@@ -1,0 +1,2594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AI GenTools</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(250, 250, 250);
+font-family: &quot;Inter&quot;;
+
+QPushButton {
+	border: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="navBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>221</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(250, 250, 250);
+border-right: 1px solid rgb(210, 210, 210);</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>17</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>15</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string>AI GenTools</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="detectButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+text-align: left;
+padding-left: 15px;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: rgb(250,250,250);
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: lightgrey;
+}
+
+QPushButton:checked {
+background-color: rgb(255,218,167);
+}</string>
+     </property>
+     <property name="text">
+      <string>  Detect</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/files/glass.png</normaloff>:/icons/files/glass.png</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generateButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+text-align: left;
+padding-left: 15px;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: rgb(250,250,250);
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: lightgrey;
+}
+
+QPushButton:checked {
+background-color: rgb(182,227,206);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  Generate</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/files/text.png</normaloff>:/icons/files/text.png</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="evaluateButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+text-align: left;
+padding-left: 15px;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: rgb(250,250,250);
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: lightgrey;
+}
+
+QPushButton:checked {
+background-color: rgb(199,236,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>  Evaluate</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/files/graph.png</normaloff>:/icons/files/graph.png</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="accountButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>560</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+text-align: left;
+padding-left: 15px;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: rgb(250,250,250);
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: lightgrey;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  Account</string>
+     </property>
+     <property name="icon">
+      <iconset theme="emblem-shared"/>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="accountWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>370</y>
+       <width>201</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid lightgrey;
+border-radius: 4px;</string>
+     </property>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>First Name</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="firstNameBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>161</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+border: 1px solid lightgrey;
+border-radius: 6px 6px;
+color: black;
+padding-top: 4px;
+padding-left: 2px;</string>
+      </property>
+      <property name="plainText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveDetailsButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: center;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: lightgrey;
+color: black;
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: silver;
+}
+
+QPushButton:pressed {
+background-color: grey;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="accounDetailsMessage">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>! Message</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>Last Name</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="lastNameBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>161</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+border: 1px solid lightgrey;
+border-radius: 6px 6px;
+color: black;
+padding-top: 4px;
+padding-left: 2px;</string>
+      </property>
+      <property name="plainText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="loginWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>201</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid lightgrey;
+border-radius: 4px;</string>
+      </property>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Username</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="usernameBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>161</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border: 1px solid lightgrey;
+border-radius: 6px 6px;
+color: black;
+padding-top: 4px;
+padding-left: 2px;</string>
+       </property>
+       <property name="plainText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="passwordBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>161</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border: 1px solid lightgrey;
+border-radius: 6px 6px;
+color: black;
+padding-top: 4px;
+padding-left: 2px;</string>
+       </property>
+       <property name="plainText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="loginButton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+text-align: center;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: lightgrey;
+color: black;
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: silver;
+}
+
+QPushButton:pressed {
+background-color: grey;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="loginMessage">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>160</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>! Message</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>229</x>
+      <y>-1</y>
+      <width>761</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="generatePage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250,250,250);
+</string>
+     </property>
+     <widget class="QLabel" name="title">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0,153,81);</string>
+      </property>
+      <property name="text">
+       <string>Generate</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="title2">
+      <property name="geometry">
+       <rect>
+        <x>195</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>content</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="promptBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>571</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+border: 1px solid lightgrey;
+border-radius: 6px 6px;
+color: black;
+padding-top: 4px;
+padding-left: 2px;</string>
+      </property>
+      <property name="plainText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_1">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>130</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Choose a model:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="genModelComboBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>150</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 3px;
+padding-left: 5px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+    background: white;
+border-radius: 4px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/icons/files/arrow.png);
+width: 12px;
+}</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>190</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Generated response:</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="responseBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>210</y>
+        <width>681</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+border: 1px solid rgb(0,153,81);
+border-radius: 6px 6px;
+padding-top: 4px;
+padding-left: 2px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="genButton">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>80</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: left;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: white;
+color: grey;
+border-radius: 7px 7px;
+padding-left: 8px;
+}
+
+QPushButton:hover {
+background-color: whitesmoke;
+}
+
+QPushButton:pressed {
+background-color: lightgrey;
+}</string>
+      </property>
+      <property name="text">
+       <string>Generate</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/files/send.png</normaloff>:/icons/files/send.png</iconset>
+      </property>
+     </widget>
+     <widget class="QWidget" name="genAdvancedWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>170</y>
+        <width>391</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid lightgrey;
+border-radius: 4px;</string>
+      </property>
+      <widget class="QPushButton" name="generateUploadFileButton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+text-align: left;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: white;
+color: black;
+border-radius: 4px;
+padding-left: 8px;
+}
+
+QPushButton:hover {
+background-color: whitesmoke;
+}
+
+QPushButton:pressed {
+background-color: lightgrey;
+}</string>
+       </property>
+       <property name="text">
+        <string>  Upload...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/files/folder.png</normaloff>:/icons/files/folder.png</iconset>
+       </property>
+      </widget>
+      <widget class="QSlider" name="genMaxNewTokensSlider">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>120</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="minimum">
+        <number>512</number>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>100</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Maximum New Tokens</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string> Key file location:</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="genWaterMarkCheckBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Watermark</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="genHashingSlider">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Hashing Context</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="genDeltaSlider">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>190</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="singleStep">
+        <number>1</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Delta</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="genEntropySlider">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>190</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>6</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>170</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Entropy Threshold</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="genHashingDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="genDeltaDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="genMaxDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>150</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="genEntropyDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>220</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="genAdvancedButton">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>140</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: center;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: rgb(182,227,206);
+color: black;
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: #6fd9a7;
+}
+
+QPushButton:pressed {
+background-color :#57c994;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Advanced Options</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="detectPage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250,250,250);</string>
+     </property>
+     <widget class="QLabel" name="title2_3">
+      <property name="geometry">
+       <rect>
+        <x>155</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>watermark</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="title_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #DD8F22;</string>
+      </property>
+      <property name="text">
+       <string>Detect</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter content:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="checkButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>350</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: center;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: #ffd59c;
+color: black;
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: #ffcc87;
+}
+
+QPushButton:pressed {
+background-color: #ffc370;
+}</string>
+      </property>
+      <property name="text">
+       <string>Check</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>500</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>Results</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="resultsDisplay">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>520</y>
+        <width>251</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>Watermark [not] detected</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="userDisplay">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>540</y>
+        <width>201</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-align: left;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: white;
+color: black;
+border-radius: 4px;
+padding-left: 8px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>520</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>User:</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="detectBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>681</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+border: 1px solid #DD8F22;
+border-radius: 6px 6px;
+padding-top: 4px;
+padding-left: 2px;</string>
+      </property>
+      <property name="plainText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="detectAdvancedButton">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>350</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: center;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: #ffd59c;
+color: black;
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: #ffcc87;
+}
+
+QPushButton:pressed {
+background-color: #ffc370;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Advanced Options</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="detectAdvancedWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>380</y>
+        <width>391</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid lightgrey;
+border-radius: 4px;</string>
+      </property>
+      <widget class="QSlider" name="detectHashingSlider">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Hashing Context</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="detectZSlider">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Z Threshold</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="detectEntropySlider">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>80</y>
+         <width>160</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+QSlider {
+border: none;
+}</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>60</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string>Entropy Threshold</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="detectUploadFileButton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+text-align: left;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: white;
+color: black;
+border-radius: 4px;
+padding-left: 8px;
+}
+
+QPushButton:hover {
+background-color: whitesmoke;
+}
+
+QPushButton:pressed {
+background-color: lightgrey;
+}</string>
+       </property>
+       <property name="text">
+        <string>  Upload...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/files/folder.png</normaloff>:/icons/files/folder.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string> Key file location:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectHashingDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectEntropyDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>110</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectZDisplayValue">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+color: grey;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>10</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="text">
+        <string> Choose a model:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="detectModelComboBox">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>30</y>
+         <width>161</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 3px;
+padding-left: 5px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+    background: white;
+border-radius: 4px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/icons/files/arrow.png);
+width: 12px;
+}</string>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <zorder>title_3</zorder>
+     <zorder>title2_3</zorder>
+     <zorder>label_11</zorder>
+     <zorder>checkButton</zorder>
+     <zorder>label_12</zorder>
+     <zorder>resultsDisplay</zorder>
+     <zorder>userDisplay</zorder>
+     <zorder>label_15</zorder>
+     <zorder>detectBox</zorder>
+     <zorder>detectAdvancedButton</zorder>
+     <zorder>detectAdvancedWidget</zorder>
+    </widget>
+    <widget class="QWidget" name="evaluatePage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250,250,250);
+</string>
+     </property>
+     <widget class="QLabel" name="title2_2">
+      <property name="geometry">
+       <rect>
+        <x>188</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="title_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(91,177,219);</string>
+      </property>
+      <property name="text">
+       <string>Evaluate</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>80</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Choose a model:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="evalModelComboBox">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>100</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 3px;
+padding-left: 5px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+    background: white;
+border-radius: 4px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/icons/files/arrow.png);
+width: 12px;
+}</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="evalUploadFileButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: left;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: white;
+color: black;
+border-radius: 4px;
+padding-left: 8px;
+}
+
+QPushButton:hover {
+background-color: whitesmoke;
+}
+
+QPushButton:pressed {
+background-color: lightgrey;
+}</string>
+      </property>
+      <property name="text">
+       <string>  Upload...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/files/folder.png</normaloff>:/icons/files/folder.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Choose prompts file:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="evalButton">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>90</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: center;
+font-family: &quot;Inter&quot;;
+border: none;
+background-color: rgb(199,236,255);
+color: black;
+border-radius: 7px 7px;
+}
+
+QPushButton:hover {
+background-color: #a1dfff;
+}
+
+QPushButton:pressed {
+background-color: #78d1ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Evaluate</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>190</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>Values</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="evalMaxNewTokensSlider">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>310</y>
+        <width>160</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+</string>
+      </property>
+      <property name="minimum">
+       <number>512</number>
+      </property>
+      <property name="maximum">
+       <number>4096</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>220</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delta</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>290</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Hashing Context</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>290</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Maximum New Tokens</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>220</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Entropy</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="graph1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>370</y>
+        <width>330</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid lightgrey;
+border-radius: 5px 5px;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="graph2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>370</y>
+        <width>330</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid lightgrey;
+border-radius: 5px 5px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="evalMaxDisplayValue">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>340</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+color: grey;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="evalZDisplayValue">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>270</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+color: grey;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>220</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Z Threshold</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="evalZSlider">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>240</y>
+        <width>160</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+
+</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="evalDeltaDisplayValue">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>270</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+color: grey;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="evalDeltaSlider">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>240</y>
+        <width>160</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    background: #ccc;            
+    height: 3px;                 
+    border-radius: 1.5px;
+}
+
+QSlider::handle:horizontal {
+    background: black;         
+    border: none;
+    width: 12px;                
+    height: 12px;
+    margin: -5px 0;              
+    border-radius: 6px;          
+}
+
+QSlider::handle:horizontal:hover {
+    background: #78C4EA;         
+}
+
+QSlider::sub-page:horizontal {
+    background: #3498db;        
+    border-radius: 1.5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #e0e0e0;         
+    border-radius: 1.5px;
+}
+
+</string>
+      </property>
+      <property name="maximum">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>290</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sweep values:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="evalSweepComboBox">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>310</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 3px;
+padding-left: 5px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+    background: white;
+border-radius: 4px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/icons/files/arrow.png);
+width: 12px;
+}</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Entropy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hashing Context</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="evalDownloadFileButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>150</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+text-align: left;
+font-family: &quot;Inter&quot;;
+border: 1px solid lightgrey;
+background-color: white;
+color: black;
+border-radius: 4px;
+padding-left: 8px;
+}
+
+QPushButton:hover {
+background-color: whitesmoke;
+}
+
+QPushButton:pressed {
+background-color: lightgrey;
+}</string>
+      </property>
+      <property name="text">
+       <string>  Upload...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/files/folder.png</normaloff>:/icons/files/folder.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>130</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Download location:</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="entWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>240</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <widget class="QCheckBox" name="evalEnt1Check">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalEnt2Check">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>0</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalEnt3Check">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>0</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>3.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalEnt4Check">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>4.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalEnt5Check">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>5.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalEnt6Check">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>6.0</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="hashWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>310</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <widget class="QCheckBox" name="evalHash8Check">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>8.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalHash6Check">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>6.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalHash7Check">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>7.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalHash5Check">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>0</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>5.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalHash4Check">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>0</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>4.0</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="evalHash3Check">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>3.0</string>
+       </property>
+      </widget>
+      <zorder>evalHash6Check</zorder>
+      <zorder>evalHash7Check</zorder>
+      <zorder>evalHash3Check</zorder>
+      <zorder>evalHash4Check</zorder>
+      <zorder>evalHash5Check</zorder>
+      <zorder>evalHash8Check</zorder>
+     </widget>
+     <zorder>title_2</zorder>
+     <zorder>title2_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>evalModelComboBox</zorder>
+     <zorder>evalUploadFileButton</zorder>
+     <zorder>label_4</zorder>
+     <zorder>evalButton</zorder>
+     <zorder>label_5</zorder>
+     <zorder>evalMaxNewTokensSlider</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_9</zorder>
+     <zorder>graph1</zorder>
+     <zorder>graph2</zorder>
+     <zorder>evalMaxDisplayValue</zorder>
+     <zorder>evalZDisplayValue</zorder>
+     <zorder>label_22</zorder>
+     <zorder>evalZSlider</zorder>
+     <zorder>evalDeltaDisplayValue</zorder>
+     <zorder>evalDeltaSlider</zorder>
+     <zorder>label_29</zorder>
+     <zorder>evalSweepComboBox</zorder>
+     <zorder>evalDownloadFileButton</zorder>
+     <zorder>label_10</zorder>
+     <zorder>entWidget</zorder>
+     <zorder>hashWidget</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
