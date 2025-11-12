@@ -140,11 +140,15 @@ class ZeroBitWatermarker:
         else:
             token_ids = tokenizer.encode(prompt, return_tensors='pt').to(self.model.device)
         
+        # Create explicit attention mask to avoid warning when pad_token_id == eos_token_id
+        attention_mask = torch.ones_like(token_ids)
+        
         gen_kwargs = dict(
             max_new_tokens=max_new_tokens,
             logits_processor=[logits_processor],
             do_sample=True, top_k=50, top_p=0.95, temperature=0.7,
             pad_token_id=tokenizer.eos_token_id,
+            attention_mask=attention_mask,
             **kwargs
         )
 
@@ -323,11 +327,15 @@ class LBitWatermarker:
         else:
             input_ids = tokenizer.encode(prompt, return_tensors='pt').to(device)
 
+        # Create explicit attention mask to avoid warning when pad_token_id == eos_token_id
+        attention_mask = torch.ones_like(input_ids)
+
         gen_kwargs = dict(
             max_new_tokens=max_new_tokens,
             logits_processor=[logit_processor],
             do_sample=True, top_k=50, top_p=0.95, temperature=0.7,
             pad_token_id=tokenizer.eos_token_id,
+            attention_mask=attention_mask,
             **kwargs
         )
 

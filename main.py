@@ -255,11 +255,15 @@ def generate_unwatermarked(model_wrapper, prompt: str, max_new_tokens: int, mode
     else:
         token_ids = tokenizer.encode(prompt, return_tensors='pt').to(device)
     
+    # Create explicit attention mask to avoid warning when pad_token_id == eos_token_id
+    attention_mask = torch.ones_like(token_ids)
+    
     with torch.no_grad():
         output_ids = model_wrapper._model.generate(
             token_ids, max_new_tokens=max_new_tokens, do_sample=True,
             top_k=50, top_p=0.95, temperature=0.7,
-            pad_token_id=tokenizer.eos_token_id
+            pad_token_id=tokenizer.eos_token_id,
+            attention_mask=attention_mask
         )
     
     raw_output = tokenizer.decode(output_ids[0], skip_special_tokens=True)
