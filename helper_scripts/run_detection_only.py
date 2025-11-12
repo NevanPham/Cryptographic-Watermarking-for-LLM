@@ -16,8 +16,8 @@ parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 sys.path.insert(0, parent_dir)
 
 # Now we can grab the model and watermarker definitions from the parent dir
-from models import GPT2Model, GptOssModel, GptOss120bModel
-from watermark import ZeroBitWatermarker
+from src.models import GPT2Model, GptOssModel, GptOss120bModel
+from src.watermark import ZeroBitWatermarker
 
 def get_model(model_name: str):
     """Factory function to instantiate the correct model for its tokenizer."""

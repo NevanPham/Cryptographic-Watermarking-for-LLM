@@ -8,7 +8,7 @@ import pandas as pd
 import seaborn as sns
 import numpy as np
 from core import get_model, generate_unwatermarked, parse_final_output, get_paraphraser, evaluate_model
-from watermark import ZeroBitWatermarker
+from src.watermark import ZeroBitWatermarker
 import sys, os
 import tqdm
 

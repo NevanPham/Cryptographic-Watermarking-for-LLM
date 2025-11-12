@@ -5,8 +5,8 @@ import json
 import os
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-from models import GPT2Model, GptOssModel, GptOss120bModel
-from watermark import *
+from src.models import GPT2Model, GptOssModel, GptOss120bModel
+from src.watermark import *
 from main import *
 import re
 import nltk

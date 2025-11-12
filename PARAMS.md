@@ -52,11 +52,11 @@ This guide explains the knobs you can tune for embedding (generation) and detect
 - Typical: 3.5–5.0. Default 4.0.
 - CLI (zero‑bit):
 ```bat
-python main.py detect output.txt --model gpt2 --key-file secret.key --z-threshold 3.5
+python main.py detect demonstration/watermarked_output.txt --model gpt2 --z-threshold 3.5
 ```
 - CLI (L‑bit):
 ```bat
-python main.py detect_lbit output_lbit.txt --model gpt2 --l-bits 32 --key-file secret_lbit.key --z-threshold 3.5
+python main.py detect_lbit demonstration/watermarked_lbit.txt --model gpt2 --l-bits 32 --z-threshold 3.5
 ```
 
 Detector behavior: two‑pass logic may retry with a lower effective entropy threshold if the initial block count is low.
@@ -122,7 +122,7 @@ To reduce `⊥`:
 ---
 
 ### Where these are defined in code
-- Watermarking logic and parameters: `watermark.py` (`ZeroBitWatermarker`, `LBitWatermarker`).
+- Watermarking logic and parameters: `src/watermark.py` (`ZeroBitWatermarker`, `LBitWatermarker`).
 - CLI flags: `main.py` (generate/detect/evaluate; zero‑bit and L‑bit).
-- Two‑pass generation/detection logic: `watermark.py` and `main.py` detect/evaluate paths.
+- Two‑pass generation/detection logic: `src/watermark.py` and `main.py` detect/evaluate paths.
 

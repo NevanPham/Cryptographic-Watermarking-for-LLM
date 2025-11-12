@@ -5,11 +5,11 @@ import hmac
 import hashlib
 import torch
 import numpy as np
-from models import LanguageModel
+from .models import LanguageModel
 from transformers import LogitsProcessor
 
 from tqdm import tqdm
-from fingerprinting import FingerprintingCode
+from .fingerprinting import FingerprintingCode
 
 def _calculate_entropy(logits):
     """Calculates the Shannon entropy of a logits distribution."""

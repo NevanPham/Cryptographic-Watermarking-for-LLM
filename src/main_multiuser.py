@@ -3,9 +3,14 @@
 import argparse
 import json
 import os
+import sys
 
-from models import GPT2Model, GptOssModel, GptOss120bModel
-from watermark import ZeroBitWatermarker, LBitWatermarker, MultiUserWatermarker
+# Add parent directory to path for imports when running as script
+if __name__ == "__main__":
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.models import GPT2Model, GptOssModel, GptOss120bModel
+from src.watermark import ZeroBitWatermarker, LBitWatermarker, MultiUserWatermarker
 
 def parse_final_output(raw_text: str, model_name: str) -> str:
     """
@@ -38,7 +43,7 @@ def main():
 
     # --- Base arguments for both commands ---
     base_parser = argparse.ArgumentParser(add_help=False)
-    base_parser.add_argument('--users-file', type=str, default='users.csv', help="Path to the user metadata CSV file.")
+    base_parser.add_argument('--users-file', type=str, default='assets/users.csv', help="Path to the user metadata CSV file.")
     base_parser.add_argument('--model', type=str, default='gpt2', choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'])
     base_parser.add_argument('--key-file', '-k', type=str, default='demonstration/multiuser_master.key', help="Path to the master secret key.")
     # L-bit parameters

@@ -10,51 +10,56 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
 ## Running the core CLI
 
 ### Zero‑bit watermarking
-- Generate (saves `output.txt` and `secret.key`):
+- Generate (saves `demonstration/watermarked_output.txt` and `demonstration/secret.key`; add `-o`/`-k` to rename):
 ```bat
-python main.py generate "The future of AI is" --model gpt2 --max-new-tokens 256 -o output.txt
+python main.py generate "The future of AI is" --model gpt2 --max-new-tokens 256 ^
+  -o demonstration/my_watermark.txt ^
+  -k demonstration/my_watermark.key
 ```
-- Detect (prints z-score, detected, block count):
+- Detect (prints z-score, detected, block count; point to the same files you generated):
 ```bat
-python main.py detect output.txt --model gpt2 --key-file secret.key
+python main.py detect demonstration/my_watermark.txt --model gpt2 ^
+  --key-file demonstration/my_watermark.key
 ```
 - Plain (no watermark):
 ```bat
-python main.py generate "The future of AI is" --model gpt2 --no-watermark --max-new-tokens 256 -o output_plain.txt
+python main.py generate "The future of AI is" --model gpt2 --no-watermark --max-new-tokens 256 -o demonstration/output_plain.txt
 ```
 
 ### L‑bit watermarking (embed and recover a bitstring)
-- Generate (message must be exactly L bits):
+- Generate (message must be exactly L bits, saves to `demonstration/watermarked_lbit.txt` and `demonstration/secret_lbit.key`; append `-o`/`--key-file` to rename):
 ```bat
 python main.py generate_lbit "The future of AI is" --model gpt2 ^
-  --message 01010101010101010101010101010101 --l-bits 32 ^
-  --max-new-tokens 256 --output-file output_lbit.txt --key-file secret_lbit.key
+  --message 01010101 --l-bits 8 ^
+  --max-new-tokens 256 ^
+  -o demonstration/my_lbit.txt ^
+  --key-file demonstration/my_lbit.key
 ```
-- Detect (recovers the message; may output ⊥ for undecided bits):
+- Detect (recovers the message; may output ⊥ for undecided bits; match the filenames you set above):
 ```bat
-python main.py detect_lbit output_lbit.txt --model gpt2 --l-bits 32 --key-file secret_lbit.key
+python main.py detect_lbit demonstration/my_lbit.txt --model gpt2 --l-bits 8 ^
+  --key-file demonstration/my_lbit.key
 ```
 
 ### Full evaluation (batch over prompts)
-- Sweep entropy thresholds (writes results to `evaluation_results/`):
+- Sweep entropy thresholds (writes results to `demonstration/evaluation_results/`; change with `--output-dir`):
 ```bat
 python main.py evaluate ^
-  --prompts-file prompts.txt ^
+  --prompts-file assets/prompts.txt ^
   --model gpt2 ^
   --entropy-thresholds "3.0, 3.5, 4.0" ^
-  --max-new-tokens 512 ^
-  --output-dir evaluation_results
+  --max-new-tokens 512
 ```
 - Include L‑bit in the evaluation (example L=8):
 ```bat
 python main.py evaluate ^
-  --prompts-file prompts.txt ^
+  --prompts-file assets/prompts.txt ^
   --model gpt2 ^
   --l-bit-message 01010101 ^
   --l-bits 8 ^
   --entropy-thresholds "3.5, 4.0" ^
   --max-new-tokens 256 ^
-  --output-dir evaluation_results_lbit
+  --output-dir demonstration/evaluation_results_lbit
 ```
 
 ## Running helpers and tools
@@ -62,7 +67,7 @@ python main.py evaluate ^
 ### Analyse plots and metrics (from evaluation output)
 - Reads `analysis_results.json` and writes PNG plots + `summary_analysis.txt`:
 ```bat
-python helper_scripts\analyse.py evaluation_results --z-threshold 4.0
+python helper_scripts\analyse.py demonstration/evaluation_results --z-threshold 4.0
 ```
 
 ### GUI (desktop app)
@@ -75,32 +80,30 @@ python UI\app.py
   - Evaluate: run sweeps and display plots inline.
 
 ### Multi‑user fingerprinting (optional)
-1) Create `users.csv`:
+1) Create `assets/users.csv`:
 ```text
 UserId,Username
 0,Alice
 1,Bob
 2,Carol
 ```
-2) Generate for a user (defaults to L=8 in `main_multiuser.py`):
+2) Generate for a user (defaults to L=8 in `src/main_multiuser.py`; pass `-o` to change filename):
 ```bat
-python main_multiuser.py generate ^
-  --users-file users.csv ^
+python -m src.main_multiuser generate "The future of AI is" ^
+  --users-file assets/users.csv ^
   --model gpt2 ^
   --user-id 1 ^
   --l-bits 8 ^
   --max-new-tokens 256 ^
-  --key-file demonstration\multiuser_master.key ^
-  -o demonstration\multiuser_output.txt
+  -o demonstration/multiuser_bob.txt
 ```
 3) Trace back to user(s):
 ```bat
-python main_multiuser.py trace ^
-  --users-file users.csv ^
+python -m src.main_multiuser trace ^
+  --users-file assets/users.csv ^
   --model gpt2 ^
   --l-bits 8 ^
-  --key-file demonstration\multiuser_master.key ^
-  demonstration\multiuser_output.txt
+  demonstration\multiuser_bob.txt
 ```
 
 ## Parameter tuning guide
@@ -122,22 +125,22 @@ python main_multiuser.py trace ^
 ### Examples: balancing fluency vs detection
 - More fluent (lighter watermark):
 ```bat
-python main.py generate "Topic..." --model gpt2 --delta 2.0 --entropy-threshold 4.5 --hashing-context 5 --max-new-tokens 256 -o output.txt
+python main.py generate "Topic..." --model gpt2 --delta 2.0 --entropy-threshold 4.5 --hashing-context 5 --max-new-tokens 256
 ```
 - Stronger detection (may hurt fluency):
 ```bat
-python main.py generate "Topic..." --model gpt2 --delta 3.5 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 256 -o output.txt
+python main.py generate "Topic..." --model gpt2 --delta 3.5 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 256
 ```
 
 ### L‑bit recovery tips
 - If you see ⊥ in recovered bits:
   - Increase bias or lower entropy threshold on generation:
 ```bat
-python main.py generate_lbit "Topic..." --model gpt2 --message 010101 --l-bits 6 --delta 3.0 --entropy-threshold 3.5 --max-new-tokens 256 --output-file output_lbit.txt --key-file secret_lbit.key
+python main.py generate_lbit "Topic..." --model gpt2 --message 010101 --l-bits 6 --delta 3.0 --entropy-threshold 3.5 --max-new-tokens 256
 ```
   - Lower the detector threshold a bit:
 ```bat
-python main.py detect_lbit output_lbit.txt --model gpt2 --l-bits 6 --key-file secret_lbit.key --z-threshold 3.5
+python main.py detect_lbit demonstration/watermarked_lbit.txt --model gpt2 --l-bits 6 --z-threshold 3.5
 ```
 
 ## Notes
