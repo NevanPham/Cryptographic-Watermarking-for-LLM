@@ -96,20 +96,22 @@ python helper_scripts\analyse.py evaluation_results --z-threshold 4.0
 ```
 
 ### Multi‑user (fingerprinting)
-Create `users.csv`:
+The `assets/users.csv` file contains 1000 users (UserIds 0-999, with usernames matching the ID):
 ```text
 UserId,Username
-0,Alice
-1,Bob
-2,Carol
+0,0
+1,1
+2,2
+...
+999,999
 ```
-Generate for a user (saves one master key per run):
+Generate for a user (L=10 required for 1000 users; saves one master key per run):
 ```bat
-python main_multiuser.py generate --users-file users.csv --model gpt2 --user-id 1 --l-bits 8 --max-new-tokens 256 --key-file demonstration\multiuser_master.key -o demonstration\multiuser_output.txt "The future of AI is"
+python main_multiuser.py generate --users-file assets/users.csv --model gpt2 --user-id 0 --l-bits 10 --max-new-tokens 256 --key-file demonstration\multiuser_master.key -o demonstration\multiuser_output.txt "The future of AI is"
 ```
 Trace back to user(s):
 ```bat
-python main_multiuser.py trace --users-file users.csv --model gpt2 --l-bits 8 --key-file demonstration\multiuser_master.key demonstration\multiuser_output.txt
+python main_multiuser.py trace --users-file assets/users.csv --model gpt2 --l-bits 10 --key-file demonstration\multiuser_master.key demonstration\multiuser_output.txt
 ```
 
 ---
@@ -175,11 +177,11 @@ It includes a modular model layer (GPT‑2 and large OSS models), a multi‑user
 ## Repository structure
 
 - `main_multiuser.py`: CLI for multi‑user watermarking. Supports `generate` and `trace` commands, wired to the watermarking stack and the fingerprinting code.
-- `fingerprinting.py`: Implements `FingerprintingCode` for generating per‑user codewords from `users.csv` and tracing recovered messages to likely users.
+- `fingerprinting.py`: Implements `FingerprintingCode` for generating per‑user codewords from `assets/users.csv` and tracing recovered messages to likely users.
 - `models.py`: Swappable language model adapters: `GPT2Model`, `GptOssModel` (20B), `GptOss120bModel` (120B). Each exposes `get_logits`, `tokenizer`, `vocab_size`, and `device`.
 - `PARAMS.md`: Parameter reference with guidance for `delta`, `entropy-threshold`, `hashing-context`, `max-new-tokens`, `z-threshold`, and L‑bit specifics.
 - `COMMANDS.md`: End‑to‑end command examples for Windows cmd, including quickstart, evaluation flows, GUI entrypoint, and multi‑user recipes.
-- `users.csv`: Example user metadata (`UserId,Username`) used by the fingerprinting module.
+- `assets/users.csv`: User metadata (`UserId,Username`) with 1000 users (IDs 0-999, usernames matching IDs) used by the fingerprinting module.
 - `multiuser_output.txt`: Example output file produced by `main_multiuser.py generate`.
 - `.gitignore`: Standard git ignore rules.
 
@@ -222,21 +224,23 @@ More end‑to‑end command recipes are in `COMMANDS.md`.
 
 ## Multi‑user fingerprinting workflow
 
-1) Prepare users:
+1) The `assets/users.csv` file contains 1000 users (UserIds 0-999, with usernames matching the ID):
 ```
 UserId,Username
-0,Alice
-1,Bob
-2,Carol
+0,0
+1,1
+2,2
+...
+999,999
 ```
 
-2) Generate watermarked text for a specific user (defaults shown in CLI):
+2) Generate watermarked text for a specific user (L=10 required for 1000 users):
 ```
 python main_multiuser.py generate ^
-  --users-file users.csv ^
+  --users-file assets/users.csv ^
   --model gpt2 ^
-  --user-id 1 ^
-  --l-bits 8 ^
+  --user-id 0 ^
+  --l-bits 10 ^
   --max-new-tokens 256 ^
   --key-file demonstration\multiuser_master.key ^
   -o demonstration\multiuser_output.txt
@@ -245,9 +249,9 @@ python main_multiuser.py generate ^
 3) Trace a text back to likely user(s):
 ```
 python main_multiuser.py trace ^
-  --users-file users.csv ^
+  --users-file assets/users.csv ^
   --model gpt2 ^
-  --l-bits 8 ^
+  --l-bits 10 ^
   --key-file demonstration\multiuser_master.key ^
   demonstration\multiuser_output.txt
 ```

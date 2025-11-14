@@ -1,1 +1,10 @@
-The future of AI is "software-defined Learning" for Machine Learning at the NSF's Michael Colangelo Machine Learning Initiative, part of the ASI Program in Human Distributed Learning. This presentation focuses on three fundamental truths about autonomy, responsibility, and smart design. De Gucht-Black emphasizes the role of Knowledge and Responsibility and asks for real-world examples of hard decisions that you can make with common sense and creativity. He explores further sub topics regarding how with AI an AI is defined and reconciled with relevant human and AI policies. Topics include the big picture and how AI can in turn usher in smart thinking and trans-humanism, social co-existence, consumerism, and AI to the exclusion of their limited agency. De Gucht-Black holds an advanced degree in machine learning from Swarthmore College, a post-doc in the Max Planck Institute for Computational Science in Geology and Space, and a Master's of Applied Technologies in bioinformatics from Northwestern University.
+The future of AI is dependent on being able to discover and maintain better and more healthy behaviours. AI should not rely on tracking the emotions or emotions that are not directly associated with it, but based on physically and neurally manipulated signals. Therefore, this framework may allow users to better control creativity, social competency, and expression of personal preferences and behaviours. Applications based on neuroscience research aimed at collaboration, education, literature writing, exploration of social interaction and personalized knowledge acquisition, could allow for the guidance of virtual manufacturing.
+
+
+For each new insight, focus this towards: - quantifying and applying social knowledge dissemination knowledge
+
+
+- guiding access to these systems efficiently because it creates broad wellbeing and strength for our ability to maintain and change outcomes in various ways
+
+
+- better understanding of this knowledge then consumers

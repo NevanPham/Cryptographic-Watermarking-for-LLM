@@ -80,30 +80,32 @@ python UI\app.py
   - Evaluate: run sweeps and display plots inline.
 
 ### Multi‑user fingerprinting (optional)
-1) Create `assets/users.csv`:
+1) The `assets/users.csv` file contains 1000 users (UserIds 0-999, with usernames matching the ID):
 ```text
 UserId,Username
-0,Alice
-1,Bob
-2,Carol
+0,0
+1,1
+2,2
+...
+999,999
 ```
-2) Generate for a user (defaults to L=8 in `src/main_multiuser.py`; pass `-o` to change filename):
+2) Generate for a user (L=10 required for 1000 users; pass `-o` to change filename):
 ```bat
 python -m src.main_multiuser generate "The future of AI is" ^
   --users-file assets/users.csv ^
   --model gpt2 ^
-  --user-id 1 ^
-  --l-bits 8 ^
+  --user-id 0 ^
+  --l-bits 10 ^
   --max-new-tokens 256 ^
-  -o demonstration/multiuser_bob.txt
+  -o demonstration/multiuser_user0.txt
 ```
 3) Trace back to user(s):
 ```bat
 python -m src.main_multiuser trace ^
   --users-file assets/users.csv ^
   --model gpt2 ^
-  --l-bits 8 ^
-  demonstration\multiuser_bob.txt
+  --l-bits 10 ^
+  demonstration\multiuser_user0.txt
 ```
 
 ## Parameter tuning guide

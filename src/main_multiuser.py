@@ -47,11 +47,11 @@ def main():
     base_parser.add_argument('--model', type=str, default='gpt2', choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'])
     base_parser.add_argument('--key-file', '-k', type=str, default='demonstration/multiuser_master.key', help="Path to the master secret key.")
     # L-bit parameters
-    base_parser.add_argument('--delta', type=float, default=3.0)
-    base_parser.add_argument('--entropy-threshold', type=float, default=3.0)
+    base_parser.add_argument('--delta', type=float, default=3.5)
+    base_parser.add_argument('--entropy-threshold', type=float, default=2.5)
     base_parser.add_argument('--hashing-context', type=int, default=5)
     base_parser.add_argument('--z-threshold', type=float, default=4.0)
-    base_parser.add_argument('--l-bits', type=int, default=8)
+    base_parser.add_argument('--l-bits', type=int, default=10)
 
     # --- Generate Command ---
     gen_parser = subparsers.add_parser('generate', help='Generate text watermarked for a specific user.', parents=[base_parser])
