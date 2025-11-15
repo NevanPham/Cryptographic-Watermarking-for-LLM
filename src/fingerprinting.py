@@ -57,7 +57,7 @@ class FingerprintingCode:
         number of matching bits.
 
         Args:
-            recovered_message (str): Recovered 8-bit string with possible ⊥ or ? symbols.
+            recovered_message (str): Recovered 8-bit string with possible ⊥, *, or ? symbols.
 
         Returns:
             list: List of dictionaries with accused user IDs and metadata.
@@ -70,7 +70,7 @@ class FingerprintingCode:
             raise ValueError("User metadata not loaded. Call .gen_from_file() first.")
 
         accused = []
-        valid_bits = [i for i, bit in enumerate(recovered_message) if bit not in ['⊥', '?']]
+        valid_bits = [i for i, bit in enumerate(recovered_message) if bit not in ['⊥', '*', '?']]
         if not valid_bits:
             return accused
 

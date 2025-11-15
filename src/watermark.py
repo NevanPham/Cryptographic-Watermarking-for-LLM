@@ -3,6 +3,7 @@
 import os
 import hmac
 import hashlib
+import random
 import torch
 import numpy as np
 from .models import LanguageModel
@@ -382,7 +383,7 @@ class LBitWatermarker:
             elif z_i1 > self.zero_bit.z_threshold and z_i0 <= self.zero_bit.z_threshold:
                 recovered_message += "1"
             else:
-                recovered_message += "⊥"
+                recovered_message += "*"
         return recovered_message
     
 class LBitLogitProcessor(LogitsProcessor):
@@ -392,6 +393,10 @@ class LBitLogitProcessor(LogitsProcessor):
         self.message = message
         self.L = len(message)
         self.index_bit = 0
+        # Initialize with a random permutation of [1, 2, ..., L]
+        self.current_permutation = list(range(1, self.L + 1))
+        random.shuffle(self.current_permutation)
+        self.permutation_index = 0
 
     def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor) -> torch.FloatTensor:
         """Modifies logits to encode the L-Bit message during generation"""
@@ -402,8 +407,17 @@ class LBitLogitProcessor(LogitsProcessor):
         if entropy < self.watermarker.entropy_threshold:
             return scores
         
-        bit_position = (self.index_bit % self.L) + 1  # Goes through 1 to L
+        # Check if we've used all positions in current permutation
+        if self.permutation_index >= self.L:
+            # Generate a new random permutation for the next cycle
+            self.current_permutation = list(range(1, self.L + 1))
+            random.shuffle(self.current_permutation)
+            self.permutation_index = 0
+        
+        # Get the bit position from the current permutation
+        bit_position = self.current_permutation[self.permutation_index]
         bit_value = int(self.message[bit_position - 1])  # Either 0 or 1
+        self.permutation_index += 1
         self.index_bit += 1
 
         key = derive_key(self.master_secret_key, bit_position, bit_value)

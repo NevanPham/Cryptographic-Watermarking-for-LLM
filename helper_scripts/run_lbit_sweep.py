@@ -43,7 +43,7 @@ def calculate_bit_accuracy(original: str, recovered: str) -> dict:
     undecided = 0
     
     for orig_bit, rec_bit in zip(original, recovered):
-        if rec_bit == '⊥':
+        if rec_bit == '⊥' or rec_bit == '*':
             undecided += 1
         elif orig_bit == rec_bit:
             correct += 1
