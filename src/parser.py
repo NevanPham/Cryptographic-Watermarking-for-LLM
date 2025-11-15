@@ -88,8 +88,8 @@ def build_parser():
                             help='File to save the secret key.')
     parser_gen.add_argument('--no-watermark', action='store_true', help='Generate plain text without a watermark.')
     parser_gen.add_argument('--hashing-context', type=int, default=5, help='The number of previous tokens to use for the PRF context.')
-    parser_gen.add_argument('--delta', type=check_delta_range, default=2.5, help='Watermark bias strength (1.0 to 5.0).')
-    parser_gen.add_argument('--entropy-threshold', type=check_entropy_range, default=4.0, help='Entropy threshold to define a block (1.0 to 6.0).')
+    parser_gen.add_argument('--delta', type=check_delta_range, default=3.5, help='Watermark bias strength (1.0 to 5.0).')
+    parser_gen.add_argument('--entropy-threshold', type=check_entropy_range, default=2.5, help='Entropy threshold to define a block (1.0 to 6.0).')
 
     # --- Detect Command ---
     parser_detect = subparsers.add_parser('detect', help='Detect a watermark in a text file.')
@@ -101,7 +101,7 @@ def build_parser():
                                 help='Path to the secret key file.')
     parser_detect.add_argument('--z-threshold', type=float, default=4.0,
                                 help='The z-score threshold for detection.')
-    parser_detect.add_argument('--entropy-threshold', type=check_entropy_range, default=4.0, help='Entropy threshold used during generation (1.0 to 6.0).')
+    parser_detect.add_argument('--entropy-threshold', type=check_entropy_range, default=2.5, help='Entropy threshold used during generation (1.0 to 6.0).')
     parser_detect.add_argument('--hashing-context', type=int, default=5, help='The hashing context used during generation.')
     
     # --- Evaluate Command ---
@@ -124,8 +124,8 @@ def build_parser():
     parser_lgen.add_argument('--max-new-tokens', type=int, default=256, help='Maximum number of new tokens to generate.')
     parser_lgen.add_argument('--output-file', '-o', type=str, default='demonstration/watermarked_lbit.txt', help='File to save the generated text.')
     parser_lgen.add_argument('--key-file', '-k', type=str, default='demonstration/secret_lbit.key', help='File to save the secret key.')
-    parser_lgen.add_argument('--delta', type=check_delta_range, default=2.5, help='Watermark bias strength (1.0 to 5.0).')
-    parser_lgen.add_argument('--entropy-threshold', type=check_entropy_range, default=3.5, help='Entropy threshold to define a block (1.0 to 6.0).')
+    parser_lgen.add_argument('--delta', type=check_delta_range, default=3.5, help='Watermark bias strength (1.0 to 5.0).')
+    parser_lgen.add_argument('--entropy-threshold', type=check_entropy_range, default=2.5, help='Entropy threshold to define a block (1.0 to 6.0).')
     parser_lgen.add_argument('--hashing-context', type=int, default=5, help='The number of previous tokens to use for the PRF context.')
     parser_lgen.add_argument('--z-threshold', type=float, default=4.0, help='The z-score threshold for detection.')
 
@@ -136,14 +136,14 @@ def build_parser():
     parser_ldet.add_argument('--model', type=str, required=True, choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'],
                             help='The model that was used to generate the text (for tokenizer matching).')
     parser_ldet.add_argument('--key-file', type=str, default='demonstration/secret_lbit.key', help='Path to the secret key file.')
-    parser_ldet.add_argument('--delta', type=check_delta_range, default=2.5, help='Watermark bias strength used during generation (1.0 to 5.0).')
-    parser_ldet.add_argument('--entropy-threshold', type=check_entropy_range, default=3.5, help='Entropy threshold used during generation (1.0 to 6.0).')
+    parser_ldet.add_argument('--delta', type=check_delta_range, default=3.5, help='Watermark bias strength used during generation (1.0 to 5.0).')
+    parser_ldet.add_argument('--entropy-threshold', type=check_entropy_range, default=2.5, help='Entropy threshold used during generation (1.0 to 6.0).')
     parser_ldet.add_argument('--hashing-context', type=int, default=5, help='The hashing context used during generation.')
     parser_ldet.add_argument('--z-threshold', type=float, default=4.0, help='The z-score threshold for detection.')
 
     # Arguments for parameter sweeps
-    parser_eval.add_argument('--delta', type=check_delta_range, default=2.5, help='A single delta value (1.0 to 5.0).')
-    parser_eval.add_argument('--entropy-threshold', type=check_entropy_range, default=4.0, help='A single entropy threshold value (1.0 to 6.0).')
+    parser_eval.add_argument('--delta', type=check_delta_range, default=3.5, help='A single delta value (1.0 to 5.0).')
+    parser_eval.add_argument('--entropy-threshold', type=check_entropy_range, default=2.5, help='A single entropy threshold value (1.0 to 6.0).')
     parser_eval.add_argument('--hashing-context', type=int, default=5, help='A single hashing context value.')
 
     # Mutually exclusive group for list-style arguments

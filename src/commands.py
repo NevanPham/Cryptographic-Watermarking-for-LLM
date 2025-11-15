@@ -83,7 +83,7 @@ def cmd_detect(args):
     print("\nRunning detection algorithm...")
 
     pass_1_params = {
-        'delta': 3.0,
+        'delta': 3.5,
         'hashing_context': args.hashing_context,
         'entropy_threshold': args.entropy_threshold
     }

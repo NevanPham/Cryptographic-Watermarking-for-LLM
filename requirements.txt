@@ -9,3 +9,4 @@ seaborn
 protobuf
 nltk
 pyside6
+openpyxl
