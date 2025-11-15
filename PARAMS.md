@@ -39,7 +39,7 @@ This guide explains the knobs you can tune for embedding (generation) and detect
 - GPT‑2 note: prompt_len + max_new_tokens ≤ 1024. Safe values: 256–512.
 - CLI:
 ```bat
---max-new-tokens 256
+--max-new-tokens 512
 ```
 
 ---
@@ -90,22 +90,22 @@ To reduce `⊥`:
 
 #### Balanced (good starting point)
 ```bat
---delta 2.5 --entropy-threshold 4.0 --hashing-context 5 --max-new-tokens 256 --z-threshold 4.0
+--delta 2.5 --entropy-threshold 4.0 --hashing-context 5 --max-new-tokens 512 --z-threshold 4.0
 ```
 
 #### Higher fluency (lighter watermark)
 ```bat
---delta 2.0 --entropy-threshold 4.5 --hashing-context 5 --max-new-tokens 256 --z-threshold 4.0
+--delta 2.0 --entropy-threshold 4.5 --hashing-context 5 --max-new-tokens 512 --z-threshold 4.0
 ```
 
 #### Stronger detection (may reduce fluency)
 ```bat
---delta 3.5 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 256 --z-threshold 4.0
+--delta 3.5 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 512 --z-threshold 4.0
 ```
 
 #### L‑bit robust recovery (small L example)
 ```bat
---l-bits 6 --delta 3.0 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 256 --z-threshold 3.5
+--l-bits 6 --delta 3.0 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 512 --z-threshold 3.5
 ```
 
 ---

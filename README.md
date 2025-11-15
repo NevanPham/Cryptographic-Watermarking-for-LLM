@@ -177,7 +177,7 @@ Core dependencies from `requirements.txt`:
 
 **Generate watermarked text:**
 ```bat
-python main.py generate "The future of AI is" --model gpt2 --max-new-tokens 256 -o output.txt
+python main.py generate "The future of AI is" --model gpt2 --max-new-tokens 512 -o output.txt
 ```
 
 **Output:**
@@ -212,7 +212,7 @@ python main.py generate "Your prompt here" ^
   --model gpt2 ^
   --delta 2.5 ^
   --entropy-threshold 4.0 ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 512 ^
   -o output.txt ^
   --key-file secret.key
 ```
@@ -285,7 +285,7 @@ python main.py generate_lbit "The future of AI is" ^
   --l-bits 8 ^
   --delta 2.5 ^
   --entropy-threshold 4.0 ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 512 ^
   -o output_lbit.txt ^
   --key-file secret_lbit.key
 ```
@@ -361,7 +361,7 @@ python -m src.main_multiuser generate ^
   --l-bits 10 ^
   --delta 2.5 ^
   --entropy-threshold 4.0 ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 512 ^
   --key-file demonstration\multiuser_master.key ^
   -o demonstration\multiuser_user0.txt ^
   "The future of AI is"
@@ -742,7 +742,7 @@ See `PARAMS.md` for comprehensive tuning guide. Key parameters:
 | `--delta` | 1.0-5.0 | 2.5 | Watermark strength (higher = stronger signal, lower fluency) |
 | `--entropy-threshold` | 1.0-6.0 | 4.0 | Minimum entropy to watermark (higher = fewer, cleaner blocks) |
 | `--hashing-context` | 1-10 | 5 | Number of previous tokens for PRF context |
-| `--max-new-tokens` | 50-2048 | 256 | Generation length |
+| `--max-new-tokens` | 50-2048 | 512 | Generation length |
 
 ### Detection Parameters
 
@@ -1114,7 +1114,7 @@ watermarker = ZeroBitWatermarker(model, secret_key, delta=2.5, entropy_threshold
 # Generate
 watermarked_text = watermarker.generate(
     prompt="The future of AI is",
-    max_new_tokens=256
+    max_new_tokens=512
 )
 
 # Detect

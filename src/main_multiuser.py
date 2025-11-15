@@ -55,9 +55,11 @@ def main():
 
     # --- Generate Command ---
     gen_parser = subparsers.add_parser('generate', help='Generate text watermarked for a specific user.', parents=[base_parser])
-    gen_parser.add_argument('prompt', type=str)
+    gen_parser.add_argument('prompt', type=str, nargs='?', help="Direct prompt text (optional if --prompt-file is used).")
+    gen_parser.add_argument('--prompt-file', type=str, help="Path to a text file containing the prompt (e.g., previous user's output).")
+    gen_parser.add_argument('--prompt-suffix', type=str, help="Additional text to append after the prompt file content (e.g., 'Rewrite the paragraph above and add...').")
     gen_parser.add_argument('--user-id', type=int, required=True, help="Integer ID of the user to watermark for (e.g., 2).")
-    gen_parser.add_argument('--max-new-tokens', type=int, default=2048)
+    gen_parser.add_argument('--max-new-tokens', type=int, default=512)
     gen_parser.add_argument('--output-file', '-o', type=str, default='demonstration/multiuser_output.txt')
 
     # --- Trace Command ---
@@ -90,9 +92,55 @@ def main():
         return
 
     if args.command == 'generate':
-        master_key = muw.keygen()
+        # Build the prompt from file and/or direct text
+        prompt_parts = []
         
-        raw_text = muw.embed(master_key, args.user_id, args.prompt, max_new_tokens=args.max_new_tokens)
+        if args.prompt_file:
+            if not os.path.exists(args.prompt_file):
+                print(f"❌ Error: Prompt file '{args.prompt_file}' not found.")
+                return
+            with open(args.prompt_file, 'r', encoding='utf-8') as f:
+                file_content = f.read().strip()
+                prompt_parts.append(file_content)
+        
+        if args.prompt_suffix:
+            prompt_parts.append(args.prompt_suffix)
+        
+        if args.prompt:
+            # If both prompt file and direct prompt are provided, direct prompt takes precedence
+            if args.prompt_file:
+                print("⚠️  Warning: Both --prompt-file and direct prompt provided. Using direct prompt.")
+            prompt_parts = [args.prompt]
+        
+        if not prompt_parts:
+            print("❌ Error: Must provide either 'prompt' argument, --prompt-file, or both --prompt-file and --prompt-suffix.")
+            return
+        
+        # Join prompt parts with a space (or newline if file + suffix)
+        if len(prompt_parts) > 1 and args.prompt_file and args.prompt_suffix:
+            # File content + suffix: join with newline for better readability
+            final_prompt = "\n\n".join(prompt_parts)
+        else:
+            final_prompt = prompt_parts[0]
+        
+        if args.prompt_file:
+            print(f"📄 Loaded prompt from file: {args.prompt_file}")
+        if args.prompt_suffix:
+            print(f"➕ Appended suffix to prompt")
+        
+        # Load existing master key if it exists, otherwise generate a new one
+        if os.path.exists(args.key_file):
+            with open(args.key_file, 'r') as f:
+                master_key_hex = f.read().strip()
+                master_key = bytes.fromhex(master_key_hex)
+            print(f"🔑 Loaded existing master key from {args.key_file}")
+        else:
+            master_key = muw.keygen()
+            with open(args.key_file, 'w') as f:
+                f.write(master_key.hex())
+            print(f"🔑 Generated new master key and saved to {args.key_file}")
+        
+        raw_text = muw.embed(master_key, args.user_id, final_prompt, max_new_tokens=args.max_new_tokens)
         final_text = parse_final_output(raw_text, args.model.__class__.__name__.lower())
         
         print("\n--- Final Watermarked Response ---")
@@ -100,11 +148,8 @@ def main():
         
         with open(args.output_file, 'w', encoding='utf-8') as f:
             f.write(final_text)
-        with open(args.key_file, 'w') as f:
-            f.write(master_key.hex())
             
         print(f"\n✅ Output for User ID {args.user_id} saved to {args.output_file}")
-        print(f"🔑 Master key saved to {args.key_file}")
 
     elif args.command == 'trace':
         with open(args.input_file, 'r', encoding='utf-8') as f:

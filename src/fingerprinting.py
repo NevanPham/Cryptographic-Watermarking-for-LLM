@@ -70,6 +70,11 @@ class FingerprintingCode:
             raise ValueError("User metadata not loaded. Call .gen_from_file() first.")
 
         accused = []
+        
+        # NEW: Detect collusion
+        collusion_detected = '*' in recovered_message
+        collusion_positions = [i for i, bit in enumerate(recovered_message) if bit == '*']
+        
         valid_bits = [i for i, bit in enumerate(recovered_message) if bit not in ['⊥', '*', '?']]
         if not valid_bits:
             return accused
@@ -97,7 +102,10 @@ class FingerprintingCode:
                 accused.append({
                     "user_id": user_id,
                     "username": username,
-                    "match_score_percent": (matches / len(valid_bits)) * 100
+                    "match_score_percent": (matches / len(valid_bits)) * 100,
+                    # NEW: Add collusion info
+                    "collusion_detected": collusion_detected,
+                    "collusion_positions": collusion_positions if collusion_detected else []
                 })
         
         return accused

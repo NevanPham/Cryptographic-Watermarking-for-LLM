@@ -176,7 +176,7 @@ class ZeroBitWatermarker:
                 block_count += 1
         return block_count
 
-    def embed(self, sk: bytes, prompt: str, max_new_tokens: int = 256, **kwargs) -> str:
+    def embed(self, sk: bytes, prompt: str, max_new_tokens: int = 512, **kwargs) -> str:
         """
         Embeds a watermark using a two-pass technique to ensure sufficient block count.
         Returns the raw watermarked text and the final parameters used.
@@ -307,7 +307,7 @@ class LBitWatermarker:
     def keygen(self, key_length: int = 32) -> bytes:
         return os.urandom(key_length)
 
-    def embed(self, master_secret_key: bytes, message: str, prompt: str, max_new_tokens: int = 256, **kwargs) -> str:
+    def embed(self, master_secret_key: bytes, message: str, prompt: str, max_new_tokens: int = 512, **kwargs) -> str:
         if len(message) != self.L or any(c not in {'0', '1'} for c in message):
             raise ValueError(f"Message must be a {self.L}-bit binary string")
         tokenizer = self.model.tokenizer

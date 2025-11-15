@@ -121,7 +121,7 @@ def build_parser():
     parser_lgen.add_argument('--l-bits', type=int, default=32, help='Number of bits for the message.')
     parser_lgen.add_argument('--model', type=str, default='gpt2', choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'],
                             help='The model to use for generation.')
-    parser_lgen.add_argument('--max-new-tokens', type=int, default=256, help='Maximum number of new tokens to generate.')
+    parser_lgen.add_argument('--max-new-tokens', type=int, default=512, help='Maximum number of new tokens to generate.')
     parser_lgen.add_argument('--output-file', '-o', type=str, default='demonstration/watermarked_lbit.txt', help='File to save the generated text.')
     parser_lgen.add_argument('--key-file', '-k', type=str, default='demonstration/secret_lbit.key', help='File to save the secret key.')
     parser_lgen.add_argument('--delta', type=check_delta_range, default=3.5, help='Watermark bias strength (1.0 to 5.0).')

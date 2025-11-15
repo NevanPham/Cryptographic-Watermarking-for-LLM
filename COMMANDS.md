@@ -12,7 +12,7 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
 ### Zero‑bit watermarking
 - Generate (saves `demonstration/watermarked_output.txt` and `demonstration/secret.key`; add `-o`/`-k` to rename):
 ```bat
-python main.py generate "The future of AI is" --model gpt2 --max-new-tokens 256 ^
+python main.py generate "The future of AI is" --model gpt2 --max-new-tokens 512 ^
   -o demonstration/my_watermark.txt ^
   -k demonstration/my_watermark.key
 ```
@@ -23,7 +23,7 @@ python main.py detect demonstration/my_watermark.txt --model gpt2 ^
 ```
 - Plain (no watermark):
 ```bat
-python main.py generate "The future of AI is" --model gpt2 --no-watermark --max-new-tokens 256 -o demonstration/output_plain.txt
+python main.py generate "The future of AI is" --model gpt2 --no-watermark --max-new-tokens 512 -o demonstration/output_plain.txt
 ```
 
 ### L‑bit watermarking (embed and recover a bitstring)
@@ -31,7 +31,7 @@ python main.py generate "The future of AI is" --model gpt2 --no-watermark --max-
 ```bat
 python main.py generate_lbit "The future of AI is" --model gpt2 ^
   --message 01010101 --l-bits 8 ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 512 ^
   -o demonstration/my_lbit.txt ^
   --key-file demonstration/my_lbit.key
 ```
@@ -58,7 +58,7 @@ python main.py evaluate ^
   --l-bit-message 01010101 ^
   --l-bits 8 ^
   --entropy-thresholds "3.5, 4.0" ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 512 ^
   --output-dir demonstration/evaluation_results_lbit
 ```
 
@@ -96,9 +96,24 @@ python -m src.main_multiuser generate "The future of AI is" ^
   --model gpt2 ^
   --user-id 0 ^
   --l-bits 10 ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 512 ^
   -o demonstration/multiuser_user0.txt
 ```
+
+**Using file-based prompts (for collusion scenarios):**
+- Generate with a prompt from a file (e.g., previous user's output):
+```bat
+python -m src.main_multiuser generate ^
+  --prompt-file demonstration/multiuser_user0.txt ^
+  --prompt-suffix "Rewrite the paragraph above and add more details about " ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --user-id 2 ^
+  --l-bits 10 ^
+  --max-new-tokens 512 ^
+  -o demonstration/multiuser_user2_collusion_with_user[].txt
+```
+- **Note:** Only the NEW text generated will be watermarked with user 2's codeword. The prompt file content (user 0's output) is NOT watermarked—it's just context. This is NOT collusion; collusion would require mixing multiple users' watermarks in the same generated text.
 3) Trace back to user(s):
 ```bat
 python -m src.main_multiuser trace ^
@@ -108,11 +123,22 @@ python -m src.main_multiuser trace ^
   demonstration\multiuser_user0.txt
 ```
 
+**Creating true collusion scenarios:**
+- Use the interactive script to generate watermarked text from multiple users and combine them:
+```bat
+python helper_scripts\create_collusion_scenario.py
+```
+- The script will prompt you for:
+  - Number of users (minimum 2)
+  - User ID and prompt for each user
+- Output: Combined text file with all users' watermarked text concatenated
+- Then trace the combined file to detect collusion (look for `*` symbols in recovered codeword)
+
 ## Parameter tuning guide
 
 ### GPT‑2 safety
 - Keep prompt_length + max_new_tokens ≤ 1024 (GPT‑2 context limit).
-- Recommended: `--max-new-tokens 256` (or up to 512 for shorter prompts).
+- Recommended: `--max-new-tokens 512` (or up to 512 for shorter prompts).
 
 ### Watermark strength and robustness
 - `--delta` (bias strength): higher = easier detection, may lower fluency.
@@ -127,18 +153,18 @@ python -m src.main_multiuser trace ^
 ### Examples: balancing fluency vs detection
 - More fluent (lighter watermark):
 ```bat
-python main.py generate "Topic..." --model gpt2 --delta 2.0 --entropy-threshold 4.5 --hashing-context 5 --max-new-tokens 256
+python main.py generate "Topic..." --model gpt2 --delta 2.0 --entropy-threshold 4.5 --hashing-context 5 --max-new-tokens 512
 ```
 - Stronger detection (may hurt fluency):
 ```bat
-python main.py generate "Topic..." --model gpt2 --delta 3.5 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 256
+python main.py generate "Topic..." --model gpt2 --delta 3.5 --entropy-threshold 3.5 --hashing-context 5 --max-new-tokens 512
 ```
 
 ### L‑bit recovery tips
 - If you see ⊥ in recovered bits:
   - Increase bias or lower entropy threshold on generation:
 ```bat
-python main.py generate_lbit "Topic..." --model gpt2 --message 010101 --l-bits 6 --delta 3.0 --entropy-threshold 3.5 --max-new-tokens 256
+python main.py generate_lbit "Topic..." --model gpt2 --message 010101 --l-bits 6 --delta 3.0 --entropy-threshold 3.5 --max-new-tokens 512
 ```
   - Lower the detector threshold a bit:
 ```bat

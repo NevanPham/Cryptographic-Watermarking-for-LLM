@@ -106,8 +106,8 @@ def main():
     parser.add_argument(
         '--max-new-tokens',
         type=int,
-        default=256,
-        help='Maximum number of tokens to generate (default: 256)'
+        default=512,
+        help='Maximum number of tokens to generate (default: 512)'
     )
     parser.add_argument(
         '--output-dir',
