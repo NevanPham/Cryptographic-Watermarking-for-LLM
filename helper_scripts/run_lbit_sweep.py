@@ -342,7 +342,7 @@ def main():
             summary_df = pd.DataFrame(summary_stats)
             print(summary_df.to_string(index=False))
     
-    print(f"\n✅ All results saved to: {output_dir}")
+    print(f"\nAll results saved to: {output_dir}")
 
 
 if __name__ == "__main__":

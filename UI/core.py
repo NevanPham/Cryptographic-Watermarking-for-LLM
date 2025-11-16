@@ -48,7 +48,7 @@ def generate_text(watermark: bool, prompt: str, max_new_tokens: int, key_file: s
             
         with open(key_file, 'wb') as f:
             f.write(secret_key)
-        print(f"🔑 Secret key saved to {key_file}")
+        print(f"Secret key saved to {key_file}")
 
     return final_text
 
@@ -108,7 +108,7 @@ def evaluate_model(prompts_file, max_new_tokens, eval_model, delta, entropy_thre
     key_map_path = os.path.join(output_dir, 'key_map.json')
     with open(key_map_path, 'w') as f:
         json.dump(key_map, f, indent=2)
-    print(f"\n🔑 Generation complete. Key map saved to '{key_map_path}'")
+    print(f"\nGeneration complete. Key map saved to '{key_map_path}'")
 
     # --- Stage 3: Detection and Analysis ---
     print("\n--- Starting Detection & Analysis Stage ---")
@@ -171,4 +171,4 @@ def evaluate_model(prompts_file, max_new_tokens, eval_model, delta, entropy_thre
     with open(results_path, 'w') as f:
         json.dump(results, f, indent=2)
             
-    print(f"\n✅ Evaluation complete. Final analysis summary saved to '{results_path}'.")
+    print(f"\nEvaluation complete. Final analysis summary saved to '{results_path}'.")

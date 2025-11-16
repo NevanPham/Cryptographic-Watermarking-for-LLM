@@ -75,10 +75,10 @@ def plot_completeness_vs_soundness(widget, df, output_dir, params, z_threshold):
     unwm_scores = df[df['type'] == 'unwatermarked']['z_score']
 
     if wm_scores.empty:
-        print(f"⚠️ Warning: No 'clean' watermarked data found for parameters: {params}. Skipping this completeness plot.")
+        print(f"Warning: No 'clean' watermarked data found for parameters: {params}. Skipping this completeness plot.")
         return
     if unwm_scores.empty:
-        print("⚠️ Warning: No unwatermarked data found. Skipping all completeness plots.")
+        print("Warning: No unwatermarked data found. Skipping all completeness plots.")
         return
 
 
@@ -153,7 +153,7 @@ def plot_robustness_sweep(widget, df, output_dir, sweep_var, z_threshold):
     robustness_df = df[(df['type'] == 'watermarked') & (df['perturbation'] != 'clean')].copy()
 
     if robustness_df.empty:
-        print("⚠️ No perturbed text data found to generate robustness plot.")
+        print("No perturbed text data found to generate robustness plot.")
         fig.clf()
         return
 
@@ -203,10 +203,10 @@ def plot_robustness_sweep(widget, df, output_dir, sweep_var, z_threshold):
 def analyse(eval_dir, z_threshold, widget1, widget2):
     results_path = os.path.join(eval_dir, 'analysis_results.json')
     if not os.path.exists(results_path):
-        print(f"❌ Error: Could not find 'analysis_results.json' in '{eval_dir}'")
+        print(f"Error: Could not find 'analysis_results.json' in '{eval_dir}'")
         return
 
-    print(f"📄 Loading results from {results_path}")
+    print(f"Loading results from {results_path}")
     df = pd.read_json(results_path)
 
     df = df[df['z_score'].apply(lambda x: isinstance(x, (int, float)))]
@@ -218,7 +218,7 @@ def analyse(eval_dir, z_threshold, widget1, widget2):
             ordered=True
         )
     else:
-        print("⚠️ Warning: 'perturbation' column not found in dataframe — skipping categorization.")
+        print("Warning: 'perturbation' column not found in dataframe — skipping categorization.")
 
 
     # --- Identify the swept parameter ---
@@ -776,7 +776,7 @@ class GUIAppWindow(QMainWindow, Ui_MainWindow):
             
             with open(key_file, 'wb') as f:
                 f.write(secret_key)
-            print(f"🔑 Secret key saved to {key_file}")
+            print(f"Secret key saved to {key_file}")
         
         self.responseBox.setPlainText(f"Prompt: '{prompt}'\n'{final_text}'") # add final text to text display box
         QApplication.processEvents()
@@ -800,11 +800,11 @@ class GUIAppWindow(QMainWindow, Ui_MainWindow):
         try:
             with open(key_file, 'rb') as f:
                 secret_key = f.read()
-            print(f"🔑 Loaded secret key from {key_file}")
+            print(f"Loaded secret key from {key_file}")
             text_to_check = str(self.detectBox.toPlainText().strip())
 
         except FileNotFoundError as e:
-            print(f"❌ Error: Could not find file {e.filename}")
+            print(f"Error: Could not find file {e.filename}")
             return
             
         print("\nRunning detection algorithm...")
@@ -820,7 +820,7 @@ class GUIAppWindow(QMainWindow, Ui_MainWindow):
         final_params = pass_1_params
 
         if block_count < 75 and not is_detected:
-            print(f"⚠️ Initial block count ({block_count}) is low. Running a more aggressive second pass...")
+            print(f"Initial block count ({block_count}) is low. Running a more aggressive second pass...")
             
             pass_2_params = pass_1_params.copy()
             pass_2_params['entropy_threshold'] -= 2.0
@@ -835,7 +835,7 @@ class GUIAppWindow(QMainWindow, Ui_MainWindow):
         print("\n--- Detection Results ---")
         print(f"  Z-Score: {z_score:.4f}")
         print(f"  Threshold: {z_threshold}")
-        print(f"  Detected: {'✅ Yes' if is_detected else '❌ No'}")
+        print(f"  Detected: {'Yes' if is_detected else 'No'}")
         print(f"  Blocks Found: {block_count}")
         print(f"  Final Params Used: {final_params}")
         print("-------------------------")

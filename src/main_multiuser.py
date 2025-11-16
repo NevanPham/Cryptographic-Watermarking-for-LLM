@@ -86,9 +86,9 @@ def main():
     try:
         # Load user data and generate codes for both commands
         muw.fingerprinter.gen(users_file=args.users_file)
-        print(f"📖 Loaded {muw.fingerprinter.N} users and codes from {args.users_file}")
+        print(f"Loaded {muw.fingerprinter.N} users and codes from {args.users_file}")
     except (FileNotFoundError, ValueError, KeyError) as e:
-        print(f"❌ Error initializing fingerprinting: {e}")
+        print(f"Error initializing fingerprinting: {e}")
         return
 
     if args.command == 'generate':
@@ -97,7 +97,7 @@ def main():
         
         if args.prompt_file:
             if not os.path.exists(args.prompt_file):
-                print(f"❌ Error: Prompt file '{args.prompt_file}' not found.")
+                print(f"Error: Prompt file '{args.prompt_file}' not found.")
                 return
             with open(args.prompt_file, 'r', encoding='utf-8') as f:
                 file_content = f.read().strip()
@@ -109,11 +109,11 @@ def main():
         if args.prompt:
             # If both prompt file and direct prompt are provided, direct prompt takes precedence
             if args.prompt_file:
-                print("⚠️  Warning: Both --prompt-file and direct prompt provided. Using direct prompt.")
+                print("Warning: Both --prompt-file and direct prompt provided. Using direct prompt.")
             prompt_parts = [args.prompt]
         
         if not prompt_parts:
-            print("❌ Error: Must provide either 'prompt' argument, --prompt-file, or both --prompt-file and --prompt-suffix.")
+            print("Error: Must provide either 'prompt' argument, --prompt-file, or both --prompt-file and --prompt-suffix.")
             return
         
         # Join prompt parts with a space (or newline if file + suffix)
@@ -124,21 +124,21 @@ def main():
             final_prompt = prompt_parts[0]
         
         if args.prompt_file:
-            print(f"📄 Loaded prompt from file: {args.prompt_file}")
+            print(f"Loaded prompt from file: {args.prompt_file}")
         if args.prompt_suffix:
-            print(f"➕ Appended suffix to prompt")
+            print(f"Appended suffix to prompt")
         
         # Load existing master key if it exists, otherwise generate a new one
         if os.path.exists(args.key_file):
             with open(args.key_file, 'r') as f:
                 master_key_hex = f.read().strip()
                 master_key = bytes.fromhex(master_key_hex)
-            print(f"🔑 Loaded existing master key from {args.key_file}")
+            print(f"Loaded existing master key from {args.key_file}")
         else:
             master_key = muw.keygen()
             with open(args.key_file, 'w') as f:
                 f.write(master_key.hex())
-            print(f"🔑 Generated new master key and saved to {args.key_file}")
+            print(f"Generated new master key and saved to {args.key_file}")
         
         raw_text = muw.embed(master_key, args.user_id, final_prompt, max_new_tokens=args.max_new_tokens)
         final_text = parse_final_output(raw_text, args.model.__class__.__name__.lower())
@@ -149,7 +149,7 @@ def main():
         with open(args.output_file, 'w', encoding='utf-8') as f:
             f.write(final_text)
             
-        print(f"\n✅ Output for User ID {args.user_id} saved to {args.output_file}")
+        print(f"\nOutput for User ID {args.user_id} saved to {args.output_file}")
 
     elif args.command == 'trace':
         with open(args.input_file, 'r', encoding='utf-8') as f:
@@ -162,11 +162,11 @@ def main():
         
         print("\n--- Trace Results ---")
         if accused_users:
-            print(f"  ✅ Text traced back to user(s):")
+            print(f"  Text traced back to user(s):")
             for user in accused_users:
                 print(f"     - User ID: {user['user_id']}, Username: {user['username']}, Match: {user['match_score_percent']:.2f}%")
         else:
-            print("  ❌ Could not confidently trace text to any user.")
+            print("  Could not confidently trace text to any user.")
         print("---------------------")
 
 if __name__ == "__main__":

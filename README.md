@@ -54,13 +54,13 @@ This repository implements cryptographic watermarking techniques for LLM text ge
 
 ## Features
 
-✅ **Three watermarking modes**: Zero-bit detection, L-bit message embedding, multi-user tracing
-✅ **Multiple model support**: GPT-2 (local), GPT-OSS-20B, GPT-OSS-120B
-✅ **Three interfaces**: CLI, Desktop GUI (PySide6), SLURM batch scripts
-✅ **Robustness testing**: Built-in perturbation attacks (deletion, paraphrasing)
-✅ **Comprehensive evaluation**: Parameter sweeps, automated plotting, statistical analysis
-✅ **HPC-ready**: Offline model caching, SLURM job templates
-✅ **Well-documented**: Copy-paste commands, parameter guides, usage examples
+**Three watermarking modes**: Zero-bit detection, L-bit message embedding, multi-user tracing
+**Multiple model support**: GPT-2 (local), GPT-OSS-20B, GPT-OSS-120B
+**Three interfaces**: CLI, Desktop GUI (PySide6), SLURM batch scripts
+**Robustness testing**: Built-in perturbation attacks (deletion, paraphrasing)
+**Comprehensive evaluation**: Parameter sweeps, automated plotting, statistical analysis
+**HPC-ready**: Offline model caching, SLURM job templates
+**Well-documented**: Copy-paste commands, parameter guides, usage examples
 
 ---
 

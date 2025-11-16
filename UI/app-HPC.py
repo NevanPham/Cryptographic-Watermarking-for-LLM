@@ -121,10 +121,10 @@ def plot_completeness_vs_soundness(widget, df, output_dir, params, z_threshold):
     unwm_scores = df[df['type'] == 'unwatermarked']['z_score']
 
     if wm_scores.empty:
-        print(f"⚠️ Warning: No 'clean' watermarked data found for parameters: {params}. Skipping this completeness plot.")
+        print(f"Warning: No 'clean' watermarked data found for parameters: {params}. Skipping this completeness plot.")
         return
     if unwm_scores.empty:
-        print("⚠️ Warning: No unwatermarked data found. Skipping all completeness plots.")
+        print("Warning: No unwatermarked data found. Skipping all completeness plots.")
         return
 
 
@@ -199,7 +199,7 @@ def plot_robustness_sweep(widget, df, output_dir, sweep_var, z_threshold):
     robustness_df = df[(df['type'] == 'watermarked') & (df['perturbation'] != 'clean')].copy()
 
     if robustness_df.empty:
-        print("⚠️ No perturbed text data found to generate robustness plot.")
+        print("No perturbed text data found to generate robustness plot.")
         fig.clf()
         return
 
@@ -248,10 +248,10 @@ def plot_robustness_sweep(widget, df, output_dir, sweep_var, z_threshold):
 def analyse(eval_dir, z_threshold, widget1, widget2):
     results_path = os.path.join(eval_dir, 'analysis_results.json')
     if not os.path.exists(results_path):
-        print(f"❌ Error: Could not find 'analysis_results.json' in '{eval_dir}'")
+        print(f"Error: Could not find 'analysis_results.json' in '{eval_dir}'")
         return
 
-    print(f"📄 Loading results from {results_path}")
+    print(f"Loading results from {results_path}")
     df = pd.read_json(results_path)
 
     df = df[df['z_score'].apply(lambda x: isinstance(x, (int, float)))]
@@ -263,7 +263,7 @@ def analyse(eval_dir, z_threshold, widget1, widget2):
             ordered=True
         )
     else:
-        print("⚠️ Warning: 'perturbation' column not found in dataframe — skipping categorization.")
+        print("Warning: 'perturbation' column not found in dataframe — skipping categorization.")
 
 
     # --- Identify the swept parameter ---

@@ -50,13 +50,13 @@ def main():
             text = f.read()
 
     except FileNotFoundError as e:
-        print(f"❌ Error: File not found - {e.filename}")
+        print(f"Error: File not found - {e.filename}")
         return
 
     original_message = args.message
     L = len(original_message)
 
-    print(f"⚙️ Analyzing with L={L} and Entropy Threshold={args.entropy_threshold}")
+    print(f"Analyzing with L={L} and Entropy Threshold={args.entropy_threshold}")
 
     # --- 2. Find Block Boundaries ---
     token_ids = tokenizer.encode(text, return_tensors='pt').to(model.device)[0]
@@ -71,12 +71,12 @@ def main():
     block_to_bit_map = {token_index: i % L for i, token_index in enumerate(block_indices)}
 
     # --- 4. Print Summary ---
-    print(f"\n✅ Found {len(block_indices)} total blocks.")
+    print(f"\nFound {len(block_indices)} total blocks.")
     embedded_bits_count = Counter(block_to_bit_map.values())
     print("\n--- Bit Embedding Summary ---")
     for i in range(L):
         count = embedded_bits_count.get(i, 0)
-        status = "✅ Embedded" if count > 0 else "❌ MISSED"
+        status = "Embedded" if count > 0 else "MISSED"
         print(f"  Bit #{i} (value: {original_message[i]}): {status} {count} time(s)")
     print("-----------------------------\n")
 

@@ -61,11 +61,11 @@ def main():
         try:
             num_users = int(input("Enter number of users for collusion scenario: "))
             if num_users < 2:
-                print("❌ Error: Need at least 2 users for collusion. Please try again.")
+                print("Error: Need at least 2 users for collusion. Please try again.")
                 continue
             break
         except ValueError:
-            print("❌ Error: Please enter a valid number.")
+            print("Error: Please enter a valid number.")
     
     print()
     print(f"Using settings:")
@@ -92,9 +92,9 @@ def main():
     # Load user data and generate codes
     try:
         muw.fingerprinter.gen(users_file=users_file)
-        print(f"📖 Loaded {muw.fingerprinter.N} users and codes from {users_file}")
+        print(f"Loaded {muw.fingerprinter.N} users and codes from {users_file}")
     except (FileNotFoundError, ValueError, KeyError) as e:
-        print(f"❌ Error initializing fingerprinting: {e}")
+        print(f"Error initializing fingerprinting: {e}")
         return
     
     # Load or generate master key
@@ -102,12 +102,12 @@ def main():
         with open(key_file, 'r') as f:
             master_key_hex = f.read().strip()
             master_key = bytes.fromhex(master_key_hex)
-        print(f"🔑 Loaded existing master key from {key_file}")
+        print(f"Loaded existing master key from {key_file}")
     else:
         master_key = muw.keygen()
         with open(key_file, 'w') as f:
             f.write(master_key.hex())
-        print(f"🔑 Generated new master key and saved to {key_file}")
+        print(f"Generated new master key and saved to {key_file}")
     
     print()
     print("-" * 60)
@@ -125,16 +125,16 @@ def main():
             try:
                 user_id = int(input(f"  Enter User ID (0-{muw.fingerprinter.N-1}): "))
                 if user_id < 0 or user_id >= muw.fingerprinter.N:
-                    print(f"    ❌ Error: User ID must be between 0 and {muw.fingerprinter.N-1}")
+                    print(f"    Error: User ID must be between 0 and {muw.fingerprinter.N-1}")
                     continue
                 break
             except ValueError:
-                print("    ❌ Error: Please enter a valid number.")
+                print("    Error: Please enter a valid number.")
         
         # Get prompt
         prompt = input(f"  Enter prompt for User {user_id}: ").strip()
         if not prompt:
-            print("    ⚠️  Warning: Empty prompt, using default...")
+            print("    Warning: Empty prompt, using default...")
             prompt = "The future of AI is"
         
         user_data.append({
@@ -165,9 +165,9 @@ def main():
                 'text': final_text,
                 'prompt': prompt
             })
-            print(f"  ✅ Generated {len(final_text)} characters")
+            print(f"  Generated {len(final_text)} characters")
         except Exception as e:
-            print(f"  ❌ Error generating text: {e}")
+            print(f"  Error generating text: {e}")
             return
     
     # Combine all texts
@@ -198,10 +198,10 @@ def main():
     
     print()
     print("=" * 60)
-    print("✅ Collusion scenario created successfully!")
+    print("Collusion scenario created successfully!")
     print("=" * 60)
-    print(f"📄 Combined text saved to: {output_file}")
-    print(f"🔑 Master key location: {key_file}")
+    print(f"Combined text saved to: {output_file}")
+    print(f"Master key location: {key_file}")
     print()
     print("To trace this collusion scenario, run:")
     print(f'  python -m src.main_multiuser trace ^')

@@ -29,7 +29,7 @@ def cmd_generate(args):
         print("------------------------")
         with open(args.output_file, 'w', encoding='utf-8') as f:
             f.write(final_text)
-        print(f"\n✅ Output saved to {args.output_file}")
+        print(f"\nOutput saved to {args.output_file}")
         
     else:
         watermarker = ZeroBitWatermarker(
@@ -55,11 +55,11 @@ def cmd_generate(args):
         # Save the parsed output and key
         with open(args.output_file, 'w', encoding='utf-8') as f:
             f.write(final_text)
-        print(f"\n✅ Watermarked text saved to {args.output_file}")
+        print(f"\nWatermarked text saved to {args.output_file}")
         
         with open(args.key_file, 'wb') as f:
             f.write(secret_key)
-        print(f"🔑 Secret key saved to {args.key_file}")
+        print(f"Secret key saved to {args.key_file}")
 
 
 def cmd_detect(args):
@@ -70,14 +70,14 @@ def cmd_detect(args):
     try:
         with open(args.key_file, 'rb') as f:
             secret_key = f.read()
-        print(f"🔑 Loaded secret key from {args.key_file}")
+        print(f"Loaded secret key from {args.key_file}")
 
         with open(args.input_file, 'r', encoding='utf-8') as f:
             text_to_check = f.read()
-        print(f"📄 Loaded text from {args.input_file}")
+        print(f"Loaded text from {args.input_file}")
 
     except FileNotFoundError as e:
-        print(f"❌ Error: Could not find file {e.filename}")
+        print(f"Error: Could not find file {e.filename}")
         return
         
     print("\nRunning detection algorithm...")
@@ -93,7 +93,7 @@ def cmd_detect(args):
     final_params = pass_1_params
 
     if block_count < 75 and not is_detected:
-        print(f"⚠️ Initial block count ({block_count}) is low. Running a more aggressive second pass...")
+        print(f"Initial block count ({block_count}) is low. Running a more aggressive second pass...")
         
         pass_2_params = pass_1_params.copy()
         pass_2_params['entropy_threshold'] -= 2.0
@@ -108,7 +108,7 @@ def cmd_detect(args):
     print("\n--- Detection Results ---")
     print(f"  Z-Score: {z_score:.4f}")
     print(f"  Threshold: {args.z_threshold}")
-    print(f"  Detected: {'✅ Yes' if is_detected else '❌ No'}")
+    print(f"  Detected: {'Yes' if is_detected else 'No'}")
     print(f"  Blocks Found: {block_count}")
     print(f"  Final Params Used: {final_params}")
     print("-------------------------")
@@ -149,7 +149,7 @@ def cmd_generate_lbit(args):
     with open(args.key_file, 'w') as f:
         json.dump(master_secret_key.hex(), f)  # Save single key as hex
     print(f"Watermarked L-bit text saved to {args.output_file}")
-    print(f"🔑 Secret key saved to {args.key_file}")
+    print(f"Secret key saved to {args.key_file}")
 
 
 def cmd_detect_lbit(args):
@@ -262,7 +262,7 @@ def cmd_evaluate(args):
     key_map_path = os.path.join(args.output_dir, 'key_map.json')
     with open(key_map_path, 'w') as f:
         json.dump(key_map, f, indent=2)
-    print(f"\n🔑 Generation complete. Key map saved to '{key_map_path}'")
+        print(f"\nGeneration complete. Key map saved to '{key_map_path}'")
 
     # --- Stage 3: Detection and Analysis ---
     print("\n--- Starting Detection & Analysis Stage ---")
@@ -373,7 +373,7 @@ def cmd_evaluate(args):
     with open(results_path, 'w') as f:
         json.dump(results, f, indent=2)
 
-    print(f"\n✅ Evaluation complete. Final analysis summary saved to '{results_path}'.")
+        print(f"\nEvaluation complete. Final analysis summary saved to '{results_path}'.")
     print("You can now run 'analyse.py' on this directory to generate plots.")
 
 

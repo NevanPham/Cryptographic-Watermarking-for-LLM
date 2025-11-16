@@ -29,9 +29,9 @@ for name, (model_id, model_class, tokenizer_class) in models_to_download.items()
         # Download and cache the model and tokenizer
         model_class.from_pretrained(model_id, cache_dir=cache_dir)
         tokenizer_class.from_pretrained(model_id, cache_dir=cache_dir)
-        print(f"✅ Successfully downloaded {name}.")
+        print(f"Successfully downloaded {name}.")
     except Exception as e:
-        print(f"❌ Failed to download {name}. Error: {e}")
+        print(f"Failed to download {name}. Error: {e}")
 
 setup_nltk()
 

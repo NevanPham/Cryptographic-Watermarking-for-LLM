@@ -110,9 +110,9 @@ def main():
         
         if is_correct:
             score += 1
-            print("✅ Correct!")
+            print("Correct!")
         else:
-            print("❌ Incorrect!")
+            print("Incorrect!")
         
         print(f"The response was {'watermarked' if sample['is_watermarked'] else 'not watermarked'}.")
         if i < num_tests - 1:

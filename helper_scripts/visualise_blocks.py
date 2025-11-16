@@ -56,7 +56,7 @@ def main():
     args = parser.parse_args()
 
     if not os.path.isdir(args.eval_dir):
-        print(f"❌ Error: Directory not found at '{args.eval_dir}'")
+        print(f"Error: Directory not found at '{args.eval_dir}'")
         return
 
     # --- 1. Load Model ---
@@ -69,7 +69,7 @@ def main():
     watermarked_files = [f for f in all_files if "_wm_" in f and f.endswith('clean.txt')]
     
     if not watermarked_files:
-        print(f"⚠️ No watermarked files ('_wm_...txt') found in '{args.eval_dir}'.")
+        print(f"No watermarked files ('_wm_...txt') found in '{args.eval_dir}'.")
         return
         
     print(f"Found {len(watermarked_files)} watermarked text files to process.")
@@ -131,7 +131,7 @@ def main():
             f.write(visualized_text)
             f.write("\n")
 
-    print(f"\n✅ Processing complete. All visualizations have been appended to '{output_filepath}'.")
+    print(f"\nProcessing complete. All visualizations have been appended to '{output_filepath}'.")
 
 if __name__ == "__main__":
     main()

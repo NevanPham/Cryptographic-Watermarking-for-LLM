@@ -55,7 +55,7 @@ def setup_nltk():
         nltk.data.find('tokenizers/punkt')
         
     except LookupError:
-        print("❌ ERROR: NLTK 'punkt' package not found in the specified path.")
+        print("ERROR: NLTK 'punkt' package not found in the specified path.")
         print(f"Please run 'download_models_hpc.py' on a login node first.")
         # Exit if the required data is not found
         exit(1)
@@ -64,7 +64,7 @@ def setup_nltk():
         nltk.data.find('tokenizers/punkt_tab')
         
     except LookupError:
-        print("❌ ERROR: NLTK 'punkt_tab' package not found in the specified path.")
+        print("ERROR: NLTK 'punkt_tab' package not found in the specified path.")
         print(f"Please run 'download_models_hpc.py' on a login node first.")
         # Exit if the required data is not found
         exit(1)

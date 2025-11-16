@@ -21,7 +21,7 @@ def setup_nltk():
         nltk.data.find('tokenizers/punkt')
         
     except LookupError:
-        print("❌ ERROR: NLTK 'punkt' package not found in the specified path.")
+        print("ERROR: NLTK 'punkt' package not found in the specified path.")
         print(f"Please run 'download_models_hpc.py' on a login node first.")
         # Exit if the required data is not found
         exit(1)
@@ -30,7 +30,7 @@ def setup_nltk():
         nltk.data.find('tokenizers/punkt_tab')
         
     except LookupError:
-        print("❌ ERROR: NLTK 'punkt_tab' package not found in the specified path.")
+        print("ERROR: NLTK 'punkt_tab' package not found in the specified path.")
         print(f"Please run 'download_models_hpc.py' on a login node first.")
         # Exit if the required data is not found
         exit(1)
@@ -101,7 +101,7 @@ def main():
     args = parser.parse_args()
 
     if not os.path.isdir(args.eval_dir):
-        print(f"❌ Error: Directory not found at '{args.eval_dir}'")
+        print(f"Error: Directory not found at '{args.eval_dir}'")
         return
 
     # --- 1. Setup ---
@@ -115,7 +115,7 @@ def main():
     clean_files = [f for f in all_files if "_wm_" in f and f.endswith("_clean.txt")]
     
     if not clean_files:
-        print(f"⚠️ No clean watermarked files ('..._clean.txt') found in '{args.eval_dir}'.")
+        print(f"No clean watermarked files ('..._clean.txt') found in '{args.eval_dir}'.")
         return
         
     print(f"\nFound {len(clean_files)} clean watermarked files to attack.")
@@ -137,7 +137,7 @@ def main():
         with open(output_filepath, 'w', encoding='utf-8') as f:
             f.write(substituted_text)
     
-    print(f"\n✅ Processing complete. All {len(clean_files)} substitution attack files have been regenerated in '{args.eval_dir}'.")
+    print(f"\nProcessing complete. All {len(clean_files)} substitution attack files have been regenerated in '{args.eval_dir}'.")
     print("You can now re-run the detection job.")
 
 if __name__ == "__main__":

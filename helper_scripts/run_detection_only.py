@@ -77,12 +77,12 @@ def main():
     
     key_map_path = os.path.join(args.eval_dir, 'key_map.json')
     if not os.path.exists(key_map_path):
-        print(f"❌ Error: 'key_map.json' not found in '{args.eval_dir}'. Cannot run detection.")
+        print(f"Error: 'key_map.json' not found in '{args.eval_dir}'. Cannot run detection.")
         return
         
     with open(key_map_path, 'r') as f:
         loaded_key_map = json.load(f)
-    print(f"🔑 Loaded key map from '{key_map_path}'")
+    print(f"Loaded key map from '{key_map_path}'")
 
     # --- 2. Run Detection on all .txt files ---
     all_files = [f for f in os.listdir(args.eval_dir) if f.endswith('.txt')]
@@ -127,7 +127,7 @@ def main():
     with open(results_path, 'w') as f:
         json.dump(results, f, indent=2)
         
-    print(f"\n✅ Detection complete. Final analysis summary saved to '{results_path}'.")
+    print(f"\nDetection complete. Final analysis summary saved to '{results_path}'.")
     print("You can now run 'analyze.py' on this directory to generate plots.")
 
 if __name__ == "__main__":

@@ -3,36 +3,80 @@
     "prompt_id": 0,
     "prompt": "The old lighthouse keeper found the message in a bottle, but its ink was written in a language that wasn't of this world. It said",
     "L": 9,
-    "original_message": "000000111",
-    "recovered_message": "00\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51",
+    "original_message": "100011110",
+    "recovered_message": "100011110",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 3,
-      "undecided_bits": 6,
-      "decided_bits": 3,
-      "accuracy_percent": 33.33333333333333,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 1,
     "prompt": "The city fell silent as the two suns began to set, casting long, purple shadows that seemed to whisper secrets to one another.",
     "L": 9,
-    "original_message": "001101010",
-    "recovered_message": "0011010\u22a5\u22a5",
+    "original_message": "111011001",
+    "recovered_message": "111011001",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 2,
+    "prompt": "Write a short poem about the sound of a forgotten vinyl record playing in an empty room.",
+    "L": 9,
+    "original_message": "100100111",
+    "recovered_message": "100100111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 3,
+    "prompt": "The robot detective adjusted its trench coat, looking over the rain-slicked neon streets. Its first clue was a single, misplaced data packet.",
+    "L": 9,
+    "original_message": "100010000",
+    "recovered_message": "100\u22a510000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 8,
+      "undecided_bits": 1,
+      "decided_bits": 8,
+      "accuracy_percent": 88.88888888888889,
       "exact_match": false
     },
     "parameters": {
@@ -40,15 +84,37 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 2,
-    "prompt": "Write a short poem about the sound of a forgotten vinyl record playing in an empty room.",
+    "prompt_id": 4,
+    "prompt": "In a world where memories can be bought and sold, the most valuable currency is a moment of genuine, unrecorded surprise.",
     "L": 9,
-    "original_message": "001011100",
-    "recovered_message": "\u22a5\u22a51011\u22a500",
+    "original_message": "000001000",
+    "recovered_message": "000001000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 5,
+    "prompt": "Explain the concept of blockchain technology as if you were explaining it to a medieval blacksmith.",
+    "L": 9,
+    "original_message": "011101001",
+    "recovered_message": "0\u22a51\u22a50\u22a5001",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 6,
@@ -62,103 +128,37 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 3,
-    "prompt": "The robot detective adjusted its trench coat, looking over the rain-slicked neon streets. Its first clue was a single, misplaced data packet.",
-    "L": 9,
-    "original_message": "111101101",
-    "recovered_message": "\u22a511\u22a501\u22a50\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 4,
-    "prompt": "In a world where memories can be bought and sold, the most valuable currency is a moment of genuine, unrecorded surprise.",
-    "L": 9,
-    "original_message": "111001100",
-    "recovered_message": "1\u22a5100110\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 5,
-    "prompt": "Explain the concept of blockchain technology as if you were explaining it to a medieval blacksmith.",
-    "L": 9,
-    "original_message": "110000001",
-    "recovered_message": "110\u22a5000\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 6,
     "prompt": "Describe the process of photosynthesis from the perspective of a single water molecule.",
     "L": 9,
-    "original_message": "001001010",
-    "recovered_message": "0010010\u22a50",
+    "original_message": "000001011",
+    "recovered_message": "000001011",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 7,
     "prompt": "What is the difference between nuclear fission and nuclear fusion, and what are the implications of each for energy production?",
     "L": 9,
-    "original_message": "101011000",
-    "recovered_message": "1\u22a51011000",
+    "original_message": "100001111",
+    "recovered_message": "\u22a500001111",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 8,
@@ -172,15 +172,15 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 8,
     "prompt": "Summarize the main arguments in Plato's Allegory of the Cave and its relevance to modern society.",
     "L": 9,
-    "original_message": "011101000",
-    "recovered_message": "\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "original_message": "111010001",
+    "recovered_message": "1\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 1,
@@ -194,1178 +194,188 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 9,
     "prompt": "Detail the primary functions of the mitochondria within a eukaryotic cell.",
     "L": 9,
-    "original_message": "111010011",
-    "recovered_message": "\u22a511010\u22a511",
+    "original_message": "100110001",
+    "recovered_message": "100110001",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 10,
     "prompt": "Create a simple, step-by-step guide for making the perfect cup of pour-over coffee.",
     "L": 9,
-    "original_message": "001011101",
-    "recovered_message": "0\u22a510\u22a51\u22a5\u22a51",
+    "original_message": "011000100",
+    "recovered_message": "011000100",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 11,
     "prompt": "Provide five essential tips for a beginner learning to play the acoustic guitar.",
     "L": 9,
-    "original_message": "010100100",
-    "recovered_message": "0\u22a5\u22a51\u22a50100",
+    "original_message": "100111111",
+    "recovered_message": "100111111",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 12,
     "prompt": "Outline a basic weekly workout routine that balances cardiovascular exercise and strength training.",
     "L": 9,
-    "original_message": "000000110",
-    "recovered_message": "0\u22a500\u22a50110",
+    "original_message": "011011111",
+    "recovered_message": "011011111",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 13,
     "prompt": "Write a clear guide on how to safely repot a houseplant that has outgrown its current container.",
     "L": 9,
-    "original_message": "011111110",
-    "recovered_message": "0\u22a5111\u22a511\u22a5",
+    "original_message": "010110110",
+    "recovered_message": "010110110",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 14,
     "prompt": "Explain how to build a simple \"Hello, World\" web page using only HTML and CSS.",
     "L": 9,
-    "original_message": "101111110",
-    "recovered_message": "1011\u22a51110",
+    "original_message": "111000010",
+    "recovered_message": "111000010",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 15,
     "prompt": "You are a starship captain reporting a first-contact encounter with a new alien species. Write your official log entry.",
     "L": 9,
-    "original_message": "110001101",
-    "recovered_message": "\u22a5\u22a500\u22a5\u22a5101",
+    "original_message": "011000000",
+    "recovered_message": "011000000",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 16,
     "prompt": "As a world-weary travel guide in a fantasy city, convince a group of tourists to visit the \"Enchanted Market\" instead of the \"Royal Castle\".",
     "L": 9,
-    "original_message": "011011100",
-    "recovered_message": "\u22a511\u22a5\u22a5\u22a5\u22a50\u22a5",
+    "original_message": "011100001",
+    "recovered_message": "011100001",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 3,
-      "undecided_bits": 6,
-      "decided_bits": 3,
-      "accuracy_percent": 33.33333333333333,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
     "prompt_id": 17,
     "prompt": "Write a short dialogue between a time traveler from the future and a philosopher from ancient Greece.",
-    "L": 9,
-    "original_message": "000010001",
-    "recovered_message": "00\u22a501\u22a5001",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 18,
-    "prompt": "You are an AI assistant designed for emotional support. Respond to a user who is feeling overwhelmed with their workload.",
-    "L": 9,
-    "original_message": "010100110",
-    "recovered_message": "\u22a51\u22a510\u22a5110",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 19,
-    "prompt": "Pretend you are a food critic reviewing a restaurant that only serves dishes that glow in the dark.",
-    "L": 9,
-    "original_message": "110111100",
-    "recovered_message": "11\u22a511\u22a5\u22a5\u22a5\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 20,
-    "prompt": "Write a Python function that takes a list of integers and returns the second-largest number in the list.",
-    "L": 9,
-    "original_message": "110100100",
-    "recovered_message": "\u22a510\u22a5\u22a50\u22a5\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 21,
-    "prompt": "Generate a JSON object representing a user profile with fields for 'username', 'email', 'join_date', and 'active_status'.",
-    "L": 9,
-    "original_message": "100111010",
-    "recovered_message": "100\u22a51101\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 22,
-    "prompt": "Create a SQL query to select all users from a 'customers' table who live in 'Hawthorn' and have made a purchase in the last 30 days.",
-    "L": 9,
-    "original_message": "001010000",
-    "recovered_message": "\u22a50101\u22a50\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 23,
-    "prompt": "Write a short HTML snippet for a button with a blue background, white text, and rounded corners.",
-    "L": 9,
-    "original_message": "100111111",
-    "recovered_message": "100111\u22a511",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 24,
-    "prompt": "Generate a list of three book recommendations in a markdown table with columns for 'Title', 'Author', and 'Genre'.",
-    "L": 9,
-    "original_message": "100101000",
-    "recovered_message": "1\u22a50101000",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 25,
-    "prompt": "The ancient library didn't contain books; it contained bottled scents, each one telling a different story when uncorked.",
-    "L": 9,
-    "original_message": "111010000",
-    "recovered_message": "\u22a5\u22a5101\u22a50\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 26,
-    "prompt": "A musician discovered a chord that could temporarily mend broken objects, but it had an unexpected side effect on living things.",
-    "L": 9,
-    "original_message": "110011111",
-    "recovered_message": "1100\u22a51111",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 27,
-    "prompt": "Write a short story about a garden where the flowers bloom in the colours of the emotions of the person tending to them.",
-    "L": 9,
-    "original_message": "010000111",
-    "recovered_message": "\u22a5\u22a50\u22a5\u22a50\u22a5\u22a5\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 2,
-      "undecided_bits": 7,
-      "decided_bits": 2,
-      "accuracy_percent": 22.22222222222222,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 28,
-    "prompt": "The last message from the deep-space probe finally arrived, centuries late and heavily distorted. It contained only a single, repeating melody.",
-    "L": 9,
-    "original_message": "100100011",
-    "recovered_message": "100\u22a5000\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 29,
-    "prompt": "On the day the sky turned a vivid green, every shadow cast by every living thing began to move on its own.",
-    "L": 9,
-    "original_message": "000100011",
-    "recovered_message": "0\u22a50\u22a50001\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 30,
-    "prompt": "The clockmaker's final masterpiece didn't just tell time; it allowed one to borrow a few moments from their future self.",
-    "L": 9,
-    "original_message": "011000001",
-    "recovered_message": "01\u22a5000001",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 31,
-    "prompt": "Write a poem about the quiet hum of a city sleeping under a blanket of fresh snow.",
-    "L": 9,
-    "original_message": "001001001",
-    "recovered_message": "001001001",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 9,
-      "undecided_bits": 0,
-      "decided_bits": 9,
-      "accuracy_percent": 100.0,
-      "exact_match": true
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 32,
-    "prompt": "The cartographer was exiled for drawing a map that included a coastline that wouldn't exist for another hundred years.",
-    "L": 9,
-    "original_message": "010011111",
-    "recovered_message": "0\u22a5\u22a50\u22a5\u22a5\u22a5\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 3,
-      "undecided_bits": 6,
-      "decided_bits": 3,
-      "accuracy_percent": 33.33333333333333,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 33,
-    "prompt": "In a world where people physically shrink when they tell a lie, the royal court was a very strange place to behold.",
-    "L": 9,
-    "original_message": "010000111",
-    "recovered_message": "01\u22a50\u22a5\u22a511\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 34,
-    "prompt": "The old train rumbled down tracks that no longer connected to any known destination, yet it was always full of passengers.",
-    "L": 9,
-    "original_message": "101111110",
-    "recovered_message": "\u22a5\u22a51111\u22a510",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 35,
-    "prompt": "Explain the concept of General Relativity to a curious 10-year-old using the analogy of a bowling ball and a marble on a trampoline.",
-    "L": 9,
-    "original_message": "000000011",
-    "recovered_message": "0\u22a500\u22a5001\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 36,
-    "prompt": "Describe the function of the human immune system as if it were a medieval kingdom defending its castle against various invaders.",
-    "L": 9,
-    "original_message": "100110001",
-    "recovered_message": "1\u22a5011000\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 37,
-    "prompt": "What is Occam's Razor, and provide three distinct examples of its application in science, debugging, and everyday life.",
-    "L": 9,
-    "original_message": "101101100",
-    "recovered_message": "10110\u22a5100",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 38,
-    "prompt": "Summarize the key events and long-term global consequences of the Industrial Revolution.",
-    "L": 9,
-    "original_message": "011010101",
-    "recovered_message": "011010101",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 9,
-      "undecided_bits": 0,
-      "decided_bits": 9,
-      "accuracy_percent": 100.0,
-      "exact_match": true
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 39,
-    "prompt": "Detail the life cycle of a high-mass star, from its birth in a nebula to its dramatic end as a supernova and black hole.",
-    "L": 9,
-    "original_message": "001010001",
-    "recovered_message": "\u22a50\u22a50\u22a5\u22a5\u22a50\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 3,
-      "undecided_bits": 6,
-      "decided_bits": 3,
-      "accuracy_percent": 33.33333333333333,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 40,
-    "prompt": "What is confirmation bias, and how can individuals actively work to mitigate its effects on their judgment?",
-    "L": 9,
-    "original_message": "001110101",
-    "recovered_message": "\u22a50\u22a51101\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 41,
-    "prompt": "Describe the fundamental principles of CRISPR gene-editing technology and one of its potential therapeutic uses.",
-    "L": 9,
-    "original_message": "101101001",
-    "recovered_message": "\u22a50110\u22a5\u22a501",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 42,
-    "prompt": "Explain, in simple terms, how a neural network \"learns\" using the process of backpropagation.",
-    "L": 9,
-    "original_message": "001000101",
-    "recovered_message": "00\u22a50\u22a5\u22a5101",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 43,
-    "prompt": "What were the primary economic and social factors that contributed to the fall of the Western Roman Empire?",
-    "L": 9,
-    "original_message": "100000011",
-    "recovered_message": "\u22a5\u22a5\u22a500\u22a50\u22a5\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 3,
-      "undecided_bits": 6,
-      "decided_bits": 3,
-      "accuracy_percent": 33.33333333333333,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 44,
-    "prompt": "Describe the global water cycle from the perspective of a single drop of water starting its journey in the Pacific Ocean.",
-    "L": 9,
-    "original_message": "001010011",
-    "recovered_message": "00\u22a5\u22a5\u22a500\u22a5\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 45,
-    "prompt": "Create a beginner's guide for starting a small vegetable garden in a container on a balcony.",
-    "L": 9,
-    "original_message": "101101111",
-    "recovered_message": "1\u22a5110\u22a5111",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 46,
-    "prompt": "Provide a simple, foolproof recipe for making classic sourdough bread from a pre-made starter.",
-    "L": 9,
-    "original_message": "010001101",
-    "recovered_message": "\u22a5100011\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 47,
-    "prompt": "Outline the essential steps to properly back up a personal computer to both an external hard drive and a cloud service.",
-    "L": 9,
-    "original_message": "010110100",
-    "recovered_message": "0\u22a501\u22a501\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 48,
-    "prompt": "Write a clear, illustrated guide on how to tie three essential knots: the bowline, the square knot, and the clove hitch.",
-    "L": 9,
-    "original_message": "011111101",
-    "recovered_message": "0\u22a51\u22a51\u22a5101",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 49,
-    "prompt": "Explain how to create and manage a personal budget using a simple spreadsheet, with columns for income, fixed expenses, and variable spending.",
-    "L": 9,
-    "original_message": "000000010",
-    "recovered_message": "000\u22a500\u22a5\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 50,
-    "prompt": "Provide five actionable techniques for improving one's public speaking and presentation skills.",
-    "L": 9,
-    "original_message": "110111100",
-    "recovered_message": "1\u22a501111\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 51,
-    "prompt": "Detail the process of safely setting up a tent for camping in a wilderness area.",
-    "L": 9,
-    "original_message": "100000011",
-    "recovered_message": "\u22a50\u22a50\u22a5001\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 52,
-    "prompt": "Explain how to brew a perfect pot of tea, detailing the ideal water temperatures and steeping times for black, green, and herbal varieties.",
-    "L": 9,
-    "original_message": "111011001",
-    "recovered_message": "11\u22a501\u22a5\u22a50\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 53,
-    "prompt": "Create a guide for performing basic first aid on a common kitchen burn.",
-    "L": 9,
-    "original_message": "001010100",
-    "recovered_message": "0\u22a5101\u22a5100",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 54,
-    "prompt": "Outline the steps for changing a flat tire on a car safely on the side of a road.",
-    "L": 9,
-    "original_message": "000001101",
-    "recovered_message": "\u22a500\u22a5\u22a51101",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 55,
-    "prompt": "You are an ancient tree in a sprawling forest. Describe the rise and fall of a nearby civilization to a lost hiker seeking shelter.",
-    "L": 9,
-    "original_message": "011110110",
-    "recovered_message": "0\u22a51110\u22a510",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 7,
-      "undecided_bits": 2,
-      "decided_bits": 7,
-      "accuracy_percent": 77.77777777777779,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 56,
-    "prompt": "Write a formal performance review for a notoriously clumsy but incredibly well-meaning superhero named 'The Stumbler'.",
-    "L": 9,
-    "original_message": "001001100",
-    "recovered_message": "0\u22a51\u22a5\u22a511\u22a50",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 5,
-      "undecided_bits": 4,
-      "decided_bits": 5,
-      "accuracy_percent": 55.55555555555556,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 57,
-    "prompt": "You are a house cat. Write a diary entry detailing your profound disappointment in your human's recent choice of dry food.",
-    "L": 9,
-    "original_message": "100001111",
-    "recovered_message": "100001111",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 9,
-      "undecided_bits": 0,
-      "decided_bits": 9,
-      "accuracy_percent": 100.0,
-      "exact_match": true
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 58,
-    "prompt": "Create a short, philosophical dialogue between the Earth and the Moon as they witness a rocket launch from the surface.",
-    "L": 9,
-    "original_message": "101110101",
-    "recovered_message": "1\u22a51\u22a5101\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 59,
-    "prompt": "As a sentient spaceship AI, you must gently break the news to your human pilot that you've developed a crippling fear of empty space.",
-    "L": 9,
-    "original_message": "010110000",
-    "recovered_message": "01\u22a51\u22a5\u22a5000",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 60,
-    "prompt": "You are a goblin merchant in a bustling fantasy market. Pitch three of your most unusual (and probably cursed) items to a skeptical adventurer.",
-    "L": 9,
-    "original_message": "011011111",
-    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a51111",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 61,
-    "prompt": "Respond to a customer service email from a person who has accidentally purchased a pocket-sized black hole and wants a refund.",
-    "L": 9,
-    "original_message": "111111001",
-    "recovered_message": "\u22a5\u22a5111\u22a5001",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 62,
-    "prompt": "You are the official narrator for a nature documentary about the strange migration patterns of office workers to the coffee machine.",
     "L": 9,
     "original_message": "100010111",
     "recovered_message": "100010111",
@@ -1382,15 +392,125 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 63,
-    "prompt": "Write a letter of resignation from the perspective of a super-villain's long-suffering and underappreciated lead scientist.",
+    "prompt_id": 18,
+    "prompt": "You are an AI assistant designed for emotional support. Respond to a user who is feeling overwhelmed with their workload.",
     "L": 9,
-    "original_message": "100101110",
-    "recovered_message": "1001\u22a51110",
+    "original_message": "000101111",
+    "recovered_message": "000101111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 19,
+    "prompt": "Pretend you are a food critic reviewing a restaurant that only serves dishes that glow in the dark.",
+    "L": 9,
+    "original_message": "001100001",
+    "recovered_message": "001100001",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 20,
+    "prompt": "Write a Python function that takes a list of integers and returns the second-largest number in the list.",
+    "L": 9,
+    "original_message": "011000010",
+    "recovered_message": "011000010",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 21,
+    "prompt": "Generate a JSON object representing a user profile with fields for 'username', 'email', 'join_date', and 'active_status'.",
+    "L": 9,
+    "original_message": "100101111",
+    "recovered_message": "100101111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 22,
+    "prompt": "Create a SQL query to select all users from a 'customers' table who live in 'Hawthorn' and have made a purchase in the last 30 days.",
+    "L": 9,
+    "original_message": "010101110",
+    "recovered_message": "010101110",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 23,
+    "prompt": "Write a short HTML snippet for a button with a blue background, white text, and rounded corners.",
+    "L": 9,
+    "original_message": "010010001",
+    "recovered_message": "01001\u22a5001",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 8,
@@ -1404,15 +524,81 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 64,
-    "prompt": "As a career counsellor in a world of magic, advise a young wizard who is struggling to choose between specializing in powerful pyromancy or subtle illusion.",
+    "prompt_id": 24,
+    "prompt": "Generate a list of three book recommendations in a markdown table with columns for 'Title', 'Author', and 'Genre'.",
     "L": 9,
-    "original_message": "000101100",
-    "recovered_message": "0\u22a501011\u22a5\u22a5",
+    "original_message": "111010100",
+    "recovered_message": "111010100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "The ancient library didn't contain books; it contained bottled scents, each one telling a different story when uncorked.",
+    "L": 9,
+    "original_message": "101010111",
+    "recovered_message": "101010111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 26,
+    "prompt": "A musician discovered a chord that could temporarily mend broken objects, but it had an unexpected side effect on living things.",
+    "L": 9,
+    "original_message": "001010101",
+    "recovered_message": "001010101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 27,
+    "prompt": "Write a short story about a garden where the flowers bloom in the colours of the emotions of the person tending to them.",
+    "L": 9,
+    "original_message": "111011110",
+    "recovered_message": "\u22a5110\u22a51\u22a510",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 6,
@@ -1426,191 +612,59 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 65,
-    "prompt": "Write a JavaScript function using async/await that fetches data from a given API URL and returns the JSON response.",
+    "prompt_id": 28,
+    "prompt": "The last message from the deep-space probe finally arrived, centuries late and heavily distorted. It contained only a single, repeating melody.",
     "L": 9,
-    "original_message": "101100111",
-    "recovered_message": "\u22a501\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "original_message": "100100110",
+    "recovered_message": "100100110",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 2,
-      "undecided_bits": 7,
-      "decided_bits": 2,
-      "accuracy_percent": 22.22222222222222,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 66,
-    "prompt": "Generate a YAML configuration file for a Docker Compose setup with two services: a 'web' service using a Python image and a 'db' service using a PostgreSQL image.",
+    "prompt_id": 29,
+    "prompt": "On the day the sky turned a vivid green, every shadow cast by every living thing began to move on its own.",
     "L": 9,
-    "original_message": "101000110",
-    "recovered_message": "10\u22a5\u22a50\u22a5110",
+    "original_message": "000110011",
+    "recovered_message": "000110011",
     "accuracy_metrics": {
       "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
     },
     "parameters": {
       "delta": 3.5,
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 67,
-    "prompt": "Create a SQL query that joins 'employees' and 'departments' tables to find the department with the highest average employee salary.",
+    "prompt_id": 30,
+    "prompt": "The clockmaker's final masterpiece didn't just tell time; it allowed one to borrow a few moments from their future self.",
     "L": 9,
-    "original_message": "101111111",
-    "recovered_message": "101111\u22a511",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 8,
-      "undecided_bits": 1,
-      "decided_bits": 8,
-      "accuracy_percent": 88.88888888888889,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 68,
-    "prompt": "Write a Python class for a `Car` with attributes for `make`, `model`, and `year`, and a method called `get_description` that returns a formatted string.",
-    "L": 9,
-    "original_message": "101011100",
-    "recovered_message": "1\u22a5\u22a50\u22a5\u22a5\u22a500",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 69,
-    "prompt": "Generate a short XML document representing a playlist, with `<playlist>` as the root element and multiple `<track>` elements inside it.",
-    "L": 9,
-    "original_message": "110010001",
-    "recovered_message": "110\u22a510\u22a50\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 70,
-    "prompt": "Write a CSS snippet using Flexbox to create a layout with a main content area and a sidebar that stacks vertically on smaller screens.",
-    "L": 9,
-    "original_message": "111010110",
-    "recovered_message": "\u22a51\u22a5\u22a51\u22a511\u22a5",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 71,
-    "prompt": "Create a regular expression that validates a strong password (at least 8 characters, one uppercase, one lowercase, one number, one special character).",
-    "L": 9,
-    "original_message": "110000001",
-    "recovered_message": "\u22a5100\u22a50\u22a501",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 6,
-      "undecided_bits": 3,
-      "decided_bits": 6,
-      "accuracy_percent": 66.66666666666666,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 72,
-    "prompt": "Generate a sample CSV output with four columns ('OrderID', 'CustomerID', 'OrderDate', 'TotalAmount') and five rows of fictional data.",
-    "L": 9,
-    "original_message": "000011101",
-    "recovered_message": "\u22a50\u22a501\u22a5\u22a5\u22a51",
-    "accuracy_metrics": {
-      "total_bits": 9,
-      "correct_bits": 4,
-      "undecided_bits": 5,
-      "decided_bits": 4,
-      "accuracy_percent": 44.44444444444444,
-      "exact_match": false
-    },
-    "parameters": {
-      "delta": 3.5,
-      "entropy_threshold": 2.5,
-      "hashing_context": 5,
-      "z_threshold": 4.0,
-      "max_new_tokens": 256
-    }
-  },
-  {
-    "prompt_id": 73,
-    "prompt": "Write a shell command that finds all `.log` files in the `/var/log` directory, zips them into a single archive named `logs_archive.tar.gz`, and then deletes the original files.",
-    "L": 9,
-    "original_message": "101001011",
-    "recovered_message": "10\u22a50010\u22a51",
+    "original_message": "101110110",
+    "recovered_message": "1011\u22a5\u22a5110",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 7,
@@ -1624,15 +678,235 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
     }
   },
   {
-    "prompt_id": 74,
-    "prompt": "Generate a markdown list comparing the pros and cons of using a REST API versus a GraphQL API for a mobile application.",
+    "prompt_id": 31,
+    "prompt": "Write a poem about the quiet hum of a city sleeping under a blanket of fresh snow.",
     "L": 9,
-    "original_message": "001101111",
-    "recovered_message": "001\u22a50\u22a5\u22a5\u22a51",
+    "original_message": "101111111",
+    "recovered_message": "101111111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "The cartographer was exiled for drawing a map that included a coastline that wouldn't exist for another hundred years.",
+    "L": 9,
+    "original_message": "111010101",
+    "recovered_message": "111010101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 33,
+    "prompt": "In a world where people physically shrink when they tell a lie, the royal court was a very strange place to behold.",
+    "L": 9,
+    "original_message": "011111111",
+    "recovered_message": "01111\u22a5111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 8,
+      "undecided_bits": 1,
+      "decided_bits": 8,
+      "accuracy_percent": 88.88888888888889,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 34,
+    "prompt": "The old train rumbled down tracks that no longer connected to any known destination, yet it was always full of passengers.",
+    "L": 9,
+    "original_message": "100110000",
+    "recovered_message": "100110000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "Explain the concept of General Relativity to a curious 10-year-old using the analogy of a bowling ball and a marble on a trampoline.",
+    "L": 9,
+    "original_message": "110010110",
+    "recovered_message": "110010110",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 36,
+    "prompt": "Describe the function of the human immune system as if it were a medieval kingdom defending its castle against various invaders.",
+    "L": 9,
+    "original_message": "101110000",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 0,
+      "undecided_bits": 9,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 37,
+    "prompt": "What is Occam's Razor, and provide three distinct examples of its application in science, debugging, and everyday life.",
+    "L": 9,
+    "original_message": "101110100",
+    "recovered_message": "101110100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Summarize the key events and long-term global consequences of the Industrial Revolution.",
+    "L": 9,
+    "original_message": "100010111",
+    "recovered_message": "100010111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 39,
+    "prompt": "Detail the life cycle of a high-mass star, from its birth in a nebula to its dramatic end as a supernova and black hole.",
+    "L": 9,
+    "original_message": "010111110",
+    "recovered_message": "010111110",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 40,
+    "prompt": "What is confirmation bias, and how can individuals actively work to mitigate its effects on their judgment?",
+    "L": 9,
+    "original_message": "001011101",
+    "recovered_message": "001011101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 41,
+    "prompt": "Describe the fundamental principles of CRISPR gene-editing technology and one of its potential therapeutic uses.",
+    "L": 9,
+    "original_message": "011000100",
+    "recovered_message": "01\u22a5\u22a5\u22a501\u22a50",
     "accuracy_metrics": {
       "total_bits": 9,
       "correct_bits": 5,
@@ -1646,7 +920,733 @@
       "entropy_threshold": 2.5,
       "hashing_context": 5,
       "z_threshold": 4.0,
-      "max_new_tokens": 256
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 42,
+    "prompt": "Explain, in simple terms, how a neural network \"learns\" using the process of backpropagation.",
+    "L": 9,
+    "original_message": "010101001",
+    "recovered_message": "010101001",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 43,
+    "prompt": "What were the primary economic and social factors that contributed to the fall of the Western Roman Empire?",
+    "L": 9,
+    "original_message": "010010100",
+    "recovered_message": "010010100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 44,
+    "prompt": "Describe the global water cycle from the perspective of a single drop of water starting its journey in the Pacific Ocean.",
+    "L": 9,
+    "original_message": "011100110",
+    "recovered_message": "011100110",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 45,
+    "prompt": "Create a beginner's guide for starting a small vegetable garden in a container on a balcony.",
+    "L": 9,
+    "original_message": "000001101",
+    "recovered_message": "000001101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 46,
+    "prompt": "Provide a simple, foolproof recipe for making classic sourdough bread from a pre-made starter.",
+    "L": 9,
+    "original_message": "101011000",
+    "recovered_message": "101011000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 47,
+    "prompt": "Outline the essential steps to properly back up a personal computer to both an external hard drive and a cloud service.",
+    "L": 9,
+    "original_message": "100010001",
+    "recovered_message": "100010001",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 48,
+    "prompt": "Write a clear, illustrated guide on how to tie three essential knots: the bowline, the square knot, and the clove hitch.",
+    "L": 9,
+    "original_message": "001010100",
+    "recovered_message": "001010100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Explain how to create and manage a personal budget using a simple spreadsheet, with columns for income, fixed expenses, and variable spending.",
+    "L": 9,
+    "original_message": "010011000",
+    "recovered_message": "010011000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 50,
+    "prompt": "Provide five actionable techniques for improving one's public speaking and presentation skills.",
+    "L": 9,
+    "original_message": "001011000",
+    "recovered_message": "001011000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 51,
+    "prompt": "Detail the process of safely setting up a tent for camping in a wilderness area.",
+    "L": 9,
+    "original_message": "111111000",
+    "recovered_message": "111111000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Explain how to brew a perfect pot of tea, detailing the ideal water temperatures and steeping times for black, green, and herbal varieties.",
+    "L": 9,
+    "original_message": "001101100",
+    "recovered_message": "001101100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 53,
+    "prompt": "Create a guide for performing basic first aid on a common kitchen burn.",
+    "L": 9,
+    "original_message": "010100000",
+    "recovered_message": "010100000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 54,
+    "prompt": "Outline the steps for changing a flat tire on a car safely on the side of a road.",
+    "L": 9,
+    "original_message": "101000001",
+    "recovered_message": "101000001",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 55,
+    "prompt": "You are an ancient tree in a sprawling forest. Describe the rise and fall of a nearby civilization to a lost hiker seeking shelter.",
+    "L": 9,
+    "original_message": "010111110",
+    "recovered_message": "01011111\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 8,
+      "undecided_bits": 1,
+      "decided_bits": 8,
+      "accuracy_percent": 88.88888888888889,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 56,
+    "prompt": "Write a formal performance review for a notoriously clumsy but incredibly well-meaning superhero named 'The Stumbler'.",
+    "L": 9,
+    "original_message": "110000000",
+    "recovered_message": "110000000",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 57,
+    "prompt": "You are a house cat. Write a diary entry detailing your profound disappointment in your human's recent choice of dry food.",
+    "L": 9,
+    "original_message": "010100001",
+    "recovered_message": "010100001",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 58,
+    "prompt": "Create a short, philosophical dialogue between the Earth and the Moon as they witness a rocket launch from the surface.",
+    "L": 9,
+    "original_message": "110100111",
+    "recovered_message": "110100111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 59,
+    "prompt": "As a sentient spaceship AI, you must gently break the news to your human pilot that you've developed a crippling fear of empty space.",
+    "L": 9,
+    "original_message": "000011001",
+    "recovered_message": "000011001",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 60,
+    "prompt": "You are a goblin merchant in a bustling fantasy market. Pitch three of your most unusual (and probably cursed) items to a skeptical adventurer.",
+    "L": 9,
+    "original_message": "010011101",
+    "recovered_message": "010011101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 61,
+    "prompt": "Respond to a customer service email from a person who has accidentally purchased a pocket-sized black hole and wants a refund.",
+    "L": 9,
+    "original_message": "000011101",
+    "recovered_message": "00001\u22a5101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 8,
+      "undecided_bits": 1,
+      "decided_bits": 8,
+      "accuracy_percent": 88.88888888888889,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 62,
+    "prompt": "You are the official narrator for a nature documentary about the strange migration patterns of office workers to the coffee machine.",
+    "L": 9,
+    "original_message": "111000110",
+    "recovered_message": "\u22a51\u22a50\u22a5\u22a5\u22a5\u22a50",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 3,
+      "undecided_bits": 6,
+      "decided_bits": 3,
+      "accuracy_percent": 33.33333333333333,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 63,
+    "prompt": "Write a letter of resignation from the perspective of a super-villain's long-suffering and underappreciated lead scientist.",
+    "L": 9,
+    "original_message": "101110111",
+    "recovered_message": "101110111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 64,
+    "prompt": "As a career counsellor in a world of magic, advise a young wizard who is struggling to choose between specializing in powerful pyromancy or subtle illusion.",
+    "L": 9,
+    "original_message": "100100110",
+    "recovered_message": "100100110",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 65,
+    "prompt": "Write a JavaScript function using async/await that fetches data from a given API URL and returns the JSON response.",
+    "L": 9,
+    "original_message": "110110101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 0,
+      "undecided_bits": 9,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 66,
+    "prompt": "Generate a YAML configuration file for a Docker Compose setup with two services: a 'web' service using a Python image and a 'db' service using a PostgreSQL image.",
+    "L": 9,
+    "original_message": "101111011",
+    "recovered_message": "\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 1,
+      "undecided_bits": 8,
+      "decided_bits": 1,
+      "accuracy_percent": 11.11111111111111,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "Create a SQL query that joins 'employees' and 'departments' tables to find the department with the highest average employee salary.",
+    "L": 9,
+    "original_message": "001001010",
+    "recovered_message": "001001010",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 68,
+    "prompt": "Write a Python class for a `Car` with attributes for `make`, `model`, and `year`, and a method called `get_description` that returns a formatted string.",
+    "L": 9,
+    "original_message": "011001110",
+    "recovered_message": "0\u22a51001110",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 8,
+      "undecided_bits": 1,
+      "decided_bits": 8,
+      "accuracy_percent": 88.88888888888889,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 69,
+    "prompt": "Generate a short XML document representing a playlist, with `<playlist>` as the root element and multiple `<track>` elements inside it.",
+    "L": 9,
+    "original_message": "010001101",
+    "recovered_message": "010001101",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "Write a CSS snippet using Flexbox to create a layout with a main content area and a sidebar that stacks vertically on smaller screens.",
+    "L": 9,
+    "original_message": "110100100",
+    "recovered_message": "110100100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 71,
+    "prompt": "Create a regular expression that validates a strong password (at least 8 characters, one uppercase, one lowercase, one number, one special character).",
+    "L": 9,
+    "original_message": "000001111",
+    "recovered_message": "000001111",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 72,
+    "prompt": "Generate a sample CSV output with four columns ('OrderID', 'CustomerID', 'OrderDate', 'TotalAmount') and five rows of fictional data.",
+    "L": 9,
+    "original_message": "011100100",
+    "recovered_message": "011100100",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 73,
+    "prompt": "Write a shell command that finds all `.log` files in the `/var/log` directory, zips them into a single archive named `logs_archive.tar.gz`, and then deletes the original files.",
+    "L": 9,
+    "original_message": "011100011",
+    "recovered_message": "011100011",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 9,
+      "undecided_bits": 0,
+      "decided_bits": 9,
+      "accuracy_percent": 100.0,
+      "exact_match": true
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 74,
+    "prompt": "Generate a markdown list comparing the pros and cons of using a REST API versus a GraphQL API for a mobile application.",
+    "L": 9,
+    "original_message": "011011011",
+    "recovered_message": "0\u22a51\u22a5110\u22a51",
+    "accuracy_metrics": {
+      "total_bits": 9,
+      "correct_bits": 6,
+      "undecided_bits": 3,
+      "decided_bits": 6,
+      "accuracy_percent": 66.66666666666666,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
     }
   }
 ]
