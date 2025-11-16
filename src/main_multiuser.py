@@ -52,6 +52,8 @@ def main():
     base_parser.add_argument('--hashing-context', type=int, default=5)
     base_parser.add_argument('--z-threshold', type=float, default=4.0)
     base_parser.add_argument('--l-bits', type=int, default=10)
+    base_parser.add_argument('--min-distance', type=int, default=3, choices=[2, 3, 4],
+                            help="Minimum Hamming distance between codewords for collusion resistance (default: 3).")
 
     # --- Generate Command ---
     gen_parser = subparsers.add_parser('generate', help='Generate text watermarked for a specific user.', parents=[base_parser])
@@ -80,7 +82,7 @@ def main():
         hashing_context=args.hashing_context
     )
     lbw = LBitWatermarker(zero_bit_watermarker=zbw, L=args.l_bits)
-    muw = MultiUserWatermarker(lbit_watermarker=lbw)
+    muw = MultiUserWatermarker(lbit_watermarker=lbw, min_distance=args.min_distance)
 
     # --- Command Logic ---
     try:
@@ -164,7 +166,14 @@ def main():
         if accused_users:
             print(f"  Text traced back to user(s):")
             for user in accused_users:
-                print(f"     - User ID: {user['user_id']}, Username: {user['username']}, Match: {user['match_score_percent']:.2f}%")
+                group_id = user.get('group_id', None)
+                if group_id is not None:
+                    print(f"     - User ID: {user['user_id']}, Username: {user['username']}, "
+                          f"Group: {group_id}, Match: {user['match_score_percent']:.2f}%")
+                    print(f"       User ID {user['user_id']} belongs to Group {group_id}")
+                else:
+                    print(f"     - User ID: {user['user_id']}, Username: {user['username']}, "
+                          f"Match: {user['match_score_percent']:.2f}%")
         else:
             print("  Could not confidently trace text to any user.")
         print("---------------------")

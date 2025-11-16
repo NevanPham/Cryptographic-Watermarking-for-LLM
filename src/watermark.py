@@ -431,10 +431,10 @@ class MultiUserWatermarker:
     """
     Implements the multi-user scheme by embedding fingerprinting codes via the L-bit scheme.
     """
-    def __init__(self, lbit_watermarker: LBitWatermarker):
+    def __init__(self, lbit_watermarker: LBitWatermarker, min_distance: int = 3):
         self.lbw = lbit_watermarker
         # Initialize the fingerprinting system with the number of users and codeword length (L)
-        self.fingerprinter = FingerprintingCode(L=self.lbw.L)
+        self.fingerprinter = FingerprintingCode(L=self.lbw.L, min_distance=min_distance)
 
     def keygen(self, key_length: int = 32) -> bytes:
         """Generates a single master secret key for the entire system."""
@@ -451,7 +451,13 @@ class MultiUserWatermarker:
         codeword_array = self.fingerprinter.codewords[user_id]
         codeword = "".join(map(str, codeword_array))
         
-        print(f"Embedding codeword '{codeword}' for User ID {user_id}...")
+        # Get group information
+        group_id = self.fingerprinter.user_to_group.get(user_id, None)
+        if group_id is not None:
+            print(f"User ID {user_id} belongs to Group {group_id}")
+            print(f"Embedding codeword '{codeword}' for User ID {user_id} (Group {group_id})...")
+        else:
+            print(f"Embedding codeword '{codeword}' for User ID {user_id}...")
         
         # Use the L-bit watermarker to embed this codeword
         raw_output = self.lbw.embed(master_key, codeword, prompt, **kwargs)

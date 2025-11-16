@@ -45,10 +45,11 @@ This repository implements cryptographic watermarking techniques for LLM text ge
 2. Cycle through bits at each high-entropy block, embedding the target bitstring
 3. During detection, test both hypotheses (0 and 1) for each bit position and recover the message
 
-**Multi-User Fingerprinting:**
-1. Assign each user a unique L-bit codeword (deterministic from User ID)
-2. Embed the user's codeword using L-bit watermarking
-3. Trace recovered (noisy) codewords back to the most likely user(s)
+**Multi-User Fingerprinting (BCH-Based):**
+1. Generate BCH codewords with guaranteed minimum Hamming distance (2, 3, or 4)
+2. Assign users to groups sequentially (all users in a group share the same group codeword)
+3. Embed the user's group codeword using L-bit watermarking
+4. During tracing, match recovered codeword to group(s) and identify accused users
 
 ---
 
@@ -116,6 +117,12 @@ Cryptographic-Watermarking-for-LLM/
 ├── assets/                          # Data files
 │   ├── users.csv                    # 1000 users (UserIds 0-999)
 │   └── prompts.txt                  # 75 evaluation prompts
+│
+├── evaluation/                      # Evaluation results (auto-created)
+│   ├── evaluation_results/          # Main evaluation outputs
+│   ├── lbit_parameter_sweep/        # L-bit parameter sweep results
+│   ├── lbit_sweep/                  # L-bit sweep results
+│   └── gui_app_evaluation_results/  # GUI analysis results
 │
 └── demonstration/                   # Example outputs
     ├── my_watermark.txt             # Zero-bit example output
@@ -333,9 +340,21 @@ Decision: MESSAGE RECOVERED SUCCESSFULLY ✓
 
 ---
 
-### Multi-User Fingerprinting
+### Multi-User Fingerprinting (BCH-Based)
 
-Trace generated text back to specific users (1000 users supported with L=10).
+Trace generated text back to specific users using BCH error-correcting codes with guaranteed minimum Hamming distance for improved collusion resistance.
+
+#### How It Works
+
+- **BCH Codes**: Codewords are generated with guaranteed minimum Hamming distance (2, 3, or 4)
+- **Group Assignment**: Users are assigned to groups sequentially:
+  - `group_id = user_id // users_per_group`
+  - All users in the same group share the same group codeword
+  - This prevents collusion attacks where users combine codewords to frame others
+- **Minimum Distance Options**:
+  - `--min-distance 2`: Up to 100 groups, 10 users per group
+  - `--min-distance 3`: Up to 50 groups, 20 users per group (default)
+  - `--min-distance 4`: Up to 10 groups, 100 users per group
 
 #### User Database
 
@@ -349,7 +368,7 @@ UserId,Username
 999,999
 ```
 
-You can customize usernames or add more users (ensure L-bits ≥ log₂(num_users)).
+You can customize usernames or add more users. The number of groups is limited by the minimum distance setting.
 
 #### Generate for User
 
@@ -359,6 +378,7 @@ python -m src.main_multiuser generate ^
   --model gpt2 ^
   --user-id 0 ^
   --l-bits 10 ^
+  --min-distance 3 ^
   --delta 2.5 ^
   --entropy-threshold 4.0 ^
   --max-new-tokens 512 ^
@@ -367,11 +387,17 @@ python -m src.main_multiuser generate ^
   "The future of AI is"
 ```
 
-**Key point:** L=10 supports up to 2¹⁰ = 1024 users. For more users, increase L.
+**Key points:**
+- L=10 supports up to 2¹⁰ = 1024 users
+- `--min-distance 3` (default) assigns users to groups of 20
+- User 0 belongs to Group 0 (users 0-19)
+- User 20 belongs to Group 1 (users 20-39)
+- All users in the same group share the same codeword
 
 **Expected outputs:**
-1. **multiuser_user0.txt**: Text watermarked with user 0's codeword
+1. **multiuser_user0.txt**: Text watermarked with user 0's group codeword
 2. **multiuser_master.key**: Master key (shared across all users)
+3. Console output showing: "User ID 0 belongs to Group 0"
 
 #### Trace User
 
@@ -380,21 +406,42 @@ python -m src.main_multiuser trace ^
   --users-file assets/users.csv ^
   --model gpt2 ^
   --l-bits 10 ^
+  --min-distance 3 ^
   --key-file demonstration\multiuser_master.key ^
   demonstration\multiuser_user0.txt
 ```
 
 **Expected output:**
 ```
-=== Multi-User Tracing Results ===
-Recovered codeword: 0000000000
-Top matching users (max 16):
-  1. User ID: 0, Username: 0, Bit matches: 10/10 (100%)
-
-Decision: Text traced to User 0 ✓
+--- Trace Results ---
+  Text traced back to user(s):
+     - User ID: 0, Username: 0, Group: 0, Match: 100.00%
+       User ID 0 belongs to Group 0
 ```
 
-**Collusion detection:** Returns up to 16 best matches if multiple users' codewords match closely.
+**Collusion detection:** 
+- Returns up to 16 best matches if multiple users' codewords match closely
+- Shows group membership for each accused user
+- Detects collusion when recovered codeword contains `*` symbols (conflicting bits)
+
+#### Visualize Groups
+
+View group assignments, codewords, and verify minimum distance:
+
+```bat
+python helper_scripts/visualize_groups.py ^
+  --users-file assets/users.csv ^
+  --l-bits 10 ^
+  --min-distance 3
+```
+
+**Output includes:**
+- Group assignments with codewords and user ranges
+- Minimum distance verification between all group codewords
+- Statistics (average users per group, codeword distribution)
+- Any distance violations (if minimum distance is not satisfied)
+
+Use `--detailed` flag to see all user IDs in each group.
 
 ---
 
@@ -411,7 +458,7 @@ python main.py evaluate ^
   --delta "2.0, 2.5, 3.0" ^
   --entropy-thresholds "3.0, 3.5, 4.0" ^
   --max-new-tokens 512 ^
-  --output-dir evaluation_results
+  --output-dir evaluation/evaluation_results
 ```
 
 **What it does:**
@@ -422,11 +469,11 @@ python main.py evaluate ^
    - Delete middle 20% of sentences
    - Paraphrase 30% of sentences (T5 model)
 3. Runs detection on all variants
-4. Saves results to `evaluation_results/analysis_results.json`
+4. Saves results to `evaluation/evaluation_results/analysis_results.json`
 
 **Expected output files:**
 ```
-evaluation_results/
+evaluation/evaluation_results/
 ├── analysis_results.json        # Detailed results (z-scores, block counts, decisions)
 ├── generated_text_*.txt         # Generated text files
 └── keys/                        # Secret keys
@@ -435,7 +482,7 @@ evaluation_results/
 #### Analyze Results
 
 ```bat
-python helper_scripts\analyse.py evaluation_results --z-threshold 4.0
+python helper_scripts\analyse.py evaluation/evaluation_results --z-threshold 4.0
 ```
 
 **Generated plots:**
@@ -549,29 +596,43 @@ python -m UI.app
 
 **Usage:** Automatically instantiated by CLI/GUI based on `--model` flag
 
-#### `src/fingerprinting.py` (122 lines)
-**Purpose:** Multi-user codeword management
+#### `src/fingerprinting.py` (296 lines)
+**Purpose:** Multi-user codeword management using BCH error-correcting codes
 **Class:** `FingerprintingCode`
 
+**Features:**
+- BCH-based codeword generation with guaranteed minimum Hamming distance
+- Group-based user assignment for improved collusion resistance
+- Sequential group assignment: `group_id = user_id // users_per_group`
+
 **Methods:**
-- `generate_codeword(user_id)`: User ID → L-bit binary string
-- `trace(recovered_message)`: Find users matching noisy codeword
+- `gen(users_file)`: Load users and generate BCH codewords with minimum distance
+- `trace(recovered_message)`: Find users matching noisy codeword (includes group info)
+
+**Parameters:**
+- `L` (int): Codeword length (default: 10)
+- `min_distance` (int): Minimum Hamming distance between codewords (2, 3, or 4, default: 3)
+- `c` (int): Maximum number of colluders (default: 16)
 
 **Example:**
 ```python
 from src.fingerprinting import FingerprintingCode
-import pandas as pd
 
-users_df = pd.read_csv('assets/users.csv')
-code = FingerprintingCode(users_df, l_bits=10)
+# Initialize with minimum distance 3 (default)
+code = FingerprintingCode(L=10, min_distance=3)
 
-# Get user 0's codeword
-codeword = code.generate_codeword(0)  # "0000000000"
+# Load users and generate codewords
+code.gen(users_file='assets/users.csv')
+
+# Users are assigned to groups:
+# - Users 0-19 → Group 0
+# - Users 20-39 → Group 1
+# - etc.
 
 # Trace noisy recovery
 recovered = "0000000010"  # 1 bit flipped
-matches = code.trace(recovered, max_collusion=16)
-# Returns: [(UserId=0, Username="0", bit_matches=9/10)]
+matches = code.trace(recovered)
+# Returns: [{"user_id": 0, "username": "0", "group_id": 0, "match_score_percent": 90.0, ...}]
 ```
 
 #### `src/commands.py` (398 lines)
@@ -630,7 +691,7 @@ python -m src.main_multiuser trace [args]
 **Purpose:** Generate plots and statistics from evaluation results
 **Usage:**
 ```bat
-python helper_scripts\analyse.py evaluation_results --z-threshold 4.0
+python helper_scripts\analyse.py evaluation/evaluation_results --z-threshold 4.0
 ```
 
 **Outputs:**
@@ -1134,10 +1195,10 @@ Test robustness against multiple users combining outputs:
 ```python
 from src.fingerprinting import FingerprintingCode
 from src.watermark import MultiUserWatermarker
-import pandas as pd
 
-users_df = pd.read_csv('assets/users.csv')
-code = FingerprintingCode(users_df, l_bits=10)
+# Initialize with BCH codes (minimum distance 3)
+code = FingerprintingCode(L=10, min_distance=3)
+code.gen(users_file='assets/users.csv')
 
 # Generate from multiple users
 user_texts = []
@@ -1148,9 +1209,13 @@ for user_id in [0, 5, 10]:
 # Combine texts (e.g., interleave sentences)
 combined = combine_texts(user_texts)  # Your logic
 
-# Trace
-matches = code.trace(recovered_message, max_collusion=16)
-print(f"Detected users: {matches}")  # Should identify all 3 users
+# Trace (includes group information)
+matches = code.trace(recovered_message)
+for match in matches:
+    print(f"User {match['user_id']} (Group {match['group_id']}): "
+          f"{match['match_score_percent']:.2f}% match")
+    if match.get('collusion_detected'):
+        print(f"  Collusion detected at positions: {match['collusion_positions']}")
 ```
 
 ---
@@ -1233,7 +1298,7 @@ python -m src.main_multiuser trace out.txt --l-bits 10 --model gpt2
 
 # Evaluate
 python main.py evaluate --prompts-file assets/prompts.txt --model gpt2
-python helper_scripts\analyse.py evaluation_results
+python helper_scripts\analyse.py evaluation/evaluation_results
 
 # GUI
 python UI\app.py

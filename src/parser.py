@@ -108,7 +108,7 @@ def build_parser():
     parser_eval = subparsers.add_parser('evaluate', help='Run a full evaluation of the watermarking framework.')
     parser_eval.add_argument('--prompts-file', type=str, required=True, help='Path to a .txt file with one prompt per line.')
     parser_eval.add_argument('--model', type=str, default='gpt2', choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'], help='Model to use for generation.')
-    parser_eval.add_argument('--output-dir', type=str, default='demonstration/evaluation_results', help='Directory to save all generated texts and results.')
+    parser_eval.add_argument('--output-dir', type=str, default='evaluation/evaluation_results', help='Directory to save all generated texts and results.')
     parser_eval.add_argument('--max-new-tokens', type=int, default=2048, help='Tokens to generate for each prompt.')
     parser_eval.add_argument('--z-threshold', type=float, default=4.0, help='The z-score threshold for detection.')
     parser_eval.add_argument('--l-bit-message', type=str, help='L-bit binary message to embed (e.g., "0101...").')

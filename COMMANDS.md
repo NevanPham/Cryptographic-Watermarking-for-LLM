@@ -42,7 +42,7 @@ python main.py detect_lbit demonstration/my_lbit.txt --model gpt2 --l-bits 8 ^
 ```
 
 ### Full evaluation (batch over prompts)
-- Sweep entropy thresholds (writes results to `demonstration/evaluation_results/`; change with `--output-dir`):
+- Sweep entropy thresholds (writes results to `evaluation/evaluation_results/`; change with `--output-dir`):
 ```bat
 python main.py evaluate ^
   --prompts-file assets/prompts.txt ^
@@ -59,7 +59,7 @@ python main.py evaluate ^
   --l-bits 8 ^
   --entropy-thresholds "3.5, 4.0" ^
   --max-new-tokens 512 ^
-  --output-dir demonstration/evaluation_results_lbit
+  --output-dir evaluation/evaluation_results_lbit
 ```
 
 ## Running helpers and tools
@@ -67,7 +67,7 @@ python main.py evaluate ^
 ### Analyse plots and metrics (from evaluation output)
 - Reads `analysis_results.json` and writes PNG plots + `summary_analysis.txt`:
 ```bat
-python helper_scripts\analyse.py demonstration/evaluation_results --z-threshold 4.0
+python helper_scripts\analyse.py evaluation/evaluation_results --z-threshold 4.0
 ```
 
 ### GUI (desktop app)
@@ -79,7 +79,7 @@ python UI\app.py
   - Detect: paste text + select key folder; shows detection result.
   - Evaluate: run sweeps and display plots inline.
 
-### Multi‑user fingerprinting (optional)
+### Multi‑user fingerprinting (BCH-based with minimum distance)
 1) The `assets/users.csv` file contains 1000 users (UserIds 0-999, with usernames matching the ID):
 ```text
 UserId,Username
@@ -89,16 +89,24 @@ UserId,Username
 ...
 999,999
 ```
-2) Generate for a user (L=10 required for 1000 users; pass `-o` to change filename):
+2) Generate for a user (L=10 required for 1000 users; uses BCH codes with guaranteed minimum Hamming distance):
 ```bat
 python -m src.main_multiuser generate "The future of AI is" ^
   --users-file assets/users.csv ^
   --model gpt2 ^
   --user-id 0 ^
   --l-bits 10 ^
+  --min-distance 3 ^
   --max-new-tokens 512 ^
   -o demonstration/multiuser_user0.txt
 ```
+
+**BCH minimum distance options:**
+- `--min-distance 2`: Up to 100 groups, 10 users per group (weaker collusion resistance)
+- `--min-distance 3`: Up to 50 groups, 20 users per group (default, balanced)
+- `--min-distance 4`: Up to 10 groups, 100 users per group (strongest collusion resistance)
+
+**Note:** Users are assigned to groups sequentially (Users 0-19 → Group 0, Users 20-39 → Group 1, etc.). All users in the same group share the same group codeword, providing better collusion resistance than binary ID-based fingerprinting.
 
 **Using file-based prompts (for collusion scenarios):**
 - Generate with a prompt from a file (e.g., previous user's output):
@@ -110,16 +118,18 @@ python -m src.main_multiuser generate ^
   --model gpt2 ^
   --user-id 2 ^
   --l-bits 10 ^
+  --min-distance 3 ^
   --max-new-tokens 512 ^
   -o demonstration/multiuser_user2_collusion_with_user[].txt
 ```
 - **Note:** Only the NEW text generated will be watermarked with user 2's codeword. The prompt file content (user 0's output) is NOT watermarked—it's just context. This is NOT collusion; collusion would require mixing multiple users' watermarks in the same generated text.
-3) Trace back to user(s):
+3) Trace back to user(s) (shows group membership):
 ```bat
 python -m src.main_multiuser trace ^
   --users-file assets/users.csv ^
   --model gpt2 ^
   --l-bits 10 ^
+  --min-distance 3 ^
   demonstration\multiuser_user0.txt
 ```
 
@@ -133,6 +143,28 @@ python helper_scripts\create_collusion_scenario.py
   - User ID and prompt for each user
 - Output: Combined text file with all users' watermarked text concatenated
 - Then trace the combined file to detect collusion (look for `*` symbols in recovered codeword)
+
+**Visualizing group assignments and codewords:**
+- View all groups, user assignments, and codewords:
+```bat
+python helper_scripts\visualize_groups.py ^
+  --users-file assets/users.csv ^
+  --l-bits 10 ^
+  --min-distance 3
+```
+- Show detailed output with all user IDs:
+```bat
+python helper_scripts\visualize_groups.py ^
+  --users-file assets/users.csv ^
+  --l-bits 10 ^
+  --min-distance 3 ^
+  --detailed
+```
+- The script displays:
+  - Group assignments (Group ID, codeword, user range)
+  - Minimum distance verification between all group codewords
+  - Statistics (average users per group, codeword distribution)
+  - Distance violations (if any)
 
 ## Parameter tuning guide
 

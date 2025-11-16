@@ -112,8 +112,8 @@ def main():
     parser.add_argument(
         '--output-dir',
         type=str,
-        default='lbit_sweep_results',
-        help='Output directory for results (default: lbit_sweep_results)'
+        default='evaluation/lbit_sweep',
+        help='Output directory for results (default: evaluation/lbit_sweep)'
     )
     parser.add_argument(
         '--min-l',

@@ -653,7 +653,10 @@ class GUIAppWindow(QMainWindow, Ui_MainWindow):
         if not folder_path:
             QMessageBox.information(self, "Cancelled", "No folder selected.")
             return
-        self.analyse_path = folder_path + "/gui_app_evaluation_results" # set location to save  analysis results
+        # Get project root (parent of UI directory)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(current_dir)
+        self.analyse_path = os.path.join(project_root, "evaluation", "gui_app_evaluation_results") # set location to save  analysis results
         if self.analyse_path:
             print(self.analyse_path)
             folder_name = os.path.basename(folder_path)
