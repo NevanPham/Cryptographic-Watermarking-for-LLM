@@ -1,5 +1,5 @@
 # run_lbit_sweep.py
-# Script to run L-bit embedding and detection for L = 8 to 32
+# Script to run L-bit embedding and detection for specified L values
 # Uses prompts.txt and outputs JSONs and Excel summary
 
 import argparse
@@ -61,9 +61,74 @@ def calculate_bit_accuracy(original: str, recovered: str) -> dict:
     }
 
 
+def load_existing_results(output_dir: str, exclude_l_values: list = None) -> list:
+    """
+    Load existing JSON results from previous runs.
+    Returns a list of summary data entries from existing results.
+    """
+    if exclude_l_values is None:
+        exclude_l_values = []
+    
+    existing_summary_data = []
+    
+    # Look for existing JSON files
+    if os.path.exists(output_dir):
+        for filename in os.listdir(output_dir):
+            if filename.startswith('lbit_L') and filename.endswith('_results.json'):
+                # Extract L value from filename
+                try:
+                    L = int(filename.replace('lbit_L', '').replace('_results.json', ''))
+                    # Skip if this L is in the exclude list (will be regenerated)
+                    if L in exclude_l_values:
+                        print(f"Skipping existing L={L} (will be regenerated)")
+                        continue
+                    
+                    json_path = os.path.join(output_dir, filename)
+                    with open(json_path, 'r', encoding='utf-8') as f:
+                        l_results = json.load(f)
+                    
+                    # Convert to summary format
+                    for result in l_results:
+                        if 'error' not in result:
+                            accuracy_metrics = result.get('accuracy_metrics', {})
+                            existing_summary_data.append({
+                                'L': L,
+                                'Prompt_ID': result.get('prompt_id', 0),
+                                'Original_Message': result.get('original_message', ''),
+                                'Recovered_Message': result.get('recovered_message', ''),
+                                'Total_Bits': accuracy_metrics.get('total_bits', 0),
+                                'Correct_Bits': accuracy_metrics.get('correct_bits', 0),
+                                'Undecided_Bits': accuracy_metrics.get('undecided_bits', 0),
+                                'Decided_Bits': accuracy_metrics.get('decided_bits', 0),
+                                'Accuracy_Percent': accuracy_metrics.get('accuracy_percent', 0.0),
+                                'Exact_Match': accuracy_metrics.get('exact_match', False)
+                            })
+                        else:
+                            existing_summary_data.append({
+                                'L': L,
+                                'Prompt_ID': result.get('prompt_id', 0),
+                                'Original_Message': None,
+                                'Recovered_Message': None,
+                                'Total_Bits': None,
+                                'Correct_Bits': None,
+                                'Undecided_Bits': None,
+                                'Decided_Bits': None,
+                                'Accuracy_Percent': None,
+                                'Exact_Match': False,
+                                'Error': result.get('error', 'Unknown error')
+                            })
+                    
+                    print(f"Loaded existing results for L={L} from {filename}")
+                except (ValueError, json.JSONDecodeError) as e:
+                    print(f"Warning: Could not load {filename}: {e}")
+                    continue
+    
+    return existing_summary_data
+
+
 def main():
     parser = argparse.ArgumentParser(
-        description="Run L-bit embedding and detection sweep for L = 8 to 32",
+        description="Run L-bit embedding and detection sweep for specified L values",
         formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument(
@@ -118,22 +183,46 @@ def main():
     parser.add_argument(
         '--min-l',
         type=int,
-        default=8,
-        help='Minimum L value (default: 8)'
+        default=None,
+        help='Minimum L value (used if --l-values not specified, default: 8)'
     )
     parser.add_argument(
         '--max-l',
         type=int,
-        default=32,
-        help='Maximum L value (default: 32)'
+        default=None,
+        help='Maximum L value (used if --l-values not specified, default: 32)'
+    )
+    parser.add_argument(
+        '--l-values',
+        type=int,
+        nargs='+',
+        default=None,
+        help='Specific L values to test (e.g., --l-values 4 5 6 7). If specified, overrides --min-l and --max-l'
     )
     
     args = parser.parse_args()
     
-    # Validate L range
-    if args.min_l < 1 or args.max_l > 64 or args.min_l > args.max_l:
-        print("Error: Invalid L range. min_l must be >= 1, max_l must be <= 64, and min_l <= max_l")
-        return
+    # Determine which L values to use
+    if args.l_values is not None:
+        # Use specified L values
+        l_values = sorted(set(args.l_values))  # Remove duplicates and sort
+        # Validate L values
+        if any(L < 1 or L > 64 for L in l_values):
+            print("Error: All L values must be between 1 and 64")
+            return
+    else:
+        # Use range from min-l to max-l
+        min_l = args.min_l if args.min_l is not None else 8
+        max_l = args.max_l if args.max_l is not None else 32
+        
+        # Validate L range
+        if min_l < 1 or max_l > 64 or min_l > max_l:
+            print("Error: Invalid L range. min_l must be >= 1, max_l must be <= 64, and min_l <= max_l")
+            return
+        
+        l_values = list(range(min_l, max_l + 1))
+    
+    print(f"Will test L values: {l_values}")
     
     # Create output directory (relative to project root)
     if not os.path.isabs(args.output_dir):
@@ -141,6 +230,12 @@ def main():
     else:
         output_dir = args.output_dir
     os.makedirs(output_dir, exist_ok=True)
+    
+    # Load existing results (excluding L values that will be regenerated)
+    print(f"\nLoading existing results from {output_dir}...")
+    existing_summary_data = load_existing_results(output_dir, exclude_l_values=l_values)
+    if existing_summary_data:
+        print(f"Loaded {len(existing_summary_data)} existing result entries")
     
     # Load prompts
     prompts_path = os.path.join(parent_dir, args.prompts_file)
@@ -161,7 +256,7 @@ def main():
     summary_data = []
     
     # Loop through L values
-    for L in range(args.min_l, args.max_l + 1):
+    for L in l_values:
         print(f"\n{'='*60}")
         print(f"Processing L = {L}")
         print(f"{'='*60}")
@@ -284,13 +379,20 @@ def main():
             print(f"  Average accuracy: {avg_accuracy:.2f}%")
             print(f"  Exact match rate: {exact_match_rate:.2f}%")
     
-    # Create Excel summary
-    if summary_data:
-        df = pd.DataFrame(summary_data)
+    # Create Excel summary (merge existing and new results)
+    all_summary_data = existing_summary_data + summary_data
+    if not summary_data and existing_summary_data:
+        print(f"\nNo new results generated, but found {len(existing_summary_data)} existing result entries")
+    if all_summary_data:
+        df = pd.DataFrame(all_summary_data)
+        
+        # Get all unique L values from the merged data
+        all_l_values = sorted(df['L'].unique())
+        print(f"\nCreating Excel summary with L values: {all_l_values}")
         
         # Create summary statistics by L
         summary_stats = []
-        for L in range(args.min_l, args.max_l + 1):
+        for L in all_l_values:
             l_data = df[df['L'] == L]
             if len(l_data) > 0:
                 # Filter out any rows with errors (they won't have accuracy metrics)
