@@ -91,13 +91,14 @@ UserId,Username
 ...
 999,999
 ```
-2) Generate for a user (L=10 required for 1000 users; uses BCH codes with guaranteed minimum Hamming distance):
+2) Generate for a user (L=10 required for 1000 users; uses grouped BCH codes with guaranteed minimum Hamming distance):
 ```bat
 python -m src.main_multiuser generate "The future of AI is" ^
   --users-file assets/users.csv ^
   --model gpt2 ^
   --user-id 0 ^
   --l-bits 10 ^
+  --scheme grouped ^
   --min-distance 3 ^
   --max-new-tokens 512 ^
   -o demonstration/multiuser_user0.txt
@@ -110,6 +111,17 @@ python -m src.main_multiuser generate "The future of AI is" ^
 
 **Note:** Users are assigned to groups sequentially (Users 0-19 → Group 0, Users 20-39 → Group 1, etc.). All users in the same group share the same group codeword, providing better collusion resistance than binary ID-based fingerprinting.
 
+**Legacy (naive) scheme:** Pass `--scheme naive` to fall back to the original per-user binary codeword assignment (no grouping, no BCH codes). `--min-distance` is ignored in this mode.
+```bat
+python -m src.main_multiuser generate "Binary fingerprint" ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --user-id 42 ^
+  --l-bits 10 ^
+  --scheme naive ^
+  --max-new-tokens 256
+```
+
 **Using file-based prompts (for collusion scenarios):**
 - Generate with a prompt from a file (e.g., previous user's output):
 ```bat
@@ -120,6 +132,7 @@ python -m src.main_multiuser generate ^
   --model gpt2 ^
   --user-id 2 ^
   --l-bits 10 ^
+  --scheme grouped ^
   --min-distance 3 ^
   --max-new-tokens 512 ^
   -o demonstration/multiuser_user2_collusion_with_user[].txt
@@ -131,6 +144,7 @@ python -m src.main_multiuser trace ^
   --users-file assets/users.csv ^
   --model gpt2 ^
   --l-bits 10 ^
+  --scheme grouped ^
   --min-distance 3 ^
   demonstration\multiuser_user0.txt
 ```

@@ -79,7 +79,8 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── watermark.py                 # Watermarking implementations
 │   │                                  - ZeroBitWatermarker
 │   │                                  - LBitWatermarker
-│   │                                  - MultiUserWatermarker
+│   │                                  - NaiveMultiUserWatermarker
+│   │                                  - GroupedMultiUserWatermarker
 │   ├── models.py                    # Model abstractions (GPT-2, GPT-OSS variants)
 │   ├── fingerprinting.py            # Multi-user codeword generation & tracing
 │   ├── commands.py                  # CLI command handlers
@@ -571,7 +572,8 @@ python -m UI.app
 **Classes:**
 - `ZeroBitWatermarker`: Binary detection
 - `LBitWatermarker`: Message embedding
-- `MultiUserWatermarker`: User fingerprinting
+- `NaiveMultiUserWatermarker`: Legacy per-user fingerprinting
+- `GroupedMultiUserWatermarker`: Fingerprinting with grouped codes
 - `WatermarkLogitsProcessor`: Transformers integration
 
 **Key functions:**
@@ -1194,12 +1196,11 @@ print(f"Detected: {z_score > 4.0}")
 Test robustness against multiple users combining outputs:
 
 ```python
-from src.fingerprinting import FingerprintingCode
-from src.watermark import MultiUserWatermarker
+from src.watermark import GroupedMultiUserWatermarker
 
-# Initialize with BCH codes (minimum distance 3)
-code = FingerprintingCode(L=10, min_distance=3)
-code.gen(users_file='assets/users.csv')
+# Initialize grouped scheme (min distance 3)
+grouped = GroupedMultiUserWatermarker(lbit_watermarker=lbw, min_distance=3)
+grouped.load_users('assets/users.csv')
 
 # Generate from multiple users
 user_texts = []
@@ -1211,7 +1212,7 @@ for user_id in [0, 5, 10]:
 combined = combine_texts(user_texts)  # Your logic
 
 # Trace (includes group information)
-matches = code.trace(recovered_message)
+matches = grouped.trace(master_key, combined)
 for match in matches:
     print(f"User {match['user_id']} (Group {match['group_id']}): "
           f"{match['match_score_percent']:.2f}% match")

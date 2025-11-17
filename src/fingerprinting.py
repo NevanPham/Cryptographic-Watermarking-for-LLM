@@ -258,21 +258,19 @@ class FingerprintingCode:
             elif matches == max_matches:
                 potential_matches.append((user_idx, user_data['Username'], matches))
 
-        # Return all users tied for the highest match score, up to collusion limit
+        # Return all users tied for the highest match score (no artificial cap)
         for user_id, username, matches in potential_matches:
-            if len(accused) < self.c:
-                # Get group information
-                group_id = self.user_to_group.get(user_id, None)
-                
-                accused.append({
-                    "user_id": user_id,
-                    "username": username,
-                    "match_score_percent": (matches / len(valid_bits)) * 100,
-                    "group_id": group_id,
-                    # NEW: Add collusion info
-                    "collusion_detected": collusion_detected,
-                    "collusion_positions": collusion_positions if collusion_detected else []
-                })
+            group_id = self.user_to_group.get(user_id, None)
+            
+            accused.append({
+                "user_id": user_id,
+                "username": username,
+                "match_score_percent": (matches / len(valid_bits)) * 100,
+                "group_id": group_id,
+                # NEW: Add collusion info
+                "collusion_detected": collusion_detected,
+                "collusion_positions": collusion_positions if collusion_detected else []
+            })
         
         return accused
 

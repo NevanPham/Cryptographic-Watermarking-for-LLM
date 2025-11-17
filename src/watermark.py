@@ -6,6 +6,7 @@ import hashlib
 import random
 import torch
 import numpy as np
+import pandas as pd
 from .models import LanguageModel
 from transformers import LogitsProcessor
 
@@ -427,54 +428,163 @@ class LBitLogitProcessor(LogitsProcessor):
 
         return scores
 
-class MultiUserWatermarker:
+class NaiveMultiUserWatermarker:
     """
-    Implements the multi-user scheme by embedding fingerprinting codes via the L-bit scheme.
+    Implements the original per-user binary multi-user scheme without grouping.
+    Each user receives the binary expansion of their user ID (padded/truncated to L bits).
+    """
+    def __init__(self, lbit_watermarker: LBitWatermarker):
+        self.lbw = lbit_watermarker
+        self.user_metadata: pd.DataFrame | None = None
+        self.user_lookup: dict[int, pd.Series] = {}
+        self.N: int = 0
+    
+    def keygen(self, key_length: int = 32) -> bytes:
+        return self.lbw.keygen(key_length)
+    
+    def load_users(self, users_file: str) -> pd.DataFrame:
+        """Loads user metadata and prepares lookup tables."""
+        if not os.path.exists(users_file):
+            raise FileNotFoundError(f"User metadata file {users_file} not found")
+        
+        df = pd.read_csv(users_file)
+        self._initialize_metadata(df)
+        return self.user_metadata
+    
+    def _initialize_metadata(self, df: pd.DataFrame):
+        if "UserId" not in df.columns:
+            raise ValueError("users_file must contain a 'UserId' column.")
+        
+        df = df.copy()
+        df["UserId"] = df["UserId"].astype(int)
+        if df["UserId"].duplicated().any():
+            raise ValueError("Duplicate UserId entries detected in users file.")
+        
+        df = df.sort_values("UserId").reset_index(drop=True)
+        max_users = 2 ** self.lbw.L
+        if len(df) > max_users:
+            raise ValueError(
+                f"Number of users in file ({len(df)}) exceeds max allowed by L={self.lbw.L} (max {max_users})"
+            )
+        
+        self.user_metadata = df
+        self.N = len(df)
+        self.user_lookup = {int(row["UserId"]): row for _, row in df.iterrows()}
+    
+    def _require_metadata(self):
+        if self.user_metadata is None or not self.user_lookup:
+            raise ValueError("User metadata not loaded. Call load_users(...) first.")
+    
+    def _validate_user_id(self, user_id: int):
+        if user_id not in self.user_lookup:
+            if self.N == 0:
+                raise ValueError("User metadata not loaded.")
+            raise ValueError(f"User ID {user_id} not found in loaded metadata.")
+    
+    def get_codeword_for_user(self, user_id: int) -> str:
+        """Returns the naive binary codeword for a user."""
+        max_users = 2 ** self.lbw.L
+        if user_id >= max_users or user_id < 0:
+            raise ValueError(
+                f"User ID {user_id} cannot be represented with {self.lbw.L} bits (max {max_users - 1})."
+            )
+        return format(user_id, f'0{self.lbw.L}b')
+    
+    def _log_embed(self, user_id: int, codeword: str):
+        print(f"Embedding codeword '{codeword}' for User ID {user_id} (naive scheme)...")
+    
+    def embed(self, master_key: bytes, user_id: int, prompt: str, **kwargs) -> str:
+        self._require_metadata()
+        self._validate_user_id(user_id)
+        codeword = self.get_codeword_for_user(user_id)
+        self._log_embed(user_id, codeword)
+        return self.lbw.embed(master_key, codeword, prompt, **kwargs)
+    
+    def trace(self, master_key: bytes, text: str, **kwargs) -> list[dict]:
+        self._require_metadata()
+        print("Extracting L-bit codeword from text...")
+        recovered_codeword = self.lbw.detect(master_key, text, **kwargs)
+        print(f"  - Recovered Codeword: {recovered_codeword}")
+        return self._match_users_from_codeword(recovered_codeword)
+    
+    def _match_users_from_codeword(self, recovered_codeword: str) -> list[dict]:
+        valid_positions = [idx for idx, bit in enumerate(recovered_codeword) if bit not in ('⊥', '*')]
+        if not valid_positions:
+            print("No decided bits recovered; cannot trace.")
+            return []
+        
+        best_score = -1
+        candidates: list[dict] = []
+        
+        for user_id, row in self.user_lookup.items():
+            codeword = self.get_codeword_for_user(user_id)
+            matches, total = self._score_codewords(recovered_codeword, codeword, valid_positions)
+            if total == 0:
+                continue
+            if matches > best_score:
+                best_score = matches
+                candidates = [self._format_trace_entry(user_id, row, matches, total)]
+            elif matches == best_score:
+                candidates.append(self._format_trace_entry(user_id, row, matches, total))
+        
+        return candidates
+    
+    def _score_codewords(self, recovered: str, candidate: str, valid_positions: list[int]) -> tuple[int, int]:
+        matches = sum(recovered[i] == candidate[i] for i in valid_positions)
+        total = len(valid_positions)
+        return matches, total
+    
+    def _format_trace_entry(self, user_id: int, row: pd.Series, matches: int, total: int) -> dict:
+        username = row.get("Username") if row is not None else None
+        return {
+            "user_id": user_id,
+            "username": username,
+            "match_score_percent": (matches / total) * 100 if total else 0.0,
+            "group_id": None
+        }
+
+
+class GroupedMultiUserWatermarker(NaiveMultiUserWatermarker):
+    """
+    Enhanced grouped multi-user scheme that layers fingerprinting codes on top of
+    the naive scheme to provide collusion resistance and group awareness.
     """
     def __init__(self, lbit_watermarker: LBitWatermarker, min_distance: int = 3):
-        self.lbw = lbit_watermarker
-        # Initialize the fingerprinting system with the number of users and codeword length (L)
+        super().__init__(lbit_watermarker=lbit_watermarker)
         self.fingerprinter = FingerprintingCode(L=self.lbw.L, min_distance=min_distance)
-
-    def keygen(self, key_length: int = 32) -> bytes:
-        """Generates a single master secret key for the entire system."""
-        return self.lbw.keygen(key_length)
-
-    def embed(self, master_key: bytes, user_id: int, prompt: str, **kwargs) -> str:
-        """Embeds the codeword for a specific user ID."""
+    
+    def load_users(self, users_file: str) -> pd.DataFrame:
+        """Generates BCH-based codewords and stores metadata from the users file."""
+        self.fingerprinter.gen(users_file=users_file)
+        self.user_metadata = self.fingerprinter.user_metadata
+        self.N = self.fingerprinter.N
+        self.user_lookup = {int(row["UserId"]): row for _, row in self.user_metadata.iterrows()}
+        return self.user_metadata
+    
+    def get_codeword_for_user(self, user_id: int) -> str:
         if self.fingerprinter.codewords is None or self.fingerprinter.codewords.size == 0:
-            raise ValueError("Fingerprinter codes not generated. Call .fingerprinter.gen() first.")
-        if user_id >= self.fingerprinter.N or user_id < 0:
+            raise ValueError("Fingerprinter codes not generated. Call load_users(...) first.")
+        if user_id < 0 or user_id >= self.fingerprinter.N:
             raise ValueError(f"User ID {user_id} is out of range for {self.fingerprinter.N} users.")
-        
-        # Get the user's assigned codeword (e.g. '00000001...')
         codeword_array = self.fingerprinter.codewords[user_id]
-        codeword = "".join(map(str, codeword_array))
-        
-        # Get group information
+        return "".join(map(str, codeword_array))
+    
+    def _log_embed(self, user_id: int, codeword: str):
         group_id = self.fingerprinter.user_to_group.get(user_id, None)
         if group_id is not None:
             print(f"User ID {user_id} belongs to Group {group_id}")
             print(f"Embedding codeword '{codeword}' for User ID {user_id} (Group {group_id})...")
         else:
-            print(f"Embedding codeword '{codeword}' for User ID {user_id}...")
-        
-        # Use the L-bit watermarker to embed this codeword
-        raw_output = self.lbw.embed(master_key, codeword, prompt, **kwargs)
-        return raw_output
-
-    def trace(self, master_key: bytes, text: str, **kwargs) -> list[int]:
-        """Extracts the L-bit codeword and traces it back to a list of accused user IDs."""
-        # Use the L-bit watermarker to extract the noisy codeword
-        print("Extracting L-bit codeword from text...")
+            print(f"Embedding codeword '{codeword}' for User ID {user_id} (grouped scheme)...")
+    
+    def trace(self, master_key: bytes, text: str, **kwargs) -> list[dict]:
         if self.fingerprinter.codewords is None or self.fingerprinter.user_metadata is None:
-            raise ValueError("Fingerprinter codes or metadata not loaded. Call .fingerprinter.gen() and .fingerprinter.load_metadata() first.")
-
+            raise ValueError("Fingerprinter codes or metadata not loaded. Call load_users(...) first.")
+        
+        print("Extracting L-bit codeword from text...")
         noisy_codeword = self.lbw.detect(master_key, text, **kwargs)
         print(f"  - Recovered Codeword: {noisy_codeword}")
         
-        # Use the fingerprinter to find the best match(es)
         print("Tracing codeword to find user(s)...")
         accused_users = self.fingerprinter.trace(noisy_codeword)
-        
         return accused_users

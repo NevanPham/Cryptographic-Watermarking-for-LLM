@@ -12,7 +12,7 @@ parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 sys.path.insert(0, parent_dir)
 
 from src.models import GPT2Model, GptOssModel, GptOss120bModel
-from src.watermark import ZeroBitWatermarker, LBitWatermarker, MultiUserWatermarker
+from src.watermark import ZeroBitWatermarker, LBitWatermarker, GroupedMultiUserWatermarker
 
 
 def parse_final_output(raw_text: str, model_name: str) -> str:
@@ -87,12 +87,12 @@ def main():
         hashing_context=hashing_context
     )
     lbw = LBitWatermarker(zero_bit_watermarker=zbw, L=l_bits)
-    muw = MultiUserWatermarker(lbit_watermarker=lbw)
+    muw = GroupedMultiUserWatermarker(lbit_watermarker=lbw)
     
     # Load user data and generate codes
     try:
-        muw.fingerprinter.gen(users_file=users_file)
-        print(f"Loaded {muw.fingerprinter.N} users and codes from {users_file}")
+        muw.load_users(users_file=users_file)
+        print(f"Loaded {muw.N} users and grouped codes from {users_file}")
     except (FileNotFoundError, ValueError, KeyError) as e:
         print(f"Error initializing fingerprinting: {e}")
         return
@@ -177,10 +177,9 @@ def main():
     print("-" * 60)
     
     combined_parts = []
-    for i, gen_data in enumerate(generated_texts):
-        user_id = gen_data['user_id']
+    for gen_data in generated_texts:
         text = gen_data['text']
-        combined_parts.append(f"=== User {user_id} (Prompt: {gen_data['prompt']}) ===\n{text}\n")
+        combined_parts.append(text)
     
     combined_text = "\n\n".join(combined_parts)
     

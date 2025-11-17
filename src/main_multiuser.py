@@ -10,7 +10,12 @@ if __name__ == "__main__":
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.models import GPT2Model, GptOssModel, GptOss120bModel
-from src.watermark import ZeroBitWatermarker, LBitWatermarker, MultiUserWatermarker
+from src.watermark import (
+    ZeroBitWatermarker,
+    LBitWatermarker,
+    NaiveMultiUserWatermarker,
+    GroupedMultiUserWatermarker,
+)
 
 def parse_final_output(raw_text: str, model_name: str) -> str:
     """
@@ -38,7 +43,7 @@ def get_model(model_name: str):
         raise ValueError(f"Unknown model name: {model_name}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Multi-User Watermarking Tool using Fingerprinting Codes.")
+    parser = argparse.ArgumentParser(description="Multi-User Watermarking Tool (naive + grouped schemes).")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     # --- Base arguments for both commands ---
@@ -52,6 +57,13 @@ def main():
     base_parser.add_argument('--hashing-context', type=int, default=5)
     base_parser.add_argument('--z-threshold', type=float, default=4.0)
     base_parser.add_argument('--l-bits', type=int, default=10)
+    base_parser.add_argument(
+        '--scheme',
+        type=str,
+        default='grouped',
+        choices=['naive', 'grouped'],
+        help="Multi-user scheme to use (default: grouped).",
+    )
     base_parser.add_argument('--min-distance', type=int, default=3, choices=[2, 3, 4],
                             help="Minimum Hamming distance between codewords for collusion resistance (default: 3).")
 
@@ -82,15 +94,17 @@ def main():
         hashing_context=args.hashing_context
     )
     lbw = LBitWatermarker(zero_bit_watermarker=zbw, L=args.l_bits)
-    muw = MultiUserWatermarker(lbit_watermarker=lbw, min_distance=args.min_distance)
+    if args.scheme == 'grouped':
+        muw = GroupedMultiUserWatermarker(lbit_watermarker=lbw, min_distance=args.min_distance)
+    else:
+        muw = NaiveMultiUserWatermarker(lbit_watermarker=lbw)
 
     # --- Command Logic ---
     try:
-        # Load user data and generate codes for both commands
-        muw.fingerprinter.gen(users_file=args.users_file)
-        print(f"Loaded {muw.fingerprinter.N} users and codes from {args.users_file}")
+        muw.load_users(args.users_file)
+        print(f"Loaded {muw.N} users from {args.users_file} using '{args.scheme}' scheme")
     except (FileNotFoundError, ValueError, KeyError) as e:
-        print(f"Error initializing fingerprinting: {e}")
+        print(f"Error initializing multi-user scheme: {e}")
         return
 
     if args.command == 'generate':
@@ -164,15 +178,43 @@ def main():
         
         print("\n--- Trace Results ---")
         if accused_users:
-            print(f"  Text traced back to user(s):")
-            for user in accused_users:
-                group_id = user.get('group_id', None)
-                if group_id is not None:
-                    print(f"     - User ID: {user['user_id']}, Username: {user['username']}, "
-                          f"Group: {group_id}, Match: {user['match_score_percent']:.2f}%")
-                    print(f"       User ID {user['user_id']} belongs to Group {group_id}")
-                else:
-                    print(f"     - User ID: {user['user_id']}, Username: {user['username']}, "
+            total_users = len(accused_users)
+            group_ids = [u.get('group_id') for u in accused_users if u.get('group_id') is not None]
+            unique_groups = len(set(group_ids)) if group_ids else 0
+            
+            print(f"  Users detected: {total_users}")
+            print(f"  Groups detected: {unique_groups}")
+            print(f"  Details:")
+            
+            has_group_info = unique_groups > 0
+            if has_group_info:
+                grouped_users = {}
+                for user in accused_users:
+                    gid = user.get('group_id')
+                    grouped_users.setdefault(gid, []).append(user)
+                
+                for gid in sorted(grouped_users.keys(), key=lambda x: (-1 if x is None else x)):
+                    members = grouped_users[gid]
+                    username_label = f"Group {gid}" if gid is not None else "Ungrouped users"
+                    print(f"     {username_label}: {len(members)} user(s)")
+                    
+                    for entry in members[:20]:
+                        username = entry.get('username') or 'N/A'
+                        print(f"        - User ID: {entry['user_id']}, Username: {username}, "
+                              f"Match: {entry['match_score_percent']:.2f}%")
+                    
+                    if gid is not None and len(members) > 20:
+                        remaining = len(members) - 20
+                        print(f"        ... all {len(members)} users belong to Group {gid} "
+                              f"(showing first 20)")
+                    
+                    if gid is not None and len(members) > 1:
+                        print("        Note: Users in the same group share an identical codeword, "
+                              "so they tie when traced.")
+            else:
+                for user in accused_users:
+                    username = user.get('username') or 'N/A'
+                    print(f"     - User ID: {user['user_id']}, Username: {username}, "
                           f"Match: {user['match_score_percent']:.2f}%")
         else:
             print("  Could not confidently trace text to any user.")
