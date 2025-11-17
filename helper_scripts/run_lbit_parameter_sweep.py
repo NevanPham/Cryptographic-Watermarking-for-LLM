@@ -74,6 +74,12 @@ def main():
         help='Path to prompts file (default: assets/prompts.txt)'
     )
     parser.add_argument(
+        '--max-prompts',
+        type=int,
+        default=100,
+        help='Cap on number of prompts to process (default: 100; set <=0 for all prompts)'
+    )
+    parser.add_argument(
         '--model',
         type=str,
         default='gpt2',
@@ -121,14 +127,14 @@ def main():
     parser.add_argument(
         '--min-l',
         type=int,
-        default=8,
-        help='Minimum L value (default: 8)'
+        default=4,
+        help='Minimum L value (default: 4)'
     )
     parser.add_argument(
         '--max-l',
         type=int,
-        default=10,
-        help='Maximum L value (default: 10)'
+        default=20,
+        help='Maximum L value (default: 20)'
     )
     
     args = parser.parse_args()
@@ -154,7 +160,12 @@ def main():
     with open(prompts_path, 'r', encoding='utf-8') as f:
         prompts = [line.strip() for line in f.readlines() if line.strip()]
     
-    print(f"Loaded {len(prompts)} prompts from {prompts_path}")
+    total_prompts = len(prompts)
+    if args.max_prompts and args.max_prompts > 0 and args.max_prompts < total_prompts:
+        prompts = prompts[:args.max_prompts]
+        print(f"Loaded {total_prompts} prompts from {prompts_path}. Limiting run to first {len(prompts)} prompts.")
+    else:
+        print(f"Loaded {total_prompts} prompts from {prompts_path}")
     print(f"Testing {len(args.deltas)} delta values: {args.deltas}")
     print(f"Testing {len(args.entropy_thresholds)} entropy threshold values: {args.entropy_thresholds}")
     print(f"Testing L values: {list(range(args.min_l, args.max_l + 1))}")

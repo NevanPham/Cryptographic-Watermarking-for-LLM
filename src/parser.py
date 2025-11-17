@@ -107,6 +107,8 @@ def build_parser():
     # --- Evaluate Command ---
     parser_eval = subparsers.add_parser('evaluate', help='Run a full evaluation of the watermarking framework.')
     parser_eval.add_argument('--prompts-file', type=str, required=True, help='Path to a .txt file with one prompt per line.')
+    parser_eval.add_argument('--max-prompts', type=int, default=100,
+                             help='How many prompts to evaluate (default: 100; set <=0 to use all).')
     parser_eval.add_argument('--model', type=str, default='gpt2', choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'], help='Model to use for generation.')
     parser_eval.add_argument('--output-dir', type=str, default='evaluation/evaluation_results', help='Directory to save all generated texts and results.')
     parser_eval.add_argument('--max-new-tokens', type=int, default=2048, help='Tokens to generate for each prompt.')

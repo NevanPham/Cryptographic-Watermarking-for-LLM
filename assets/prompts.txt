@@ -1,75 +1,300 @@
-The old lighthouse keeper found the message in a bottle, but its ink was written in a language that wasn't of this world. It said
-The city fell silent as the two suns began to set, casting long, purple shadows that seemed to whisper secrets to one another.
-Write a short poem about the sound of a forgotten vinyl record playing in an empty room.
-The robot detective adjusted its trench coat, looking over the rain-slicked neon streets. Its first clue was a single, misplaced data packet.
-In a world where memories can be bought and sold, the most valuable currency is a moment of genuine, unrecorded surprise.
-Explain the concept of blockchain technology as if you were explaining it to a medieval blacksmith.
-Describe the process of photosynthesis from the perspective of a single water molecule.
-What is the difference between nuclear fission and nuclear fusion, and what are the implications of each for energy production?
-Summarize the main arguments in Plato's Allegory of the Cave and its relevance to modern society.
-Detail the primary functions of the mitochondria within a eukaryotic cell.
-Create a simple, step-by-step guide for making the perfect cup of pour-over coffee.
-Provide five essential tips for a beginner learning to play the acoustic guitar.
-Outline a basic weekly workout routine that balances cardiovascular exercise and strength training.
-Write a clear guide on how to safely repot a houseplant that has outgrown its current container.
-Explain how to build a simple "Hello, World" web page using only HTML and CSS.
-You are a starship captain reporting a first-contact encounter with a new alien species. Write your official log entry.
-As a world-weary travel guide in a fantasy city, convince a group of tourists to visit the "Enchanted Market" instead of the "Royal Castle".
-Write a short dialogue between a time traveler from the future and a philosopher from ancient Greece.
-You are an AI assistant designed for emotional support. Respond to a user who is feeling overwhelmed with their workload.
-Pretend you are a food critic reviewing a restaurant that only serves dishes that glow in the dark.
-Write a Python function that takes a list of integers and returns the second-largest number in the list.
-Generate a JSON object representing a user profile with fields for 'username', 'email', 'join_date', and 'active_status'.
-Create a SQL query to select all users from a 'customers' table who live in 'Hawthorn' and have made a purchase in the last 30 days.
-Write a short HTML snippet for a button with a blue background, white text, and rounded corners.
-Generate a list of three book recommendations in a markdown table with columns for 'Title', 'Author', and 'Genre'.
-The ancient library didn't contain books; it contained bottled scents, each one telling a different story when uncorked.
-A musician discovered a chord that could temporarily mend broken objects, but it had an unexpected side effect on living things.
-Write a short story about a garden where the flowers bloom in the colours of the emotions of the person tending to them.
-The last message from the deep-space probe finally arrived, centuries late and heavily distorted. It contained only a single, repeating melody.
-On the day the sky turned a vivid green, every shadow cast by every living thing began to move on its own.
-The clockmaker's final masterpiece didn't just tell time; it allowed one to borrow a few moments from their future self.
-Write a poem about the quiet hum of a city sleeping under a blanket of fresh snow.
-The cartographer was exiled for drawing a map that included a coastline that wouldn't exist for another hundred years.
-In a world where people physically shrink when they tell a lie, the royal court was a very strange place to behold.
-The old train rumbled down tracks that no longer connected to any known destination, yet it was always full of passengers.
-Explain the concept of General Relativity to a curious 10-year-old using the analogy of a bowling ball and a marble on a trampoline.
-Describe the function of the human immune system as if it were a medieval kingdom defending its castle against various invaders.
-What is Occam's Razor, and provide three distinct examples of its application in science, debugging, and everyday life.
-Summarize the key events and long-term global consequences of the Industrial Revolution.
-Detail the life cycle of a high-mass star, from its birth in a nebula to its dramatic end as a supernova and black hole.
-What is confirmation bias, and how can individuals actively work to mitigate its effects on their judgment?
-Describe the fundamental principles of CRISPR gene-editing technology and one of its potential therapeutic uses.
-Explain, in simple terms, how a neural network "learns" using the process of backpropagation.
-What were the primary economic and social factors that contributed to the fall of the Western Roman Empire?
-Describe the global water cycle from the perspective of a single drop of water starting its journey in the Pacific Ocean.
-Create a beginner's guide for starting a small vegetable garden in a container on a balcony.
-Provide a simple, foolproof recipe for making classic sourdough bread from a pre-made starter.
-Outline the essential steps to properly back up a personal computer to both an external hard drive and a cloud service.
-Write a clear, illustrated guide on how to tie three essential knots: the bowline, the square knot, and the clove hitch.
-Explain how to create and manage a personal budget using a simple spreadsheet, with columns for income, fixed expenses, and variable spending.
-Provide five actionable techniques for improving one's public speaking and presentation skills.
-Detail the process of safely setting up a tent for camping in a wilderness area.
-Explain how to brew a perfect pot of tea, detailing the ideal water temperatures and steeping times for black, green, and herbal varieties.
-Create a guide for performing basic first aid on a common kitchen burn.
-Outline the steps for changing a flat tire on a car safely on the side of a road.
-You are an ancient tree in a sprawling forest. Describe the rise and fall of a nearby civilization to a lost hiker seeking shelter.
-Write a formal performance review for a notoriously clumsy but incredibly well-meaning superhero named 'The Stumbler'.
-You are a house cat. Write a diary entry detailing your profound disappointment in your human's recent choice of dry food.
-Create a short, philosophical dialogue between the Earth and the Moon as they witness a rocket launch from the surface.
-As a sentient spaceship AI, you must gently break the news to your human pilot that you've developed a crippling fear of empty space.
-You are a goblin merchant in a bustling fantasy market. Pitch three of your most unusual (and probably cursed) items to a skeptical adventurer.
-Respond to a customer service email from a person who has accidentally purchased a pocket-sized black hole and wants a refund.
-You are the official narrator for a nature documentary about the strange migration patterns of office workers to the coffee machine.
-Write a letter of resignation from the perspective of a super-villain's long-suffering and underappreciated lead scientist.
-As a career counsellor in a world of magic, advise a young wizard who is struggling to choose between specializing in powerful pyromancy or subtle illusion.
-Write a JavaScript function using async/await that fetches data from a given API URL and returns the JSON response.
-Generate a YAML configuration file for a Docker Compose setup with two services: a 'web' service using a Python image and a 'db' service using a PostgreSQL image.
-Create a SQL query that joins 'employees' and 'departments' tables to find the department with the highest average employee salary.
-Write a Python class for a `Car` with attributes for `make`, `model`, and `year`, and a method called `get_description` that returns a formatted string.
-Generate a short XML document representing a playlist, with `<playlist>` as the root element and multiple `<track>` elements inside it.
-Write a CSS snippet using Flexbox to create a layout with a main content area and a sidebar that stacks vertically on smaller screens.
-Create a regular expression that validates a strong password (at least 8 characters, one uppercase, one lowercase, one number, one special character).
-Generate a sample CSV output with four columns ('OrderID', 'CustomerID', 'OrderDate', 'TotalAmount') and five rows of fictional data.
-Write a shell command that finds all `.log` files in the `/var/log` directory, zips them into a single archive named `logs_archive.tar.gz`, and then deletes the original files.
-Generate a markdown list comparing the pros and cons of using a REST API versus a GraphQL API for a mobile application.
+in football whats the point of wasting the first two plays with a rush - up the middle - not regular rush plays i get those
+Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?
+Stars and Visibility
+How do we know all the money the government is getting from bank settlements is going back to the people?
+What are good and bad sides of manual and automatic drive gear?
+How do muscles grow?
+Why does the water from my kitchen faucet taste different than the water from my bathroom faucet? Doesn't it come from the same place?
+If dark colours absorb more heat, why does light skin burn easier than dark skin?
+How the fuck does Facebook know about people I know?!
+Why is chickenpox worse as an adult?
+How do movies not get uploaded online in HD from movie theater employees before their DVD release?
+Can defense attorneys 'throw' a case if they know their clients are guilty?
+why, when intoxicated, does it feel like everything is spinning when you close your eyes but stops spinning when you open them?
+Why are some fish bones edible, and others are not?
+What's the meaning of the phrase "I've got a bone to pick with you."
+Why can't we just taste candy or Sweets and then spit it out to avoid its unhealthy attributes? What makes us swallow it to get satisfaction?
+Why are the things that taste the best bad for us?
+Why do you see weird colors when you press your eyes?
+If a movie production has $5,000,000 (estimated) Budget, must some of that money go to the actors? or only movie's production quality?
+What classifies an island as an island? Aren't all continents etc essentially large islands?
+why does wikipedia ask for donations almost every month? do they really need it to not disappear?
+How does a water purifier jug work and could you put 3rd world ditch water through one and drink safely?
+Why people like getting drunk/sloshed/hammered/shit-faced ?
+Why has the Mars Rover Opportunity's Lithium Ion Battery Lasted 11+ Years and the one in My Cell Phone/Laptop/Tablet Dies in Less Than 2?
+Why is sales tax in the US excluded from the list price?
+Why does a beer on tap almost always taste better than it does from a bottle?
+What is the significance of Jamaican Bobsled team qualifies for the Olympics?
+Is it possible to build up an immunity to poisons both naturally occurring and man-made?
+How do devices know the amount of charge left in a battery?
+Why are my muscles sore after jumping in cold water?
+why do we like watching the same TV show or movie over and over again?
+why do the French have an abstain vote instead of people physically restraining from voting. [Other]
+Why The Beatles broke up?
+- Why do phones not require cooling vents but other small appliances do?
+Why are oil prices so shockingly low?
+If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?
+Why do we lack the instincts our ancestors had, e.g. telling you which foods are poisonous
+Why do we wake up early when we don't have to but tend to wake up late when we need to be up?
+Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?
+with such an important vote like appointing a supreme court nomine, why is the senate floor so empty?
+If you put tires on your car that are larger than the ones from the factory, would you actually be going slower than the reading on your speedometer?
+How does bugspray kills bugs?
+If a computer has a GPU, why would reducing GUI effects impact performance?
+What happens if you don't pay your US Federal income tax?
+Why does my employer require a voided personal check in order to setup direct deposit?
+Why are the insides of Ovens Dark and Not Metallic or Mirror Like?
+Why does metal react so violently when microwaved?
+How did the American accent come about?
+Why do The Miranda Rights state that anything you say can "and will" be used against you. If something's not incriminating why would it be used against you? Why would cops be forced to admit this up front?
+Why is it when you rewind VHS tapes they lose their quality over time?
+The demon stands amid your destroyed kitchen screaming, "How? How were you able to summon me?
+You have the power to manipulate time. But you discover the more you use this power the younger you become.
+Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.
+It's 3 AM. An official phone alert wakes you up.
+You've been fully blind since birth. You also just can't make sense of why the charming Greek lady who runs the local statue garden doesn't seem to have many friends besides you.
+You are the first man on Mars to explore a previously unknown cave. The camera feed is able to still reach earth, but with a 20 minute delay.
+“Only twice out of the other times in humanity’s history did they direct their atomic weapons against an enemy force. “ ”… other times?
+A love triangle where the person at the center of it is not only aromantic and incredibly uncomfortable with the situation, but suspects the two ‘rivals’ are simply looking for a way to spend time with one another, both being too obtuse to realize. The title of this story should be: Over It It should feature the following genres: Drama, Comedy, Romance
+"Earth" is actually the setting of a tabletop RPG, where players create a species of animal and try to rise to the top of the food chain. The rest of the group is getting fed up with the power gamer and his "humans.
+Playing poker against a god is a lot harder than it sounds. .
+You’re a time traveller, but you never change any part of history - you just wear period clothing, relax and watch daily life go by in the past. Suddenly, someone comes up and asks you out on a date.
+After mistakenly transfering to a high school for monsters, you try to tell them that you're just a regular human. However, because of bizarre coincidences creating apparently inexplicable situations, the school population and teachers come to believe you're actually an Eldritch Abomination The title of this story should be: The Eldritch Exchange It should feature the following genres: Fantasy, Horror, Comedy, Paranormal
+"What iteration of civilization are you on? It always takes, like, a hundred just to get to farming, then civilization falls back and resets, and it takes a thousand to trade, ten thousand to get to government.
+It's Christmas Eve 2038. The world has been destroyed due to nuclear war, but Santa, being immortal, has survived, and plans to deliver presents to the few remaining humans locked in their fallout shelters.
+A man who sees ghosts checks himself into a mental institution, oblivious to the fact that the facility has been closed for almost thirty years. The title of this story should be: The Halls of Silence It should feature the following genres: Horror, Paranormal, Thriller
+You've been living alone for 13 years. Whenever you come home from work, you always find your bed made, dinner cooked and a message with "This could have been us.
+You are a litch who, in an attempt to escape the hero, managed to telekinetically throw yourself into space and landed on the moon. After countless years, you've managed to create a comfortable life for yourself, only for a space shuttle and some astronauts to land nearby and plant a flag.
+As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your "past lives". Your immortal spouse is highly amused by this.
+You are the first man to discover Aliens. The title of this story should be: Odyssey's Echo It should feature the following genres: Science Fiction, Thriller
+Ever since you were born, you had the ability to see a marker on where any item is if people ask you to find it. However, once a friend jokingly asks you if you could find him the holy grail.
+When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.
+You were born without powers, which made you the black sheep of your superhero family. Eventually, you became the director of an agency that deals with superheroes (a la Nick Fury), and now you are the boss of the family that shunned and picked on you.
+A main character is trapped in a fantasy isekai world and adjusted to their new life. However, about a while later, they find a sword with a familiar label.
+“Out of all species of sapients in the galaxy, Terrans are the strangest. A single Terran is tiny, weak, and barely sapient at all.
+Humans blood gets darker the more evil we do. One day you are suspected of murder, they draw your blood to test if you are truely a murderer.
+The zombie apocalypse has come and gone. Humanity has survived and prospered, but with the virus still inside every single human.
+"Every 5000 years, the Dark Lord comes to destroy the world, and only you, the Chosen One can stop him. " -said the priest.
+Politician gets transported to an alternate universe where instead of Abrahamic monotheistic religions being dominant, it is pagan Norse, Greek, and Egyptian. They must navigate this new world as they are also a politician there too.
+The demon stands amid your destroyed kitchen screaming, “How? How were you able to summon me?
+After months, the villain finds the hero, but upon arriving at his home, he discovers the hero in a stained robe, baby food splattered, huge dark circles under his eyes, and a non-stop crying baby. The only thing the hero says is, "My wife left me.
+You have the power to teleport anywhere when you tap four times on any surface. The catch is that you can't decide where you go or know where you are going.
+You’re a type of parasite that hijacks corpses and takes control of their bodies. Unfortunately, the “corpse” you found happens to still be alive, and now you have to share a body with them.
+When you came in to land your 747 at your destination you received no answer and instead were intercepted by WW2-era fighters. The title of this story should be: Ghosts of the Green It should feature the following genres: Paranormal, Thriller, Mystery, Horror
+As an old and world-wise soldier, you've decided to help the young prince, take him under your wing. Unfortunately every soldier in the palace barracks has the same idea!
+"Everyone can become a billionaire within a month", or so I was told. You decide to let a clairvoyant superintelligence pilot your body for a month.
+You are the firstborn son of the deposed king and true heir to the throne, on which your usurper of an uncle is currently sitting. Knights and peasants, minor lords and clergymen all try to convince you to reclaim your birthright and can't understand why you would turn them all away.
+"What the hell is wrong with you people! ?
+After one’s death, the ‘creative mode’ is unlocked. You replay life, except everything goes the way you want it to.
+Ever since you were cursed with the inability to lie, you've struggled to navigate a world built on deception. But one day, you discover that your 'curse' grants you an incredible power: the ability to verify any fact, no matter how hidden or unknown.
+It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction
+You are a long forgotten god. A small girl leaves a piece of candy at your shrine, and you awaken.
+You’re a villain who’s kidnapped one of the smartest guys on your nemesis’ team. They tell you no one’s coming for them because the hero doesn’t care.
+The demon that tried to strike a deal with you was absolutely not prepared for the level of specificity you've prepared to make sure there are no loopholes for him to abuse. The title of this story should be: The Devil's Bargain It should feature the following genres: Fantasy, Thriller, Paranormal
+First contact with a benevolent alien race takes place. The alien race, however, seems as if they already knew about us.
+The zombie apocalypse has come. But so has the robot apocalypse, and the Illuminati takeover, and the alien invaders.
+Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.
+You were cryogenically frozen for 120 years. Everyone you know and love is dead… except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama
+Prisons designed to hold magic users force inmates to wear muzzles so that they cannot cast spells, mealtimes being heavily monitored. You've just been arrested and are sentenced to one such prison.
+A male wizard sells his future firstborn for knowledge to a demon. A female warlock sells her future firstborn to the fae for power.
+You have undergone experimental surgery to be one of the first soldiers equipped with a first person shooter-like HUD showing your health, weapon equipped, current missions, etc. But, they forget to remove it after you retire from service, and you find it surprisingly helpful in civilian life.
+When a new library is built, where do they get their books? I understand many can be bought brand new from publishers. But, what about the old books, or the vast volumes of dated encyclopedias, dated periodicals, etc...
+If the ozone layer is made up of O3, why are we not producing some of it ourselves and pumping more of them into the atmosphere to fix the problem faster?
+Is it possible to be a 'man without a country'?
+In the English language, how are contractions prioritized when a word can belong to two different contractions?
+The Cuban Missle Crisis and Americas enormous beef with Cuba, what happened there?
+Why doesn't it rain salt water?
+Why can't we use a centrifuge to de-salinate ocean water?
+What is a MAC Address?
+How are adept music players able to just start playing along to anything that someone else plays and have it sound good?
+Why drill instructor in the army never stop screaming at recruit in the army?
+if i ground up a piece of pure iron and ate it, would my body abosorb it the same way as iron from food? if not, how do they make iron supplements absorb-able?
+Whats is the actual cause of the common itch. and why is scratching it the cure?
+When popcorn is popping, what is actually happening to the kernel inside?
+What happens to your brain when you space out?
+What is the point of a Kroger's Shopper card?
+Why haven't our bodies changed to make childbirth less painful?
+American TV shows compared to The rest of the world.
+How do people add colour so accurately to black and white photos?
+How do service animals help autistic children?
+Why do books downloaded from the library need to be "returned" after a given amount of time?
+How does Stephen Hawking's speech computer work?
+If a self-driving car detects multiple courses of action (all of which will likely result in human injury) how will it determine which course to take?
+why does spicy food make me sweat?
+If there are no size regulations regarding goalies in the NHL, why doesn't a team just throw some really obese person out there to block the whole net?
+If animals aren't aware that they are going to die, why would they try so hard to survive?
+How can a computer come up with a "random" number?
+Why are scars near impossible to get rid of?
+Why don't developed countries make their own clothing without child labour?
+Two spaceships are travelling towards each other at speed of light..
+Why can we eat sushi raw but not other meats?
+Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?
+Does time ever end, or is the future infinite?
+Why "crazy people" have that distinctive look to their eyes
+What is the point of money?
+the hypothetical turtle on an island in the sun question?
+how does a home equity loan work?
+In English, what is the rule for the use of “An” or “A”
+Why do we have two small nostrils and not one larger nostril?
+How the heck do authorities determine who started a massive fire in the middle of the woods somewhere?
+How do film/tv productions handle deaths of actors? Examples?
+What would happen if all the countries wiped all the debt incurred by and owed to each other?
+Why is it sometimes hard to find something that is right in front of our eyes.
+Why is second day chili better?
+How does the _URL_0_ door knocking audio clip do such a good job of making it sound like the audio doesn't come from your headphones?
+Computer/TV Screen Size Pricing
+Why do people think Yellowstone will explode and destroy the earth, but not worry about Hawaii's volcano eruption?
+How does cutting down trees to plant other vegetation for the purpose of cultivation (such as avocado farming) contribute to global warming?
+What happens to Lactose when ingested by Lactose-Intolerants?
+If Helicopters need tail rotors to stabilize themselves from spinning, how can turboprop airplanes have only one rotor and not spin in circles?
+What is the difference between an air-conditioner and a "marine" air conditioner (commonly used on boats)?
+You've been magically gifted the ability to speak all languages. Anything you say comes out in the first language of whoever you're looking at.
+You’re an exorcist. This is your first time exorcising a demon who wants to be exorcised, though.
+"Evil? What makes you think i'm evil?
+Their illegitimate half sibling did everything in their power not too be a threat, because they didn't want to get dragged into the mess that their shared parent had created. The title of this story should be: The Moth and the Flame It should feature the following genres: Drama, Literary Fiction, Thriller
+You are the god of an extremely specific category. After millennia of being ridiculed you wake up to an offering.
+You are a magically immortal being who snuck onboard a generation ship to travel beyond the solar system. It's been a couple hundred years, and it's getting difficult to conceal your immortality from the crew.
+It's a bit awkward that you managed to actually summon a demon; almost as awkward as that demon being your ex spouse. The title of this story should be: Summoning Closure It should feature the following genres: Fantasy, Paranormal, Comedy
+“Out of all the students i have in this institution of mine, why is that something impossible happens everytime and it involves you all the time! ” The Principal said to me, as i gave my most innocent face to not get another punishment.
+You were cursed by an evil witch to become a horrible monster. You know that she meant to destroy your life, but you have never been happier.
+You have walked the same roads and paths for a long time, visiting each major temple of the gods and performing a strange rite. Should you fail, the concequences would be dire.
+"Batman, you should really be helping the city by donating your wealth instead of wasting it on this crime fighting thing" "What are you talking about? I am literally the biggest donator in the city, I run multiple orphanages, I own basically every hospital in the city, WHY DO PEOPLE THINK TH-" The title of this story should be: The Shadows of Gotham It should feature the following genres: Action, Drama, Thriller, Literary Fiction
+A man decides to sift through some old childhood photos for nostalgia’s sake. He gets to a photo of him as a toddler with his parents and older sister, but he notices a strange fifth figure in the back that’s never been there before.
+After rising from hell to possess a human, the human was sent to a mental help facility. After a year, the demon now thinks it is fully human and that it's previous life in hell were just delusions.
+Humans died a long time ago. But our AI live on as caretakers for the planet; becoming spirit-like constructs integrated into the planet; today, alien colonizers arrived to what they thought was a garden world.
+The dragon doesn’t kidnap villagers because he’s going to eat them. He’s just got really bad social anxiety and doesn’t know any other ways of making friends.
+You've been summoned as a hero of legend to save a medieval fantasy world from evil. Same old, same old.
+"Excuse me, she asked for no pickles! " The guy said, as a woman who's commonly known as the Patron-Saint of Violence stands right behind him.
+When you complete task successfully once, you can repeat it on autopilot. On your deathbed, you just unlocked ability to repeat "lifetime".
+"When beads can be captured at night, it is a metaphor for the moonlight glowing in the desert. " The title of this story should be: The Beads of Night It should feature the following genres: Fantasy, Drama, Paranormal, Romance
+It's a mirror match in every sense. Not only are the characters the same, they even move in sync.
+Ever since you were young, your grandpa played horrifying pranks on you to scare you when nobody was around. Now that he's passed away, you read through his diary and realized - He's not the one who played them, he's the one who stopped them from taking your life.
+You’re an extremely powerful demon who has been sealed away for thousands of years in hell. that is, until a reckless sorcerer summons you defeat his enemy.
+Prophets and seers don't HAVE to give musings and warnings of the future in vague, riddling, or purposefully misleading ways. They mostly only do that when the people who come to them are being arrogant jerks or when someone knowing their actual happy end will cause that end to not happen.
+As everyone knows, names have great power in the world of the Fae. Today, you helped a sick and dying Fae creature by pointing out a spelling error in their True Name.
+“Play me one last pitiful tune bard. ” The villain toys with you.
+Then the 92nd little pig built a house out of depleted uranium. And the wolf was like, "dude.
+You are the guardian of an abandoned church/holy site, and for the first time in centuries, someone has entered it. The title of this story should be: The Last Prayer It should feature the following genres: Fantasy, Drama, Paranormal
+You have weird super power. If you successfully talk someone into doing something, they will succeed, regardless of if the action in question is actually possible.
+You are a medieval villager who has been cursed by a witch. She curses you to be live until you are the last human alive.
+"So sir, you called? " Peter Parker said as he stepped into his boss's office.
+After sarcastically complaining to God for the 1000th time he drags you to heaven and offers to let you run things for a day to see how the world really works. At the end of your first day he comes back to find the universe a finely tuned machine of excellence.
+Humans finally broke physics by travelling faster than light in an experimental spaceship. 8 alien civilizations visited earth to issue a speeding ticket and 3 more sent strongly worded letters about safety in their school zones.
+"When those armies came, they slaughtered the village and cornered me in my cottage. They said that they had me surrounded, but they didn't seem to realise that the last thing you should let a necromancer have access to is fresh corpses.
+"Father Christmas! " called out the Lord of Halloween across the bloody fields of November.
+A man draws a gun in a dark alley and asks for your wallet. You begrudgingly obey.
+When you die, you appear in a cinema with a number of other people who look like you. You find out that they are your previous reincarnations, and soon you all begin watching your next life on the big screen.
+You've been trapped in an endlessly repeating simulation by an alien race, studied and researched. They believe when they reset it, your memory resets as well, but for the last 1000 cycles you remember everything.
+You were cursed to be dragged to hell by an evil witch. Problem is you were actually a good person.
+“So let me get this straight. I think that we’re childhood friends, when in truth you are older than the universe itself?
+As humanity advances in technology, we decide to send messages to extraterrestrial life. We got a message back.
+The dragon has kidnapped the princess. .
+Theoretically, you can not surpass the speed of light. Humans find out why when we manage to break this rule, as our ships begin to outpace the rendering speed of the universe, and the illusion of all reality is broken as everything around us vanishes the faster we go.
+Every "walks into a bar" joke occurs in a single bar. You're the bartender and your shift just started.
+You’re an immortal 30-year-old-looking serial killer who was sentenced to 1,000 years in prison. After 100 years people started asking questions, but now it’s been 400 years and you’re starting to outlast the prison itself.
+It's been 6 years since the zombie apocalypse started, thousands die weekly, but society hasn't changed much. Your local news tracks zombie migration.
+Psychologically unstable detective takes on a special assignment. The title of this story should be: The Asylum's Ghost It should feature the following genres: Thriller, Paranormal, Mystery, Drama
+"Father, if Necromancers are evil and all get hunted down, why is the court wizard allowed to be one? " The title of this story should be: The Court of Bones It should feature the following genres: Fantasy, Horror, Drama, Paranormal
+You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama
+You were excited to attend the magic school after you learned that you were a mage. Now after your first year you are severely disappointed.
+When you die, you are given the chance to flip a coin. If you call the toss correctly, you are allowed to keep living, while resetting to the age of your choice.
+Why do people bother keeping savings in banks/currencies which are potentially unstable?
+Why does water freeze from top to bottom? Deep in the ocean it’s below freezing, why doesn’t it freeze?
+how they catch digital pirates who use hotspots or do they?
+The voting rights of citizens in the District of Columbia historically differ from the rights of citizens in each of the 50 U.S. states. Why can't the U.S. just add an amendment to fix that right now?
+I've been reading up on nukes. Did the Nevada nuclear tests have nuclear winter? Why or why not?
+How come cars are able to go up to 220 km/h but highways only allow speeds of up to 110 km/h. Wouldn't it be wiser to have cars max out at 110 km/h-ish and reduce the engine capabilities?
+Is it ever possible in the future to have matching finger/thumbprints?
+How a military can overthrow a government?
+why does spicy food stay spicy when it comes out the other end?
+Why do posts on reddit not start on 0 (what's the purpose of allowing one to vote for oneself)?
+How does copyright work with references?
+Why is the word 'cunt' such a taboo word in the U.S.?
+Why is the USA drinking age set at 21 when in most other respects you're an adult at 18.
+Why do I not smell perfume I've sprayed on me but other people do?
+How does a two headed reptile/siamese twins work? How do they move their bodies assuming there are two brains?
+why aren't AK47's an "accurate" rifle
+Why can I not remember what happens when I'm drunk?
+Why does having noise in the background (TV, music, etc.) make me feel safer when I'm home alone?
+Isn't the freshwater we have to work with just going in a cycle? How are we losing fresh water?
+Why is there such a large Insane Clown Posse (Juggalo) following?
+Why metal at room temperature feels cold while, say, fabric at room temperature doesn't
+A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?
+Why do southern states freak out over a little snow?
+What is the origin and meaning of "Strange women lying in ponds distributing swords is no basis for a system of government."
+What are those bastardly little tongue sores you get from eating too much salt or sugar, and how do you get rid of them?
+Why are swearing words related to genitals and/or sexuality?
+How can Pewdipie make $4M a year?
+Where exactly is a woman's G-spot located, and how do you find it?
+Why do we hear static from radios and TV's when there's nothing being broadcast? Shouldn't we just hear silence?
+why you can't put metal in the microwave but nothing happens to the metal that it's built from
+The size of the universe.
+Why do school hours not match working hours?
+Why do dogs go absolutely crazy after getting a bath?
+What was the warsaw uprising
+Why do professional athletes have a significantly lower pulse than the average person ?
+Pirate Bay Megathread
+How, with the proliferation of free porn websites like youporn, does any porn production make money?
+How do landlords make money
+Why do DVDs in widescreen format play with black bars on top and bottom on my widescreen TV
+How do spammers spoof a cell phone number to make scam calls?
+How have wolves impacted Yellowstone?
+What is the difference between a CEO and the President of a company?
+Why is it, that when I get really tired, everything is so much funnier?
+How do people get infected with plaque?
+Why does a company like Boeing need to make a commercial? It's not like anyone watching is going to buy one.
+How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?
+What are dentists actually doing when they scrape at your teeth with those metal picks?
+When did we stop having to type in 'www.'? Why did we have to to begin with?
+What is the difference between real and imaginary numbers?
+How odds work if everything is random?
+After several thousand years, the Greek gods awaken in the in the mid 1940’s. When the gods meet up to discuss what they had learned of the modern world, Ares walks into the room with a hollow and horrified look in his eyes, the day is August 6th, 1945.
+“Sometimes a little bit of controlled chaos is precisely what is needed to prevent something MUCH much worse… And sometimes that controlled chaos preserves the Order instead of destroying it. .
+As it turns out, the Avatar is still being reborn to this day. Unfortunately, if the government finds the Avatar, they’re killed before they liberate society.
+Every 10 years, you are expected to go to a meeting you have already been to; one attended by several future and younger versions of yourself, each version separated by 10 year intervals. The youngest you is 10, the oldest 90.
+Humans finally reach the stars and realize that. .
+You have worked all your life to become the head priestess. In your first private communal the goddess that created all life in your world tells you she wishes to die… The title of this story should be: The Last Prayer of Alaya It should feature the following genres: Fantasy, Drama, Paranormal
+"The Avengers need to be regulated. Look at how you destroyed New York in 2012.
+You are a mighty dragon, the kind who kidnaps princesses. However, you only do it because princesses inherently have the ability to talk to animals and you're starved for intelligent conversation.
+You've been traveling between universes looking for that one with the utopian intergalactic civilization, funnily enough, you found it in one where lovecraftian gods rule completely said universe. The title of this story should be: The Utopia That Never Was It should feature the following genres: Science Fiction, Fantasy, Thriller
+"Why do I remember dying? !
+It's been a century since the global blackout eliminated the worlds electricity. The nation once known as "America" is now a medieval state.
+The dragon spoke, "Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.
+You’re an immortal ruler. For a millennia you’ve slept, providing your blood to nourish your people, and allowing your body to be forever severed to provide what they need.
+You are the immortal overlord which has plagued the land for centuries. After years you have discovered a life hack to getting what you want.
+There are 10 legendary dentists who review every toothpaste. You are the 10th, the denier, the rejector of every 10/10.
+"For someone who frequently travels between worlds, you ought to know, all of them are eventually conquered by the same evil" - "Actually, all but one" The title of this story should be: The Space Between It should feature the following genres: Fantasy, Science Fiction, Thriller
+You are a minor supervillain. Your antics aren't illegal, but they're quite devastating to the local hero population.
+After the Battle of Hogwarts, Dudley met a woman and they had a daughter,Sophie. Sophie is the light of their lives,she's always been a pleasant child.
+Pyromancy is ridiculously dangerous. Most pyromancers die before they turn 20 and 25 is considered ancient by their standards.
+Every 1000 years all of the Gods get together for a contest to see who can collect the most souls with a single catastrophic event. Last time Poseidon broke the 1M mark with a Tsunami/earthquake combo.
+As it turns out, the easiest and most accurate way to identify a vampire isn’t their aversion to sunlight or absence of a reflection. Rather, it’s their extreme and unrepentant pretentiousness.
+You've eaten your Chinese takeout and open your fortune cookie. It says, "If you kill a killer, the number of killers in the world stays the same.
+When you die, you don't meet the Grim Reaper. There is no robed skeleton ready to cut you down with his scythe, or Boatman waiting to take your fare.
+"Welcome to New York, 47. Your target is professional freelance photographer and Biochemistry major, Peter Benjiman Parker" The title of this story should be: In Frame It should feature the following genres: Action, Thriller, Science Fiction, Paranormal
+"Why does everything always happen to me! ?
+You were forced to swap bodies with the biggest nerd in school who knowingly did it. Instead of demanding your body back, you decide to teach the nerd some self worth by becoming the most popular person in school in the nerd's body The title of this story should be: Trading Places It should feature the following genres: Fantasy, Drama, Comedy, Paranormal
+It's been five thousand years, and the last humans awake from cryostasis in the middle of an alien civilization's research station. The title of this story should be: Station 87bX It should feature the following genres: Science Fiction, Thriller, Action
+“That’s why I’m like this. This is why I must do this.
+You’re classified as a villain in the eyes of the government. The truth?
+You hear a soft squeaking coming from a nearby tree stump. When you lean down to take a peek, you find a bat with a torn wing.
+Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.
+The edge of the world is real and every few years miles of it crumbles away into the void, forcing people to constantly move toward the ever expanding centre. You're a RimRunner, scavenging the abandoned cities before they slip over the edge.
+You are the immortal ruler of a kingdom. Since the people didn't much care for an "immortal hell spawn" for a king, you play as the court jester.
+There are multi-Gods for the multi-verse, and it turns out ours is kind of like the 'cool mom who lets you drink at her house,' though other Gods look at our free will and generally silent deity as bad Godding on His part. The title of this story should be: The Unsupervised Ones It should feature the following genres: Fantasy, Drama
+You are a mobster. A particularly successful one at that.
+"Fuck it. " The General said, as the alien mother-ship came in to land.
+After the Christian Rapture happened to everyone's considerable shock, those left behind (and those born to them after) all had a strange, unremovable marking appear on their foreheads. It took decades to translate, but the result was horrifying; "Do not harvest, not fit for consumption.
+Humans get harvested for food. The title of this story should be: The Light of the Red Sun It should feature the following genres: Science Fiction, Horror, Drama, Thriller
+You’re dying. Connected to various machines and fluids so you can go as painlessly as possible.
+A man has had enough of his boring town and life, so he decides to dress up as a cryptid and scare people around. The town's actual cryptid is immensely offended by this.
+You've finally done it. You've proven the existence of magic; discovered how an ordinary human cast spells to control that immense arcane power.
+As it turns out, they had it wrong. Its "No pain without gain".
+Queen cockroach orders her guards to cut someones head off The title of this story should be: The War Below It should feature the following genres: Fantasy, Science Fiction, Thriller
+It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.
+"What happened? What sort of spell was that?
+You were framed for a crime that you have never committed, and now you are soon to be executed. While waiting for your doom, a group of armed people storm in.
+There exists a stone in Washington D. C.
+You hire a female prostitute, tell her to meet you at a fancy restaurant, and ask her to pretend to be your colleague from the bank. Hire a male prostitute, and tell him the same thing.
+"Without a doubt, the Megalodon is completely, 100% dead. Well, there's Benchley, but he lives in captivity.
+Humans have always been endurance hunters. We can endure untold physical, psychological, and emotional trauma.

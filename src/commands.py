@@ -201,7 +201,13 @@ def cmd_evaluate(args):
     paraphraser_model, paraphraser_tokenizer = get_paraphraser(model.device)
     with open(args.prompts_file, 'r', encoding='utf-8') as f:
         prompts = [line.strip() for line in f.readlines() if line.strip()]
-    print(f"Found {len(prompts)} prompts. Using all for evaluation.")
+
+    total_prompts = len(prompts)
+    if args.max_prompts and args.max_prompts > 0 and args.max_prompts < total_prompts:
+        prompts = prompts[:args.max_prompts]
+        print(f"Found {total_prompts} prompts. Limiting evaluation to first {len(prompts)}.")
+    else:
+        print(f"Found {total_prompts} prompts. Using all for evaluation.")
 
     if args.deltas:
         param_to_sweep, sweep_values = 'delta', args.deltas

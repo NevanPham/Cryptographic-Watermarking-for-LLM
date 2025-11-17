@@ -62,6 +62,8 @@ python main.py evaluate ^
   --output-dir evaluation/evaluation_results_lbit
 ```
 
+> By default evaluation uses the first 100 prompts. Pass `--max-prompts 300` (or any number you need) when running on HPC to process the full file.
+
 ## Running helpers and tools
 
 ### Analyse plots and metrics (from evaluation output)

@@ -138,6 +138,12 @@ def main():
         help='Path to prompts file (default: assets/prompts.txt)'
     )
     parser.add_argument(
+        '--max-prompts',
+        type=int,
+        default=100,
+        help='Limit on number of prompts to process (default: 100; set <=0 for all prompts)'
+    )
+    parser.add_argument(
         '--model',
         type=str,
         default='gpt2',
@@ -184,13 +190,13 @@ def main():
         '--min-l',
         type=int,
         default=None,
-        help='Minimum L value (used if --l-values not specified, default: 8)'
+        help='Minimum L value (used if --l-values not specified, default: 4)'
     )
     parser.add_argument(
         '--max-l',
         type=int,
         default=None,
-        help='Maximum L value (used if --l-values not specified, default: 32)'
+        help='Maximum L value (used if --l-values not specified, default: 20)'
     )
     parser.add_argument(
         '--l-values',
@@ -212,8 +218,8 @@ def main():
             return
     else:
         # Use range from min-l to max-l
-        min_l = args.min_l if args.min_l is not None else 8
-        max_l = args.max_l if args.max_l is not None else 32
+        min_l = args.min_l if args.min_l is not None else 4
+        max_l = args.max_l if args.max_l is not None else 20
         
         # Validate L range
         if min_l < 1 or max_l > 64 or min_l > max_l:
@@ -246,7 +252,12 @@ def main():
     with open(prompts_path, 'r', encoding='utf-8') as f:
         prompts = [line.strip() for line in f.readlines() if line.strip()]
     
-    print(f"Loaded {len(prompts)} prompts from {prompts_path}")
+    total_prompts = len(prompts)
+    if args.max_prompts and args.max_prompts > 0 and args.max_prompts < total_prompts:
+        prompts = prompts[:args.max_prompts]
+        print(f"Loaded {total_prompts} prompts from {prompts_path}. Limiting run to first {len(prompts)} prompts.")
+    else:
+        print(f"Loaded {total_prompts} prompts from {prompts_path}")
     
     # Load model
     print(f"Loading model '{args.model}'...")

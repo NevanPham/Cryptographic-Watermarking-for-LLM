@@ -470,6 +470,7 @@ python main.py evaluate ^
    - Paraphrase 30% of sentences (T5 model)
 3. Runs detection on all variants
 4. Saves results to `evaluation/evaluation_results/analysis_results.json`
+5. By default only the first 100 prompts are evaluated. Pass `--max-prompts 300` (or any number ≤ total prompts) when you want the full sweep.
 
 **Expected output files:**
 ```
@@ -780,7 +781,7 @@ UserId,Username
 
 **Usage:** Required for multi-user fingerprinting
 
-#### `assets/prompts.txt` (75 prompts)
+#### `assets/prompts.txt` (~300 prompts, configurable)
 **Format:** One prompt per line
 ```text
 The future of artificial intelligence is
@@ -788,7 +789,7 @@ Write a Python function to calculate fibonacci numbers
 Explain quantum computing in simple terms
 ```
 
-**Usage:** Batch evaluation input
+**Usage:** Batch evaluation input (default runs first 100 prompts; override with `--max-prompts N`)
 
 ---
 
@@ -903,21 +904,21 @@ Decision: Text traced to User 888 ✓
 After running batch evaluation:
 ```
 === Evaluation Summary ===
-Total prompts tested: 75
+Total prompts tested: 100 (subset of ~300 available prompts)
 Model: gpt2
 Parameter sweep: delta=[2.0, 2.5, 3.0], entropy=[3.0, 3.5, 4.0]
 
 Clean text results:
-  Detection rate: 98.7% (74/75 prompts)
+  Detection rate: 98.7% (97/100 prompts)
   Average z-score: 15.23
   Average blocks: 94.5
-  False positive rate: 0.0% (0/75 control texts)
+  False positive rate: 0.0% (0/100 control texts)
 
 Perturbation robustness:
-  Delete start 20%: 87.3% (65/75)
-  Delete end 20%: 89.1% (67/75)
-  Delete middle 20%: 85.7% (64/75)
-  Paraphrase 30%: 76.4% (57/75)
+  Delete start 20%: 87.3% (87/100)
+  Delete end 20%: 89.1% (89/100)
+  Delete middle 20%: 85.7% (86/100)
+  Paraphrase 30%: 76.4% (76/100)
 
 Best parameter combination:
   delta=2.5, entropy_threshold=3.5

@@ -42,6 +42,14 @@ This guide explains the knobs you can tune for embedding (generation) and detect
 --max-new-tokens 512
 ```
 
+#### max_prompts (evaluation scope)
+- What: Caps how many lines are read from `assets/prompts.txt` when running `main.py evaluate` or the sweep helpers.
+- Effect: Default is 100 prompts. Set a higher value (e.g., `--max-prompts 300`) or ≤0 to process the entire file on HPC runs.
+- CLI:
+```bat
+python main.py evaluate --prompts-file assets/prompts.txt --max-prompts 300 ...
+```
+
 ---
 
 ### Detector‑specific parameter
