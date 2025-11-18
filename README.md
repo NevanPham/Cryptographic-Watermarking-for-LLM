@@ -706,8 +706,9 @@ python helper_scripts\compare_collusion_resistance.py ^
 - Tests three approaches: naive, min-distance-2, min-distance-3
 - Uses same colluding users across all approaches per prompt (fair comparison)
 - Two combination methods: normal and with deletion
-- Generates comparison table, JSON results, and CSV summary
+- Generates comparison table, JSON results, per-prompt JSONs, and CSV summary
 - Organized output structure by approach and prompt
+- Supports `--csv-only` mode to rebuild summaries without regenerating text
 
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
@@ -1228,7 +1229,7 @@ python helper_scripts/compare_collusion_resistance.py ^
   --entropy-threshold 2.5 ^
   --hashing-context 5 ^
   --z-threshold 4.0 ^
-  --max-new-tokens 256 ^
+  --max-new-tokens 400 ^
   --deletion-percentage 0.05 ^
   --output-dir evaluation/collusion_resistance
 ```
@@ -1262,6 +1263,8 @@ evaluation/collusion_resistance_<N>/
 │   └── prompt_0/, prompt_1/, ...
 ├── min-distance-3/
 │   └── prompt_0/, prompt_1/, ...
+├── prompt_results/
+│   └── prompt_0_results.json, prompt_1_results.json, ...
 ├── collusion_resistance_results_<N>users.json
 └── collusion_resistance_summary_<N>users.csv
 ```
@@ -1270,12 +1273,14 @@ evaluation/collusion_resistance_<N>/
 - Console: Comparison table showing success rates
 - JSON: Detailed results with trace information for each test case
 - CSV: Summary statistics for easy analysis
+- Per-prompt JSON files (`prompt_results/prompt_<ID>_results.json`) for quick post-processing
 
 **Parameters:**
 - `--num-colluders`: Number of colluding users (2 or 3, default: 2)
 - `--deletion-percentage`: Percentage of text to delete per user (default: 0.05 for 5%)
 - `--max-prompts`: Number of prompts to test (default: 100)
 - Output directory automatically appends `_<num_colluders>` (e.g., `collusion_resistance_2`)
+- `--csv-only`: Skip generation and rebuild JSON/CSV summaries from existing per-prompt results
 
 ---
 

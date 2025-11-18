@@ -194,7 +194,7 @@ python helper_scripts\compare_collusion_resistance.py ^
   --l-bits 10 ^
   --delta 3.5 ^
   --entropy-threshold 2.5 ^
-  --max-new-tokens 256
+  --max-new-tokens 400
 ```
 - Test with 3 colluders:
 ```bat
@@ -229,7 +229,15 @@ python helper_scripts\compare_collusion_resistance.py ^
   - Same colluding users used across all three approaches per prompt (fair comparison)
   - Users selected from different groups (tests true collusion resistance)
   - Two combination methods test robustness
+  - Generates per-prompt JSON files under `prompt_results/` for easy post-processing
   - Default: first 100 prompts (use `--max-prompts` to change)
+- **CSV-only mode (skip regeneration, reuse existing prompt results):**
+```bat
+python helper_scripts\compare_collusion_resistance.py ^
+  --csv-only ^
+  --num-colluders 2 ^
+  --output-dir evaluation/collusion_resistance
+```
 
 ## Parameter tuning guide
 

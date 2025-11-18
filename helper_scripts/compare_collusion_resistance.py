@@ -10,6 +10,7 @@ import random
 import sys
 from tqdm import tqdm
 import pandas as pd
+import numpy as np
 import nltk
 
 # Add the parent directory to sys.path
@@ -76,6 +77,19 @@ def combine_texts_with_deletion(texts: list[str], deletion_percentage: float = 0
     """Combine texts after deleting a percentage from each user's text."""
     deleted_texts = [delete_percentage_text(text, deletion_percentage) for text in texts]
     return "\n\n".join(deleted_texts)
+
+
+def json_default_encoder(obj):
+    """Convert NumPy/Pandas types to native Python types for JSON serialization."""
+    if isinstance(obj, (np.integer, np.int64)):
+        return int(obj)
+    if isinstance(obj, (np.floating, np.float64)):
+        return float(obj)
+    if isinstance(obj, (np.ndarray,)):
+        return obj.tolist()
+    if isinstance(obj, pd.Series):
+        return obj.to_dict()
+    return obj
 
 
 def select_colluding_users(num_users: int, total_users: int, min_distance: int = None) -> list[int]:
@@ -240,8 +254,8 @@ def main():
     parser.add_argument(
         '--max-new-tokens',
         type=int,
-        default=256,
-        help='Maximum number of tokens to generate per user (default: 256)'
+        default=400,
+        help='Maximum number of tokens to generate per user (default: 400)'
     )
     parser.add_argument(
         '--num-colluders',
@@ -262,8 +276,25 @@ def main():
         default='evaluation/collusion_resistance',
         help='Output directory for results (default: evaluation/collusion_resistance). Will append _<num_colluders> automatically.'
     )
+    parser.add_argument(
+        '--csv-only',
+        action='store_true',
+        help='Skip generation and only build JSON/CSV summaries from existing prompt-level results.'
+    )
     
     args = parser.parse_args()
+    
+    # Create output directory with number of colluders appended
+    base_output_dir = args.output_dir
+    # Append _<num_colluders> to the directory name
+    if not base_output_dir.endswith(f'_{args.num_colluders}'):
+        base_output_dir = f'{base_output_dir}_{args.num_colluders}'
+    
+    if not os.path.isabs(base_output_dir):
+        output_dir = os.path.join(parent_dir, base_output_dir)
+    else:
+        output_dir = base_output_dir
+    os.makedirs(output_dir, exist_ok=True)
     
     # Print header
     print("\n" + "="*80)
@@ -279,23 +310,28 @@ def main():
     print(f"  • Z-threshold: {args.z_threshold}")
     print(f"  • Max new tokens: {args.max_new_tokens}")
     print(f"  • Deletion percentage: {args.deletion_percentage*100:.1f}%")
+    print(f"  • Output directory: {output_dir}")
     print("="*80)
     
-    # Setup NLTK
+    prompt_results_dir = os.path.join(output_dir, 'prompt_results')
+    
+    if args.csv_only:
+        print("\n[CSV-ONLY MODE] Rebuilding summaries from existing prompt results...\n")
+        if not os.path.isdir(prompt_results_dir):
+            print(f"  ❌ Error: Prompt results directory not found: {prompt_results_dir}")
+            print("  Please run the full comparison first.")
+            return
+        all_results = load_prompt_results(prompt_results_dir)
+        if not all_results:
+            print(f"  ❌ Error: No prompt result files found in {prompt_results_dir}")
+            print("  Please run the full comparison first.")
+            return
+        total_prompts_processed = len({result['prompt_id'] for result in all_results})
+        generate_reports(all_results, args, output_dir, total_prompts_processed)
+        return
+    
+    # Setup NLTK (only needed when generating new data)
     setup_nltk()
-    
-    # Create output directory with number of colluders appended
-    base_output_dir = args.output_dir
-    # Append _<num_colluders> to the directory name
-    if not base_output_dir.endswith(f'_{args.num_colluders}'):
-        base_output_dir = f'{base_output_dir}_{args.num_colluders}'
-    
-    if not os.path.isabs(base_output_dir):
-        output_dir = os.path.join(parent_dir, base_output_dir)
-    else:
-        output_dir = base_output_dir
-    os.makedirs(output_dir, exist_ok=True)
-    print(f"\n[OUTPUT] Results will be saved to: {output_dir}")
     
     # Load prompts
     print(f"\n[1/4] Loading prompts...")
@@ -364,7 +400,10 @@ def main():
     print(f"  → Each prompt uses same colluding users across all approaches")
     print(f"  → Two combination methods: normal and with {args.deletion_percentage*100:.1f}% deletion\n")
     
+    os.makedirs(prompt_results_dir, exist_ok=True)
+    
     for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Processing prompts", unit="prompt")):
+        prompt_specific_results = []
         # Select colluding users ONCE per prompt - same users for all approaches
         # This ensures fair comparison across approaches using the same collusion scenario
         # For grouped schemes, try to select from different groups if possible
@@ -458,7 +497,8 @@ def main():
                         }
                     }
                     all_results.append(result)
-            
+                    prompt_specific_results.append(result)
+        
             except Exception as e:
                 print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx} with approach '{approach_name}': {e}")
                 # Store error result
@@ -475,8 +515,45 @@ def main():
                         'error': str(e)
                     }
                     all_results.append(result)
+                    prompt_specific_results.append(result)
+        
+        # Save per-prompt results for later csv-only summary generation
+        prompt_json_path = os.path.join(prompt_results_dir, f'prompt_{prompt_idx}_results.json')
+        with open(prompt_json_path, 'w', encoding='utf-8') as prompt_file:
+            json.dump(prompt_specific_results, prompt_file, indent=2, default=json_default_encoder)
     
-    # Calculate success rates
+    total_prompts_processed = len({result['prompt_id'] for result in all_results})
+    generate_reports(all_results, args, output_dir, total_prompts_processed)
+
+
+def load_prompt_results(prompt_results_dir: str) -> list[dict]:
+    """Load all per-prompt result JSON files from disk."""
+    all_results: list[dict] = []
+    if not os.path.isdir(prompt_results_dir):
+        return all_results
+    prompt_files = sorted(
+        filename for filename in os.listdir(prompt_results_dir)
+        if filename.startswith('prompt_') and filename.endswith('_results.json')
+    )
+    for filename in prompt_files:
+        path = os.path.join(prompt_results_dir, filename)
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                prompt_results = json.load(f)
+                if isinstance(prompt_results, list):
+                    all_results.extend(prompt_results)
+        except (json.JSONDecodeError, OSError) as exc:
+            print(f"  ⚠ Warning: Could not load {filename}: {exc}")
+            continue
+    return all_results
+
+
+def generate_reports(all_results: list[dict], args, output_dir: str, total_prompts_processed: int):
+    """Calculate success rates and write summary artifacts."""
+    if not all_results:
+        print("No results available to summarize.")
+        return
+    
     print(f"\n[4/4] Calculating success rates and generating reports...")
     print("="*80)
     
@@ -503,12 +580,11 @@ def main():
     print("="*80)
     print(f"\nTest Configuration:")
     print(f"  • Number of colluders: {args.num_colluders}")
-    print(f"  • Total prompts tested: {len(prompts)}")
+    print(f"  • Total prompts tested: {total_prompts_processed}")
     print(f"  • Deletion percentage: {args.deletion_percentage*100:.1f}%")
     print(f"\nSuccess Rates by Approach:")
     print("-"*80)
     
-    # Create table data
     table_data = []
     for approach in ['naive', 'min-distance-2', 'min-distance-3']:
         row = {'Approach': approach}
@@ -530,7 +606,7 @@ def main():
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump({
             'summary': {
-                'num_prompts': len(prompts),
+                'num_prompts': total_prompts_processed,
                 'num_colluders': args.num_colluders,
                 'deletion_percentage': args.deletion_percentage,
                 'parameters': {
@@ -544,26 +620,12 @@ def main():
             },
             'success_rates': success_rates,
             'detailed_results': all_results
-        }, f, indent=2)
+        }, f, indent=2, default=json_default_encoder)
     
     print(f"\n" + "="*80)
     print(" " * 25 + "FILES SAVED")
     print("="*80)
     print(f"\n✓ Detailed results JSON: {json_path}")
-    print(f"✓ Summary CSV: {csv_path}")
-    print(f"\nIntermediate files structure:")
-    print(f"  {output_dir}/")
-    print(f"    ├── naive/")
-    print(f"    │   ├── prompt_0/")
-    print(f"    │   │   ├── master_key.key")
-    print(f"    │   │   ├── user_<ID>_text.txt")
-    print(f"    │   │   ├── combined_normal.txt")
-    print(f"    │   │   └── combined_with_deletion.txt")
-    print(f"    │   └── prompt_1/, prompt_2/, ...")
-    print(f"    ├── min-distance-2/")
-    print(f"    │   └── prompt_0/, prompt_1/, ...")
-    print(f"    └── min-distance-3/")
-    print(f"        └── prompt_0/, prompt_1/, ...")
     
     # Save summary CSV
     summary_data = []
@@ -581,6 +643,21 @@ def main():
     csv_path = os.path.join(output_dir, f'collusion_resistance_summary_{args.num_colluders}users.csv')
     summary_df = pd.DataFrame(summary_data)
     summary_df.to_csv(csv_path, index=False)
+    
+    print(f"✓ Summary CSV: {csv_path}")
+    print(f"\nIntermediate files structure:")
+    print(f"  {output_dir}/")
+    print(f"    ├── naive/")
+    print(f"    │   ├── prompt_0/")
+    print(f"    │   │   ├── master_key.key")
+    print(f"    │   │   ├── user_<ID>_text.txt")
+    print(f"    │   │   ├── combined_normal.txt")
+    print(f"    │   │   └── combined_with_deletion.txt")
+    print(f"    │   └── prompt_1/, prompt_2/, ...")
+    print(f"    ├── min-distance-2/")
+    print(f"    │   └── prompt_0/, prompt_1/, ...")
+    print(f"    └── min-distance-3/")
+    print(f"        └── prompt_0/, prompt_1/, ...")
     
     print("\n" + "="*80)
     print(" " * 30 + "✓ EVALUATION COMPLETE!")
