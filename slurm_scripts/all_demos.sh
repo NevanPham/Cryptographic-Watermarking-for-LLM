@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=watermark_demos
-#SBATCH --account=oz413               # Replace with your project account
+#SBATCH --account=oz402
 #SBATCH --partition=skylake-gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -19,9 +19,9 @@ module load python/3.13.1
 module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
-source /fred/oz413/rburke/Watermark-Project/venv/bin/activate
+source /home/kpham/crypto-watermark/venv/bin/activate
 
-export HF_HOME=/fred/oz413/rburke/huggingface
+export HF_HOME=/home/kpham/huggingface
 export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
 
