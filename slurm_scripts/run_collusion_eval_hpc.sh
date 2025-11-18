@@ -26,7 +26,7 @@ export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
 
 echo "Starting collusion resistance evaluation..."
-echo "="*80
+echo "================================================================================"
 
 # Test different numbers of colluders
 for NUM_COLLUDERS in 2 3 4; do
@@ -52,5 +52,21 @@ done
 echo "All collusion evaluations completed!"
 echo "Results saved to:"
 echo "  - evaluation/collusion_resistance_2users/"
-echo "  - evaluation/collusion_resistance_3users/" 
+echo "  - evaluation/collusion_resistance_3users/"
 echo "  - evaluation/collusion_resistance_4users/"
+
+# Send completion email
+mail -s "HPC Job Complete: run_collusion_eval_hpc.sh (Job ID: $SLURM_JOB_ID)" 104772183@student.swin.edu.au << EOF
+Your run_collusion_eval_hpc.sh job has finished!
+
+Job ID: $SLURM_JOB_ID
+Status: COMPLETED
+Results locations:
+- /home/kpham/crypto-watermark/evaluation/collusion_resistance_2users/
+- /home/kpham/crypto-watermark/evaluation/collusion_resistance_3users/
+- /home/kpham/crypto-watermark/evaluation/collusion_resistance_4users/
+
+Check results with:
+scp -r kpham@ozstar.swin.edu.au:/home/kpham/crypto-watermark/evaluation/collusion_resistance_* ~/Downloads/
+
+EOF

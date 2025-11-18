@@ -26,7 +26,7 @@ export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
 
 echo "Starting comprehensive watermarking demonstrations..."
-echo "="*80
+echo "================================================================================"
 
 # Available models: gpt2, gpt-oss-20b, gpt-oss-120b
 MODELS=("gpt2" "gpt-oss-20b")  # Skip 120b unless you have 80GB+ GPU
@@ -34,7 +34,7 @@ PROMPT="The future of AI is"
 
 for MODEL in "${MODELS[@]}"; do
     echo "Testing with model: $MODEL"
-    echo "-"*50
+    echo "------------------------------------------------------------------------"
     
     # 1. Zero-bit watermarking demo
     echo "[1/5] Zero-bit watermarking with $MODEL..."
@@ -128,3 +128,16 @@ for MODEL in "${MODELS[@]}"; do
 done
 
 echo "All demonstrations completed successfully!"
+
+# Send completion email
+mail -s "HPC Job Complete: all_demos.sh (Job ID: $SLURM_JOB_ID)" 104772183@student.swin.edu.au << EOF
+Your all_demos.sh job has finished!
+
+Job ID: $SLURM_JOB_ID
+Status: COMPLETED
+Results location: /home/kpham/crypto-watermark/demonstration/
+
+Check results with:
+scp -r kpham@ozstar.swin.edu.au:/home/kpham/crypto-watermark/demonstration ~/Downloads/
+
+EOF

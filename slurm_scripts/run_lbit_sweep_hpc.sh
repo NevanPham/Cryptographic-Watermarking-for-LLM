@@ -26,7 +26,7 @@ export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
 
 echo "Starting L-bit parameter sweep evaluation..."
-echo "="*80
+echo "================================================================================"
 
 # Run the L-bit parameter sweep
 python run_lbit_sweep.py \
@@ -42,3 +42,16 @@ python run_lbit_sweep.py \
 echo "L-bit sweep completed!"
 echo "Results saved to: evaluation/lbit_sweep_gpt20b"
 echo "You can analyze results with: python analyse.py evaluation/lbit_sweep_gpt20b"
+
+# Send completion email
+mail -s "HPC Job Complete: run_lbit_sweep_hpc.sh (Job ID: $SLURM_JOB_ID)" 104772183@student.swin.edu.au << EOF
+Your run_lbit_sweep_hpc.sh job has finished!
+
+Job ID: $SLURM_JOB_ID
+Status: COMPLETED
+Results location: /home/kpham/crypto-watermark/evaluation/lbit_sweep_gpt20b/
+
+Check results with:
+scp -r kpham@ozstar.swin.edu.au:/home/kpham/crypto-watermark/evaluation/lbit_sweep_gpt20b ~/Downloads/
+
+EOF
