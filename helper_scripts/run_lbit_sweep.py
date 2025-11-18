@@ -205,8 +205,101 @@ def main():
         default=None,
         help='Specific L values to test (e.g., --l-values 4 5 6 7). If specified, overrides --min-l and --max-l'
     )
+    parser.add_argument(
+        '--csv-only',
+        action='store_true',
+        help='Only create CSV/Excel summary from existing JSON files, do not run new evaluations'
+    )
     
     args = parser.parse_args()
+    
+    # Create output directory (relative to project root)
+    if not os.path.isabs(args.output_dir):
+        output_dir = os.path.join(parent_dir, args.output_dir)
+    else:
+        output_dir = args.output_dir
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # If csv-only mode, just load all existing results and create summary
+    if args.csv_only:
+        print("="*60)
+        print("CSV-Only Mode: Creating summary from existing JSON files")
+        print("="*60)
+        
+        # Load ALL existing results (no exclusions)
+        print(f"\nLoading all existing results from {output_dir}...")
+        existing_summary_data = load_existing_results(output_dir, exclude_l_values=[])
+        
+        if not existing_summary_data:
+            print(f"No existing JSON files found in {output_dir}")
+            return
+        
+        print(f"Loaded {len(existing_summary_data)} existing result entries")
+        
+        # Create summary from existing data only
+        all_summary_data = existing_summary_data
+        df = pd.DataFrame(all_summary_data)
+        
+        # Get all unique L values from the data
+        all_l_values = sorted(df['L'].unique())
+        print(f"\nFound results for L values: {all_l_values}")
+        
+        # Create summary statistics by L
+        summary_stats = []
+        for L in all_l_values:
+            l_data = df[df['L'] == L]
+            if len(l_data) > 0:
+                # Filter out any rows with errors (they won't have accuracy metrics)
+                successful = l_data.dropna(subset=['Accuracy_Percent'])
+                if len(successful) > 0 and 'Accuracy_Percent' in successful.columns:
+                    summary_stats.append({
+                        'L': L,
+                        'Total_Prompts': len(l_data),
+                        'Successful': len(successful),
+                        'Avg_Accuracy_Percent': successful['Accuracy_Percent'].mean(),
+                        'Median_Accuracy_Percent': successful['Accuracy_Percent'].median(),
+                        'Min_Accuracy_Percent': successful['Accuracy_Percent'].min(),
+                        'Max_Accuracy_Percent': successful['Accuracy_Percent'].max(),
+                        'Exact_Matches': successful['Exact_Match'].sum() if 'Exact_Match' in successful.columns else 0,
+                        'Exact_Match_Rate_Percent': (successful['Exact_Match'].sum() / len(successful)) * 100.0 if 'Exact_Match' in successful.columns else 0.0,
+                        'Avg_Undecided_Bits': successful['Undecided_Bits'].mean() if 'Undecided_Bits' in successful.columns else 0.0,
+                        'Avg_Decided_Bits': successful['Decided_Bits'].mean() if 'Decided_Bits' in successful.columns else 0.0
+                    })
+        
+        # Save detailed Excel file
+        excel_path = os.path.join(output_dir, 'lbit_sweep_summary.xlsx')
+        try:
+            with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
+                # Detailed results sheet
+                df.to_excel(writer, sheet_name='Detailed_Results', index=False)
+                
+                # Summary statistics sheet
+                if summary_stats:
+                    summary_df = pd.DataFrame(summary_stats)
+                    summary_df.to_excel(writer, sheet_name='Summary_By_L', index=False)
+        except ImportError:
+            # Fallback to CSV if openpyxl is not available
+            print("Warning: openpyxl not found. Saving as CSV instead.")
+            csv_path = os.path.join(output_dir, 'lbit_sweep_summary.csv')
+            df.to_csv(csv_path, index=False)
+            excel_path = csv_path
+            if summary_stats:
+                summary_csv_path = os.path.join(output_dir, 'lbit_sweep_summary_by_L.csv')
+                summary_df = pd.DataFrame(summary_stats)
+                summary_df.to_csv(summary_csv_path, index=False)
+        
+        print(f"\n{'='*60}")
+        print(f"Excel summary saved to: {excel_path}")
+        print(f"{'='*60}")
+        
+        # Print summary table
+        if summary_stats:
+            print("\nSummary Statistics by L:")
+            summary_df = pd.DataFrame(summary_stats)
+            print(summary_df.to_string(index=False))
+        
+        print(f"\nAll results saved to: {output_dir}")
+        return
     
     # Determine which L values to use
     if args.l_values is not None:
@@ -229,13 +322,6 @@ def main():
         l_values = list(range(min_l, max_l + 1))
     
     print(f"Will test L values: {l_values}")
-    
-    # Create output directory (relative to project root)
-    if not os.path.isabs(args.output_dir):
-        output_dir = os.path.join(parent_dir, args.output_dir)
-    else:
-        output_dir = args.output_dir
-    os.makedirs(output_dir, exist_ok=True)
     
     # Load existing results (excluding L values that will be regenerated)
     print(f"\nLoading existing results from {output_dir}...")

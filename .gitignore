@@ -4,3 +4,5 @@ venv
 slurm_out
 #demonstration
 evaluation_results_lbit
+collusion_resistance_2
+collusion_resistance_3

@@ -99,6 +99,7 @@ Cryptographic-Watermarking-for-LLM/
 │
 ├── helper_scripts/                  # Analysis and utility scripts
 │   ├── analyse.py                   # Generate plots from evaluation results
+│   ├── compare_collusion_resistance.py  # Compare naive vs fingerprinting approaches
 │   ├── generate_users.py            # Create user database CSV
 │   ├── visualise_blocks.py          # Visualize watermark blocks
 │   ├── visualise_lbit_blocks.py     # Visualize L-bit blocks
@@ -690,6 +691,24 @@ python -m src.main_multiuser trace [args]
 
 ### Helper Scripts
 
+#### `helper_scripts/compare_collusion_resistance.py`
+**Purpose:** Compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance
+**Usage:**
+```bat
+python helper_scripts\compare_collusion_resistance.py ^
+  --prompts-file assets/prompts.txt ^
+  --max-prompts 100 ^
+  --num-colluders 2 ^
+  --model gpt2
+```
+
+**Features:**
+- Tests three approaches: naive, min-distance-2, min-distance-3
+- Uses same colluding users across all approaches per prompt (fair comparison)
+- Two combination methods: normal and with deletion
+- Generates comparison table, JSON results, and CSV summary
+- Organized output structure by approach and prompt
+
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
 **Usage:**
@@ -1190,6 +1209,75 @@ z_score, blocks = watermarker.detect(
 print(f"Z-score: {z_score:.2f}, Blocks: {blocks}")
 print(f"Detected: {z_score > 4.0}")
 ```
+
+### Collusion Resistance Comparison
+
+Compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance.
+
+#### Run Comparison
+
+```bat
+python helper_scripts/compare_collusion_resistance.py ^
+  --prompts-file assets/prompts.txt ^
+  --max-prompts 100 ^
+  --model gpt2 ^
+  --users-file assets/users.csv ^
+  --num-colluders 2 ^
+  --l-bits 10 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 256 ^
+  --deletion-percentage 0.05 ^
+  --output-dir evaluation/collusion_resistance
+```
+
+**What it does:**
+1. Tests three approaches:
+   - **Naive**: Binary user ID-based fingerprinting
+   - **Min-distance-2**: Fingerprinting with minimum Hamming distance 2
+   - **Min-distance-3**: Fingerprinting with minimum Hamming distance 3
+2. For each prompt:
+   - Selects colluding users from different groups (ensures fair comparison)
+   - Uses the same users for all three approaches
+   - Generates watermarked text for each colluding user
+3. Two combination methods:
+   - **Normal**: Concatenates texts directly
+   - **With deletion**: Deletes 5% of each user's text before combining
+4. Attempts to trace back to original colluding users
+5. Calculates success rates for each approach and combination method
+
+**Output structure:**
+```
+evaluation/collusion_resistance_<N>/
+├── naive/
+│   ├── prompt_0/
+│   │   ├── master_key.key
+│   │   ├── user_<ID>_text.txt
+│   │   ├── combined_normal.txt
+│   │   └── combined_with_deletion.txt
+│   └── prompt_1/, prompt_2/, ...
+├── min-distance-2/
+│   └── prompt_0/, prompt_1/, ...
+├── min-distance-3/
+│   └── prompt_0/, prompt_1/, ...
+├── collusion_resistance_results_<N>users.json
+└── collusion_resistance_summary_<N>users.csv
+```
+
+**Expected output:**
+- Console: Comparison table showing success rates
+- JSON: Detailed results with trace information for each test case
+- CSV: Summary statistics for easy analysis
+
+**Parameters:**
+- `--num-colluders`: Number of colluding users (2 or 3, default: 2)
+- `--deletion-percentage`: Percentage of text to delete per user (default: 0.05 for 5%)
+- `--max-prompts`: Number of prompts to test (default: 100)
+- Output directory automatically appends `_<num_colluders>` (e.g., `collusion_resistance_2`)
+
+---
 
 ### Multi-User Collusion Testing
 

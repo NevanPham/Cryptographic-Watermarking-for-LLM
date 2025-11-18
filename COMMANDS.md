@@ -182,6 +182,55 @@ python helper_scripts\visualize_groups.py ^
   - Statistics (average users per group, codeword distribution)
   - Distance violations (if any)
 
+**Comparing collusion resistance across approaches:**
+- Compare naive vs fingerprinting (min-distance-2, min-distance-3) approaches:
+```bat
+python helper_scripts\compare_collusion_resistance.py ^
+  --prompts-file assets/prompts.txt ^
+  --max-prompts 100 ^
+  --model gpt2 ^
+  --users-file assets/users.csv ^
+  --num-colluders 2 ^
+  --l-bits 10 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --max-new-tokens 256
+```
+- Test with 3 colluders:
+```bat
+python helper_scripts\compare_collusion_resistance.py ^
+  --num-colluders 3 ^
+  --max-prompts 100
+```
+- **What it does:**
+  1. For each prompt, selects colluding users from different groups (ensures fair comparison)
+  2. Generates watermarked text for each colluding user using three approaches:
+     - Naive (binary user ID)
+     - Min-distance-2 (fingerprinting with distance 2)
+     - Min-distance-3 (fingerprinting with distance 3)
+  3. Combines texts in two ways:
+     - Normal combination (concatenation)
+     - With deletion (5% of each user's text deleted before combining)
+  4. Attempts to trace back to original colluding users
+  5. Calculates success rates for each approach and combination method
+- **Output:**
+  - Comparison table printed to console
+  - JSON file: `collusion_resistance_results_<N>users.json` (detailed results)
+  - CSV file: `collusion_resistance_summary_<N>users.csv` (summary)
+  - Organized folder structure:
+    ```
+    evaluation/collusion_resistance_<N>/
+    ├── naive/prompt_0/, prompt_1/, ...
+    ├── min-distance-2/prompt_0/, prompt_1/, ...
+    ├── min-distance-3/prompt_0/, prompt_1/, ...
+    └── collusion_resistance_results_<N>users.json
+    ```
+- **Key features:**
+  - Same colluding users used across all three approaches per prompt (fair comparison)
+  - Users selected from different groups (tests true collusion resistance)
+  - Two combination methods test robustness
+  - Default: first 100 prompts (use `--max-prompts` to change)
+
 ## Parameter tuning guide
 
 ### GPT‑2 safety
