@@ -30,7 +30,7 @@ echo "Starting L-bit parameter sweep evaluation..."
 echo "================================================================================"
 
 # Run the L-bit parameter sweep
-python run_lbit_sweep.py \
+python helper_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
     --model gpt-oss-20b \
     --l-bits-values "6,8,10,12,14,16,18,20,22,24,26,28,30" \

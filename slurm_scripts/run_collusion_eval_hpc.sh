@@ -33,7 +33,7 @@ echo "==========================================================================
 for NUM_COLLUDERS in 2 3 4; do
     echo "Testing collusion resistance with $NUM_COLLUDERS colluders..."
     
-    python compare_collusion_resistance.py \
+    python helper_scripts/compare_collusion_resistance.py \
         --prompts-file assets/prompts.txt \
         --users-file assets/users.csv \
         --model gpt-oss-20b \
