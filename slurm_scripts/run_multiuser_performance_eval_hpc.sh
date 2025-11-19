@@ -19,9 +19,11 @@ module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
 source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
+
 export HF_HOME=/fred/oz402/kpham-watermark/huggingface
 export HF_HUB_CACHE=$HF_HOME
-export HF_HUB_OFFLINE=0
+export HF_HUB_OFFLINE=1
+export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
@@ -30,7 +32,7 @@ echo "==============================================================="
 
 python helper_scripts/evaluate_multiuser_performance.py \
     --users-file assets/users.csv \
-    --model gpt-oss-20b \
+    --model gpt2 \
     --l-bits 10 \
     --delta 3.5 \
     --entropy-threshold 2.5 \
@@ -39,6 +41,7 @@ python helper_scripts/evaluate_multiuser_performance.py \
     --max-new-tokens 512 \
     --prompt "The future of artificial intelligence is" \
     --user-id 0 \
-    --output-dir evaluation/multiuser_performance
+    --output-dir evaluation/multiuser_performance_gpt2
 
 echo "Multi-user performance evaluation completed."
+echo "Results at: evaluation/multiuser_performance_gpt2"
