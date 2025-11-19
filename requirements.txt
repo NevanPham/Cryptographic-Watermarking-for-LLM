@@ -10,3 +10,4 @@ protobuf
 nltk
 pyside6
 openpyxl
+psutil
