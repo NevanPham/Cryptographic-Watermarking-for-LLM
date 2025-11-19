@@ -44,7 +44,7 @@ for NUM_COLLUDERS in 2 3; do
         --hashing-context 5 \
         --z-threshold 4.0 \
         --max-new-tokens 400 \
-        --max-prompts 20 \
+        --max-prompts 0 \
         --deletion-percentage 0.2 \
         --output-dir evaluation/collusion_resistance_gpt2
 done

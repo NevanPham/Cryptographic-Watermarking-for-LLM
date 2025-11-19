@@ -40,7 +40,7 @@ python helper_scripts/run_lbit_sweep.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --max-prompts 50 \
+    --max-prompts 0 \
     --output-dir evaluation/lbit_sweep_gpt2
 
 echo "L-bit sweep completed."

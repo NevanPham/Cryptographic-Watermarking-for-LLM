@@ -39,7 +39,8 @@ python helper_scripts/evaluate_multiuser_performance.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --prompt "The future of artificial intelligence is" \
+    --prompts-file assets/prompts.txt \
+    --max-prompts 0 \
     --user-id 0 \
     --output-dir evaluation/multiuser_performance_gpt2
 

@@ -13,7 +13,7 @@ import torch
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-from typing import Tuple
+from typing import List, Tuple
 
 # Add the parent directory to sys.path
 current_dir = os.path.dirname(__file__)
@@ -54,6 +54,41 @@ def get_storage_size_mb(obj):
     elif isinstance(obj, pd.DataFrame):
         size_bytes = obj.memory_usage(deep=True).sum()
     return size_bytes / 1024 / 1024
+
+
+def load_prompts(prompts_file: str, max_prompts: int) -> List[str]:
+    """Load prompts from a text file, returning up to max_prompts entries."""
+    if not os.path.exists(prompts_file):
+        raise FileNotFoundError(f"Prompts file not found: {prompts_file}")
+    
+    with open(prompts_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    prompts = [line.strip() for line in lines if line.strip()]
+    if not prompts:
+        raise ValueError(f"No valid prompts found in {prompts_file}")
+    
+    if max_prompts is None or max_prompts <= 0 or max_prompts >= len(prompts):
+        return prompts
+    
+    return prompts[:max_prompts]
+
+
+def aggregate_numeric_metrics(metrics_list: List[dict]) -> dict:
+    """Average numeric metrics across a list of metric dictionaries."""
+    if not metrics_list:
+        return {}
+    
+    sums = {}
+    counts = {}
+    
+    for metrics in metrics_list:
+        for key, value in metrics.items():
+            if isinstance(value, (int, float)):
+                sums[key] = sums.get(key, 0.0) + float(value)
+                counts[key] = counts.get(key, 0) + 1
+    
+    return {key: (sums[key] / counts[key]) for key in sums}
 
 
 def measure_initialization(muw, users_file: str, scheme_name: str) -> dict:
@@ -323,14 +358,26 @@ def main():
     parser.add_argument(
         '--prompt',
         type=str,
-        default='The future of artificial intelligence is',
-        help='Prompt for generation (default: "The future of artificial intelligence is")'
+        default=None,
+        help='Optional single prompt for generation; overrides prompts file when provided'
     )
     parser.add_argument(
         '--user-id',
         type=int,
         default=0,
         help='User ID to use for embedding test (default: 0)'
+    )
+    parser.add_argument(
+        '--prompts-file',
+        type=str,
+        default='assets/prompts.txt',
+        help='Path to prompts file (default: assets/prompts.txt)'
+    )
+    parser.add_argument(
+        '--max-prompts',
+        type=int,
+        default=100,
+        help='Number of prompts to evaluate from prompts file when --prompt is not set (default: 100)'
     )
     parser.add_argument(
         '--output-dir',
@@ -352,6 +399,16 @@ def main():
     print(f"Users file: {args.users_file}")
     print(f"Output directory: {args.output_dir}")
     print("=" * 80)
+    
+    if args.prompt:
+        prompts_to_use = [args.prompt.strip()]
+    else:
+        prompts_to_use = load_prompts(args.prompts_file, args.max_prompts)
+    
+    if not prompts_to_use:
+        raise ValueError("No prompts available for evaluation.")
+    
+    print(f"Total prompts to evaluate: {len(prompts_to_use)}")
     
     # Load model
     print(f"\nLoading model '{args.model}'...")
@@ -406,42 +463,70 @@ def main():
         # 3. Generate master key
         master_key = muw.keygen()
         
-        # 4. Embedding metrics
-        watermarked_text = None
-        try:
-            embed_metrics, watermarked_text = measure_embedding(
-                muw, master_key, args.user_id, args.prompt, args.max_new_tokens, scheme_name
-            )
-            scheme_results['embedding'] = embed_metrics
-            print(f"✓ Embedding completed: {embed_metrics['embed_time_sec']:.4f}s")
-        except Exception as e:
-            print(f"✗ Embedding failed: {e}")
-            scheme_results['embedding'] = {'error': str(e)}
+        # 4-6. Embedding, detection, and tracing metrics across prompts
+        embedding_metrics_list = []
+        detection_metrics_list = []
+        tracing_metrics_list = []
+        
+        for prompt_idx, prompt in enumerate(prompts_to_use):
             watermarked_text = None
-        
-        # 5. Detection metrics
-        if watermarked_text:
             try:
-                detect_metrics = measure_detection(muw, master_key, watermarked_text, scheme_name)
-                scheme_results['detection'] = detect_metrics
-                print(f"✓ Detection completed: {detect_metrics['detect_time_sec']:.4f}s")
+                embed_metrics, watermarked_text = measure_embedding(
+                    muw, master_key, args.user_id, prompt, args.max_new_tokens, scheme_name
+                )
+                embed_metrics['prompt'] = prompt
+                embed_metrics['prompt_index'] = prompt_idx
+                embedding_metrics_list.append(embed_metrics)
             except Exception as e:
-                print(f"✗ Detection failed: {e}")
-                scheme_results['detection'] = {'error': str(e)}
-        else:
-            scheme_results['detection'] = {'error': 'No watermarked text available'}
+                print(f"✗ Embedding failed for prompt #{prompt_idx}: {e}")
+                continue
+            
+            if watermarked_text:
+                try:
+                    detect_metrics = measure_detection(muw, master_key, watermarked_text, scheme_name)
+                    detect_metrics['prompt'] = prompt
+                    detect_metrics['prompt_index'] = prompt_idx
+                    detection_metrics_list.append(detect_metrics)
+                except Exception as e:
+                    print(f"✗ Detection failed for prompt #{prompt_idx}: {e}")
+                
+                try:
+                    trace_metrics = measure_tracing(muw, master_key, watermarked_text, scheme_name)
+                    trace_metrics['prompt'] = prompt
+                    trace_metrics['prompt_index'] = prompt_idx
+                    tracing_metrics_list.append(trace_metrics)
+                except Exception as e:
+                    print(f"✗ Tracing failed for prompt #{prompt_idx}: {e}")
         
-        # 6. Tracing metrics
-        if watermarked_text:
-            try:
-                trace_metrics = measure_tracing(muw, master_key, watermarked_text, scheme_name)
-                scheme_results['tracing'] = trace_metrics
-                print(f"✓ Tracing completed: {trace_metrics['trace_time_sec']:.4f}s")
-            except Exception as e:
-                print(f"✗ Tracing failed: {e}")
-                scheme_results['tracing'] = {'error': str(e)}
+        if embedding_metrics_list:
+            avg_embedding = aggregate_numeric_metrics(embedding_metrics_list)
+            scheme_results['embedding'] = {
+                'average': avg_embedding,
+                'per_prompt': embedding_metrics_list
+            }
+            print(f"✓ Embedding completed for {len(embedding_metrics_list)} prompt(s); average time {avg_embedding.get('embed_time_sec', 0):.4f}s")
         else:
-            scheme_results['tracing'] = {'error': 'No watermarked text available'}
+            scheme_results['embedding'] = {'error': 'No successful embeddings'}
+        
+        if detection_metrics_list:
+            avg_detection = aggregate_numeric_metrics(detection_metrics_list)
+            scheme_results['detection'] = {
+                'average': avg_detection,
+                'per_prompt': detection_metrics_list
+            }
+            print(f"✓ Detection completed for {len(detection_metrics_list)} prompt(s); average time {avg_detection.get('detect_time_sec', 0):.4f}s")
+        else:
+            scheme_results['detection'] = {'error': 'No detection results available'}
+        
+        if tracing_metrics_list:
+            avg_tracing = aggregate_numeric_metrics(tracing_metrics_list)
+            scheme_results['tracing'] = {
+                'average': avg_tracing,
+                'per_prompt': tracing_metrics_list
+            }
+            print(f"✓ Tracing completed for {len(tracing_metrics_list)} prompt(s); average time {avg_tracing.get('trace_time_sec', 0):.4f}s")
+        else:
+            scheme_results['tracing'] = {'error': 'No tracing results available'}
         
         all_results[scheme_name] = scheme_results
     
@@ -467,22 +552,22 @@ def main():
         
         # Embedding
         if 'embedding' in results and 'error' not in results['embedding']:
-            embed = results['embedding']
-            row['embed_time_sec'] = embed.get('embed_time_sec', 0)
-            row['embed_overhead_percent'] = embed.get('overhead_percent', 0)
-            row['time_per_token_ms'] = embed.get('time_per_token_ms', 0)
+            embed_avg = results['embedding'].get('average', {})
+            row['embed_time_sec'] = embed_avg.get('embed_time_sec', 0)
+            row['embed_overhead_percent'] = embed_avg.get('overhead_percent', 0)
+            row['time_per_token_ms'] = embed_avg.get('time_per_token_ms', 0)
         
         # Detection
         if 'detection' in results and 'error' not in results['detection']:
-            detect = results['detection']
-            row['detect_time_sec'] = detect.get('detect_time_sec', 0)
-            row['hmac_operations'] = detect.get('hmac_operations', 0)
+            detect_avg = results['detection'].get('average', {})
+            row['detect_time_sec'] = detect_avg.get('detect_time_sec', 0)
+            row['hmac_operations'] = detect_avg.get('hmac_operations', 0)
         
         # Tracing
         if 'tracing' in results and 'error' not in results['tracing']:
-            trace = results['tracing']
-            row['trace_time_sec'] = trace.get('trace_time_sec', 0)
-            row['trace_comparisons'] = trace.get('comparisons_count', 0)
+            trace_avg = results['tracing'].get('average', {})
+            row['trace_time_sec'] = trace_avg.get('trace_time_sec', 0)
+            row['trace_comparisons'] = trace_avg.get('comparisons_count', 0)
         
         # Scalability
         if 'scalability' in results:
