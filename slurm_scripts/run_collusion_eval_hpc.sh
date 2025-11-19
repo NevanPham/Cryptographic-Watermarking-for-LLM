@@ -19,9 +19,9 @@ module load python/3.13.1
 module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
-source /home/kpham/crypto-watermark/venv/bin/activate
+source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
 
-export HF_HOME=/home/kpham/huggingface
+export HF_HOME=/fred/oz402/kpham-watermark/huggingface
 export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
 
@@ -62,11 +62,11 @@ Your run_collusion_eval_hpc.sh job has finished!
 Job ID: $SLURM_JOB_ID
 Status: COMPLETED
 Results locations:
-- /home/kpham/crypto-watermark/evaluation/collusion_resistance_2users/
-- /home/kpham/crypto-watermark/evaluation/collusion_resistance_3users/
-- /home/kpham/crypto-watermark/evaluation/collusion_resistance_4users/
+- /fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_2users/
+- /fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_3users/
+- /fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_4users/
 
 Check results with:
-scp -r kpham@ozstar.swin.edu.au:/home/kpham/crypto-watermark/evaluation/collusion_resistance_* ~/Downloads/
+scp -r kpham@ozstar.swin.edu.au:/fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_* ~/Downloads/
 
 EOF

@@ -19,9 +19,8 @@ module load python/3.13.1
 module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
-source /home/kpham/crypto-watermark/venv/bin/activate
-
-export HF_HOME=/home/kpham/huggingface
+source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
+export HF_HOME=/fred/oz402/kpham-watermark/huggingface
 export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
 
@@ -135,9 +134,9 @@ Your all_demos.sh job has finished!
 
 Job ID: $SLURM_JOB_ID
 Status: COMPLETED
-Results location: /home/kpham/crypto-watermark/demonstration/
+Results location: /fred/oz402/kpham-watermark/crypto-watermark/demonstration/
 
 Check results with:
-scp -r kpham@ozstar.swin.edu.au:/home/kpham/crypto-watermark/demonstration ~/Downloads/
+scp -r kpham@ozstar.swin.edu.au:/fred/oz402/kpham-watermark/crypto-watermark/demonstration ~/Downloads/
 
 EOF
