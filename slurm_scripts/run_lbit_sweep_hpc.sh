@@ -32,7 +32,7 @@ echo "==========================================================================
 python run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
     --model gpt-oss-20b \
-    --l-bits-values "6,8,10,12" \
+    --l-bits-values "6,8,10,12,14,16,18,20,22,24,26,28,30" \
     --delta-values "2.0,2.5,3.0,3.5" \
     --entropy-thresholds "3.0,3.5,4.0,4.5" \
     --max-new-tokens 1024 \
