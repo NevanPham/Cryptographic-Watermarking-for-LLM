@@ -11,8 +11,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_out/slurm-%j.out
 
-# --- Environment Setup ---
-echo "Setting up environment for collusion resistance evaluation..."
+echo "Setting up environment for collusion evaluation..."
 module purge
 module load gcc/14.2.0
 module load python/3.13.1
@@ -20,54 +19,30 @@ module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
 source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
-
 export HF_HOME=/fred/oz402/kpham-watermark/huggingface
 export HF_HUB_CACHE=$HF_HOME
-export HF_HUB_OFFLINE=1
-cd /fred/oz402/kpham-watermark/crypto-watermark   # FIXED
+export HF_HUB_OFFLINE=0
+
+cd /fred/oz402/kpham-watermark/crypto-watermark
 
 echo "Starting collusion resistance evaluation..."
-echo "================================================================================"
+echo "==============================================================="
 
-# Test different numbers of colluders
-for NUM_COLLUDERS in 2 3 4; do
-    echo "Testing collusion resistance with $NUM_COLLUDERS colluders..."
-    
+for NUM in 2 3; do
+    echo "Running collusion test with $NUM colluders..."
+
     python helper_scripts/compare_collusion_resistance.py \
         --prompts-file assets/prompts.txt \
         --users-file assets/users.csv \
         --model gpt-oss-20b \
-        --num-colluders $NUM_COLLUDERS \
+        --num-colluders $NUM \
         --l-bits 10 \
         --delta 2.5 \
         --entropy-threshold 4.0 \
         --max-new-tokens 800 \
         --max-prompts 20 \
         --deletion-percentage 0.2 \
-        --output-dir evaluation/collusion_resistance_${NUM_COLLUDERS}users
-    
-    echo "Completed evaluation for $NUM_COLLUDERS colluders"
-    echo ""
+        --output-dir evaluation/collusion_resistance_${NUM}users
 done
 
-echo "All collusion evaluations completed!"
-echo "Results saved to:"
-echo "  - evaluation/collusion_resistance_2users/"
-echo "  - evaluation/collusion_resistance_3users/"
-echo "  - evaluation/collusion_resistance_4users/"
-
-# Send completion email
-mail -s "HPC Job Complete: run_collusion_eval_hpc.sh (Job ID: $SLURM_JOB_ID)" 104772183@student.swin.edu.au << EOF
-Your run_collusion_eval_hpc.sh job has finished!
-
-Job ID: $SLURM_JOB_ID
-Status: COMPLETED
-Results locations:
-- /fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_2users/
-- /fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_3users/
-- /fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_4users/
-
-Check results with:
-scp -r kpham@ozstar.swin.edu.au:/fred/oz402/kpham-watermark/crypto-watermark/evaluation/collusion_resistance_* ~/Downloads/
-
-EOF
+echo "Collusion evaluation completed."

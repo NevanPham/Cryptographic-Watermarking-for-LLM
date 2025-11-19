@@ -17,9 +17,9 @@ print(f"Using Hugging Face cache directory: {cache_dir}")
 
 # --- List of models to download ---
 models_to_download = {
-    #"gpt-oss-20b": ("openai/gpt-oss-20b", AutoModelForCausalLM, AutoTokenizer),
-    #"Vamsi/T5_Paraphrase_Paws": ("Vamsi/T5_Paraphrase_Paws", AutoModelForSeq2SeqLM, AutoTokenizer),
-    #"gpt2": ("gpt2", GPT2LMHeadModel, GPT2Tokenizer)
+    "gpt-oss-20b": ("openai/gpt-oss-20b", AutoModelForCausalLM, AutoTokenizer),
+    "Vamsi/T5_Paraphrase_Paws": ("Vamsi/T5_Paraphrase_Paws", AutoModelForSeq2SeqLM, AutoTokenizer),
+    "gpt2": ("gpt2", GPT2LMHeadModel, GPT2Tokenizer)
 }
 
 # --- Download loop ---
