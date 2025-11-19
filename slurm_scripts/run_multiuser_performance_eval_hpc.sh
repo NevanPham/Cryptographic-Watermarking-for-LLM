@@ -28,7 +28,7 @@ export HF_HUB_OFFLINE=1
 echo "Starting multi-user performance evaluation..."
 echo "================================================================================"
 
-cd $SLURM_SUBMIT_DIR
+cd /fred/oz402/kpham-watermark/crypto-watermark   # FIXED
 
 # Run performance evaluation
 python helper_scripts/evaluate_multiuser_performance.py \

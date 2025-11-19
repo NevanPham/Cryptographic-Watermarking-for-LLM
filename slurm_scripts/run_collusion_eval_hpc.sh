@@ -24,6 +24,7 @@ source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
 export HF_HOME=/fred/oz402/kpham-watermark/huggingface
 export HF_HUB_CACHE=$HF_HOME
 export HF_HUB_OFFLINE=1
+cd /fred/oz402/kpham-watermark/crypto-watermark   # FIXED
 
 echo "Starting collusion resistance evaluation..."
 echo "================================================================================"
