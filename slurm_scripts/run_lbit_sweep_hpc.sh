@@ -32,16 +32,16 @@ echo "==============================================================="
 
 python helper_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
+    --max-prompts 100 \
     --model gpt2 \
-    --min-l 6 \
-    --max-l 30 \
-    --delta 2.5 \
-    --entropy-threshold 4.0 \
+    --min-l 4 \
+    --max-l 20 \
+    --delta 3.5 \
+    --entropy-threshold 2.5 \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --max-prompts 0 \
-    --output-dir evaluation/lbit_sweep_gpt2
+    --output-dir evaluation/lbit_sweep
 
 echo "L-bit sweep completed."
-echo "Results saved to: evaluation/lbit_sweep_gpt2"
+echo "Results saved to: evaluation/lbit_sweep"

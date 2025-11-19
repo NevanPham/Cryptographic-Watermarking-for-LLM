@@ -40,9 +40,9 @@ python helper_scripts/evaluate_multiuser_performance.py \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
     --prompts-file assets/prompts.txt \
-    --max-prompts 0 \
+    --max-prompts 100 \
     --user-id 0 \
-    --output-dir evaluation/multiuser_performance_gpt2
+    --output-dir evaluation/multiuser_performance
 
 echo "Multi-user performance evaluation completed."
-echo "Results at: evaluation/multiuser_performance_gpt2"
+echo "Results at: evaluation/multiuser_performance"

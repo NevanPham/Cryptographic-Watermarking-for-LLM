@@ -35,19 +35,19 @@ for NUM_COLLUDERS in 2 3; do
 
     python helper_scripts/compare_collusion_resistance.py \
         --prompts-file assets/prompts.txt \
+        --max-prompts 100 \
         --users-file assets/users.csv \
         --model gpt2 \
         --num-colluders $NUM_COLLUDERS \
         --l-bits 10 \
-        --delta 2.5 \
-        --entropy-threshold 4.0 \
+        --delta 3.5 \
+        --entropy-threshold 2.5 \
         --hashing-context 5 \
         --z-threshold 4.0 \
         --max-new-tokens 400 \
-        --max-prompts 0 \
-        --deletion-percentage 0.2 \
-        --output-dir evaluation/collusion_resistance_gpt2
+        --deletion-percentage 0.05 \
+        --output-dir evaluation/collusion_resistance
 done
 
 echo "All collusion evaluations completed."
-echo "Results under: evaluation/collusion_resistance_gpt2_*"
+echo "Results under: evaluation/collusion_resistance_*"
