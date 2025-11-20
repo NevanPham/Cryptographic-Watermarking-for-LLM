@@ -11,7 +11,6 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_out/slurm-%j.out
 
-echo "Setting up environment for L-bit sweep..."
 module purge
 module load gcc/14.2.0
 module load python/3.13.1
@@ -27,21 +26,15 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
-echo "Starting L-bit parameter sweep..."
-echo "==============================================================="
-
 python helper_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
-    --max-prompts 100 \
+    --max-prompts 300 \
     --model gpt2 \
     --min-l 4 \
-    --max-l 20 \
+    --max-l 30 \
     --delta 3.5 \
     --entropy-threshold 2.5 \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
     --output-dir evaluation/lbit_sweep
-
-echo "L-bit sweep completed."
-echo "Results saved to: evaluation/lbit_sweep"

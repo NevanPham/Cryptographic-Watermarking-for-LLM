@@ -11,7 +11,6 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_out/slurm-%j.out
 
-echo "Setting up environment for collusion evaluation..."
 module purge
 module load gcc/14.2.0
 module load python/3.13.1
@@ -27,18 +26,13 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
-echo "Starting collusion resistance evaluation..."
-echo "==============================================================="
-
-for NUM_COLLUDERS in 2 3; do
-    echo "Running collusion test with $NUM_COLLUDERS colluders..."
-
+for NUM in 2 3; do
     python helper_scripts/compare_collusion_resistance.py \
         --prompts-file assets/prompts.txt \
-        --max-prompts 100 \
+        --max-prompts 300 \
         --users-file assets/users.csv \
         --model gpt2 \
-        --num-colluders $NUM_COLLUDERS \
+        --num-colluders $NUM \
         --l-bits 10 \
         --delta 3.5 \
         --entropy-threshold 2.5 \
@@ -48,6 +42,3 @@ for NUM_COLLUDERS in 2 3; do
         --deletion-percentage 0.05 \
         --output-dir evaluation/collusion_resistance
 done
-
-echo "All collusion evaluations completed."
-echo "Results under: evaluation/collusion_resistance_*"

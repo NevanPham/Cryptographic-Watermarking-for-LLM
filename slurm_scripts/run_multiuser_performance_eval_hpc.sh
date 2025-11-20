@@ -11,7 +11,6 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_out/slurm-%j.out
 
-echo "Setting up environment for multi-user performance evaluation..."
 module purge
 module load gcc/14.2.0
 module load python/3.13.1
@@ -27,9 +26,6 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
-echo "Running multi-user performance evaluation..."
-echo "==============================================================="
-
 python helper_scripts/evaluate_multiuser_performance.py \
     --users-file assets/users.csv \
     --model gpt2 \
@@ -40,9 +36,6 @@ python helper_scripts/evaluate_multiuser_performance.py \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
     --prompts-file assets/prompts.txt \
-    --max-prompts 100 \
+    --max-prompts 300 \
     --user-id 0 \
     --output-dir evaluation/multiuser_performance
-
-echo "Multi-user performance evaluation completed."
-echo "Results at: evaluation/multiuser_performance"
