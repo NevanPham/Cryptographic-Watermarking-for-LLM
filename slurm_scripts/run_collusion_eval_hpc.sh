@@ -21,7 +21,7 @@ source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
 
 export HF_HOME=/fred/oz402/kpham-watermark/huggingface
 export HF_HUB_CACHE=$HF_HOME
-export HF_HUB_OFFLINE=1
+#export HF_HUB_OFFLINE=1
 export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
