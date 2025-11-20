@@ -43,3 +43,5 @@ for NUM in 2 3; do
         --z-threshold 4.0 \
         --max-new-tokens 400 \
         --deletion-percentage 0.05 \
+        --output-dir evaluation/collusion_resistance
+done
