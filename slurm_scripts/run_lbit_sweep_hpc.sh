@@ -32,7 +32,7 @@ cd /fred/oz402/kpham-watermark/crypto-watermark
 python helper_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
     --max-prompts 300 \
-    --model /fred/oz402/kpham-watermark/huggingface/models--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e \
+    --model gpt2 \
     --min-l 4 \
     --max-l 30 \
     --delta 3.5 \

@@ -31,7 +31,7 @@ cd /fred/oz402/kpham-watermark/crypto-watermark
 
 python helper_scripts/evaluate_multiuser_performance.py \
     --users-file assets/users.csv \
-    --model /fred/oz402/kpham-watermark/huggingface/models--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e \
+    --model gpt2 \
     --l-bits 10 \
     --delta 3.5 \
     --entropy-threshold 2.5 \

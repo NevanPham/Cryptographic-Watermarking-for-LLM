@@ -34,7 +34,7 @@ for NUM in 2 3; do
         --prompts-file assets/prompts.txt \
         --max-prompts 300 \
         --users-file assets/users.csv \
-        --model /fred/oz402/kpham-watermark/huggingface/models--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e \
+        --model gpt2 \
         --num-colluders $NUM \
         --l-bits 10 \
         --delta 3.5 \
@@ -43,5 +43,3 @@ for NUM in 2 3; do
         --z-threshold 4.0 \
         --max-new-tokens 400 \
         --deletion-percentage 0.05 \
-        --output-dir evaluation/collusion_resistance
-done
