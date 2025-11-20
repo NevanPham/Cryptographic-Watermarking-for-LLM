@@ -19,9 +19,12 @@ module load cudnn/9.5.0.50-cuda-12.6.0
 
 source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
 
+export TRANSFORMERS_CACHE=/fred/oz402/kpham-watermark/huggingface
 export HF_HOME=/fred/oz402/kpham-watermark/huggingface
-export HF_HUB_CACHE=$HF_HOME
-#export HF_HUB_OFFLINE=1
+export HF_DATASETS_CACHE=/fred/oz402/kpham-watermark/huggingface
+export HF_HUB_CACHE=/fred/oz402/kpham-watermark/huggingface
+export TRANSFORMERS_OFFLINE=1
+export HF_HUB_OFFLINE=1
 export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
@@ -29,7 +32,7 @@ cd /fred/oz402/kpham-watermark/crypto-watermark
 python helper_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
     --max-prompts 300 \
-    --model gpt2 \
+    --model /fred/oz402/kpham-watermark/huggingface/models--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e \
     --min-l 4 \
     --max-l 30 \
     --delta 3.5 \
