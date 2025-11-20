@@ -1,7 +1,7 @@
 # compare_collusion_resistance.py
 # Script to compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance
 # Tests with 2-3 users across different groups using three approaches: naive, min-distance-2, and min-distance-3
-# Two combination methods: normal combination and combination with 5% deletion per user
+# Multiple combination methods: normal combination and combinations with deletion (5%, 10%, 15%) using different types (random, start, end)
 
 import argparse
 import json
@@ -36,13 +36,14 @@ def setup_nltk():
             pass  # Will fall back to simple split in delete_percentage_text
 
 
-def delete_percentage_text(text: str, percentage: float = 0.05) -> str:
+def delete_percentage_text(text: str, percentage: float = 0.05, deletion_type: str = 'random') -> str:
     """
     Delete a percentage of sentences from the text.
     
     Args:
         text: Input text
         percentage: Percentage of sentences to delete (default: 0.05 for 5%)
+        deletion_type: Type of deletion - 'random', 'start', or 'end' (default: 'random')
     
     Returns:
         Text with percentage of sentences deleted
@@ -61,9 +62,17 @@ def delete_percentage_text(text: str, percentage: float = 0.05) -> str:
         # If we need to delete all or more, keep at least one sentence
         num_to_delete = len(sentences) - 1
     
-    # Randomly select sentences to delete
-    indices_to_delete = random.sample(range(len(sentences)), num_to_delete)
-    remaining_sentences = [sentences[i] for i in range(len(sentences)) if i not in indices_to_delete]
+    # Select sentences to delete based on deletion type
+    if deletion_type == 'start':
+        # Delete from the beginning
+        remaining_sentences = sentences[num_to_delete:]
+    elif deletion_type == 'end':
+        # Delete from the end
+        remaining_sentences = sentences[:-num_to_delete] if num_to_delete > 0 else sentences
+    else:  # 'random' (default)
+        # Randomly select sentences to delete
+        indices_to_delete = random.sample(range(len(sentences)), num_to_delete)
+        remaining_sentences = [sentences[i] for i in range(len(sentences)) if i not in indices_to_delete]
     
     return " ".join(remaining_sentences)
 
@@ -73,9 +82,9 @@ def combine_texts_normal(texts: list[str]) -> str:
     return "\n\n".join(texts)
 
 
-def combine_texts_with_deletion(texts: list[str], deletion_percentage: float = 0.05) -> str:
+def combine_texts_with_deletion(texts: list[str], deletion_percentage: float = 0.05, deletion_type: str = 'random') -> str:
     """Combine texts after deleting a percentage from each user's text."""
-    deleted_texts = [delete_percentage_text(text, deletion_percentage) for text in texts]
+    deleted_texts = [delete_percentage_text(text, deletion_percentage, deletion_type) for text in texts]
     return "\n\n".join(deleted_texts)
 
 
@@ -265,10 +274,19 @@ def main():
         help='Number of colluding users (default: 2)'
     )
     parser.add_argument(
-        '--deletion-percentage',
+        '--deletion-percentages',
         type=float,
-        default=0.05,
-        help='Percentage of text to delete per user in deletion scenario (default: 0.05 for 5%%)'
+        nargs='+',
+        default=[0.05, 0.10, 0.15],
+        help='Percentages of text to delete per user in deletion scenarios (default: 0.05 0.10 0.15 for 5%%, 10%%, 15%%)'
+    )
+    parser.add_argument(
+        '--deletion-types',
+        type=str,
+        nargs='+',
+        default=['random', 'start', 'end'],
+        choices=['random', 'start', 'end'],
+        help='Types of deletion to test: random, start, end (default: all three)'
     )
     parser.add_argument(
         '--output-dir',
@@ -309,7 +327,8 @@ def main():
     print(f"  • Hashing context: {args.hashing_context}")
     print(f"  • Z-threshold: {args.z_threshold}")
     print(f"  • Max new tokens: {args.max_new_tokens}")
-    print(f"  • Deletion percentage: {args.deletion_percentage*100:.1f}%")
+    print(f"  • Deletion percentages: {[f'{p*100:.1f}%' for p in args.deletion_percentages]}")
+    print(f"  • Deletion types: {args.deletion_types}")
     print(f"  • Output directory: {output_dir}")
     print("="*80)
     
@@ -398,7 +417,9 @@ def main():
     print(f"\n[3/4] Processing {len(prompts)} prompts with {args.num_colluders} colluders...")
     print(f"  → Testing 3 approaches: naive, min-distance-2, min-distance-3")
     print(f"  → Each prompt uses same colluding users across all approaches")
-    print(f"  → Two combination methods: normal and with {args.deletion_percentage*100:.1f}% deletion\n")
+    num_deletion_tests = len(args.deletion_percentages) * len(args.deletion_types)
+    print(f"  → Combination methods: normal + {num_deletion_tests} deletion scenarios")
+    print(f"    (Percentages: {[f'{p*100:.1f}%' for p in args.deletion_percentages]}, Types: {args.deletion_types})\n")
     
     os.makedirs(prompt_results_dir, exist_ok=True)
     
@@ -455,15 +476,25 @@ def main():
                         f.write(final_text)
                     user_text_files.append(user_text_filename)
                 
-                # Test two combination methods
-                for combination_method in ['normal', 'with_deletion']:
+                # Test combination methods: normal + all deletion scenarios
+                combination_methods = [('normal', None, None)]
+                
+                # Add all deletion scenarios
+                for deletion_percentage in args.deletion_percentages:
+                    for deletion_type in args.deletion_types:
+                        combination_methods.append(('with_deletion', deletion_percentage, deletion_type))
+                
+                for combination_method, deletion_percentage, deletion_type in combination_methods:
                     if combination_method == 'normal':
                         combined_text = combine_texts_normal(user_texts)
+                        combined_filename = f'combined_normal.txt'
                     else:
-                        combined_text = combine_texts_with_deletion(user_texts, args.deletion_percentage)
+                        combined_text = combine_texts_with_deletion(user_texts, deletion_percentage, deletion_type)
+                        # Format: combined_deletion_5.0%_random.txt
+                        pct_str = f"{deletion_percentage*100:.1f}%".replace('.', '_')
+                        combined_filename = f'combined_deletion_{pct_str}_{deletion_type}.txt'
                     
                     # Save combined text file
-                    combined_filename = f'combined_{combination_method}.txt'
                     combined_path = os.path.join(prompt_dir, combined_filename)
                     with open(combined_path, 'w', encoding='utf-8') as f:
                         f.write(combined_text)
@@ -477,6 +508,8 @@ def main():
                         'prompt': prompt,
                         'approach': approach_name,
                         'combination_method': combination_method,
+                        'deletion_percentage': deletion_percentage if deletion_percentage is not None else 0.0,
+                        'deletion_type': deletion_type if deletion_type is not None else 'none',
                         'num_colluders': args.num_colluders,
                         'original_user_ids': user_ids,
                         'trace_result': trace_result,
@@ -492,8 +525,7 @@ def main():
                             'entropy_threshold': args.entropy_threshold,
                             'hashing_context': args.hashing_context,
                             'z_threshold': args.z_threshold,
-                            'max_new_tokens': args.max_new_tokens,
-                            'deletion_percentage': args.deletion_percentage if combination_method == 'with_deletion' else 0.0
+                            'max_new_tokens': args.max_new_tokens
                         }
                     }
                     all_results.append(result)
@@ -501,13 +533,20 @@ def main():
         
             except Exception as e:
                 print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx} with approach '{approach_name}': {e}")
-                # Store error result
-                for combination_method in ['normal', 'with_deletion']:
+                # Store error result for all combination methods
+                combination_methods = [('normal', None, None)]
+                for deletion_percentage in args.deletion_percentages:
+                    for deletion_type in args.deletion_types:
+                        combination_methods.append(('with_deletion', deletion_percentage, deletion_type))
+                
+                for combination_method, deletion_percentage, deletion_type in combination_methods:
                     result = {
                         'prompt_id': prompt_idx,
                         'prompt': prompt,
                         'approach': approach_name,
                         'combination_method': combination_method,
+                        'deletion_percentage': deletion_percentage if deletion_percentage is not None else 0.0,
+                        'deletion_type': deletion_type if deletion_type is not None else 'none',
                         'num_colluders': args.num_colluders,
                         'original_user_ids': user_ids,
                         'trace_result': {'success': False, 'reason': str(e)},
@@ -559,10 +598,37 @@ def generate_reports(all_results: list[dict], args, output_dir: str, total_promp
     
     success_rates = {}
     
+    # Get unique deletion configurations from results
+    deletion_configs = set()
+    for result in all_results:
+        if result['combination_method'] == 'with_deletion':
+            config = (result['deletion_percentage'], result['deletion_type'])
+            deletion_configs.add(config)
+    deletion_configs = sorted(deletion_configs)
+    
     for approach in ['naive', 'min-distance-2', 'min-distance-3']:
-        for method in ['normal', 'with_deletion']:
-            key = f"{approach}_{method}"
-            approach_results = [r for r in all_results if r['approach'] == approach and r['combination_method'] == method]
+        # Normal combination
+        normal_results = [r for r in all_results if r['approach'] == approach and r['combination_method'] == 'normal']
+        if normal_results:
+            successful = sum(1 for r in normal_results if r.get('success', False))
+            total = len(normal_results)
+            success_rate = (successful / total) * 100.0 if total > 0 else 0.0
+            success_rates[f"{approach}_normal"] = {
+                'successful': successful,
+                'total': total,
+                'success_rate': success_rate
+            }
+        
+        # Deletion combinations
+        for deletion_percentage, deletion_type in deletion_configs:
+            key = f"{approach}_deletion_{deletion_percentage}_{deletion_type}"
+            approach_results = [
+                r for r in all_results 
+                if r['approach'] == approach 
+                and r['combination_method'] == 'with_deletion'
+                and r['deletion_percentage'] == deletion_percentage
+                and r['deletion_type'] == deletion_type
+            ]
             
             if approach_results:
                 successful = sum(1 for r in approach_results if r.get('success', False))
@@ -571,7 +637,9 @@ def generate_reports(all_results: list[dict], args, output_dir: str, total_promp
                 success_rates[key] = {
                     'successful': successful,
                     'total': total,
-                    'success_rate': success_rate
+                    'success_rate': success_rate,
+                    'deletion_percentage': deletion_percentage,
+                    'deletion_type': deletion_type
                 }
     
     # Print comparison table
@@ -581,20 +649,34 @@ def generate_reports(all_results: list[dict], args, output_dir: str, total_promp
     print(f"\nTest Configuration:")
     print(f"  • Number of colluders: {args.num_colluders}")
     print(f"  • Total prompts tested: {total_prompts_processed}")
-    print(f"  • Deletion percentage: {args.deletion_percentage*100:.1f}%")
+    print(f"  • Deletion percentages: {[f'{p*100:.1f}%' for p in args.deletion_percentages]}")
+    print(f"  • Deletion types: {args.deletion_types}")
     print(f"\nSuccess Rates by Approach:")
     print("-"*80)
     
+    # Create a comprehensive table
     table_data = []
     for approach in ['naive', 'min-distance-2', 'min-distance-3']:
         row = {'Approach': approach}
-        for method in ['normal', 'with_deletion']:
-            key = f"{approach}_{method}"
+        
+        # Normal combination
+        normal_key = f"{approach}_normal"
+        if normal_key in success_rates:
+            sr = success_rates[normal_key]
+            row['Normal'] = f"{sr['success_rate']:.2f}% ({sr['successful']}/{sr['total']})"
+        else:
+            row['Normal'] = "N/A"
+        
+        # Deletion combinations
+        for deletion_percentage, deletion_type in deletion_configs:
+            key = f"{approach}_deletion_{deletion_percentage}_{deletion_type}"
+            col_name = f"{deletion_percentage*100:.0f}% {deletion_type}"
             if key in success_rates:
                 sr = success_rates[key]
-                row[method.replace('_', ' ').title()] = f"{sr['success_rate']:.2f}% ({sr['successful']}/{sr['total']})"
+                row[col_name] = f"{sr['success_rate']:.2f}% ({sr['successful']}/{sr['total']})"
             else:
-                row[method.replace('_', ' ').title()] = "N/A"
+                row[col_name] = "N/A"
+        
         table_data.append(row)
     
     df = pd.DataFrame(table_data)
@@ -608,7 +690,8 @@ def generate_reports(all_results: list[dict], args, output_dir: str, total_promp
             'summary': {
                 'num_prompts': total_prompts_processed,
                 'num_colluders': args.num_colluders,
-                'deletion_percentage': args.deletion_percentage,
+                'deletion_percentages': args.deletion_percentages,
+                'deletion_types': args.deletion_types,
                 'parameters': {
                     'l_bits': args.l_bits,
                     'delta': args.delta,
@@ -634,6 +717,8 @@ def generate_reports(all_results: list[dict], args, output_dir: str, total_promp
             'prompt_id': result['prompt_id'],
             'approach': result['approach'],
             'combination_method': result['combination_method'],
+            'deletion_percentage': result.get('deletion_percentage', 0.0),
+            'deletion_type': result.get('deletion_type', 'none'),
             'num_colluders': result['num_colluders'],
             'original_user_ids': str(result['original_user_ids']),
             'success': result.get('success', False),

@@ -266,30 +266,18 @@ def main():
                         'Avg_Decided_Bits': successful['Decided_Bits'].mean() if 'Decided_Bits' in successful.columns else 0.0
                     })
         
-        # Save detailed Excel file
-        excel_path = os.path.join(output_dir, 'lbit_sweep_summary.xlsx')
-        try:
-            with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
-                # Detailed results sheet
-                df.to_excel(writer, sheet_name='Detailed_Results', index=False)
-                
-                # Summary statistics sheet
-                if summary_stats:
-                    summary_df = pd.DataFrame(summary_stats)
-                    summary_df.to_excel(writer, sheet_name='Summary_By_L', index=False)
-        except ImportError:
-            # Fallback to CSV if openpyxl is not available
-            print("Warning: openpyxl not found. Saving as CSV instead.")
-            csv_path = os.path.join(output_dir, 'lbit_sweep_summary.csv')
-            df.to_csv(csv_path, index=False)
-            excel_path = csv_path
-            if summary_stats:
-                summary_csv_path = os.path.join(output_dir, 'lbit_sweep_summary_by_L.csv')
-                summary_df = pd.DataFrame(summary_stats)
-                summary_df.to_csv(summary_csv_path, index=False)
-        
+        # Save as CSV files (not Excel)
+        csv_path = os.path.join(output_dir, 'lbit_sweep_summary.csv')
+        df.to_csv(csv_path, index=False)
         print(f"\n{'='*60}")
-        print(f"Excel summary saved to: {excel_path}")
+        print(f"CSV summary saved to: {csv_path}")
+        
+        if summary_stats:
+            summary_csv_path = os.path.join(output_dir, 'lbit_sweep_summary_by_L.csv')
+            summary_df = pd.DataFrame(summary_stats)
+            summary_df.to_csv(summary_csv_path, index=False)
+            print(f"Summary by L saved to: {summary_csv_path}")
+        
         print(f"{'='*60}")
         
         # Print summary table
@@ -476,7 +464,7 @@ def main():
             print(f"  Average accuracy: {avg_accuracy:.2f}%")
             print(f"  Exact match rate: {exact_match_rate:.2f}%")
     
-    # Create Excel summary (merge existing and new results)
+    # Create CSV summary (merge existing and new results)
     all_summary_data = existing_summary_data + summary_data
     if not summary_data and existing_summary_data:
         print(f"\nNo new results generated, but found {len(existing_summary_data)} existing result entries")
@@ -485,7 +473,7 @@ def main():
         
         # Get all unique L values from the merged data
         all_l_values = sorted(df['L'].unique())
-        print(f"\nCreating Excel summary with L values: {all_l_values}")
+        print(f"\nCreating CSV summary with L values: {all_l_values}")
         
         # Create summary statistics by L
         summary_stats = []
@@ -509,30 +497,17 @@ def main():
                         'Avg_Decided_Bits': successful['Decided_Bits'].mean() if 'Decided_Bits' in successful.columns else 0.0
                     })
         
-        # Save detailed Excel file
-        excel_path = os.path.join(output_dir, 'lbit_sweep_summary.xlsx')
-        try:
-            with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
-                # Detailed results sheet
-                df.to_excel(writer, sheet_name='Detailed_Results', index=False)
-                
-                # Summary statistics sheet
-                if summary_stats:
-                    summary_df = pd.DataFrame(summary_stats)
-                    summary_df.to_excel(writer, sheet_name='Summary_By_L', index=False)
-        except ImportError:
-            # Fallback to CSV if openpyxl is not available
-            print("Warning: openpyxl not found. Saving as CSV instead.")
-            csv_path = os.path.join(output_dir, 'lbit_sweep_summary.csv')
-            df.to_csv(csv_path, index=False)
-            excel_path = csv_path
-            if summary_stats:
-                summary_csv_path = os.path.join(output_dir, 'lbit_sweep_summary_by_L.csv')
-                summary_df = pd.DataFrame(summary_stats)
-                summary_df.to_csv(summary_csv_path, index=False)
-        
+        # Save CSV files
+        csv_path = os.path.join(output_dir, 'lbit_sweep_summary.csv')
+        df.to_csv(csv_path, index=False)
         print(f"\n{'='*60}")
-        print(f"Excel summary saved to: {excel_path}")
+        print(f"CSV summary saved to: {csv_path}")
+        
+        if summary_stats:
+            summary_csv_path = os.path.join(output_dir, 'lbit_sweep_summary_by_L.csv')
+            summary_df = pd.DataFrame(summary_stats)
+            summary_df.to_csv(summary_csv_path, index=False)
+            print(f"Summary by L saved to: {summary_csv_path}")
         print(f"{'='*60}")
         
         # Print summary table

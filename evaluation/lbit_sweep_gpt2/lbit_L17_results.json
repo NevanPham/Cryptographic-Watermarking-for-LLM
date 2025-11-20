@@ -1,0 +1,1102 @@
+[
+  {
+    "prompt_id": 0,
+    "prompt": "in football whats the point of wasting the first two plays with a rush - up the middle - not regular rush plays i get those",
+    "L": 17,
+    "original_message": "10100000011001010",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "L": 17,
+    "original_message": "11000000011110101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a50\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 2,
+    "prompt": "Stars and Visibility",
+    "L": 17,
+    "original_message": "10011111000000100",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a511\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 3,
+      "undecided_bits": 14,
+      "decided_bits": 3,
+      "accuracy_percent": 17.647058823529413,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 3,
+    "prompt": "How do we know all the money the government is getting from bank settlements is going back to the people?",
+    "L": 17,
+    "original_message": "01011010111100110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 4,
+    "prompt": "What are good and bad sides of manual and automatic drive gear?",
+    "L": 17,
+    "original_message": "01111000000011110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 5,
+    "prompt": "How do muscles grow?",
+    "L": 17,
+    "original_message": "01001010000010110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 6,
+    "prompt": "Why does the water from my kitchen faucet taste different than the water from my bathroom faucet? Doesn't it come from the same place?",
+    "L": 17,
+    "original_message": "00100010011111111",
+    "recovered_message": "0\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 7,
+    "prompt": "If dark colours absorb more heat, why does light skin burn easier than dark skin?",
+    "L": 17,
+    "original_message": "10011001101110011",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 8,
+    "prompt": "How the fuck does Facebook know about people I know?!",
+    "L": 17,
+    "original_message": "00011111001100101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 9,
+    "prompt": "Why is chickenpox worse as an adult?",
+    "L": 17,
+    "original_message": "10010100110001101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 10,
+    "prompt": "How do movies not get uploaded online in HD from movie theater employees before their DVD release?",
+    "L": 17,
+    "original_message": "00001000111100100",
+    "recovered_message": "0\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a511\u22a5\u22a501\u22a50",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 7,
+      "undecided_bits": 10,
+      "decided_bits": 7,
+      "accuracy_percent": 41.17647058823529,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 11,
+    "prompt": "Can defense attorneys 'throw' a case if they know their clients are guilty?",
+    "L": 17,
+    "original_message": "10000100000101101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 12,
+    "prompt": "why, when intoxicated, does it feel like everything is spinning when you close your eyes but stops spinning when you open them?",
+    "L": 17,
+    "original_message": "01101110110100011",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "L": 17,
+    "original_message": "00011000101111010",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 14,
+    "prompt": "What's the meaning of the phrase \"I've got a bone to pick with you.\"",
+    "L": 17,
+    "original_message": "10001000011111110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 15,
+    "prompt": "Why can't we just taste candy or Sweets and then spit it out to avoid its unhealthy attributes? What makes us swallow it to get satisfaction?",
+    "L": 17,
+    "original_message": "10011010101000010",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 16,
+    "prompt": "Why are the things that taste the best bad for us?",
+    "L": 17,
+    "original_message": "10100010011111010",
+    "recovered_message": "\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 17,
+    "prompt": "Why do you see weird colors when you press your eyes?",
+    "L": 17,
+    "original_message": "00011001011100001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 18,
+    "prompt": "If a movie production has $5,000,000 (estimated) Budget, must some of that money go to the actors? or only movie's production quality?",
+    "L": 17,
+    "original_message": "00100011111100111",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 19,
+    "prompt": "What classifies an island as an island? Aren't all continents etc essentially large islands?",
+    "L": 17,
+    "original_message": "01101001000110111",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 20,
+    "prompt": "why does wikipedia ask for donations almost every month? do they really need it to not disappear?",
+    "L": 17,
+    "original_message": "11000001111111000",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 21,
+    "prompt": "How does a water purifier jug work and could you put 3rd world ditch water through one and drink safely?",
+    "L": 17,
+    "original_message": "11011011000110100",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 22,
+    "prompt": "Why people like getting drunk/sloshed/hammered/shit-faced ?",
+    "L": 17,
+    "original_message": "00100001001100110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 23,
+    "prompt": "Why has the Mars Rover Opportunity's Lithium Ion Battery Lasted 11+ Years and the one in My Cell Phone/Laptop/Tablet Dies in Less Than 2?",
+    "L": 17,
+    "original_message": "10001100010100000",
+    "recovered_message": "1\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 24,
+    "prompt": "Why is sales tax in the US excluded from the list price?",
+    "L": 17,
+    "original_message": "11110011110101001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "L": 17,
+    "original_message": "10111001000011010",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 26,
+    "prompt": "What is the significance of Jamaican Bobsled team qualifies for the Olympics?",
+    "L": 17,
+    "original_message": "10111101111100001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 27,
+    "prompt": "Is it possible to build up an immunity to poisons both naturally occurring and man-made?",
+    "L": 17,
+    "original_message": "01111001110001001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 28,
+    "prompt": "How do devices know the amount of charge left in a battery?",
+    "L": 17,
+    "original_message": "01010101111101111",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 29,
+    "prompt": "Why are my muscles sore after jumping in cold water?",
+    "L": 17,
+    "original_message": "11000000111110101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 30,
+    "prompt": "why do we like watching the same TV show or movie over and over again?",
+    "L": 17,
+    "original_message": "11001111101010111",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 31,
+    "prompt": "why do the French have an abstain vote instead of people physically restraining from voting. [Other]",
+    "L": 17,
+    "original_message": "10101010110100010",
+    "recovered_message": "\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "L": 17,
+    "original_message": "01111100001101010",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 33,
+    "prompt": "- Why do phones not require cooling vents but other small appliances do?",
+    "L": 17,
+    "original_message": "10000011000111111",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 34,
+    "prompt": "Why are oil prices so shockingly low?",
+    "L": 17,
+    "original_message": "00100001101111101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "L": 17,
+    "original_message": "10100101011011001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a501\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 3,
+      "undecided_bits": 14,
+      "decided_bits": 3,
+      "accuracy_percent": 17.647058823529413,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 36,
+    "prompt": "Why do we lack the instincts our ancestors had, e.g. telling you which foods are poisonous",
+    "L": 17,
+    "original_message": "01101100001110011",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 37,
+    "prompt": "Why do we wake up early when we don't have to but tend to wake up late when we need to be up?",
+    "L": 17,
+    "original_message": "10101101010001110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "L": 17,
+    "original_message": "11000111001111001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 39,
+    "prompt": "with such an important vote like appointing a supreme court nomine, why is the senate floor so empty?",
+    "L": 17,
+    "original_message": "00111101101110001",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 40,
+    "prompt": "If you put tires on your car that are larger than the ones from the factory, would you actually be going slower than the reading on your speedometer?",
+    "L": 17,
+    "original_message": "10111111101000001",
+    "recovered_message": "\u22a50\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 41,
+    "prompt": "How does bugspray kills bugs?",
+    "L": 17,
+    "original_message": "11111001111010011",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 42,
+    "prompt": "If a computer has a GPU, why would reducing GUI effects impact performance?",
+    "L": 17,
+    "original_message": "11000101111010101",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 0,
+      "undecided_bits": 17,
+      "decided_bits": 0,
+      "accuracy_percent": 0.0,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 43,
+    "prompt": "What happens if you don't pay your US Federal income tax?",
+    "L": 17,
+    "original_message": "01101111111011111",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 44,
+    "prompt": "Why does my employer require a voided personal check in order to setup direct deposit?",
+    "L": 17,
+    "original_message": "00001100100000010",
+    "recovered_message": "\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 45,
+    "prompt": "Why are the insides of Ovens Dark and Not Metallic or Mirror Like?",
+    "L": 17,
+    "original_message": "10111010100111000",
+    "recovered_message": "\u22a5\u22a5\u22a51\u22a5\u22a5\u22a50\u22a5\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 3,
+      "undecided_bits": 14,
+      "decided_bits": 3,
+      "accuracy_percent": 17.647058823529413,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 46,
+    "prompt": "Why does metal react so violently when microwaved?",
+    "L": 17,
+    "original_message": "01100000101110100",
+    "recovered_message": "0\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 1,
+      "undecided_bits": 16,
+      "decided_bits": 1,
+      "accuracy_percent": 5.88235294117647,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 47,
+    "prompt": "How did the American accent come about?",
+    "L": 17,
+    "original_message": "11100011111001100",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a51\u22a5\u22a5\u22a5\u22a5\u22a50\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 48,
+    "prompt": "Why do The Miranda Rights state that anything you say can \"and will\" be used against you. If something's not incriminating why would it be used against you? Why would cops be forced to admit this up front?",
+    "L": 17,
+    "original_message": "01111111111010110",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a501\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 2,
+      "undecided_bits": 15,
+      "decided_bits": 2,
+      "accuracy_percent": 11.76470588235294,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "L": 17,
+    "original_message": "00010000000110010",
+    "recovered_message": "\u22a5\u22a5\u22a5\u22a50\u22a5\u22a5000\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5\u22a5",
+    "accuracy_metrics": {
+      "total_bits": 17,
+      "correct_bits": 4,
+      "undecided_bits": 13,
+      "decided_bits": 4,
+      "accuracy_percent": 23.52941176470588,
+      "exact_match": false
+    },
+    "parameters": {
+      "delta": 2.5,
+      "entropy_threshold": 4.0,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 512
+    }
+  }
+]
