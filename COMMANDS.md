@@ -185,7 +185,7 @@ python helper_scripts\visualize_groups.py ^
 **Comparing collusion resistance across approaches:**
 - Compare naive vs fingerprinting (min-distance-2, min-distance-3) approaches:
 ```bat
-python helper_scripts\compare_collusion_resistance.py ^
+python evalution_scripts\compare_collusion_resistance.py ^
   --prompts-file assets/prompts.txt ^
   --max-prompts 100 ^
   --model gpt2 ^
@@ -198,7 +198,7 @@ python helper_scripts\compare_collusion_resistance.py ^
 ```
 - Test with 3 colluders:
 ```bat
-python helper_scripts\compare_collusion_resistance.py ^
+python evalution_scripts\compare_collusion_resistance.py ^
   --num-colluders 3 ^
   --max-prompts 100
 ```
@@ -233,7 +233,7 @@ python helper_scripts\compare_collusion_resistance.py ^
   - Default: first 100 prompts (use `--max-prompts` to change)
 - **CSV-only mode (skip regeneration, reuse existing prompt results):**
 ```bat
-python helper_scripts\compare_collusion_resistance.py ^
+python evalution_scripts\compare_collusion_resistance.py ^
   --csv-only ^
   --num-colluders 2 ^
   --output-dir evaluation/collusion_resistance

@@ -30,7 +30,7 @@ export NLTK_DATA=$HF_HOME
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
 for NUM in 2 3; do
-    python helper_scripts/compare_collusion_resistance.py \
+    python evalution_scripts/compare_collusion_resistance.py \
         --prompts-file assets/prompts.txt \
         --max-prompts 300 \
         --users-file assets/users.csv \

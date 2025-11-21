@@ -97,15 +97,22 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── mainWindow.ui                # Qt Designer UI file
 │   └── resources.*                  # GUI assets
 │
+├── evalution_scripts/               # Evaluation and experiment scripts
+│   ├── compare_collusion_resistance.py  # Compare naive vs fingerprinting approaches
+│   ├── evaluate_multiuser_performance.py  # Multi-user performance evaluation
+│   ├── run_lbit_sweep.py            # L-bit parameter sweep
+│   ├── run_lbit_parameter_sweep.py  # L-bit parameter sweep (alternative)
+│   ├── run_detection_only.py        # Standalone detection script
+│   ├── redo_paraphrase_attack.py    # Re-run perturbation attacks
+│   └── test_undetectability.py      # Statistical undetectability tests
+│
 ├── helper_scripts/                  # Analysis and utility scripts
 │   ├── analyse.py                   # Generate plots from evaluation results
-│   ├── compare_collusion_resistance.py  # Compare naive vs fingerprinting approaches
 │   ├── generate_users.py            # Create user database CSV
 │   ├── visualise_blocks.py          # Visualize watermark blocks
 │   ├── visualise_lbit_blocks.py     # Visualize L-bit blocks
-│   ├── run_detection_only.py        # Standalone detection script
-│   ├── redo_paraphrase_attack.py    # Re-run perturbation attacks
-│   ├── test_undetectability.py      # Statistical undetectability tests
+│   ├── visualize_groups.py         # Visualize multi-user groups
+│   ├── create_collusion_scenario.py # Create collusion test scenarios
 │   └── download_models_hpc.py       # Pre-download models for HPC
 │
 ├── slurm_scripts/                   # HPC cluster batch job scripts
@@ -691,11 +698,11 @@ python -m src.main_multiuser trace [args]
 
 ### Helper Scripts
 
-#### `helper_scripts/compare_collusion_resistance.py`
+#### `evalution_scripts/compare_collusion_resistance.py`
 **Purpose:** Compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance
 **Usage:**
 ```bat
-python helper_scripts\compare_collusion_resistance.py ^
+python evalution_scripts\compare_collusion_resistance.py ^
   --prompts-file assets/prompts.txt ^
   --max-prompts 100 ^
   --num-colluders 2 ^
@@ -750,11 +757,11 @@ python helper_scripts\visualise_lbit_blocks.py output_lbit.txt --key-file secret
 
 **Output:** Shows which bit is embedded at each block position
 
-#### `helper_scripts/test_undetectability.py`
+#### `evalution_scripts/test_undetectability.py`
 **Purpose:** Statistical tests for undetectability
 **Usage:**
 ```bat
-python helper_scripts\test_undetectability.py --model gpt2 --num-samples 100
+python evalution_scripts\test_undetectability.py --model gpt2 --num-samples 100
 ```
 
 **Output:** Chi-square test results, KL divergence metrics
@@ -1218,7 +1225,7 @@ Compare naive vs fingerprinting multi-user watermarking approaches for collusion
 #### Run Comparison
 
 ```bat
-python helper_scripts/compare_collusion_resistance.py ^
+python evalution_scripts/compare_collusion_resistance.py ^
   --prompts-file assets/prompts.txt ^
   --max-prompts 100 ^
   --model gpt2 ^

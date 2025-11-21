@@ -6,3 +6,6 @@ slurm_out
 evaluation_results_lbit
 collusion_resistance_2
 collusion_resistance_3
+lbit_sweep
+local_multiuser_perf_user500
+collusion_resistance_2_colluders

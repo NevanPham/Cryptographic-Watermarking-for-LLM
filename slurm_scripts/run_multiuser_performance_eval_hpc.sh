@@ -29,7 +29,7 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
-python helper_scripts/evaluate_multiuser_performance.py \
+python evalution_scripts/evaluate_multiuser_performance.py \
     --users-file assets/users.csv \
     --model gpt2 \
     --l-bits 10 \

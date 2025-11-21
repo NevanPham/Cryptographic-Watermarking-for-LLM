@@ -29,7 +29,7 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
-python helper_scripts/run_lbit_sweep.py \
+python evalution_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
     --max-prompts 300 \
     --model gpt2 \
