@@ -1,0 +1,2258 @@
+[
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        562,
+        626,
+        818,
+        882
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        626
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        96,
+        98,
+        112,
+        114,
+        224,
+        226,
+        240,
+        242,
+        352,
+        354,
+        368,
+        370,
+        480,
+        482,
+        496,
+        498,
+        608,
+        610,
+        624,
+        626,
+        736,
+        738,
+        752,
+        754,
+        864,
+        866,
+        880,
+        882,
+        992,
+        994
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        626
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 98,
+          "username": 98,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 480,
+          "username": 480,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 482,
+          "username": 482,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 496,
+          "username": 496,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 866,
+          "username": 866,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        626,
+        882
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        626
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        96,
+        98,
+        112,
+        114,
+        224,
+        226,
+        240,
+        242,
+        352,
+        354,
+        368,
+        370,
+        480,
+        482,
+        496,
+        498,
+        608,
+        610,
+        624,
+        626,
+        736,
+        738,
+        752,
+        754,
+        864,
+        866,
+        880,
+        882,
+        992,
+        994
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        626
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 98,
+          "username": 98,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 480,
+          "username": 480,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 482,
+          "username": 482,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 496,
+          "username": 496,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 866,
+          "username": 866,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        802
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        802
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        802
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        802
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 80,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634,
+        635,
+        636,
+        637,
+        638,
+        639
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [
+        626
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 620,
+          "username": 620,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 621,
+          "username": 621,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 622,
+          "username": 622,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 623,
+          "username": 623,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 625,
+          "username": 625,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 627,
+          "username": 627,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 628,
+          "username": 628,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 629,
+          "username": 629,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 631,
+          "username": 631,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 632,
+          "username": 632,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 633,
+          "username": 633,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 634,
+          "username": 634,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 635,
+          "username": 635,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 636,
+          "username": 636,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 637,
+          "username": 637,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 638,
+          "username": 638,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 639,
+          "username": 639,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 111,
+    "prompt": "Whats is the actual cause of the common itch. and why is scratching it the cure?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      626,
+      802
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "original_user_ids": [
+        626,
+        802
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_626_text.txt",
+        "user_802_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

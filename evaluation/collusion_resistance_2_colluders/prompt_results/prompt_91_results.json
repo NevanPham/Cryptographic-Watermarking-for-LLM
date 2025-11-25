@@ -1,0 +1,2145 @@
+[
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        202,
+        234,
+        714,
+        746
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 714,
+          "username": 714,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        138,
+        139,
+        170,
+        171,
+        202,
+        203,
+        234,
+        235,
+        650,
+        651,
+        682,
+        683,
+        714,
+        715,
+        746,
+        747
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        683
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 138,
+          "username": 138,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 139,
+          "username": 139,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 170,
+          "username": 170,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 171,
+          "username": 171,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 203,
+          "username": 203,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 682,
+          "username": 682,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 683,
+          "username": 683,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 714,
+          "username": 714,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 715,
+          "username": 715,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        202,
+        234
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        202,
+        234,
+        458,
+        490,
+        714,
+        746,
+        970
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 490,
+          "username": 490,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 714,
+          "username": 714,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        680,
+        681,
+        682,
+        683,
+        684,
+        685,
+        686,
+        687,
+        688,
+        689,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        683
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 680,
+          "username": 680,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 681,
+          "username": 681,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 682,
+          "username": 682,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 683,
+          "username": 683,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 684,
+          "username": 684,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 685,
+          "username": 685,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 686,
+          "username": 686,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 687,
+          "username": 687,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 688,
+          "username": 688,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 689,
+          "username": 689,
+          "match_score_percent": 100.0,
+          "group_id": 68,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "reason": "No users accused"
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 440,
+          "username": 440,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 441,
+          "username": 441,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 442,
+          "username": 442,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 443,
+          "username": 443,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 444,
+          "username": 444,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 445,
+          "username": 445,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 446,
+          "username": 446,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 447,
+          "username": 447,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 448,
+          "username": 448,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 449,
+          "username": 449,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 440,
+          "username": 440,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 441,
+          "username": 441,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 442,
+          "username": 442,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 443,
+          "username": 443,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 444,
+          "username": 444,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 445,
+          "username": 445,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 446,
+          "username": 446,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 447,
+          "username": 447,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 448,
+          "username": 448,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 449,
+          "username": 449,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 440,
+          "username": 440,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 441,
+          "username": 441,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 442,
+          "username": 442,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 443,
+          "username": 443,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 444,
+          "username": 444,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 445,
+          "username": 445,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 446,
+          "username": 446,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 447,
+          "username": 447,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 448,
+          "username": 448,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 449,
+          "username": 449,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 91,
+    "prompt": "You\u2019re a villain who\u2019s kidnapped one of the smartest guys on your nemesis\u2019 team. They tell you no one\u2019s coming for them because the hero doesn\u2019t care.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      458,
+      683
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "original_user_ids": [
+        458,
+        683
+      ],
+      "matches": [
+        458
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 440,
+          "username": 440,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 441,
+          "username": 441,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 442,
+          "username": 442,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 443,
+          "username": 443,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 444,
+          "username": 444,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 445,
+          "username": 445,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 446,
+          "username": 446,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 447,
+          "username": 447,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 448,
+          "username": 448,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 449,
+          "username": 449,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_458_text.txt",
+        "user_683_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

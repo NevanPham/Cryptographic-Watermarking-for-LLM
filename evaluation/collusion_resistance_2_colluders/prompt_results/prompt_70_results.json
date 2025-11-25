@@ -1,0 +1,2564 @@
+[
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        660,
+        668,
+        692,
+        700
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 668,
+          "username": 668,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        532,
+        540,
+        564,
+        572,
+        660,
+        668,
+        692,
+        700
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 532,
+          "username": 532,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 540,
+          "username": 540,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 668,
+          "username": 668,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        660,
+        668,
+        692,
+        700
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 668,
+          "username": 668,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        392,
+        396,
+        408,
+        412,
+        456,
+        460,
+        472,
+        476,
+        904,
+        908,
+        920,
+        924,
+        968,
+        972,
+        984,
+        988
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        908
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 408,
+          "username": 408,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 412,
+          "username": 412,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 920,
+          "username": 920,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 924,
+          "username": 924,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        908,
+        566
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        908,
+        566
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        908,
+        566
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 70,
+    "prompt": "When you ask your daughter what she wants for Christmas, she asks for a unicorn. Your wife laughs it off, but you don't.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      566,
+      908
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        566,
+        908
+      ],
+      "matches": [
+        908,
+        566
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_566_text.txt",
+        "user_908_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

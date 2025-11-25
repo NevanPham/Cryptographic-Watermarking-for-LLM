@@ -1,0 +1,2723 @@
+[
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        391,
+        423,
+        903,
+        935
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        391,
+        423,
+        903,
+        935
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        391,
+        423,
+        903,
+        935
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        3,
+        7,
+        19,
+        23,
+        35,
+        39,
+        51,
+        55,
+        131,
+        135,
+        147,
+        151,
+        163,
+        167,
+        179,
+        183,
+        259,
+        263,
+        275,
+        279,
+        291,
+        295,
+        307,
+        311,
+        387,
+        391,
+        403,
+        407,
+        419,
+        423,
+        435,
+        439,
+        515,
+        519,
+        531,
+        535,
+        547,
+        551,
+        563,
+        567,
+        643,
+        647,
+        659,
+        663,
+        675,
+        679,
+        691,
+        695,
+        771,
+        775,
+        787,
+        791,
+        803,
+        807,
+        819,
+        823,
+        899,
+        903,
+        915,
+        919,
+        931,
+        935,
+        947,
+        951
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 23,
+          "username": 23,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 51,
+          "username": 51,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 55,
+          "username": 55,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 131,
+          "username": 131,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 147,
+          "username": 147,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 151,
+          "username": 151,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 163,
+          "username": 163,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 167,
+          "username": 167,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 179,
+          "username": 179,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 183,
+          "username": 183,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 263,
+          "username": 263,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 291,
+          "username": 291,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 295,
+          "username": 295,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 307,
+          "username": 307,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 407,
+          "username": 407,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 419,
+          "username": 419,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 531,
+          "username": 531,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 535,
+          "username": 535,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 547,
+          "username": 547,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 551,
+          "username": 551,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 647,
+          "username": 647,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 663,
+          "username": 663,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 675,
+          "username": 675,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 679,
+          "username": 679,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 691,
+          "username": 691,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 695,
+          "username": 695,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 771,
+          "username": 771,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 787,
+          "username": 787,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 791,
+          "username": 791,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 823,
+          "username": 823,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 947,
+          "username": 947,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 280,
+          "username": 280,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 281,
+          "username": 281,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 282,
+          "username": 282,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 283,
+          "username": 283,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 284,
+          "username": 284,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 285,
+          "username": 285,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 286,
+          "username": 286,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 287,
+          "username": 287,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926,
+        927,
+        928,
+        929
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        921
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 920,
+          "username": 920,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 921,
+          "username": 921,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 922,
+          "username": 922,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 924,
+          "username": 924,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 925,
+          "username": 925,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 926,
+          "username": 926,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 927,
+          "username": 927,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 928,
+          "username": 928,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 929,
+          "username": 929,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926,
+        927,
+        928,
+        929,
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        921,
+        423
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 280,
+          "username": 280,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 281,
+          "username": 281,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 282,
+          "username": 282,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 283,
+          "username": 283,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 284,
+          "username": 284,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 285,
+          "username": 285,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 286,
+          "username": 286,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 287,
+          "username": 287,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 701,
+          "username": 701,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 702,
+          "username": 702,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 703,
+          "username": 703,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 704,
+          "username": 704,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 705,
+          "username": 705,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 708,
+          "username": 708,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 709,
+          "username": 709,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 90,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 920,
+          "username": 920,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 921,
+          "username": 921,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 922,
+          "username": 922,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 924,
+          "username": 924,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 925,
+          "username": 925,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 926,
+          "username": 926,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 927,
+          "username": 927,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 928,
+          "username": 928,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 929,
+          "username": 929,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 92,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 930,
+          "username": 930,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 937,
+          "username": 937,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 939,
+          "username": 939,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926,
+        927,
+        928,
+        929
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        921
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 920,
+          "username": 920,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 921,
+          "username": 921,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 922,
+          "username": 922,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 924,
+          "username": 924,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 925,
+          "username": 925,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 926,
+          "username": 926,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 927,
+          "username": 927,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 928,
+          "username": 928,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 929,
+          "username": 929,
+          "match_score_percent": 100.0,
+          "group_id": 92,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 430,
+          "username": 430,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 431,
+          "username": 431,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 437,
+          "username": 437,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 430,
+          "username": 430,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 431,
+          "username": 431,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 437,
+          "username": 437,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 430,
+          "username": 430,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 431,
+          "username": 431,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 437,
+          "username": 437,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 139,
+    "prompt": "How do film/tv productions handle deaths of actors? Examples?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      423,
+      921
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "original_user_ids": [
+        423,
+        921
+      ],
+      "matches": [
+        423
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 430,
+          "username": 430,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 431,
+          "username": 431,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 437,
+          "username": 437,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_423_text.txt",
+        "user_921_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

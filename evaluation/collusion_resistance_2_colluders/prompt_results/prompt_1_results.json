@@ -1,0 +1,2626 @@
+[
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        4,
+        5,
+        132,
+        133,
+        260,
+        261,
+        388,
+        389,
+        516,
+        517,
+        644,
+        645,
+        772,
+        773,
+        900,
+        901
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        260
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 644,
+          "username": 644,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 645,
+          "username": 645,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        4,
+        260
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        260
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        4,
+        5,
+        132,
+        133,
+        260,
+        261,
+        388,
+        389,
+        516,
+        517,
+        644,
+        645,
+        772,
+        773,
+        900,
+        901
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        260
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 644,
+          "username": 644,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 645,
+          "username": 645,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        4,
+        260
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        260
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        701
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 701,
+          "username": 701,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 702,
+          "username": 702,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 703,
+          "username": 703,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 704,
+          "username": 704,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 705,
+          "username": 705,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 708,
+          "username": 708,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 709,
+          "username": 709,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        701
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 701,
+          "username": 701,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 702,
+          "username": 702,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 703,
+          "username": 703,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 704,
+          "username": 704,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 705,
+          "username": 705,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 708,
+          "username": 708,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 709,
+          "username": 709,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 452,
+          "username": 452,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 453,
+          "username": 453,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 454,
+          "username": 454,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 455,
+          "username": 455,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 456,
+          "username": 456,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 457,
+          "username": 457,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        701
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 701,
+          "username": 701,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 702,
+          "username": 702,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 703,
+          "username": 703,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 704,
+          "username": 704,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 705,
+          "username": 705,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 708,
+          "username": 708,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 709,
+          "username": 709,
+          "match_score_percent": 100.0,
+          "group_id": 70,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 60,
+          "username": 60,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 61,
+          "username": 61,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 62,
+          "username": 62,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 63,
+          "username": 63,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 64,
+          "username": 64,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 65,
+          "username": 65,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 66,
+          "username": 66,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 67,
+          "username": 67,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 68,
+          "username": 68,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 69,
+          "username": 69,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 60,
+          "username": 60,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 61,
+          "username": 61,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 62,
+          "username": 62,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 63,
+          "username": 63,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 64,
+          "username": 64,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 65,
+          "username": 65,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 66,
+          "username": 66,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 67,
+          "username": 67,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 68,
+          "username": 68,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 69,
+          "username": 69,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 60,
+          "username": 60,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 61,
+          "username": 61,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 62,
+          "username": 62,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 63,
+          "username": 63,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 64,
+          "username": 64,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 65,
+          "username": 65,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 66,
+          "username": 66,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 67,
+          "username": 67,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 68,
+          "username": 68,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 69,
+          "username": 69,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 87.5,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 1,
+    "prompt": "Why are different tiers (regular < mid < premium) of gas' prices almost always 10 cents different?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      260,
+      701
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712,
+        713,
+        714,
+        715,
+        716,
+        717,
+        718,
+        719,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839
+      ],
+      "original_user_ids": [
+        260,
+        701
+      ],
+      "matches": [
+        701
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 700,
+          "username": 700,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 701,
+          "username": 701,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 702,
+          "username": 702,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 703,
+          "username": 703,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 704,
+          "username": 704,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 705,
+          "username": 705,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 708,
+          "username": 708,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 709,
+          "username": 709,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 710,
+          "username": 710,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 711,
+          "username": 711,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 712,
+          "username": 712,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 713,
+          "username": 713,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 714,
+          "username": 714,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 715,
+          "username": 715,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 716,
+          "username": 716,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 717,
+          "username": 717,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 718,
+          "username": 718,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 719,
+          "username": 719,
+          "match_score_percent": 100.0,
+          "group_id": 35,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 821,
+          "username": 821,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 823,
+          "username": 823,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 824,
+          "username": 824,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 825,
+          "username": 825,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 826,
+          "username": 826,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 827,
+          "username": 827,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 828,
+          "username": 828,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 829,
+          "username": 829,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 830,
+          "username": 830,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 831,
+          "username": 831,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 833,
+          "username": 833,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 835,
+          "username": 835,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_260_text.txt",
+        "user_701_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

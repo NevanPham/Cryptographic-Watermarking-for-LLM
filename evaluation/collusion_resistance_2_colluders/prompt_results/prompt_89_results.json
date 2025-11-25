@@ -1,0 +1,4170 @@
+[
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        392,
+        394,
+        396,
+        398,
+        904,
+        906,
+        908,
+        910
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        256,
+        258,
+        260,
+        262,
+        264,
+        266,
+        268,
+        270,
+        384,
+        386,
+        388,
+        390,
+        392,
+        394,
+        396,
+        398,
+        768,
+        770,
+        772,
+        774,
+        776,
+        778,
+        780,
+        782,
+        896,
+        898,
+        900,
+        902,
+        904,
+        906,
+        908,
+        910
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 768,
+          "username": 768,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 776,
+          "username": 776,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525,
+        526,
+        527,
+        640,
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        768,
+        769,
+        770,
+        771,
+        772,
+        773,
+        774,
+        775,
+        776,
+        777,
+        778,
+        779,
+        780,
+        781,
+        782,
+        783,
+        896,
+        897,
+        898,
+        899,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904,
+        6
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 128,
+          "username": 128,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 130,
+          "username": 130,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 131,
+          "username": 131,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 136,
+          "username": 136,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 137,
+          "username": 137,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 138,
+          "username": 138,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 139,
+          "username": 139,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 140,
+          "username": 140,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 141,
+          "username": 141,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 142,
+          "username": 142,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 143,
+          "username": 143,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 263,
+          "username": 263,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 265,
+          "username": 265,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 267,
+          "username": 267,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 269,
+          "username": 269,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 520,
+          "username": 520,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 521,
+          "username": 521,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 522,
+          "username": 522,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 523,
+          "username": 523,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 524,
+          "username": 524,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 525,
+          "username": 525,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 526,
+          "username": 526,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 527,
+          "username": 527,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 640,
+          "username": 640,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 641,
+          "username": 641,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 642,
+          "username": 642,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 644,
+          "username": 644,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 645,
+          "username": 645,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 646,
+          "username": 646,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 647,
+          "username": 647,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 648,
+          "username": 648,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 649,
+          "username": 649,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 652,
+          "username": 652,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 653,
+          "username": 653,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 654,
+          "username": 654,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 655,
+          "username": 655,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 768,
+          "username": 768,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 769,
+          "username": 769,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 771,
+          "username": 771,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 776,
+          "username": 776,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 777,
+          "username": 777,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 779,
+          "username": 779,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 781,
+          "username": 781,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 783,
+          "username": 783,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        264,
+        266,
+        268,
+        270,
+        392,
+        394,
+        396,
+        398,
+        776,
+        778,
+        780,
+        782,
+        904,
+        906,
+        908,
+        910
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 776,
+          "username": 776,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        640,
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 640,
+          "username": 640,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 641,
+          "username": 641,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 642,
+          "username": 642,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 644,
+          "username": 644,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 645,
+          "username": 645,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 646,
+          "username": 646,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 647,
+          "username": 647,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 648,
+          "username": 648,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 649,
+          "username": 649,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 263,
+          "username": 263,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 265,
+          "username": 265,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 267,
+          "username": 267,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 269,
+          "username": 269,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 652,
+          "username": 652,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 653,
+          "username": 653,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 654,
+          "username": 654,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 655,
+          "username": 655,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 656,
+          "username": 656,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 657,
+          "username": 657,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 658,
+          "username": 658,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        640,
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 640,
+          "username": 640,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 641,
+          "username": 641,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 642,
+          "username": 642,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 644,
+          "username": 644,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 645,
+          "username": 645,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 646,
+          "username": 646,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 647,
+          "username": 647,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 648,
+          "username": 648,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 649,
+          "username": 649,
+          "match_score_percent": 100.0,
+          "group_id": 64,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 263,
+          "username": 263,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 265,
+          "username": 265,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 267,
+          "username": 267,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 269,
+          "username": 269,
+          "match_score_percent": 100.0,
+          "group_id": 26,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 652,
+          "username": 652,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 653,
+          "username": 653,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 654,
+          "username": 654,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 655,
+          "username": 655,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 656,
+          "username": 656,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 657,
+          "username": 657,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 658,
+          "username": 658,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        6
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        6
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849,
+        850,
+        851,
+        852,
+        853,
+        854,
+        855,
+        856,
+        857,
+        858,
+        859
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        6
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 80.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 841,
+          "username": 841,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 843,
+          "username": 843,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 848,
+          "username": 848,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 849,
+          "username": 849,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 850,
+          "username": 850,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 851,
+          "username": 851,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 852,
+          "username": 852,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 853,
+          "username": 853,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 855,
+          "username": 855,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 856,
+          "username": 856,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 857,
+          "username": 857,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 858,
+          "username": 858,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 859,
+          "username": 859,
+          "match_score_percent": 80.0,
+          "group_id": 42,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 89,
+    "prompt": "It's March 8 2034 and a plane identifying as MH370 requests a landing at beijing airport, the pilots still think it's 2014 The title of this story should be: The Return It should feature the following genres: Mystery, Thriller, Paranormal, Science Fiction",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      6,
+      904
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        674,
+        675,
+        676,
+        677,
+        678,
+        679,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        6,
+        904
+      ],
+      "matches": [
+        904,
+        6
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 661,
+          "username": 661,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 662,
+          "username": 662,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 663,
+          "username": 663,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 664,
+          "username": 664,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 665,
+          "username": 665,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 666,
+          "username": 666,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 667,
+          "username": 667,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 668,
+          "username": 668,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 669,
+          "username": 669,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 670,
+          "username": 670,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 671,
+          "username": 671,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 672,
+          "username": 672,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 673,
+          "username": 673,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 674,
+          "username": 674,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 675,
+          "username": 675,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 676,
+          "username": 676,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 677,
+          "username": 677,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 678,
+          "username": 678,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 679,
+          "username": 679,
+          "match_score_percent": 100.0,
+          "group_id": 33,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_6_text.txt",
+        "user_904_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

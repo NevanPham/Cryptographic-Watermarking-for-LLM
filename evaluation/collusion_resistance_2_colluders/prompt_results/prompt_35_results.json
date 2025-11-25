@@ -1,0 +1,2604 @@
+[
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        790,
+        798
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 798,
+          "username": 798,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        790,
+        798
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 798,
+          "username": 798,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        790,
+        798
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 798,
+          "username": 798,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        790,
+        798,
+        918,
+        926
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 798,
+          "username": 798,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 926,
+          "username": 926,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        950
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 40,
+          "username": 40,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 41,
+          "username": 41,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 42,
+          "username": 42,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 43,
+          "username": 43,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 44,
+          "username": 44,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 45,
+          "username": 45,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 46,
+          "username": 46,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 47,
+          "username": 47,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 48,
+          "username": 48,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 49,
+          "username": 49,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 300,
+          "username": 300,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 301,
+          "username": 301,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 302,
+          "username": 302,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 303,
+          "username": 303,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 305,
+          "username": 305,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 306,
+          "username": 306,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 307,
+          "username": 307,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 309,
+          "username": 309,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        950
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 40,
+          "username": 40,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 41,
+          "username": 41,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 42,
+          "username": 42,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 43,
+          "username": 43,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 44,
+          "username": 44,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 45,
+          "username": 45,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 46,
+          "username": 46,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 47,
+          "username": 47,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 48,
+          "username": 48,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 49,
+          "username": 49,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 300,
+          "username": 300,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 301,
+          "username": 301,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 302,
+          "username": 302,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 303,
+          "username": 303,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 305,
+          "username": 305,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 306,
+          "username": 306,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 307,
+          "username": 307,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 309,
+          "username": 309,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        950
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 40,
+          "username": 40,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 41,
+          "username": 41,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 42,
+          "username": 42,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 43,
+          "username": 43,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 44,
+          "username": 44,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 45,
+          "username": 45,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 46,
+          "username": 46,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 47,
+          "username": 47,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 48,
+          "username": 48,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 49,
+          "username": 49,
+          "match_score_percent": 100.0,
+          "group_id": 4,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 300,
+          "username": 300,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 301,
+          "username": 301,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 302,
+          "username": 302,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 303,
+          "username": 303,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 305,
+          "username": 305,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 306,
+          "username": 306,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 307,
+          "username": 307,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 309,
+          "username": 309,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        286
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 280,
+          "username": 280,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 281,
+          "username": 281,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 282,
+          "username": 282,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 283,
+          "username": 283,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 284,
+          "username": 284,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 285,
+          "username": 285,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 286,
+          "username": 286,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 287,
+          "username": 287,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        940,
+        941,
+        942,
+        943,
+        944,
+        945,
+        946,
+        947,
+        948,
+        949,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        950
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 944,
+          "username": 944,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 945,
+          "username": 945,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 946,
+          "username": 946,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 947,
+          "username": 947,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 949,
+          "username": 949,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2,
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        940,
+        941,
+        942,
+        943,
+        944,
+        945,
+        946,
+        947,
+        948,
+        949,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        950
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 944,
+          "username": 944,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 945,
+          "username": 945,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 946,
+          "username": 946,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 947,
+          "username": 947,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 949,
+          "username": 949,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        940,
+        941,
+        942,
+        943,
+        944,
+        945,
+        946,
+        947,
+        948,
+        949,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        950
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 944,
+          "username": 944,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 945,
+          "username": 945,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 946,
+          "username": 946,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 947,
+          "username": 947,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 949,
+          "username": 949,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            2,
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 35,
+    "prompt": "If the inside of my microwave is made of metal, why is it bad to put metallic objects in it?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      286,
+      950
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299
+      ],
+      "original_user_ids": [
+        286,
+        950
+      ],
+      "matches": [
+        286
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 280,
+          "username": 280,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 281,
+          "username": 281,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 282,
+          "username": 282,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 283,
+          "username": 283,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 284,
+          "username": 284,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 285,
+          "username": 285,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 286,
+          "username": 286,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 287,
+          "username": 287,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 290,
+          "username": 290,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 291,
+          "username": 291,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 292,
+          "username": 292,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 293,
+          "username": 293,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 294,
+          "username": 294,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 295,
+          "username": 295,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 296,
+          "username": 296,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 297,
+          "username": 297,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 298,
+          "username": 298,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 299,
+          "username": 299,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_286_text.txt",
+        "user_950_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

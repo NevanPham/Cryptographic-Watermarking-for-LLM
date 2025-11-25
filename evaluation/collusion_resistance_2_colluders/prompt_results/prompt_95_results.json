@@ -1,0 +1,2769 @@
+[
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        511
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        511
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        244,
+        245,
+        246,
+        247,
+        252,
+        253,
+        254,
+        255,
+        500,
+        501,
+        502,
+        503,
+        508,
+        509,
+        510,
+        511,
+        756,
+        757,
+        758,
+        759,
+        764,
+        765,
+        766,
+        767
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        511
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 764,
+          "username": 764,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 765,
+          "username": 765,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 766,
+          "username": 766,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 767,
+          "username": 767,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        498,
+        499,
+        502,
+        503,
+        506,
+        507,
+        510,
+        511
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        511
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 499,
+          "username": 499,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        496,
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        766,
+        767
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        511
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 496,
+          "username": 496,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 497,
+          "username": 497,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 499,
+          "username": 499,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 505,
+          "username": 505,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 760,
+          "username": 760,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 761,
+          "username": 761,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 762,
+          "username": 762,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 763,
+          "username": 763,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 764,
+          "username": 764,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 765,
+          "username": 765,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 766,
+          "username": 766,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 767,
+          "username": 767,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        770,
+        771,
+        772,
+        773,
+        774,
+        775,
+        776,
+        777,
+        778,
+        779
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 771,
+          "username": 771,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 776,
+          "username": 776,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 777,
+          "username": 777,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 779,
+          "username": 779,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 732,
+          "username": 732,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 733,
+          "username": 733,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 734,
+          "username": 734,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 735,
+          "username": 735,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 737,
+          "username": 737,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 739,
+          "username": 739,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        770,
+        771,
+        772,
+        773,
+        774,
+        775,
+        776,
+        777,
+        778,
+        779
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 771,
+          "username": 771,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 776,
+          "username": 776,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 777,
+          "username": 777,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 779,
+          "username": 779,
+          "match_score_percent": 100.0,
+          "group_id": 77,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        511
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": 51,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 530,
+          "username": 530,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 531,
+          "username": 531,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 532,
+          "username": 532,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 533,
+          "username": 533,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 534,
+          "username": 534,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 535,
+          "username": 535,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 536,
+          "username": 536,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 537,
+          "username": 537,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 538,
+          "username": 538,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 539,
+          "username": 539,
+          "match_score_percent": 100.0,
+          "group_id": 53,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 732,
+          "username": 732,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 733,
+          "username": 733,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 734,
+          "username": 734,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 735,
+          "username": 735,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 737,
+          "username": 737,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 739,
+          "username": 739,
+          "match_score_percent": 100.0,
+          "group_id": 73,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 37,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 95,
+    "prompt": "Humans can't see spirits, but the same goes vise versa. There's currently chaos in the spirit plane, hulking towers of metal and concrete are appearing at an even faster pace than before, and the spirits must investigate why.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      511,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "original_user_ids": [
+        511,
+        740
+      ],
+      "matches": [
+        511
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 505,
+          "username": 505,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_511_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

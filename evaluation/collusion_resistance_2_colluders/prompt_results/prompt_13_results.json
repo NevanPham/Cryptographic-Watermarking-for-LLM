@@ -1,0 +1,2088 @@
+[
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        854,
+        855,
+        862,
+        863
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 855,
+          "username": 855,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 862,
+          "username": 862,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 863,
+          "username": 863,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        838,
+        839,
+        846,
+        847,
+        854,
+        855,
+        862,
+        863
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        846
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 855,
+          "username": 855,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 862,
+          "username": 862,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 863,
+          "username": 863,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        854,
+        855,
+        862,
+        863
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 855,
+          "username": 855,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 862,
+          "username": 862,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 863,
+          "username": 863,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        846
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        846
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849,
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981,
+        846
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 841,
+          "username": 841,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 843,
+          "username": 843,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 848,
+          "username": 848,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 849,
+          "username": 849,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 13,
+    "prompt": "Why are some fish bones edible, and others are not?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      846,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        846,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_846_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

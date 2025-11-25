@@ -1,0 +1,3052 @@
+[
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        304,
+        308,
+        312,
+        316,
+        368,
+        372,
+        376,
+        380
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312,
+        372
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        304,
+        312,
+        368,
+        376
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        304,
+        308,
+        312,
+        316,
+        368,
+        372,
+        376,
+        380
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312,
+        372
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        304,
+        312,
+        368,
+        376
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 313,
+          "username": 313,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 314,
+          "username": 314,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 315,
+          "username": 315,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 317,
+          "username": 317,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 318,
+          "username": 318,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 319,
+          "username": 319,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 313,
+          "username": 313,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 314,
+          "username": 314,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 315,
+          "username": 315,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 317,
+          "username": 317,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 318,
+          "username": 318,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 319,
+          "username": 319,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 313,
+          "username": 313,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 314,
+          "username": 314,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 315,
+          "username": 315,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 317,
+          "username": 317,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 318,
+          "username": 318,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        },
+        {
+          "user_id": 319,
+          "username": 319,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        312
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 313,
+          "username": 313,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 314,
+          "username": 314,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 315,
+          "username": 315,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 317,
+          "username": 317,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 318,
+          "username": 318,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 319,
+          "username": 319,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        372
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 361,
+          "username": 361,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 363,
+          "username": 363,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 364,
+          "username": 364,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 365,
+          "username": 365,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 367,
+          "username": 367,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 369,
+          "username": 369,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 371,
+          "username": 371,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 373,
+          "username": 373,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 374,
+          "username": 374,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 375,
+          "username": 375,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 377,
+          "username": 377,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 378,
+          "username": 378,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 379,
+          "username": 379,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 430,
+          "username": 430,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 431,
+          "username": 431,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 437,
+          "username": 437,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 21,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 23,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 85.71428571428571,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        372
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 361,
+          "username": 361,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 363,
+          "username": 363,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 364,
+          "username": 364,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 365,
+          "username": 365,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 367,
+          "username": 367,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 369,
+          "username": 369,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 371,
+          "username": 371,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 373,
+          "username": 373,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 374,
+          "username": 374,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 375,
+          "username": 375,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 377,
+          "username": 377,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 378,
+          "username": 378,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 379,
+          "username": 379,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        372
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 361,
+          "username": 361,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 363,
+          "username": 363,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 364,
+          "username": 364,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 365,
+          "username": 365,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 367,
+          "username": 367,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 369,
+          "username": 369,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 371,
+          "username": 371,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 373,
+          "username": 373,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 374,
+          "username": 374,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 375,
+          "username": 375,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 377,
+          "username": 377,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 378,
+          "username": 378,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 379,
+          "username": 379,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 611,
+          "username": 611,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 613,
+          "username": 613,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 615,
+          "username": 615,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 619,
+          "username": 619,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 245,
+    "prompt": "How do American football have bruised lungs without also having broken ribs? Isn't that the point of ribs?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      312,
+      372
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379
+      ],
+      "original_user_ids": [
+        312,
+        372
+      ],
+      "matches": [
+        372
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 361,
+          "username": 361,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 363,
+          "username": 363,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 364,
+          "username": 364,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 365,
+          "username": 365,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 367,
+          "username": 367,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 369,
+          "username": 369,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 371,
+          "username": 371,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 373,
+          "username": 373,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 374,
+          "username": 374,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 375,
+          "username": 375,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 376,
+          "username": 376,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 377,
+          "username": 377,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 378,
+          "username": 378,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 379,
+          "username": 379,
+          "match_score_percent": 100.0,
+          "group_id": 18,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_312_text.txt",
+        "user_372_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

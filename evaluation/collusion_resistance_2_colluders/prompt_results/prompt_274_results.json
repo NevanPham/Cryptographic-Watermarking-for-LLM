@@ -1,0 +1,5380 @@
+[
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        2,
+        8,
+        10,
+        32,
+        34,
+        40,
+        42,
+        64,
+        66,
+        72,
+        74,
+        96,
+        98,
+        104,
+        106,
+        256,
+        258,
+        264,
+        266,
+        288,
+        290,
+        296,
+        298,
+        320,
+        322,
+        328,
+        330,
+        352,
+        354,
+        360,
+        362,
+        512,
+        514,
+        520,
+        522,
+        544,
+        546,
+        552,
+        554,
+        576,
+        578,
+        584,
+        586,
+        608,
+        610,
+        616,
+        618,
+        768,
+        770,
+        776,
+        778,
+        800,
+        802,
+        808,
+        810,
+        832,
+        834,
+        840,
+        842,
+        864,
+        866,
+        872,
+        874
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        288
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 40,
+          "username": 40,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 42,
+          "username": 42,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 64,
+          "username": 64,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 66,
+          "username": 66,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 98,
+          "username": 98,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 290,
+          "username": 290,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 296,
+          "username": 296,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 298,
+          "username": 298,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 320,
+          "username": 320,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 322,
+          "username": 322,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 328,
+          "username": 328,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 330,
+          "username": 330,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 520,
+          "username": 520,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 522,
+          "username": 522,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 544,
+          "username": 544,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 546,
+          "username": 546,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 552,
+          "username": 552,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 554,
+          "username": 554,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 584,
+          "username": 584,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 586,
+          "username": 586,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 768,
+          "username": 768,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 776,
+          "username": 776,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 866,
+          "username": 866,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 872,
+          "username": 872,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 874,
+          "username": 874,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        2,
+        6,
+        10,
+        14,
+        34,
+        38,
+        42,
+        46,
+        66,
+        70,
+        74,
+        78,
+        98,
+        102,
+        106,
+        110,
+        258,
+        262,
+        266,
+        270,
+        290,
+        294,
+        298,
+        302,
+        322,
+        326,
+        330,
+        334,
+        354,
+        358,
+        362,
+        366,
+        514,
+        518,
+        522,
+        526,
+        546,
+        550,
+        554,
+        558,
+        578,
+        582,
+        586,
+        590,
+        610,
+        614,
+        618,
+        622,
+        770,
+        774,
+        778,
+        782,
+        802,
+        806,
+        810,
+        814,
+        834,
+        838,
+        842,
+        846,
+        866,
+        870,
+        874,
+        878
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 42,
+          "username": 42,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 46,
+          "username": 46,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 66,
+          "username": 66,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 98,
+          "username": 98,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 290,
+          "username": 290,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 294,
+          "username": 294,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 298,
+          "username": 298,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 302,
+          "username": 302,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 322,
+          "username": 322,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 326,
+          "username": 326,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 330,
+          "username": 330,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 334,
+          "username": 334,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 358,
+          "username": 358,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 522,
+          "username": 522,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 526,
+          "username": 526,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 546,
+          "username": 546,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 550,
+          "username": 550,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 554,
+          "username": 554,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 558,
+          "username": 558,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 582,
+          "username": 582,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 586,
+          "username": 586,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 622,
+          "username": 622,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 866,
+          "username": 866,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 870,
+          "username": 870,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 874,
+          "username": 874,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 878,
+          "username": 878,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        2,
+        6,
+        10,
+        14,
+        34,
+        38,
+        42,
+        46,
+        66,
+        70,
+        74,
+        78,
+        98,
+        102,
+        106,
+        110,
+        258,
+        262,
+        266,
+        270,
+        290,
+        294,
+        298,
+        302,
+        322,
+        326,
+        330,
+        334,
+        354,
+        358,
+        362,
+        366,
+        514,
+        518,
+        522,
+        526,
+        546,
+        550,
+        554,
+        558,
+        578,
+        582,
+        586,
+        590,
+        610,
+        614,
+        618,
+        622,
+        770,
+        774,
+        778,
+        782,
+        802,
+        806,
+        810,
+        814,
+        834,
+        838,
+        842,
+        846,
+        866,
+        870,
+        874,
+        878
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 42,
+          "username": 42,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 46,
+          "username": 46,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 66,
+          "username": 66,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 98,
+          "username": 98,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 290,
+          "username": 290,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 294,
+          "username": 294,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 298,
+          "username": 298,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 302,
+          "username": 302,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 322,
+          "username": 322,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 326,
+          "username": 326,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 330,
+          "username": 330,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 334,
+          "username": 334,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 358,
+          "username": 358,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 522,
+          "username": 522,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 526,
+          "username": 526,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 546,
+          "username": 546,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 550,
+          "username": 550,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 554,
+          "username": 554,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 558,
+          "username": 558,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 582,
+          "username": 582,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 586,
+          "username": 586,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 610,
+          "username": 610,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 614,
+          "username": 614,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 618,
+          "username": 618,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 622,
+          "username": 622,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 770,
+          "username": 770,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 778,
+          "username": 778,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 866,
+          "username": 866,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 870,
+          "username": 870,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 874,
+          "username": 874,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 878,
+          "username": 878,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        32,
+        288
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        288
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 70,
+          "username": 70,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 71,
+          "username": 71,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 72,
+          "username": 72,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 73,
+          "username": 73,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 74,
+          "username": 74,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 75,
+          "username": 75,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 76,
+          "username": 76,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 77,
+          "username": 77,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 78,
+          "username": 78,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 79,
+          "username": 79,
+          "match_score_percent": 100.0,
+          "group_id": 7,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 39,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        584,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 580,
+          "username": 580,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 581,
+          "username": 581,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 582,
+          "username": 582,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 583,
+          "username": 583,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 584,
+          "username": 584,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 585,
+          "username": 585,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 586,
+          "username": 586,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 587,
+          "username": 587,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 588,
+          "username": 588,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 589,
+          "username": 589,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        584,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 580,
+          "username": 580,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 581,
+          "username": 581,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 582,
+          "username": 582,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 583,
+          "username": 583,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 584,
+          "username": 584,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 585,
+          "username": 585,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 586,
+          "username": 586,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 587,
+          "username": 587,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 588,
+          "username": 588,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 589,
+          "username": 589,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        584,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        590
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 580,
+          "username": 580,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 581,
+          "username": 581,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 582,
+          "username": 582,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 583,
+          "username": 583,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 584,
+          "username": 584,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 585,
+          "username": 585,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 586,
+          "username": 586,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 587,
+          "username": 587,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 588,
+          "username": 588,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 589,
+          "username": 589,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 29,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 274,
+    "prompt": "\"Why does everything always happen to me! ?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      288,
+      590
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634,
+        635,
+        636,
+        637,
+        638,
+        639
+      ],
+      "original_user_ids": [
+        288,
+        590
+      ],
+      "matches": [
+        288
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 263,
+          "username": 263,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 265,
+          "username": 265,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 267,
+          "username": 267,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 269,
+          "username": 269,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 280,
+          "username": 280,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 281,
+          "username": 281,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 282,
+          "username": 282,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 283,
+          "username": 283,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 284,
+          "username": 284,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 285,
+          "username": 285,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 286,
+          "username": 286,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 287,
+          "username": 287,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 290,
+          "username": 290,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 291,
+          "username": 291,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 292,
+          "username": 292,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 293,
+          "username": 293,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 294,
+          "username": 294,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 295,
+          "username": 295,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 296,
+          "username": 296,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 297,
+          "username": 297,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 298,
+          "username": 298,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 299,
+          "username": 299,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 620,
+          "username": 620,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 621,
+          "username": 621,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 622,
+          "username": 622,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 623,
+          "username": 623,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 625,
+          "username": 625,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 627,
+          "username": 627,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 628,
+          "username": 628,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 629,
+          "username": 629,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 631,
+          "username": 631,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 632,
+          "username": 632,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 633,
+          "username": 633,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 634,
+          "username": 634,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 635,
+          "username": 635,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 636,
+          "username": 636,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 637,
+          "username": 637,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 638,
+          "username": 638,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 639,
+          "username": 639,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_288_text.txt",
+        "user_590_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

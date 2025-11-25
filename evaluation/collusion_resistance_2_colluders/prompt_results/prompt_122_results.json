@@ -1,0 +1,3578 @@
+[
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        643,
+        651,
+        659,
+        667,
+        707,
+        715,
+        723,
+        731,
+        899,
+        907,
+        915,
+        923,
+        963,
+        971,
+        979,
+        987
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 667,
+          "username": 667,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 715,
+          "username": 715,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 963,
+          "username": 963,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 971,
+          "username": 971,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 979,
+          "username": 979,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        640,
+        641,
+        642,
+        643,
+        648,
+        649,
+        650,
+        651,
+        656,
+        657,
+        658,
+        659,
+        664,
+        665,
+        666,
+        667,
+        704,
+        705,
+        706,
+        707,
+        712,
+        713,
+        714,
+        715,
+        720,
+        721,
+        722,
+        723,
+        728,
+        729,
+        730,
+        731,
+        896,
+        897,
+        898,
+        899,
+        904,
+        905,
+        906,
+        907,
+        912,
+        913,
+        914,
+        915,
+        920,
+        921,
+        922,
+        923,
+        960,
+        961,
+        962,
+        963,
+        968,
+        969,
+        970,
+        971,
+        976,
+        977,
+        978,
+        979,
+        984,
+        985,
+        986,
+        987
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        905
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 640,
+          "username": 640,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 641,
+          "username": 641,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 642,
+          "username": 642,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 648,
+          "username": 648,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 649,
+          "username": 649,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 656,
+          "username": 656,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 657,
+          "username": 657,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 658,
+          "username": 658,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 664,
+          "username": 664,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 665,
+          "username": 665,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 666,
+          "username": 666,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 667,
+          "username": 667,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 704,
+          "username": 704,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 705,
+          "username": 705,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 712,
+          "username": 712,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 713,
+          "username": 713,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 714,
+          "username": 714,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 715,
+          "username": 715,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 920,
+          "username": 920,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 921,
+          "username": 921,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 922,
+          "username": 922,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 960,
+          "username": 960,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 961,
+          "username": 961,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 962,
+          "username": 962,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 963,
+          "username": 963,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 969,
+          "username": 969,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 971,
+          "username": 971,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 976,
+          "username": 976,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 977,
+          "username": 977,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 978,
+          "username": 978,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 979,
+          "username": 979,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        642,
+        643,
+        650,
+        651,
+        658,
+        659,
+        666,
+        667,
+        706,
+        707,
+        714,
+        715,
+        722,
+        723,
+        730,
+        731,
+        898,
+        899,
+        906,
+        907,
+        914,
+        915,
+        922,
+        923,
+        962,
+        963,
+        970,
+        971,
+        978,
+        979,
+        986,
+        987
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 642,
+          "username": 642,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 643,
+          "username": 643,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 658,
+          "username": 658,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 666,
+          "username": 666,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 667,
+          "username": 667,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 706,
+          "username": 706,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 707,
+          "username": 707,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 714,
+          "username": 714,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 715,
+          "username": 715,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 922,
+          "username": 922,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 962,
+          "username": 962,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 963,
+          "username": 963,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 971,
+          "username": 971,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 978,
+          "username": 978,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 979,
+          "username": 979,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        905,
+        969
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        905
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 969,
+          "username": 969,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        726
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        726
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        726
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        726
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 42,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        726
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 732,
+          "username": 732,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 733,
+          "username": 733,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 734,
+          "username": 734,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 735,
+          "username": 735,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 737,
+          "username": 737,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        },
+        {
+          "user_id": 739,
+          "username": 739,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        905,
+        726
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 732,
+          "username": 732,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 733,
+          "username": 733,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 734,
+          "username": 734,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 735,
+          "username": 735,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 737,
+          "username": 737,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 739,
+          "username": 739,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        905,
+        726
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 732,
+          "username": 732,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 733,
+          "username": 733,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 734,
+          "username": 734,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 735,
+          "username": 735,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 737,
+          "username": 737,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 739,
+          "username": 739,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 122,
+    "prompt": "why does spicy food make me sweat?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      726,
+      905
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739
+      ],
+      "original_user_ids": [
+        726,
+        905
+      ],
+      "matches": [
+        726
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 730,
+          "username": 730,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 731,
+          "username": 731,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 732,
+          "username": 732,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 733,
+          "username": 733,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 734,
+          "username": 734,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 735,
+          "username": 735,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 736,
+          "username": 736,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 737,
+          "username": 737,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 738,
+          "username": 738,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 739,
+          "username": 739,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_726_text.txt",
+        "user_905_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

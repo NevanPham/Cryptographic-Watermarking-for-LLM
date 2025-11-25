@@ -1,0 +1,1858 @@
+[
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        150,
+        182
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        146,
+        150,
+        178,
+        182
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 146,
+          "username": 146,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        146,
+        150,
+        178,
+        182
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 146,
+          "username": 146,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        146,
+        150,
+        178,
+        182
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 146,
+          "username": 146,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 170,
+          "username": 170,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 171,
+          "username": 171,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 172,
+          "username": 172,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 173,
+          "username": 173,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 174,
+          "username": 174,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 175,
+          "username": 175,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 176,
+          "username": 176,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 177,
+          "username": 177,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 179,
+          "username": 179,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 170,
+          "username": 170,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 171,
+          "username": 171,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 172,
+          "username": 172,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 173,
+          "username": 173,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 174,
+          "username": 174,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 175,
+          "username": 175,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 176,
+          "username": 176,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 177,
+          "username": 177,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 179,
+          "username": 179,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 170,
+          "username": 170,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 171,
+          "username": 171,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 172,
+          "username": 172,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 173,
+          "username": 173,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 174,
+          "username": 174,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 175,
+          "username": 175,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 176,
+          "username": 176,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 177,
+          "username": 177,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 179,
+          "username": 179,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        414
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 410,
+          "username": 410,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 411,
+          "username": 411,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 412,
+          "username": 412,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 413,
+          "username": 413,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 414,
+          "username": 414,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 415,
+          "username": 415,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 416,
+          "username": 416,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 417,
+          "username": 417,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 418,
+          "username": 418,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 419,
+          "username": 419,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        414
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 400,
+          "username": 400,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 401,
+          "username": 401,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 402,
+          "username": 402,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 404,
+          "username": 404,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 405,
+          "username": 405,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 407,
+          "username": 407,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 408,
+          "username": 408,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 409,
+          "username": 409,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 410,
+          "username": 410,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 411,
+          "username": 411,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 412,
+          "username": 412,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 413,
+          "username": 413,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 414,
+          "username": 414,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 415,
+          "username": 415,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 416,
+          "username": 416,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 417,
+          "username": 417,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 418,
+          "username": 418,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 419,
+          "username": 419,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        178
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 160,
+          "username": 160,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 161,
+          "username": 161,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 162,
+          "username": 162,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 163,
+          "username": 163,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 164,
+          "username": 164,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 165,
+          "username": 165,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 166,
+          "username": 166,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 167,
+          "username": 167,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 168,
+          "username": 168,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 169,
+          "username": 169,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 170,
+          "username": 170,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 171,
+          "username": 171,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 172,
+          "username": 172,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 173,
+          "username": 173,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 174,
+          "username": 174,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 175,
+          "username": 175,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 176,
+          "username": 176,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 177,
+          "username": 177,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 179,
+          "username": 179,
+          "match_score_percent": 100.0,
+          "group_id": 8,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        414
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 400,
+          "username": 400,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 401,
+          "username": 401,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 402,
+          "username": 402,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 404,
+          "username": 404,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 405,
+          "username": 405,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 407,
+          "username": 407,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 408,
+          "username": 408,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 409,
+          "username": 409,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 410,
+          "username": 410,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 411,
+          "username": 411,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 412,
+          "username": 412,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 413,
+          "username": 413,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 414,
+          "username": 414,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 415,
+          "username": 415,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 416,
+          "username": 416,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 417,
+          "username": 417,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 418,
+          "username": 418,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        },
+        {
+          "user_id": 419,
+          "username": 419,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            3
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 260,
+    "prompt": "It's been a century since the global blackout eliminated the worlds electricity. The nation once known as \"America\" is now a medieval state.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      178,
+      414
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "original_user_ids": [
+        178,
+        414
+      ],
+      "matches": [
+        414
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 400,
+          "username": 400,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 401,
+          "username": 401,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 402,
+          "username": 402,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 404,
+          "username": 404,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 405,
+          "username": 405,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 407,
+          "username": 407,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 408,
+          "username": 408,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 409,
+          "username": 409,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 410,
+          "username": 410,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 411,
+          "username": 411,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 412,
+          "username": 412,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 413,
+          "username": 413,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 414,
+          "username": 414,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 415,
+          "username": 415,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 416,
+          "username": 416,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 417,
+          "username": 417,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 418,
+          "username": 418,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 419,
+          "username": 419,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_178_text.txt",
+        "user_414_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

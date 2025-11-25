@@ -1,0 +1,1769 @@
+[
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        954,
+        955
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        955
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        954,
+        955
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        955
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        954,
+        955
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        955
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        954,
+        955
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        955
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        476
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        476
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        476
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        955,
+        476
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 95,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        476
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        476
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        476
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 261,
+    "prompt": "The dragon spoke, \"Release my human, and we will leave you all in peace. Do not, and I will reduce your walls to rubble to rescue them myself.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      476,
+      955
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        940,
+        941,
+        942,
+        943,
+        944,
+        945,
+        946,
+        947,
+        948,
+        949,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959
+      ],
+      "original_user_ids": [
+        476,
+        955
+      ],
+      "matches": [
+        955
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 944,
+          "username": 944,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 945,
+          "username": 945,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 946,
+          "username": 946,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 947,
+          "username": 947,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 949,
+          "username": 949,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 951,
+          "username": 951,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 952,
+          "username": 952,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 953,
+          "username": 953,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 954,
+          "username": 954,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 955,
+          "username": 955,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 956,
+          "username": 956,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 957,
+          "username": 957,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 958,
+          "username": 958,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 959,
+          "username": 959,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_476_text.txt",
+        "user_955_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

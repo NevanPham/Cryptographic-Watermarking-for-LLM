@@ -1,0 +1,3293 @@
+[
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        256,
+        257,
+        258,
+        259,
+        272,
+        273,
+        274,
+        275,
+        288,
+        289,
+        290,
+        291,
+        304,
+        305,
+        306,
+        307,
+        320,
+        321,
+        322,
+        323,
+        336,
+        337,
+        338,
+        339,
+        352,
+        353,
+        354,
+        355,
+        368,
+        369,
+        370,
+        371,
+        384,
+        385,
+        386,
+        387,
+        400,
+        401,
+        402,
+        403,
+        416,
+        417,
+        418,
+        419,
+        432,
+        433,
+        434,
+        435,
+        448,
+        449,
+        450,
+        451,
+        464,
+        465,
+        466,
+        467,
+        480,
+        481,
+        482,
+        483,
+        496,
+        497,
+        498,
+        499
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 290,
+          "username": 290,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 291,
+          "username": 291,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 305,
+          "username": 305,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 306,
+          "username": 306,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 307,
+          "username": 307,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 320,
+          "username": 320,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 321,
+          "username": 321,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 322,
+          "username": 322,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 323,
+          "username": 323,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 336,
+          "username": 336,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 337,
+          "username": 337,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 338,
+          "username": 338,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 339,
+          "username": 339,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 353,
+          "username": 353,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 355,
+          "username": 355,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 369,
+          "username": 369,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 370,
+          "username": 370,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 371,
+          "username": 371,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 400,
+          "username": 400,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 401,
+          "username": 401,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 402,
+          "username": 402,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 416,
+          "username": 416,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 417,
+          "username": 417,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 418,
+          "username": 418,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 419,
+          "username": 419,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 448,
+          "username": 448,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 449,
+          "username": 449,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 480,
+          "username": 480,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 481,
+          "username": 481,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 482,
+          "username": 482,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 483,
+          "username": 483,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 496,
+          "username": 496,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 497,
+          "username": 497,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 499,
+          "username": 499,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        0,
+        1,
+        16,
+        17,
+        256,
+        257,
+        272,
+        273
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        256,
+        257,
+        272,
+        273,
+        288,
+        289,
+        304,
+        305
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 305,
+          "username": 305,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        129,
+        145
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        129
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 145,
+          "username": 145,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        882
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        860,
+        861,
+        862,
+        863,
+        864,
+        865,
+        866,
+        867,
+        868,
+        869,
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        129,
+        882
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 120,
+          "username": 120,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 122,
+          "username": 122,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 123,
+          "username": 123,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 124,
+          "username": 124,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 126,
+          "username": 126,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 127,
+          "username": 127,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 128,
+          "username": 128,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 160,
+          "username": 160,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 161,
+          "username": 161,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 162,
+          "username": 162,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 163,
+          "username": 163,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 164,
+          "username": 164,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 165,
+          "username": 165,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 166,
+          "username": 166,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 167,
+          "username": 167,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 168,
+          "username": 168,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 169,
+          "username": 169,
+          "match_score_percent": 100.0,
+          "group_id": 16,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 200,
+          "username": 200,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 201,
+          "username": 201,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 203,
+          "username": 203,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 204,
+          "username": 204,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 205,
+          "username": 205,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 206,
+          "username": 206,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 207,
+          "username": 207,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 208,
+          "username": 208,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 209,
+          "username": 209,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 300,
+          "username": 300,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 301,
+          "username": 301,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 302,
+          "username": 302,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 303,
+          "username": 303,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 304,
+          "username": 304,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 305,
+          "username": 305,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 306,
+          "username": 306,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 307,
+          "username": 307,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 309,
+          "username": 309,
+          "match_score_percent": 100.0,
+          "group_id": 30,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 320,
+          "username": 320,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 321,
+          "username": 321,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 322,
+          "username": 322,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 323,
+          "username": 323,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 324,
+          "username": 324,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 325,
+          "username": 325,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 326,
+          "username": 326,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 327,
+          "username": 327,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 328,
+          "username": 328,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 329,
+          "username": 329,
+          "match_score_percent": 100.0,
+          "group_id": 32,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 361,
+          "username": 361,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 362,
+          "username": 362,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 363,
+          "username": 363,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 364,
+          "username": 364,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 365,
+          "username": 365,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 366,
+          "username": 366,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 367,
+          "username": 367,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 368,
+          "username": 368,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 369,
+          "username": 369,
+          "match_score_percent": 100.0,
+          "group_id": 36,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 600,
+          "username": 600,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 602,
+          "username": 602,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 603,
+          "username": 603,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 604,
+          "username": 604,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 605,
+          "username": 605,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 606,
+          "username": 606,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 607,
+          "username": 607,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 609,
+          "username": 609,
+          "match_score_percent": 100.0,
+          "group_id": 60,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 860,
+          "username": 860,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 861,
+          "username": 861,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 862,
+          "username": 862,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 863,
+          "username": 863,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 865,
+          "username": 865,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 866,
+          "username": 866,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 867,
+          "username": 867,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 869,
+          "username": 869,
+          "match_score_percent": 100.0,
+          "group_id": 86,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        882
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        882
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 88,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        129
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 120,
+          "username": 120,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 122,
+          "username": 122,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 123,
+          "username": 123,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 124,
+          "username": 124,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 126,
+          "username": 126,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 127,
+          "username": 127,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 128,
+          "username": 128,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 130,
+          "username": 130,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 131,
+          "username": 131,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 136,
+          "username": 136,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 137,
+          "username": 137,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 138,
+          "username": 138,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 139,
+          "username": 139,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        129,
+        882
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 120,
+          "username": 120,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 122,
+          "username": 122,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 123,
+          "username": 123,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 124,
+          "username": 124,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 126,
+          "username": 126,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 127,
+          "username": 127,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 128,
+          "username": 128,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 130,
+          "username": 130,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 131,
+          "username": 131,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 136,
+          "username": 136,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 137,
+          "username": 137,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 138,
+          "username": 138,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 139,
+          "username": 139,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        129
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 120,
+          "username": 120,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 122,
+          "username": 122,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 123,
+          "username": 123,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 124,
+          "username": 124,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 126,
+          "username": 126,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 127,
+          "username": 127,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 128,
+          "username": 128,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 130,
+          "username": 130,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 131,
+          "username": 131,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 136,
+          "username": 136,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 137,
+          "username": 137,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 138,
+          "username": 138,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 139,
+          "username": 139,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 49,
+    "prompt": "Why is it when you rewind VHS tapes they lose their quality over time?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      129,
+      882
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899
+      ],
+      "original_user_ids": [
+        129,
+        882
+      ],
+      "matches": [
+        129,
+        882
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 120,
+          "username": 120,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 122,
+          "username": 122,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 123,
+          "username": 123,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 124,
+          "username": 124,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 126,
+          "username": 126,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 127,
+          "username": 127,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 128,
+          "username": 128,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 129,
+          "username": 129,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 130,
+          "username": 130,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 131,
+          "username": 131,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 136,
+          "username": 136,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 137,
+          "username": 137,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 138,
+          "username": 138,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 139,
+          "username": 139,
+          "match_score_percent": 100.0,
+          "group_id": 6,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_129_text.txt",
+        "user_882_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

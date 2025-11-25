@@ -1,0 +1,3240 @@
+[
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        204,
+        205,
+        206,
+        207,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 204,
+          "username": 204,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 205,
+          "username": 205,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 206,
+          "username": 206,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 207,
+          "username": 207,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        965,
+        981,
+        997
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        204,
+        205,
+        206,
+        207,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 204,
+          "username": 204,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 205,
+          "username": 205,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 206,
+          "username": 206,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 207,
+          "username": 207,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        965,
+        981,
+        997
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        981
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696,
+        697,
+        698,
+        699
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 690,
+          "username": 690,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 691,
+          "username": 691,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 693,
+          "username": 693,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 695,
+          "username": 695,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 696,
+          "username": 696,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 697,
+          "username": 697,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 698,
+          "username": 698,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 699,
+          "username": 699,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696,
+        697,
+        698,
+        699
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 140,
+          "username": 140,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 141,
+          "username": 141,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 142,
+          "username": 142,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 143,
+          "username": 143,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 144,
+          "username": 144,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 145,
+          "username": 145,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 146,
+          "username": 146,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 147,
+          "username": 147,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 149,
+          "username": 149,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 652,
+          "username": 652,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 653,
+          "username": 653,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 654,
+          "username": 654,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 655,
+          "username": 655,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 656,
+          "username": 656,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 657,
+          "username": 657,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 658,
+          "username": 658,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 690,
+          "username": 690,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 691,
+          "username": 691,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 693,
+          "username": 693,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 695,
+          "username": 695,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 696,
+          "username": 696,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 697,
+          "username": 697,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 698,
+          "username": 698,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 699,
+          "username": 699,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            4,
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696,
+        697,
+        698,
+        699
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 140,
+          "username": 140,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 141,
+          "username": 141,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 142,
+          "username": 142,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 143,
+          "username": 143,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 144,
+          "username": 144,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 145,
+          "username": 145,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 146,
+          "username": 146,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 147,
+          "username": 147,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 149,
+          "username": 149,
+          "match_score_percent": 100.0,
+          "group_id": 14,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 650,
+          "username": 650,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 651,
+          "username": 651,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 652,
+          "username": 652,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 653,
+          "username": 653,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 654,
+          "username": 654,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 655,
+          "username": 655,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 656,
+          "username": 656,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 657,
+          "username": 657,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 658,
+          "username": 658,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 659,
+          "username": 659,
+          "match_score_percent": 100.0,
+          "group_id": 65,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 690,
+          "username": 690,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 691,
+          "username": 691,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 693,
+          "username": 693,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 695,
+          "username": 695,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 696,
+          "username": 696,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 697,
+          "username": 697,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 698,
+          "username": 698,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        },
+        {
+          "user_id": 699,
+          "username": 699,
+          "match_score_percent": 100.0,
+          "group_id": 69,
+          "collusion_detected": true,
+          "collusion_positions": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 280,
+    "prompt": "Humans found an ancient ship proving that Adam and Eve were settlers from another star system. The ship's guidance system provided a map of every planet a ship was sent to.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      238,
+      981
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        238,
+        981
+      ],
+      "matches": [
+        238
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_238_text.txt",
+        "user_981_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

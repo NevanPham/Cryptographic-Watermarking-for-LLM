@@ -1,0 +1,1903 @@
+[
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        386,
+        387,
+        394,
+        395,
+        402,
+        403,
+        410,
+        411,
+        450,
+        451,
+        458,
+        459,
+        466,
+        467,
+        474,
+        475
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        394,
+        467
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 402,
+          "username": 402,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 410,
+          "username": 410,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 411,
+          "username": 411,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        450,
+        451,
+        458,
+        459,
+        466,
+        467,
+        474,
+        475
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        450,
+        451,
+        458,
+        459,
+        466,
+        467,
+        474,
+        475
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 459,
+          "username": 459,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        386,
+        387,
+        402,
+        403,
+        450,
+        451,
+        466,
+        467
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 402,
+          "username": 402,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 403,
+          "username": 403,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 451,
+          "username": 451,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        467
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        394
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        394
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        394
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 130,
+    "prompt": "Why is it when oil prices go up gas prices immediately go up but when oil prices come down the price of gas never comes down as fast as when the price of oil increases?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      394,
+      467
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399
+      ],
+      "original_user_ids": [
+        394,
+        467
+      ],
+      "matches": [
+        394
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 390,
+          "username": 390,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 391,
+          "username": 391,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 392,
+          "username": 392,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 393,
+          "username": 393,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 394,
+          "username": 394,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 395,
+          "username": 395,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 396,
+          "username": 396,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 397,
+          "username": 397,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 398,
+          "username": 398,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 399,
+          "username": 399,
+          "match_score_percent": 100.0,
+          "group_id": 19,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_394_text.txt",
+        "user_467_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

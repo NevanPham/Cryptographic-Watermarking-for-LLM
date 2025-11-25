@@ -1,0 +1,2519 @@
+[
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        904,
+        906,
+        936,
+        938,
+        968,
+        970
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968,
+        938
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        904,
+        906,
+        936,
+        938,
+        968,
+        970
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968,
+        938
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        904,
+        906,
+        936,
+        938,
+        968,
+        970
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968,
+        938
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        904,
+        906,
+        968,
+        970
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        938
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 930,
+          "username": 930,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 937,
+          "username": 937,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 939,
+          "username": 939,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        938
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 930,
+          "username": 930,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 937,
+          "username": 937,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 939,
+          "username": 939,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        938
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 930,
+          "username": 930,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 937,
+          "username": 937,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 939,
+          "username": 939,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        938
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 930,
+          "username": 930,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 937,
+          "username": 937,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 939,
+          "username": 939,
+          "match_score_percent": 100.0,
+          "group_id": 93,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899,
+        960,
+        961,
+        962,
+        963,
+        964,
+        965,
+        966,
+        967,
+        968,
+        969,
+        970,
+        971,
+        972,
+        973,
+        974,
+        975,
+        976,
+        977,
+        978,
+        979
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 960,
+          "username": 960,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 961,
+          "username": 961,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 962,
+          "username": 962,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 963,
+          "username": 963,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 969,
+          "username": 969,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 971,
+          "username": 971,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 976,
+          "username": 976,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 977,
+          "username": 977,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 978,
+          "username": 978,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 979,
+          "username": 979,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899,
+        960,
+        961,
+        962,
+        963,
+        964,
+        965,
+        966,
+        967,
+        968,
+        969,
+        970,
+        971,
+        972,
+        973,
+        974,
+        975,
+        976,
+        977,
+        978,
+        979
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 960,
+          "username": 960,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 961,
+          "username": 961,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 962,
+          "username": 962,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 963,
+          "username": 963,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 969,
+          "username": 969,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 971,
+          "username": 971,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 976,
+          "username": 976,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 977,
+          "username": 977,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 978,
+          "username": 978,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 979,
+          "username": 979,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899,
+        960,
+        961,
+        962,
+        963,
+        964,
+        965,
+        966,
+        967,
+        968,
+        969,
+        970,
+        971,
+        972,
+        973,
+        974,
+        975,
+        976,
+        977,
+        978,
+        979
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        968
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 880,
+          "username": 880,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 881,
+          "username": 881,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 882,
+          "username": 882,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 883,
+          "username": 883,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 885,
+          "username": 885,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 887,
+          "username": 887,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 888,
+          "username": 888,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 889,
+          "username": 889,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 44,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 960,
+          "username": 960,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 961,
+          "username": 961,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 962,
+          "username": 962,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 963,
+          "username": 963,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 968,
+          "username": 968,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 969,
+          "username": 969,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 970,
+          "username": 970,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 971,
+          "username": 971,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 976,
+          "username": 976,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 977,
+          "username": 977,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 978,
+          "username": 978,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 979,
+          "username": 979,
+          "match_score_percent": 100.0,
+          "group_id": 48,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 25,
+    "prompt": "Why does a beer on tap almost always taste better than it does from a bottle?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      938,
+      968
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926,
+        927,
+        928,
+        929,
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
+      ],
+      "original_user_ids": [
+        938,
+        968
+      ],
+      "matches": [
+        938
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 920,
+          "username": 920,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 921,
+          "username": 921,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 922,
+          "username": 922,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 923,
+          "username": 923,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 924,
+          "username": 924,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 925,
+          "username": 925,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 926,
+          "username": 926,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 927,
+          "username": 927,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 928,
+          "username": 928,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 929,
+          "username": 929,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 930,
+          "username": 930,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 931,
+          "username": 931,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 936,
+          "username": 936,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 937,
+          "username": 937,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 938,
+          "username": 938,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 939,
+          "username": 939,
+          "match_score_percent": 100.0,
+          "group_id": 46,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_938_text.txt",
+        "user_968_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

@@ -1,0 +1,2336 @@
+[
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        93,
+        95,
+        125,
+        127
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 93,
+          "username": 93,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 95,
+          "username": 95,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 127,
+          "username": 127,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        89,
+        93,
+        121,
+        125,
+        345,
+        349,
+        377,
+        381
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        345
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 89,
+          "username": 89,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 93,
+          "username": 93,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 345,
+          "username": 345,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 349,
+          "username": 349,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 377,
+          "username": 377,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        121,
+        125,
+        377,
+        381
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 121,
+          "username": 121,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 377,
+          "username": 377,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        92,
+        93,
+        124,
+        125
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 92,
+          "username": 92,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 93,
+          "username": 93,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 124,
+          "username": 124,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 125,
+          "username": 125,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        345
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 200,
+          "username": 200,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 201,
+          "username": 201,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 203,
+          "username": 203,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 204,
+          "username": 204,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 205,
+          "username": 205,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 206,
+          "username": 206,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 207,
+          "username": 207,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 208,
+          "username": 208,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 209,
+          "username": 209,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 340,
+          "username": 340,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 341,
+          "username": 341,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 342,
+          "username": 342,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 343,
+          "username": 343,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 344,
+          "username": 344,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 345,
+          "username": 345,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 346,
+          "username": 346,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 347,
+          "username": 347,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 348,
+          "username": 348,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 349,
+          "username": 349,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        345
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 340,
+          "username": 340,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 341,
+          "username": 341,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 342,
+          "username": 342,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 343,
+          "username": 343,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 344,
+          "username": 344,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 345,
+          "username": 345,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 346,
+          "username": 346,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 347,
+          "username": 347,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 348,
+          "username": 348,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 349,
+          "username": 349,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        345
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 340,
+          "username": 340,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 341,
+          "username": 341,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 342,
+          "username": 342,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 343,
+          "username": 343,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 344,
+          "username": 344,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 345,
+          "username": 345,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 346,
+          "username": 346,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 347,
+          "username": 347,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 348,
+          "username": 348,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 349,
+          "username": 349,
+          "match_score_percent": 100.0,
+          "group_id": 34,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        110
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 200,
+          "username": 200,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 201,
+          "username": 201,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 202,
+          "username": 202,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 203,
+          "username": 203,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 204,
+          "username": 204,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 205,
+          "username": 205,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 206,
+          "username": 206,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 207,
+          "username": 207,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 208,
+          "username": 208,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        },
+        {
+          "user_id": 209,
+          "username": 209,
+          "match_score_percent": 100.0,
+          "group_id": 20,
+          "collusion_detected": true,
+          "collusion_positions": [
+            6,
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        110
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        110
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        110
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 32,
+    "prompt": "Why The Beatles broke up?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      110,
+      345
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "original_user_ids": [
+        110,
+        345
+      ],
+      "matches": [
+        345
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 340,
+          "username": 340,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 341,
+          "username": 341,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 342,
+          "username": 342,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 343,
+          "username": 343,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 344,
+          "username": 344,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 345,
+          "username": 345,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 346,
+          "username": 346,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 347,
+          "username": 347,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 348,
+          "username": 348,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 349,
+          "username": 349,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 350,
+          "username": 350,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 351,
+          "username": 351,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 353,
+          "username": 353,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 354,
+          "username": 354,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 355,
+          "username": 355,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 356,
+          "username": 356,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 357,
+          "username": 357,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 358,
+          "username": 358,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 359,
+          "username": 359,
+          "match_score_percent": 100.0,
+          "group_id": 17,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 420,
+          "username": 420,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 421,
+          "username": 421,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 422,
+          "username": 422,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 423,
+          "username": 423,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 424,
+          "username": 424,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 425,
+          "username": 425,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 426,
+          "username": 426,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 427,
+          "username": 427,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 428,
+          "username": 428,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 429,
+          "username": 429,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 430,
+          "username": 430,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 431,
+          "username": 431,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 432,
+          "username": 432,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 433,
+          "username": 433,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 434,
+          "username": 434,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 435,
+          "username": 435,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 437,
+          "username": 437,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 439,
+          "username": 439,
+          "match_score_percent": 100.0,
+          "group_id": 21,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_110_text.txt",
+        "user_345_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

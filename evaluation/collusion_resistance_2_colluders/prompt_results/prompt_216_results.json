@@ -1,0 +1,1956 @@
+[
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        132,
+        134,
+        148,
+        150
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        132,
+        134,
+        148,
+        150
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        132,
+        133,
+        134,
+        135,
+        148,
+        149,
+        150,
+        151
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 149,
+          "username": 149,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 151,
+          "username": 151,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        132,
+        133,
+        134,
+        135,
+        148,
+        149,
+        150,
+        151
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 132,
+          "username": 132,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 133,
+          "username": 133,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 134,
+          "username": 134,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 135,
+          "username": 135,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 149,
+          "username": 149,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 151,
+          "username": 151,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [
+        389
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [
+        389
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [
+        389
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [
+        389
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 100.0,
+          "group_id": 38,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 505,
+          "username": 505,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 505,
+          "username": 505,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 505,
+          "username": 505,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 216,
+    "prompt": "Why can I not remember what happens when I'm drunk?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      190,
+      389
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "original_user_ids": [
+        190,
+        389
+      ],
+      "matches": [
+        190
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 180,
+          "username": 180,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 181,
+          "username": 181,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 183,
+          "username": 183,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 184,
+          "username": 184,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 185,
+          "username": 185,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 186,
+          "username": 186,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 187,
+          "username": 187,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 188,
+          "username": 188,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 189,
+          "username": 189,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 190,
+          "username": 190,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 191,
+          "username": 191,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 192,
+          "username": 192,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 193,
+          "username": 193,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 194,
+          "username": 194,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 195,
+          "username": 195,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 196,
+          "username": 196,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 197,
+          "username": 197,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 198,
+          "username": 198,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 199,
+          "username": 199,
+          "match_score_percent": 100.0,
+          "group_id": 9,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 501,
+          "username": 501,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 503,
+          "username": 503,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 505,
+          "username": 505,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 507,
+          "username": 507,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 508,
+          "username": 508,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 509,
+          "username": 509,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 510,
+          "username": 510,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 511,
+          "username": 511,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 512,
+          "username": 512,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 513,
+          "username": 513,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 514,
+          "username": 514,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 515,
+          "username": 515,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 516,
+          "username": 516,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 517,
+          "username": 517,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 518,
+          "username": 518,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 519,
+          "username": 519,
+          "match_score_percent": 100.0,
+          "group_id": 25,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_190_text.txt",
+        "user_389_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

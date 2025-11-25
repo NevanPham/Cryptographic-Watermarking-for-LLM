@@ -1,0 +1,2513 @@
+[
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        585,
+        601,
+        617,
+        633
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 585,
+          "username": 585,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 601,
+          "username": 601,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 633,
+          "username": 633,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        634,
+        635,
+        890,
+        891
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        890
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 634,
+          "username": 634,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 635,
+          "username": 635,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        585,
+        617
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 585,
+          "username": 585,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 617,
+          "username": 617,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        634,
+        635,
+        890,
+        891
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        890
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 634,
+          "username": 634,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 635,
+          "username": 635,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        890,
+        5
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 50,
+          "username": 50,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 51,
+          "username": 51,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 52,
+          "username": 52,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 53,
+          "username": 53,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 55,
+          "username": 55,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 56,
+          "username": 56,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 57,
+          "username": 57,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 58,
+          "username": 58,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 59,
+          "username": 59,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        890
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        890
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": 1,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        890
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 890,
+          "username": 890,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 891,
+          "username": 891,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 892,
+          "username": 892,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 893,
+          "username": 893,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 894,
+          "username": 894,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 895,
+          "username": 895,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 896,
+          "username": 896,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 897,
+          "username": 897,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": 89,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        5
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 221,
+    "prompt": "A neighborhood cat comes to your home and you feed it. A day/week later, other cats appear at your house looking for food. How did the other cats find out that you're a food giver?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      5,
+      890
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "original_user_ids": [
+        5,
+        890
+      ],
+      "matches": [
+        5
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 0,
+          "username": 0,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 1,
+          "username": 1,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 2,
+          "username": 2,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 3,
+          "username": 3,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 4,
+          "username": 4,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 5,
+          "username": 5,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 6,
+          "username": 6,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 7,
+          "username": 7,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 8,
+          "username": 8,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 9,
+          "username": 9,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 10,
+          "username": 10,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 11,
+          "username": 11,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 12,
+          "username": 12,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 13,
+          "username": 13,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 14,
+          "username": 14,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 15,
+          "username": 15,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 16,
+          "username": 16,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 17,
+          "username": 17,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 18,
+          "username": 18,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 19,
+          "username": 19,
+          "match_score_percent": 100.0,
+          "group_id": 0,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_5_text.txt",
+        "user_890_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

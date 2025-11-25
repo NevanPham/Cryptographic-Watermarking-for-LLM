@@ -1,0 +1,1998 @@
+[
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        50,
+        54,
+        178,
+        182
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 50,
+          "username": 50,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        50,
+        54,
+        178,
+        182,
+        562,
+        566,
+        690,
+        694
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 50,
+          "username": 50,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 690,
+          "username": 690,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        50,
+        54,
+        178,
+        182,
+        562,
+        566,
+        690,
+        694
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 50,
+          "username": 50,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 178,
+          "username": 178,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 690,
+          "username": 690,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        54,
+        118,
+        182,
+        246,
+        566,
+        630,
+        694,
+        758
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        242,
+        566
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        242
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        242,
+        566
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 56,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        242
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        242
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 250,
+          "username": 250,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 251,
+          "username": 251,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 252,
+          "username": 252,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 253,
+          "username": 253,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 254,
+          "username": 254,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 255,
+          "username": 255,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 256,
+          "username": 256,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 257,
+          "username": 257,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 258,
+          "username": 258,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 259,
+          "username": 259,
+          "match_score_percent": 100.0,
+          "group_id": 12,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 293,
+    "prompt": "It's been publicly confirmed that our galaxy is within the open maw of a massive galaxy-eating beast. The beast can't move faster than light, so it'll take hundreds of millions of years for it to finally bite down.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      242,
+      566
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579
+      ],
+      "original_user_ids": [
+        242,
+        566
+      ],
+      "matches": [
+        566
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 560,
+          "username": 560,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 561,
+          "username": 561,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 562,
+          "username": 562,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 563,
+          "username": 563,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 565,
+          "username": 565,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 567,
+          "username": 567,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 568,
+          "username": 568,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 569,
+          "username": 569,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 570,
+          "username": 570,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 571,
+          "username": 571,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 572,
+          "username": 572,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 573,
+          "username": 573,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 574,
+          "username": 574,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 575,
+          "username": 575,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 576,
+          "username": 576,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 577,
+          "username": 577,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 578,
+          "username": 578,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 579,
+          "username": 579,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_242_text.txt",
+        "user_566_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

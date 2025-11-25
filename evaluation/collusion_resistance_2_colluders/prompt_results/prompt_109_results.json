@@ -1,0 +1,1874 @@
+[
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        236,
+        748
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        748
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        96,
+        100,
+        104,
+        108
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        236,
+        748
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        748
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        236,
+        748
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        748
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108,
+        748
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108,
+        748
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 10,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 74,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 109,
+    "prompt": "Why drill instructor in the army never stop screaming at recruit in the army?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      108,
+      748
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "original_user_ids": [
+        108,
+        748
+      ],
+      "matches": [
+        108
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 101,
+          "username": 101,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 102,
+          "username": 102,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 103,
+          "username": 103,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 105,
+          "username": 105,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 106,
+          "username": 106,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 107,
+          "username": 107,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 109,
+          "username": 109,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 110,
+          "username": 110,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 111,
+          "username": 111,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 112,
+          "username": 112,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 113,
+          "username": 113,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 114,
+          "username": 114,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 115,
+          "username": 115,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 117,
+          "username": 117,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 119,
+          "username": 119,
+          "match_score_percent": 100.0,
+          "group_id": 5,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_108_text.txt",
+        "user_748_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

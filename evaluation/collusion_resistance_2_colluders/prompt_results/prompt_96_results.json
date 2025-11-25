@@ -1,0 +1,2241 @@
+[
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        914,
+        915
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        914,
+        915,
+        918,
+        919
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        914,
+        915
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        898,
+        899,
+        914,
+        915
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 898,
+          "username": 898,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 899,
+          "username": 899,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        902
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        987,
+        902
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        902
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        987,
+        902
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 90,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 98,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        987
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        987
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        987
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 96,
+    "prompt": "You were cryogenically frozen for 120 years. Everyone you know and love is dead\u2026 except for your elven companion, who is happy to someone around to see how the world has changed this time The title of this story should be: Echoes of Tomorrow It should feature the following genres: Science Fiction, Fantasy, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      902,
+      987
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917,
+        918,
+        919,
+        980,
+        981,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        989,
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        902,
+        987
+      ],
+      "matches": [
+        987,
+        902
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 821,
+          "username": 821,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 823,
+          "username": 823,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 824,
+          "username": 824,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 825,
+          "username": 825,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 826,
+          "username": 826,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 827,
+          "username": 827,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 828,
+          "username": 828,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 829,
+          "username": 829,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 830,
+          "username": 830,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 831,
+          "username": 831,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 833,
+          "username": 833,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 835,
+          "username": 835,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": 41,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 904,
+          "username": 904,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 905,
+          "username": 905,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 906,
+          "username": 906,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 907,
+          "username": 907,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 912,
+          "username": 912,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 913,
+          "username": 913,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 914,
+          "username": 914,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 915,
+          "username": 915,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 917,
+          "username": 917,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 919,
+          "username": 919,
+          "match_score_percent": 100.0,
+          "group_id": 45,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 981,
+          "username": 981,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 983,
+          "username": 983,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 984,
+          "username": 984,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 985,
+          "username": 985,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 986,
+          "username": 986,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 987,
+          "username": 987,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 988,
+          "username": 988,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 989,
+          "username": 989,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 990,
+          "username": 990,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 991,
+          "username": 991,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 992,
+          "username": 992,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 993,
+          "username": 993,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 994,
+          "username": 994,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 995,
+          "username": 995,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": 49,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_902_text.txt",
+        "user_987_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

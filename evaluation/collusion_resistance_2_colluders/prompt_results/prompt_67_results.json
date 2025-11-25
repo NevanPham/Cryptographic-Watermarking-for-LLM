@@ -1,0 +1,2123 @@
+[
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        96,
+        104,
+        224,
+        232,
+        352,
+        360,
+        480,
+        488
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 480,
+          "username": 480,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 488,
+          "username": 488,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        450,
+        458,
+        466,
+        474,
+        482,
+        490,
+        498,
+        506
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        474
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 450,
+          "username": 450,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 458,
+          "username": 458,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 482,
+          "username": 482,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 490,
+          "username": 490,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        224,
+        232,
+        480,
+        488
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 480,
+          "username": 480,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 488,
+          "username": 488,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        480,
+        482,
+        488,
+        490,
+        496,
+        498,
+        504,
+        506
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 480,
+          "username": 480,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 482,
+          "username": 482,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 488,
+          "username": 488,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 490,
+          "username": 490,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 496,
+          "username": 496,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 498,
+          "username": 498,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 504,
+          "username": 504,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 506,
+          "username": 506,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        32,
+        474
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 47,
+          "collusion_detected": true,
+          "collusion_positions": [
+            2
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        32
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        32
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        32
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 30,
+          "username": 30,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 31,
+          "username": 31,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 32,
+          "username": 32,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 33,
+          "username": 33,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 34,
+          "username": 34,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 35,
+          "username": 35,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 36,
+          "username": 36,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 37,
+          "username": 37,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 38,
+          "username": 38,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 39,
+          "username": 39,
+          "match_score_percent": 100.0,
+          "group_id": 3,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 240,
+          "username": 240,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 241,
+          "username": 241,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 242,
+          "username": 242,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 243,
+          "username": 243,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 245,
+          "username": 245,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 247,
+          "username": 247,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 248,
+          "username": 248,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 249,
+          "username": 249,
+          "match_score_percent": 100.0,
+          "group_id": 24,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        474
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        474
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        474
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 67,
+    "prompt": "As an immortal and hopeless romantic, you fake your death whenever your spouse dies, then search for your spouse's reincarnated soul to continue your \"past lives\". Your immortal spouse is highly amused by this.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      32,
+      474
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "original_user_ids": [
+        32,
+        474
+      ],
+      "matches": [
+        474
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 471,
+          "username": 471,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 472,
+          "username": 472,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 473,
+          "username": 473,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 474,
+          "username": 474,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 475,
+          "username": 475,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 476,
+          "username": 476,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 477,
+          "username": 477,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 478,
+          "username": 478,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 479,
+          "username": 479,
+          "match_score_percent": 100.0,
+          "group_id": 23,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_32_text.txt",
+        "user_474_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

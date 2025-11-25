@@ -1,0 +1,2585 @@
+[
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        96,
+        100,
+        352,
+        356,
+        608,
+        612,
+        864,
+        868
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 356,
+          "username": 356,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        96,
+        100,
+        104,
+        108,
+        352,
+        356,
+        360,
+        364,
+        608,
+        612,
+        616,
+        620,
+        864,
+        868,
+        872,
+        876
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 104,
+          "username": 104,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 108,
+          "username": 108,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 356,
+          "username": 356,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 360,
+          "username": 360,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 364,
+          "username": 364,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 616,
+          "username": 616,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 620,
+          "username": 620,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 872,
+          "username": 872,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 876,
+          "username": 876,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        96,
+        100,
+        352,
+        356,
+        608,
+        612,
+        864,
+        868
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 356,
+          "username": 356,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        96,
+        100,
+        352,
+        356,
+        608,
+        612,
+        864,
+        868
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 96,
+          "username": 96,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 100,
+          "username": 100,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 352,
+          "username": 352,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 356,
+          "username": 356,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 608,
+          "username": 608,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 612,
+          "username": 612,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 864,
+          "username": 864,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        844
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 841,
+          "username": 841,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 843,
+          "username": 843,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 848,
+          "username": 848,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 849,
+          "username": 849,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849,
+        850,
+        851,
+        852,
+        853,
+        854,
+        855,
+        856,
+        857,
+        858,
+        859
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        224,
+        844
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 22,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 380,
+          "username": 380,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 381,
+          "username": 381,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 382,
+          "username": 382,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 383,
+          "username": 383,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 384,
+          "username": 384,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 385,
+          "username": 385,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 386,
+          "username": 386,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 387,
+          "username": 387,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 388,
+          "username": 388,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 389,
+          "username": 389,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 38,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 460,
+          "username": 460,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 461,
+          "username": 461,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 462,
+          "username": 462,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 463,
+          "username": 463,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 464,
+          "username": 464,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 465,
+          "username": 465,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 466,
+          "username": 466,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 467,
+          "username": 467,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 469,
+          "username": 469,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 46,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 74,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 841,
+          "username": 841,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 843,
+          "username": 843,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 848,
+          "username": 848,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 849,
+          "username": 849,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 850,
+          "username": 850,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 851,
+          "username": 851,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 852,
+          "username": 852,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 853,
+          "username": 853,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 855,
+          "username": 855,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 856,
+          "username": 856,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 857,
+          "username": 857,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 858,
+          "username": 858,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 859,
+          "username": 859,
+          "match_score_percent": 88.88888888888889,
+          "group_id": 85,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        844
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 841,
+          "username": 841,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 843,
+          "username": 843,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 848,
+          "username": 848,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        },
+        {
+          "user_id": 849,
+          "username": 849,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": true,
+          "collusion_positions": [
+            5
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        844
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 840,
+          "username": 840,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 841,
+          "username": 841,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 842,
+          "username": 842,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 843,
+          "username": 843,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 848,
+          "username": 848,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 849,
+          "username": 849,
+          "match_score_percent": 100.0,
+          "group_id": 84,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        224
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        224
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        224
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 220,
+    "prompt": "Why metal at room temperature feels cold while, say, fabric at room temperature doesn't",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      224,
+      844
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "original_user_ids": [
+        224,
+        844
+      ],
+      "matches": [
+        224
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 220,
+          "username": 220,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 221,
+          "username": 221,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 222,
+          "username": 222,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 223,
+          "username": 223,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 224,
+          "username": 224,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 225,
+          "username": 225,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 226,
+          "username": 226,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 227,
+          "username": 227,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 228,
+          "username": 228,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 229,
+          "username": 229,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 230,
+          "username": 230,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 231,
+          "username": 231,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 232,
+          "username": 232,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 233,
+          "username": 233,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 234,
+          "username": 234,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 235,
+          "username": 235,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 236,
+          "username": 236,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 237,
+          "username": 237,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 238,
+          "username": 238,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 239,
+          "username": 239,
+          "match_score_percent": 100.0,
+          "group_id": 11,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_224_text.txt",
+        "user_844_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

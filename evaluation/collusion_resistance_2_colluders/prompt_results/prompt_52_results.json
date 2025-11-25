@@ -1,0 +1,2433 @@
+[
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        592,
+        593,
+        594,
+        595,
+        624,
+        625,
+        626,
+        627
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 625,
+          "username": 625,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 627,
+          "username": 627,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        592,
+        593,
+        594,
+        595,
+        624,
+        625,
+        626,
+        627
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 625,
+          "username": 625,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 627,
+          "username": 627,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        598
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 624,
+          "username": 624,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 625,
+          "username": 625,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 627,
+          "username": 627,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 628,
+          "username": 628,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 629,
+          "username": 629,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 631,
+          "username": 631,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        594,
+        598,
+        626,
+        630
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        598
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 626,
+          "username": 626,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753,
+        598
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753,
+        598
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753,
+        598
+      ],
+      "num_matches": 2,
+      "accused_details": [
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 75,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        598
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 590,
+          "username": 590,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 591,
+          "username": 591,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 592,
+          "username": 592,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 593,
+          "username": 593,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 594,
+          "username": 594,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 595,
+          "username": 595,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 597,
+          "username": 597,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 599,
+          "username": 599,
+          "match_score_percent": 100.0,
+          "group_id": 59,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 830,
+          "username": 830,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 831,
+          "username": 831,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 833,
+          "username": 833,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 835,
+          "username": 835,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": 83,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 52,
+    "prompt": "Humans aren't actually space Orcs, they're space Orcas. For most, they're a social, playful species.",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      598,
+      753
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "original_user_ids": [
+        598,
+        753
+      ],
+      "matches": [
+        753
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 100.0,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            1
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_598_text.txt",
+        "user_753_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

@@ -1,0 +1,3116 @@
+[
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        772,
+        773,
+        774,
+        775,
+        780,
+        781,
+        782,
+        783,
+        804,
+        805,
+        806,
+        807,
+        812,
+        813,
+        814,
+        815,
+        836,
+        837,
+        838,
+        839,
+        844,
+        845,
+        846,
+        847,
+        868,
+        869,
+        870,
+        871,
+        876,
+        877,
+        878,
+        879,
+        900,
+        901,
+        902,
+        903,
+        908,
+        909,
+        910,
+        911,
+        932,
+        933,
+        934,
+        935,
+        940,
+        941,
+        942,
+        943,
+        964,
+        965,
+        966,
+        967,
+        972,
+        973,
+        974,
+        975,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        965
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 781,
+          "username": 781,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 783,
+          "username": 783,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 869,
+          "username": 869,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 870,
+          "username": 870,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 871,
+          "username": 871,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 876,
+          "username": 876,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 877,
+          "username": 877,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 878,
+          "username": 878,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 879,
+          "username": 879,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        772,
+        773,
+        774,
+        775,
+        780,
+        781,
+        782,
+        783,
+        804,
+        805,
+        806,
+        807,
+        812,
+        813,
+        814,
+        815,
+        836,
+        837,
+        838,
+        839,
+        844,
+        845,
+        846,
+        847,
+        868,
+        869,
+        870,
+        871,
+        876,
+        877,
+        878,
+        879,
+        900,
+        901,
+        902,
+        903,
+        908,
+        909,
+        910,
+        911,
+        932,
+        933,
+        934,
+        935,
+        940,
+        941,
+        942,
+        943,
+        964,
+        965,
+        966,
+        967,
+        972,
+        973,
+        974,
+        975,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        965
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 781,
+          "username": 781,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 783,
+          "username": 783,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 869,
+          "username": 869,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 870,
+          "username": 870,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 871,
+          "username": 871,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 876,
+          "username": 876,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 877,
+          "username": 877,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 878,
+          "username": 878,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 879,
+          "username": 879,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        772,
+        773,
+        774,
+        775,
+        780,
+        781,
+        782,
+        783,
+        804,
+        805,
+        806,
+        807,
+        812,
+        813,
+        814,
+        815,
+        836,
+        837,
+        838,
+        839,
+        844,
+        845,
+        846,
+        847,
+        868,
+        869,
+        870,
+        871,
+        876,
+        877,
+        878,
+        879,
+        900,
+        901,
+        902,
+        903,
+        908,
+        909,
+        910,
+        911,
+        932,
+        933,
+        934,
+        935,
+        940,
+        941,
+        942,
+        943,
+        964,
+        965,
+        966,
+        967,
+        972,
+        973,
+        974,
+        975,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        965
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 781,
+          "username": 781,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 783,
+          "username": 783,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 869,
+          "username": 869,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 870,
+          "username": 870,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 871,
+          "username": 871,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 876,
+          "username": 876,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 877,
+          "username": 877,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 878,
+          "username": 878,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 879,
+          "username": 879,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        772,
+        773,
+        774,
+        775,
+        780,
+        781,
+        782,
+        783,
+        804,
+        805,
+        806,
+        807,
+        812,
+        813,
+        814,
+        815,
+        836,
+        837,
+        838,
+        839,
+        844,
+        845,
+        846,
+        847,
+        868,
+        869,
+        870,
+        871,
+        876,
+        877,
+        878,
+        879,
+        900,
+        901,
+        902,
+        903,
+        908,
+        909,
+        910,
+        911,
+        932,
+        933,
+        934,
+        935,
+        940,
+        941,
+        942,
+        943,
+        964,
+        965,
+        966,
+        967,
+        972,
+        973,
+        974,
+        975,
+        996,
+        997,
+        998,
+        999
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        965
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 772,
+          "username": 772,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 773,
+          "username": 773,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 774,
+          "username": 774,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 775,
+          "username": 775,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 780,
+          "username": 780,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 781,
+          "username": 781,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 782,
+          "username": 782,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 783,
+          "username": 783,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 844,
+          "username": 844,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 845,
+          "username": 845,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 846,
+          "username": 846,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 847,
+          "username": 847,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 868,
+          "username": 868,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 869,
+          "username": 869,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 870,
+          "username": 870,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 871,
+          "username": 871,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 876,
+          "username": 876,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 877,
+          "username": 877,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 878,
+          "username": 878,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 879,
+          "username": 879,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 900,
+          "username": 900,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 901,
+          "username": 901,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 902,
+          "username": 902,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 903,
+          "username": 903,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 908,
+          "username": 908,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 909,
+          "username": 909,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 910,
+          "username": 910,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 911,
+          "username": 911,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 932,
+          "username": 932,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 933,
+          "username": 933,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 934,
+          "username": 934,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 935,
+          "username": 935,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 940,
+          "username": 940,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 941,
+          "username": 941,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 942,
+          "username": 942,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 943,
+          "username": 943,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 964,
+          "username": 964,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 965,
+          "username": 965,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 966,
+          "username": 966,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 967,
+          "username": 967,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 972,
+          "username": 972,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 973,
+          "username": 973,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 974,
+          "username": 974,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 975,
+          "username": 975,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 996,
+          "username": 996,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 997,
+          "username": 997,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 998,
+          "username": 998,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 999,
+          "username": 999,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 81,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809,
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809,
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809,
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819
+      ],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "matches": [
+        810
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 800,
+          "username": 800,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 801,
+          "username": 801,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 802,
+          "username": 802,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 803,
+          "username": 803,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 804,
+          "username": 804,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 805,
+          "username": 805,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 806,
+          "username": 806,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 807,
+          "username": 807,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 808,
+          "username": 808,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 809,
+          "username": 809,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 810,
+          "username": 810,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 811,
+          "username": 811,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 812,
+          "username": 812,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 813,
+          "username": 813,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 814,
+          "username": 814,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 815,
+          "username": 815,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 816,
+          "username": 816,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 817,
+          "username": 817,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 818,
+          "username": 818,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 819,
+          "username": 819,
+          "match_score_percent": 100.0,
+          "group_id": 40,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 197,
+    "prompt": "You are the heir. But you prefer climbing til the faithful day where you climbed so far so so far and you saw something that shouldn't still be alive The title of this story should be: The Bloodline Pact It should feature the following genres: Fantasy, Adventure, Drama",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      810,
+      965
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [],
+      "original_user_ids": [
+        810,
+        965
+      ],
+      "reason": "No users accused"
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_810_text.txt",
+        "user_965_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]

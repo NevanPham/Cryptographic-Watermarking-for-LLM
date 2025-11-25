@@ -1,0 +1,4024 @@
+[
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "naive",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        20,
+        22,
+        52,
+        54,
+        84,
+        86,
+        116,
+        118,
+        148,
+        150,
+        180,
+        182,
+        212,
+        214,
+        244,
+        246,
+        276,
+        278,
+        308,
+        310,
+        340,
+        342,
+        372,
+        374,
+        404,
+        406,
+        436,
+        438,
+        468,
+        470,
+        500,
+        502,
+        532,
+        534,
+        564,
+        566,
+        596,
+        598,
+        628,
+        630,
+        660,
+        662,
+        692,
+        694,
+        724,
+        726,
+        756,
+        758,
+        788,
+        790,
+        820,
+        822,
+        852,
+        854,
+        884,
+        886,
+        916,
+        918,
+        948,
+        950,
+        980,
+        982
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        278
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 20,
+          "username": 20,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 22,
+          "username": 22,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 52,
+          "username": 52,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 84,
+          "username": 84,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 86,
+          "username": 86,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 180,
+          "username": 180,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 212,
+          "username": 212,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 214,
+          "username": 214,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 340,
+          "username": 340,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 342,
+          "username": 342,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 374,
+          "username": 374,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 404,
+          "username": 404,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 532,
+          "username": 532,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 534,
+          "username": 534,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 628,
+          "username": 628,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 662,
+          "username": 662,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 788,
+          "username": 788,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 852,
+          "username": 852,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        20,
+        22,
+        52,
+        54,
+        148,
+        150,
+        180,
+        182,
+        276,
+        278,
+        308,
+        310,
+        404,
+        406,
+        436,
+        438,
+        532,
+        534,
+        564,
+        566,
+        660,
+        662,
+        692,
+        694,
+        788,
+        790,
+        820,
+        822,
+        916,
+        918,
+        948,
+        950
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        278
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 20,
+          "username": 20,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 22,
+          "username": 22,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 52,
+          "username": 52,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 180,
+          "username": 180,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 404,
+          "username": 404,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 532,
+          "username": 532,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 534,
+          "username": 534,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 662,
+          "username": 662,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 788,
+          "username": 788,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        20,
+        22,
+        52,
+        54,
+        84,
+        86,
+        116,
+        118,
+        148,
+        150,
+        180,
+        182,
+        212,
+        214,
+        244,
+        246,
+        276,
+        278,
+        308,
+        310,
+        340,
+        342,
+        372,
+        374,
+        404,
+        406,
+        436,
+        438,
+        468,
+        470,
+        500,
+        502,
+        532,
+        534,
+        564,
+        566,
+        596,
+        598,
+        628,
+        630,
+        660,
+        662,
+        692,
+        694,
+        724,
+        726,
+        756,
+        758,
+        788,
+        790,
+        820,
+        822,
+        852,
+        854,
+        884,
+        886,
+        916,
+        918,
+        948,
+        950,
+        980,
+        982
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        278
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 20,
+          "username": 20,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 22,
+          "username": 22,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 52,
+          "username": 52,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 54,
+          "username": 54,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 84,
+          "username": 84,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 86,
+          "username": 86,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 116,
+          "username": 116,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 118,
+          "username": 118,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 148,
+          "username": 148,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 180,
+          "username": 180,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 182,
+          "username": 182,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 212,
+          "username": 212,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 214,
+          "username": 214,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 244,
+          "username": 244,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 246,
+          "username": 246,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 308,
+          "username": 308,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 340,
+          "username": 340,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 342,
+          "username": 342,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 372,
+          "username": 372,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 374,
+          "username": 374,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 404,
+          "username": 404,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 436,
+          "username": 436,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 438,
+          "username": 438,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 468,
+          "username": 468,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 470,
+          "username": 470,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 500,
+          "username": 500,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 502,
+          "username": 502,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 532,
+          "username": 532,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 534,
+          "username": 534,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 564,
+          "username": 564,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 566,
+          "username": 566,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 596,
+          "username": 596,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 598,
+          "username": 598,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 628,
+          "username": 628,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 630,
+          "username": 630,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 660,
+          "username": 660,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 662,
+          "username": 662,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 692,
+          "username": 692,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 694,
+          "username": 694,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 788,
+          "username": 788,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 852,
+          "username": 852,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 854,
+          "username": 854,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 884,
+          "username": 884,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 886,
+          "username": 886,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 916,
+          "username": 916,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 948,
+          "username": 948,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 950,
+          "username": 950,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 980,
+          "username": 980,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 982,
+          "username": 982,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "naive",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        22,
+        150,
+        278,
+        406,
+        534,
+        662,
+        790,
+        918
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        278
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 22,
+          "username": 22,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 150,
+          "username": 150,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 406,
+          "username": 406,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 534,
+          "username": 534,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 662,
+          "username": 662,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 790,
+          "username": 790,
+          "match_score_percent": 100.0,
+          "group_id": null
+        },
+        {
+          "user_id": 918,
+          "username": 918,
+          "match_score_percent": 100.0,
+          "group_id": null
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-2",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 313,
+          "username": 313,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 314,
+          "username": 314,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 315,
+          "username": 315,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 317,
+          "username": 317,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 318,
+          "username": 318,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 319,
+          "username": 319,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        278
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 27,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 280,
+          "username": 280,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 281,
+          "username": 281,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 282,
+          "username": 282,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 283,
+          "username": 283,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 284,
+          "username": 284,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 285,
+          "username": 285,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 286,
+          "username": 286,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 287,
+          "username": 287,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 288,
+          "username": 288,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 289,
+          "username": 289,
+          "match_score_percent": 100.0,
+          "group_id": 28,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 310,
+          "username": 310,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 311,
+          "username": 311,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 312,
+          "username": 312,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 313,
+          "username": 313,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 314,
+          "username": 314,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 315,
+          "username": 315,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 316,
+          "username": 316,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 317,
+          "username": 317,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 318,
+          "username": 318,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 319,
+          "username": 319,
+          "match_score_percent": 100.0,
+          "group_id": 31,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": true,
+          "collusion_positions": [
+            9
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-2",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": false,
+      "accused_user_ids": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [],
+      "num_matches": 0,
+      "accused_details": [
+        {
+          "user_id": 720,
+          "username": 720,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 721,
+          "username": 721,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 722,
+          "username": 722,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 723,
+          "username": 723,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 724,
+          "username": 724,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 725,
+          "username": 725,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 726,
+          "username": 726,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 727,
+          "username": 727,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 728,
+          "username": 728,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 729,
+          "username": 729,
+          "match_score_percent": 100.0,
+          "group_id": 72,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": false,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-3",
+    "combination_method": "normal",
+    "deletion_percentage": 0.0,
+    "deletion_type": "none",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 821,
+          "username": 821,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 823,
+          "username": 823,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 824,
+          "username": 824,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 825,
+          "username": 825,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 826,
+          "username": 826,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 827,
+          "username": 827,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 828,
+          "username": 828,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 829,
+          "username": 829,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 830,
+          "username": 830,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 831,
+          "username": 831,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 833,
+          "username": 833,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 835,
+          "username": 835,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_normal.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "random",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 821,
+          "username": 821,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 823,
+          "username": 823,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 824,
+          "username": 824,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 825,
+          "username": 825,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 826,
+          "username": 826,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 827,
+          "username": 827,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 828,
+          "username": 828,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 829,
+          "username": 829,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 830,
+          "username": 830,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 831,
+          "username": 831,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 833,
+          "username": 833,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 835,
+          "username": 835,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_random.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "start",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        740
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 740,
+          "username": 740,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 741,
+          "username": 741,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 742,
+          "username": 742,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 743,
+          "username": 743,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 744,
+          "username": 744,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 745,
+          "username": 745,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 746,
+          "username": 746,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 747,
+          "username": 747,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 748,
+          "username": 748,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 749,
+          "username": 749,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 750,
+          "username": 750,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 751,
+          "username": 751,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 752,
+          "username": 752,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 753,
+          "username": 753,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 754,
+          "username": 754,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 755,
+          "username": 755,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 756,
+          "username": 756,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 757,
+          "username": 757,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 758,
+          "username": 758,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 759,
+          "username": 759,
+          "match_score_percent": 87.5,
+          "group_id": 37,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 820,
+          "username": 820,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 821,
+          "username": 821,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 822,
+          "username": 822,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 823,
+          "username": 823,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 824,
+          "username": 824,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 825,
+          "username": 825,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 826,
+          "username": 826,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 827,
+          "username": 827,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 828,
+          "username": 828,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 829,
+          "username": 829,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 830,
+          "username": 830,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 831,
+          "username": 831,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 832,
+          "username": 832,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 833,
+          "username": 833,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 834,
+          "username": 834,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 835,
+          "username": 835,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 836,
+          "username": 836,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 837,
+          "username": 837,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 838,
+          "username": 838,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        },
+        {
+          "user_id": 839,
+          "username": 839,
+          "match_score_percent": 87.5,
+          "group_id": 41,
+          "collusion_detected": true,
+          "collusion_positions": [
+            0
+          ]
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_start.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  },
+  {
+    "prompt_id": 38,
+    "prompt": "Why do tech/software companies stay in the US when they are demanded to include backdoors by the US government? Can't tech companies just develop and release their products overseas, out of reach of the US government's influence?",
+    "approach": "min-distance-3",
+    "combination_method": "with_deletion",
+    "deletion_percentage": 0.05,
+    "deletion_type": "end",
+    "num_colluders": 2,
+    "original_user_ids": [
+      278,
+      740
+    ],
+    "trace_result": {
+      "success": true,
+      "accused_user_ids": [
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279
+      ],
+      "original_user_ids": [
+        278,
+        740
+      ],
+      "matches": [
+        278
+      ],
+      "num_matches": 1,
+      "accused_details": [
+        {
+          "user_id": 260,
+          "username": 260,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 261,
+          "username": 261,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 262,
+          "username": 262,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 263,
+          "username": 263,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 264,
+          "username": 264,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 265,
+          "username": 265,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 266,
+          "username": 266,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 267,
+          "username": 267,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 268,
+          "username": 268,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 269,
+          "username": 269,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 270,
+          "username": 270,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 271,
+          "username": 271,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 272,
+          "username": 272,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 273,
+          "username": 273,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 274,
+          "username": 274,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 275,
+          "username": 275,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 276,
+          "username": 276,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 277,
+          "username": 277,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 278,
+          "username": 278,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        },
+        {
+          "user_id": 279,
+          "username": 279,
+          "match_score_percent": 100.0,
+          "group_id": 13,
+          "collusion_detected": false,
+          "collusion_positions": []
+        }
+      ]
+    },
+    "success": true,
+    "files": {
+      "master_key": "master_key.key",
+      "user_texts": [
+        "user_278_text.txt",
+        "user_740_text.txt"
+      ],
+      "combined_text": "combined_deletion_5_0%_end.txt"
+    },
+    "parameters": {
+      "l_bits": 10,
+      "delta": 3.5,
+      "entropy_threshold": 2.5,
+      "hashing_context": 5,
+      "z_threshold": 4.0,
+      "max_new_tokens": 400
+    }
+  }
+]
