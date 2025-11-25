@@ -119,11 +119,15 @@ def select_colluding_users(num_users: int, total_users: int, min_distance: int =
         return sorted(random.sample(range(total_users), num_users))
     
     # For grouped schemes, ALWAYS select users from different groups
-    # Based on DISTANCE_CONFIG in fingerprinting.py:
-    # min_distance=2: 10 users per group
-    # min_distance=3: 20 users per group
+    # Calculate users_per_group based on min_distance (default behavior)
+    # This matches the default in FingerprintingCode.__init__
+    if min_distance == 2:
+        users_per_group = 10
+    elif min_distance == 3:
+        users_per_group = 20
+    else:
+        users_per_group = 10  # Default fallback
     
-    users_per_group = {2: 10, 3: 20}.get(min_distance, 10)
     num_groups = (total_users + users_per_group - 1) // users_per_group
     
     # Check if we have enough groups
@@ -396,9 +400,12 @@ def main():
     lbit_watermarker = LBitWatermarker(zero_bit_watermarker=zero_bit, L=args.l_bits)
     
     # Create watermarkers for each approach
+    # Note: Using default max_groups and users_per_group (None) to use auto-calculated values
     naive_muw = NaiveMultiUserWatermarker(lbit_watermarker=lbit_watermarker)
-    grouped_muw_d2 = GroupedMultiUserWatermarker(lbit_watermarker=lbit_watermarker, min_distance=2)
-    grouped_muw_d3 = GroupedMultiUserWatermarker(lbit_watermarker=lbit_watermarker, min_distance=3)
+    grouped_muw_d2 = GroupedMultiUserWatermarker(lbit_watermarker=lbit_watermarker, min_distance=2, 
+                                                 max_groups=None, users_per_group=None)
+    grouped_muw_d3 = GroupedMultiUserWatermarker(lbit_watermarker=lbit_watermarker, min_distance=3,
+                                                 max_groups=None, users_per_group=None)
     
     # Load users for each watermarker
     print(f"    • Loading users for naive scheme...")

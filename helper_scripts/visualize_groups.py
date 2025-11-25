@@ -166,6 +166,18 @@ def main():
         help="Minimum Hamming distance between codewords (default: 2)"
     )
     parser.add_argument(
+        '--max-groups',
+        type=int,
+        default=None,
+        help="Maximum number of groups allowed (default: auto-calculated based on min-distance)"
+    )
+    parser.add_argument(
+        '--users-per-group',
+        type=int,
+        default=None,
+        help="Number of users per group (default: auto-calculated based on min-distance)"
+    )
+    parser.add_argument(
         '--detailed',
         action='store_true',
         help="Show detailed output including all user IDs in each group"
@@ -175,7 +187,12 @@ def main():
     
     # Initialize fingerprinting system
     print("Initializing fingerprinting system...")
-    fingerprinter = FingerprintingCode(L=args.l_bits, min_distance=args.min_distance)
+    fingerprinter = FingerprintingCode(
+        L=args.l_bits, 
+        min_distance=args.min_distance,
+        max_groups=args.max_groups,
+        users_per_group=args.users_per_group
+    )
     
     try:
         # Load users and generate codewords

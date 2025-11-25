@@ -266,10 +266,16 @@ def measure_scalability(users_file: str, L: int, min_distance: int = None) -> di
     max_users_naive = 2 ** L
     
     if min_distance is not None:
-        from src.fingerprinting import DISTANCE_CONFIG
-        config = DISTANCE_CONFIG[min_distance]
-        max_groups = config["max_groups"]
-        users_per_group = config["users_per_group"]
+        # Use default values based on min_distance (matching FingerprintingCode defaults)
+        if min_distance == 2:
+            max_groups = 100
+            users_per_group = 10
+        elif min_distance == 3:
+            max_groups = 50
+            users_per_group = 20
+        else:
+            max_groups = 100
+            users_per_group = 10
         max_users_grouped = max_groups * users_per_group
     else:
         max_groups = None

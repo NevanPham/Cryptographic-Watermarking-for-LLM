@@ -14,7 +14,6 @@ A comprehensive framework for embedding and detecting statistical watermarks in 
   - [L-Bit Watermarking](#l-bit-watermarking)
   - [Multi-User Fingerprinting](#multi-user-fingerprinting)
   - [Batch Evaluation](#batch-evaluation)
-- [GUI Application](#gui-application)
 - [File-by-File Usage Guide](#file-by-file-usage-guide)
 - [Parameters and Tuning](#parameters-and-tuning)
 - [Expected Outputs](#expected-outputs)
@@ -57,7 +56,7 @@ This repository implements cryptographic watermarking techniques for LLM text ge
 
 **Three watermarking modes**: Zero-bit detection, L-bit message embedding, multi-user tracing
 **Multiple model support**: GPT-2 (local), GPT-OSS-20B, GPT-OSS-120B
-**Three interfaces**: CLI, Desktop GUI (PySide6), SLURM batch scripts
+**Multiple interfaces**: CLI, SLURM batch scripts
 **Robustness testing**: Built-in perturbation attacks (deletion, paraphrasing)
 **Comprehensive evaluation**: Parameter sweeps, automated plotting, statistical analysis
 **HPC-ready**: Offline model caching, SLURM job templates
@@ -87,15 +86,6 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── parser.py                    # Argument parsing & validation
 │   ├── utils.py                     # Helper utilities (parsing, perturbations)
 │   └── main_multiuser.py            # Multi-user CLI (generate, trace)
-│
-├── UI/                              # Desktop GUI application
-│   ├── app.py                       # Main PySide6 application (39KB)
-│   ├── core.py                      # Bridge between GUI and CLI logic
-│   ├── worker.py                    # Threading for non-blocking operations
-│   ├── loading_dialog.py            # Loading dialog UI
-│   ├── app_GUI.py                   # Qt Designer generated code
-│   ├── mainWindow.ui                # Qt Designer UI file
-│   └── resources.*                  # GUI assets
 │
 ├── evalution_scripts/               # Evaluation and experiment scripts
 │   ├── compare_collusion_resistance.py  # Compare naive vs fingerprinting approaches
@@ -131,7 +121,7 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── evaluation_results/          # Main evaluation outputs
 │   ├── lbit_parameter_sweep/        # L-bit parameter sweep results
 │   ├── lbit_sweep/                  # L-bit sweep results
-│   └── gui_app_evaluation_results/  # GUI analysis results
+│   └── gui_app_evaluation_results/  # Evaluation analysis results
 │
 └── demonstration/                   # Example outputs
     ├── my_watermark.txt             # Zero-bit example output
@@ -182,7 +172,6 @@ Core dependencies from `requirements.txt`:
 - **pandas**: Data manipulation
 - **matplotlib, seaborn**: Visualization
 - **nltk**: Text processing
-- **pyside6**: Desktop GUI framework
 - **protobuf**: Model serialization
 
 ---
@@ -516,55 +505,6 @@ Robustness (perturbed text):
 
 ---
 
-## GUI Application
-
-Launch the desktop GUI for interactive watermarking.
-
-### Start GUI
-
-```bat
-python UI\app.py
-```
-
-Or as a module (if you encounter import errors):
-```bat
-python -m UI.app
-```
-
-### GUI Features
-
-**Three tabs:**
-
-1. **Generate Tab:**
-   - Input prompt
-   - Select model (GPT-2, GPT-OSS-20B, GPT-OSS-120B)
-   - Adjust parameters (delta, entropy threshold, max tokens)
-   - Toggle watermarking on/off
-   - Save/load secret keys
-   - **Output:** Generated text displayed in text box
-
-2. **Detect Tab:**
-   - Paste or load text from file
-   - Load secret key
-   - Select model and parameters
-   - Click "Detect Watermark"
-   - **Output:** Z-score, block count, decision (WATERMARKED / NOT WATERMARKED)
-
-3. **Evaluate Tab:**
-   - Select prompts file
-   - Configure parameter sweeps
-   - Run batch evaluation
-   - **Output:** Inline plots and summary statistics
-
-**Screenshot flow:**
-```
-[Generate Tab] → Enter prompt → Click "Generate" → Text appears with watermark
-[Detect Tab] → Load text → Load key → Click "Detect" → See z-score and decision
-[Evaluate Tab] → Select prompts → Click "Evaluate" → View plots and metrics
-```
-
----
-
 ## File-by-File Usage Guide
 
 ### Core Python Files
@@ -589,7 +529,7 @@ python -m UI.app
 - `generate(...)`: Watermarked text generation
 - `detect(...)`: Watermark detection
 
-**Not called directly** (used via CLI/GUI)
+**Not called directly** (used via CLI)
 
 #### `src/models.py` (157 lines)
 **Purpose:** Model abstraction layer
@@ -604,7 +544,7 @@ python -m UI.app
 - `tokenizer`: Access tokenizer
 - `vocab_size`, `device`: Model properties
 
-**Usage:** Automatically instantiated by CLI/GUI based on `--model` flag
+**Usage:** Automatically instantiated by CLI based on `--model` flag
 
 #### `src/fingerprinting.py` (296 lines)
 **Purpose:** Multi-user codeword management using BCH error-correcting codes
@@ -1117,26 +1057,7 @@ Recovered message: 01⊥1⊥⊥01
    --entropy-threshold 3.5
    ```
 
-#### 5. GUI Import Error
-
-**Error:**
-```
-ModuleNotFoundError: No module named 'models'
-```
-
-**Solutions:**
-1. Run as module:
-   ```bat
-   python -m UI.app
-   ```
-
-2. Set PYTHONPATH:
-   ```bat
-   set PYTHONPATH=%CD%
-   python UI\app.py
-   ```
-
-#### 6. CUDA Out of Memory (Large Models)
+#### 5. CUDA Out of Memory (Large Models)
 
 **Error:**
 ```
@@ -1400,9 +1321,6 @@ python -m src.main_multiuser trace out.txt --l-bits 10 --model gpt2
 # Evaluate
 python main.py evaluate --prompts-file assets/prompts.txt --model gpt2
 python helper_scripts\analyse.py evaluation/evaluation_results
-
-# GUI
-python UI\app.py
 ```
 
 ### Parameter Cheatsheet

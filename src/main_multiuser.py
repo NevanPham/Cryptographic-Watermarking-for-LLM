@@ -66,6 +66,10 @@ def main():
     )
     base_parser.add_argument('--min-distance', type=int, default=2, choices=[2, 3],
                             help="Minimum Hamming distance between codewords for collusion resistance (default: 2).")
+    base_parser.add_argument('--max-groups', type=int, default=None,
+                            help="Maximum number of groups allowed (default: auto-calculated based on min-distance).")
+    base_parser.add_argument('--users-per-group', type=int, default=None,
+                            help="Number of users per group (default: auto-calculated based on min-distance).")
 
     # --- Generate Command ---
     gen_parser = subparsers.add_parser('generate', help='Generate text watermarked for a specific user.', parents=[base_parser])
@@ -95,7 +99,12 @@ def main():
     )
     lbw = LBitWatermarker(zero_bit_watermarker=zbw, L=args.l_bits)
     if args.scheme == 'grouped':
-        muw = GroupedMultiUserWatermarker(lbit_watermarker=lbw, min_distance=args.min_distance)
+        muw = GroupedMultiUserWatermarker(
+            lbit_watermarker=lbw, 
+            min_distance=args.min_distance,
+            max_groups=args.max_groups,
+            users_per_group=args.users_per_group
+        )
     else:
         muw = NaiveMultiUserWatermarker(lbit_watermarker=lbw)
 

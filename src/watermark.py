@@ -549,9 +549,15 @@ class GroupedMultiUserWatermarker(NaiveMultiUserWatermarker):
     Enhanced grouped multi-user scheme that layers fingerprinting codes on top of
     the naive scheme to provide collusion resistance and group awareness.
     """
-    def __init__(self, lbit_watermarker: LBitWatermarker, min_distance: int = 2):
+    def __init__(self, lbit_watermarker: LBitWatermarker, min_distance: int = 2, 
+                 max_groups: int = None, users_per_group: int = None):
         super().__init__(lbit_watermarker=lbit_watermarker)
-        self.fingerprinter = FingerprintingCode(L=self.lbw.L, min_distance=min_distance)
+        self.fingerprinter = FingerprintingCode(
+            L=self.lbw.L, 
+            min_distance=min_distance,
+            max_groups=max_groups,
+            users_per_group=users_per_group
+        )
     
     def load_users(self, users_file: str) -> pd.DataFrame:
         """Generates BCH-based codewords and stores metadata from the users file."""

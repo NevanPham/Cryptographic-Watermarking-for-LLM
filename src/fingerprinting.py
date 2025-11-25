@@ -2,19 +2,14 @@ import numpy as np
 import pandas as pd
 import os
 
-# Hardcoded group configuration
-DISTANCE_CONFIG = {
-    2: {"max_groups": 100, "users_per_group": 10},   # Default
-    3: {"max_groups": 50, "users_per_group": 20}
-}
-
 class FingerprintingCode:
     """
     Implements a fingerprinting code for multi-user watermarking using BCH error-correcting codes
     that guarantee minimum Hamming distance between codewords for better collusion resistance.
     Integrates with a CSV database for user metadata.
     """
-    def __init__(self, L: int = 10, c: int = 16, delta: float = 0.1, min_distance: int = 2):
+    def __init__(self, L: int = 10, c: int = 16, delta: float = 0.1, min_distance: int = 2, 
+                 max_groups: int = None, users_per_group: int = None):
         """
         Initializes the fingerprinting code.
 
@@ -22,7 +17,9 @@ class FingerprintingCode:
             L (int): Codeword length (default: 10 for BCH codes).
             c (int): Maximum number of colluders.
             delta (float): Erasure probability.
-            min_distance (int): Minimum Hamming distance between codewords (2 or 3, default: 2).
+            min_distance (int): Minimum Hamming distance between codewords (default: 2).
+            max_groups (int): Maximum number of groups allowed. If None, will be calculated based on min_distance.
+            users_per_group (int): Number of users per group. If None, will be calculated based on min_distance.
         """
         self.N = None
         self.L = L
@@ -34,14 +31,25 @@ class FingerprintingCode:
         self.group_codewords = None  # Maps group_id to codeword
         self.user_to_group = None  # Maps user_id to group_id
         
-        # Validate min_distance
-        if min_distance not in DISTANCE_CONFIG:
-            raise ValueError(f"min_distance must be one of {list(DISTANCE_CONFIG.keys())}, got {min_distance}")
-        
-        # Get group configuration
-        self.config = DISTANCE_CONFIG[min_distance]
-        self.max_groups = self.config["max_groups"]
-        self.users_per_group = self.config["users_per_group"]
+        # Set group configuration - use provided values or defaults based on min_distance
+        if max_groups is None or users_per_group is None:
+            # Default configurations for backward compatibility
+            if min_distance == 2:
+                default_max_groups = 100
+                default_users_per_group = 10
+            elif min_distance == 3:
+                default_max_groups = 50
+                default_users_per_group = 20
+            else:
+                # For other min_distance values, use conservative defaults
+                default_max_groups = 100
+                default_users_per_group = 10
+            
+            self.max_groups = max_groups if max_groups is not None else default_max_groups
+            self.users_per_group = users_per_group if users_per_group is not None else default_users_per_group
+        else:
+            self.max_groups = max_groups
+            self.users_per_group = users_per_group
 
     def _generate_bch_codewords(self, num_groups: int) -> dict:
         """
@@ -164,21 +172,30 @@ class FingerprintingCode:
         """
         # 1. Load the user metadata from the CSV. This also sets self.N.
         self.load_metadata(users_file)
+        original_N = self.N
         
-        # 2. Calculate number of groups needed
+        # 2. Calculate maximum users that can fit within max_groups constraint
+        max_users_allowed = self.max_groups * self.users_per_group
+        
+        # 3. Limit to only the users that fit within the constraints
+        if self.N > max_users_allowed:
+            print(f"Warning: CSV contains {self.N} users, but max_groups={self.max_groups} and "
+                  f"users_per_group={self.users_per_group} only allows {max_users_allowed} users. "
+                  f"Using only the first {max_users_allowed} users.")
+            # Truncate user_metadata to only the first max_users_allowed users
+            self.user_metadata = self.user_metadata.head(max_users_allowed)
+            self.N = max_users_allowed
+            # Reinitialize codeword array with new N
+            self.codewords = np.empty((self.N, self.L), dtype=int)
+        
+        # 4. Calculate number of groups needed (now guaranteed to fit)
         num_groups = (self.N + self.users_per_group - 1) // self.users_per_group
-        if num_groups > self.max_groups:
-            raise ValueError(
-                f"Number of groups needed ({num_groups}) exceeds maximum allowed "
-                f"({self.max_groups}) for min_distance={self.min_distance}. "
-                f"Need to reduce number of users or increase min_distance."
-            )
         
-        # 3. Generate BCH codewords for groups
+        # 5. Generate BCH codewords for groups
         print(f"Generating codewords with minimum distance {self.min_distance} for {num_groups} groups...")
         self.group_codewords = self._generate_bch_codewords(num_groups)
         
-        # 4. Assign users to groups and assign codewords
+        # 6. Assign users to groups and assign codewords
         self.user_to_group = {}
         for index, row in self.user_metadata.iterrows():
             user_id = int(row["UserId"])
@@ -196,7 +213,10 @@ class FingerprintingCode:
             self.codewords[user_id] = self.group_codewords[group_id].copy()
         
         # Print summary with group assignment details
-        print(f"Successfully loaded {self.N} users and generated codes with minimum distance {self.min_distance}.")
+        if original_N > self.N:
+            print(f"Successfully loaded {self.N} users (out of {original_N} in file) and generated codes with minimum distance {self.min_distance}.")
+        else:
+            print(f"Successfully loaded {self.N} users and generated codes with minimum distance {self.min_distance}.")
         print(f"Users assigned to {num_groups} groups ({self.users_per_group} users per group).")
         
         # Show group ranges for clarity
