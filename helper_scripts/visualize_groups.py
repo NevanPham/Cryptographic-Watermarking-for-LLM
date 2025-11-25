@@ -161,9 +161,9 @@ def main():
     parser.add_argument(
         '--min-distance',
         type=int,
-        default=3,
-        choices=[2, 3, 4],
-        help="Minimum Hamming distance between codewords (default: 3)"
+        default=2,
+        choices=[2, 3],
+        help="Minimum Hamming distance between codewords (default: 2)"
     )
     parser.add_argument(
         '--detailed',

@@ -122,9 +122,8 @@ def select_colluding_users(num_users: int, total_users: int, min_distance: int =
     # Based on DISTANCE_CONFIG in fingerprinting.py:
     # min_distance=2: 10 users per group
     # min_distance=3: 20 users per group
-    # min_distance=4: 100 users per group
     
-    users_per_group = {2: 10, 3: 20, 4: 100}.get(min_distance, 20)
+    users_per_group = {2: 10, 3: 20}.get(min_distance, 10)
     num_groups = (total_users + users_per_group - 1) // users_per_group
     
     # Check if we have enough groups

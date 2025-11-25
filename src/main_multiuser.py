@@ -64,8 +64,8 @@ def main():
         choices=['naive', 'grouped'],
         help="Multi-user scheme to use (default: grouped).",
     )
-    base_parser.add_argument('--min-distance', type=int, default=3, choices=[2, 3, 4],
-                            help="Minimum Hamming distance between codewords for collusion resistance (default: 3).")
+    base_parser.add_argument('--min-distance', type=int, default=2, choices=[2, 3],
+                            help="Minimum Hamming distance between codewords for collusion resistance (default: 2).")
 
     # --- Generate Command ---
     gen_parser = subparsers.add_parser('generate', help='Generate text watermarked for a specific user.', parents=[base_parser])

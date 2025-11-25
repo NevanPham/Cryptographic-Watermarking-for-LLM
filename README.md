@@ -361,9 +361,8 @@ Trace generated text back to specific users using BCH error-correcting codes wit
   - All users in the same group share the same group codeword
   - This prevents collusion attacks where users combine codewords to frame others
 - **Minimum Distance Options**:
-  - `--min-distance 2`: Up to 100 groups, 10 users per group
-  - `--min-distance 3`: Up to 50 groups, 20 users per group (default)
-  - `--min-distance 4`: Up to 10 groups, 100 users per group
+  - `--min-distance 2`: Up to 100 groups, 10 users per group (default)
+  - `--min-distance 3`: Up to 50 groups, 20 users per group
 
 #### User Database
 
@@ -387,7 +386,7 @@ python -m src.main_multiuser generate ^
   --model gpt2 ^
   --user-id 0 ^
   --l-bits 10 ^
-  --min-distance 3 ^
+  --min-distance 2 ^
   --delta 2.5 ^
   --entropy-threshold 4.0 ^
   --max-new-tokens 512 ^
@@ -398,7 +397,7 @@ python -m src.main_multiuser generate ^
 
 **Key points:**
 - L=10 supports up to 2¹⁰ = 1024 users
-- `--min-distance 3` (default) assigns users to groups of 20
+- `--min-distance 2` (default) assigns users to groups of 10
 - User 0 belongs to Group 0 (users 0-19)
 - User 20 belongs to Group 1 (users 20-39)
 - All users in the same group share the same codeword
@@ -415,7 +414,7 @@ python -m src.main_multiuser trace ^
   --users-file assets/users.csv ^
   --model gpt2 ^
   --l-bits 10 ^
-  --min-distance 3 ^
+  --min-distance 2 ^
   --key-file demonstration\multiuser_master.key ^
   demonstration\multiuser_user0.txt
 ```
@@ -441,7 +440,7 @@ View group assignments, codewords, and verify minimum distance:
 python helper_scripts/visualize_groups.py ^
   --users-file assets/users.csv ^
   --l-bits 10 ^
-  --min-distance 3
+  --min-distance 2
 ```
 
 **Output includes:**
@@ -622,15 +621,15 @@ python -m UI.app
 
 **Parameters:**
 - `L` (int): Codeword length (default: 10)
-- `min_distance` (int): Minimum Hamming distance between codewords (2, 3, or 4, default: 3)
+- `min_distance` (int): Minimum Hamming distance between codewords (2 or 3, default: 2)
 - `c` (int): Maximum number of colluders (default: 16)
 
 **Example:**
 ```python
 from src.fingerprinting import FingerprintingCode
 
-# Initialize with minimum distance 3 (default)
-code = FingerprintingCode(L=10, min_distance=3)
+# Initialize with minimum distance 2 (default)
+code = FingerprintingCode(L=10, min_distance=2)
 
 # Load users and generate codewords
 code.gen(users_file='assets/users.csv')
@@ -1298,8 +1297,8 @@ Test robustness against multiple users combining outputs:
 ```python
 from src.watermark import GroupedMultiUserWatermarker
 
-# Initialize grouped scheme (min distance 3)
-grouped = GroupedMultiUserWatermarker(lbit_watermarker=lbw, min_distance=3)
+# Initialize grouped scheme (min distance 2, default)
+grouped = GroupedMultiUserWatermarker(lbit_watermarker=lbw, min_distance=2)
 grouped.load_users('assets/users.csv')
 
 # Generate from multiple users

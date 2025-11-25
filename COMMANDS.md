@@ -99,15 +99,14 @@ python -m src.main_multiuser generate "The future of AI is" ^
   --user-id 0 ^
   --l-bits 10 ^
   --scheme grouped ^
-  --min-distance 3 ^
+  --min-distance 2 ^
   --max-new-tokens 512 ^
   -o demonstration/multiuser_user0.txt
 ```
 
 **BCH minimum distance options:**
-- `--min-distance 2`: Up to 100 groups, 10 users per group (weaker collusion resistance)
-- `--min-distance 3`: Up to 50 groups, 20 users per group (default, balanced)
-- `--min-distance 4`: Up to 10 groups, 100 users per group (strongest collusion resistance)
+- `--min-distance 2`: Up to 100 groups, 10 users per group (default)
+- `--min-distance 3`: Up to 50 groups, 20 users per group (stronger collusion resistance)
 
 **Note:** Users are assigned to groups sequentially (Users 0-19 → Group 0, Users 20-39 → Group 1, etc.). All users in the same group share the same group codeword, providing better collusion resistance than binary ID-based fingerprinting.
 
@@ -133,7 +132,7 @@ python -m src.main_multiuser generate ^
   --user-id 2 ^
   --l-bits 10 ^
   --scheme grouped ^
-  --min-distance 3 ^
+  --min-distance 2 ^
   --max-new-tokens 512 ^
   -o demonstration/multiuser_user2_collusion_with_user[].txt
 ```
@@ -145,7 +144,7 @@ python -m src.main_multiuser trace ^
   --model gpt2 ^
   --l-bits 10 ^
   --scheme grouped ^
-  --min-distance 3 ^
+  --min-distance 2 ^
   demonstration\multiuser_user0.txt
 ```
 
@@ -173,7 +172,7 @@ python helper_scripts\visualize_groups.py ^
 python helper_scripts\visualize_groups.py ^
   --users-file assets/users.csv ^
   --l-bits 10 ^
-  --min-distance 3 ^
+  --min-distance 2 ^
   --detailed
 ```
 - The script displays:
@@ -183,7 +182,7 @@ python helper_scripts\visualize_groups.py ^
   - Distance violations (if any)
 
 **Comparing collusion resistance across approaches:**
-- Compare naive vs fingerprinting (min-distance-2, min-distance-3) approaches:
+- Compare naive vs fingerprinting (min-distance-2, min-distance-3) approaches (default is min-distance-2):
 ```bat
 python evalution_scripts\compare_collusion_resistance.py ^
   --prompts-file assets/prompts.txt ^

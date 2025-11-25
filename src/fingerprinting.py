@@ -4,9 +4,8 @@ import os
 
 # Hardcoded group configuration
 DISTANCE_CONFIG = {
-    2: {"max_groups": 100, "users_per_group": 10},
-    3: {"max_groups": 50, "users_per_group": 20},   # Default
-    4: {"max_groups": 10, "users_per_group": 100}
+    2: {"max_groups": 100, "users_per_group": 10},   # Default
+    3: {"max_groups": 50, "users_per_group": 20}
 }
 
 class FingerprintingCode:
@@ -15,7 +14,7 @@ class FingerprintingCode:
     that guarantee minimum Hamming distance between codewords for better collusion resistance.
     Integrates with a CSV database for user metadata.
     """
-    def __init__(self, L: int = 10, c: int = 16, delta: float = 0.1, min_distance: int = 3):
+    def __init__(self, L: int = 10, c: int = 16, delta: float = 0.1, min_distance: int = 2):
         """
         Initializes the fingerprinting code.
 
@@ -23,7 +22,7 @@ class FingerprintingCode:
             L (int): Codeword length (default: 10 for BCH codes).
             c (int): Maximum number of colluders.
             delta (float): Erasure probability.
-            min_distance (int): Minimum Hamming distance between codewords (2, 3, or 4, default: 3).
+            min_distance (int): Minimum Hamming distance between codewords (2 or 3, default: 2).
         """
         self.N = None
         self.L = L
@@ -84,8 +83,6 @@ class FingerprintingCode:
             start_candidates.append(group_id * 2)
         elif self.min_distance == 3:
             start_candidates.append(group_id * 4)
-        elif self.min_distance == 4:
-            start_candidates.append(group_id * 8)
         else:
             start_candidates.append(group_id * (2 ** (self.min_distance - 1)))
         

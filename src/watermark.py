@@ -549,7 +549,7 @@ class GroupedMultiUserWatermarker(NaiveMultiUserWatermarker):
     Enhanced grouped multi-user scheme that layers fingerprinting codes on top of
     the naive scheme to provide collusion resistance and group awareness.
     """
-    def __init__(self, lbit_watermarker: LBitWatermarker, min_distance: int = 3):
+    def __init__(self, lbit_watermarker: LBitWatermarker, min_distance: int = 2):
         super().__init__(lbit_watermarker=lbit_watermarker)
         self.fingerprinter = FingerprintingCode(L=self.lbw.L, min_distance=min_distance)
     
