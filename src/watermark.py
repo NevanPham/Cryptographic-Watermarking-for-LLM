@@ -463,9 +463,11 @@ class NaiveMultiUserWatermarker:
         df = df.sort_values("UserId").reset_index(drop=True)
         max_users = 2 ** self.lbw.L
         if len(df) > max_users:
-            raise ValueError(
-                f"Number of users in file ({len(df)}) exceeds max allowed by L={self.lbw.L} (max {max_users})"
+            print(
+                f"Warning: users file contains {len(df)} entries but L={self.lbw.L} "
+                f"only supports {max_users}. Using first {max_users} users."
             )
+            df = df.head(max_users)
         
         self.user_metadata = df
         self.N = len(df)
@@ -683,9 +685,15 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
             raise ValueError("Duplicate UserId entries detected in users file.")
         
         df = df.sort_values("UserId").reset_index(drop=True)
-        self.user_metadata = df
-        self.N = len(df)
-        self.user_lookup = {int(row["UserId"]): row for _, row in df.iterrows()}
+        
+        # Enforce overall L-bit capacity
+        max_supported_users = 2 ** self.lbw.L
+        if len(df) > max_supported_users:
+            print(
+                f"Warning: users file contains {len(df)} entries but L={self.lbw.L} "
+                f"only supports {max_supported_users}. Using first {max_supported_users} users."
+            )
+            df = df.head(max_supported_users)
         
         # Determine users_per_group and max_groups
         if self.users_per_group is not None:
@@ -693,6 +701,30 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         else:
             # Default: use maximum capacity based on user_bits
             users_per_group = 2 ** self.user_bits
+        
+        theoretical_max_groups = 2 ** self.group_bits
+        max_groups_allowed = self.max_groups if self.max_groups is not None else theoretical_max_groups
+        max_total_users_allowed = max_groups_allowed * users_per_group
+        
+        if len(df) > max_total_users_allowed:
+            if self.max_groups is not None:
+                constraint_str = (
+                    f"max_groups={self.max_groups} and users_per_group={users_per_group}"
+                )
+            else:
+                constraint_str = (
+                    f"group_bits={self.group_bits} (max {theoretical_max_groups} groups) "
+                    f"and users_per_group={users_per_group}"
+                )
+            print(
+                f"Warning: limiting users to {max_total_users_allowed} to satisfy "
+                f"{constraint_str}."
+            )
+            df = df.head(max_total_users_allowed)
+        
+        self.user_metadata = df
+        self.N = len(df)
+        self.user_lookup = {int(row["UserId"]): row for _, row in df.iterrows()}
         
         # Calculate number of groups needed
         num_groups = (self.N + users_per_group - 1) // users_per_group
