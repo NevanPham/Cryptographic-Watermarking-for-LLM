@@ -1,7 +1,6 @@
 # compare_collusion_resistance.py
-# Script to compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance
-# Tests with 2-3 users across different groups using three approaches: naive, min-distance-2, and min-distance-3
-# Multiple combination methods: normal combination and combinations with deletion (5%, 10%, 15%) using different types (random, start, end)
+# Script to evaluate naive and hierarchical watermarking schemes under controlled collusion
+# Tests with 2-3 colluders in different configurations: same group, cross group, mixed
 
 import argparse
 import json
@@ -11,7 +10,6 @@ import sys
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
-import nltk
 
 # Add the parent directory to sys.path
 current_dir = os.path.dirname(__file__)
@@ -19,73 +17,13 @@ parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 sys.path.insert(0, parent_dir)
 
 from src.models import GPT2Model, GptOssModel, GptOss120bModel
-from src.watermark import ZeroBitWatermarker, LBitWatermarker, NaiveMultiUserWatermarker, GroupedMultiUserWatermarker
+from src.watermark import (
+    ZeroBitWatermarker, 
+    LBitWatermarker, 
+    NaiveMultiUserWatermarker, 
+    HierarchicalMultiUserWatermarker
+)
 from src.utils import get_model, parse_final_output
-
-
-def setup_nltk():
-    """Setup NLTK data path if needed."""
-    try:
-        # Try to find punkt tokenizer
-        nltk.data.find('tokenizers/punkt')
-    except LookupError:
-        # If not found, try to download (may fail in some environments)
-        try:
-            nltk.download('punkt', quiet=True)
-        except Exception:
-            pass  # Will fall back to simple split in delete_percentage_text
-
-
-def delete_percentage_text(text: str, percentage: float = 0.05, deletion_type: str = 'random') -> str:
-    """
-    Delete a percentage of sentences from the text.
-    
-    Args:
-        text: Input text
-        percentage: Percentage of sentences to delete (default: 0.05 for 5%)
-        deletion_type: Type of deletion - 'random', 'start', or 'end' (default: 'random')
-    
-    Returns:
-        Text with percentage of sentences deleted
-    """
-    try:
-        sentences = nltk.sent_tokenize(text)
-    except Exception as e:
-        # Fallback to simple split if NLTK fails
-        sentences = [s.strip() for s in text.split('.') if s.strip()]
-    
-    if len(sentences) == 0:
-        return text
-    
-    num_to_delete = max(1, int(len(sentences) * percentage))
-    if num_to_delete >= len(sentences):
-        # If we need to delete all or more, keep at least one sentence
-        num_to_delete = len(sentences) - 1
-    
-    # Select sentences to delete based on deletion type
-    if deletion_type == 'start':
-        # Delete from the beginning
-        remaining_sentences = sentences[num_to_delete:]
-    elif deletion_type == 'end':
-        # Delete from the end
-        remaining_sentences = sentences[:-num_to_delete] if num_to_delete > 0 else sentences
-    else:  # 'random' (default)
-        # Randomly select sentences to delete
-        indices_to_delete = random.sample(range(len(sentences)), num_to_delete)
-        remaining_sentences = [sentences[i] for i in range(len(sentences)) if i not in indices_to_delete]
-    
-    return " ".join(remaining_sentences)
-
-
-def combine_texts_normal(texts: list[str]) -> str:
-    """Combine texts normally (just concatenate with newlines)."""
-    return "\n\n".join(texts)
-
-
-def combine_texts_with_deletion(texts: list[str], deletion_percentage: float = 0.05, deletion_type: str = 'random') -> str:
-    """Combine texts after deleting a percentage from each user's text."""
-    deleted_texts = [delete_percentage_text(text, deletion_percentage, deletion_type) for text in texts]
-    return "\n\n".join(deleted_texts)
 
 
 def json_default_encoder(obj):
@@ -101,131 +39,297 @@ def json_default_encoder(obj):
     return obj
 
 
-def select_colluding_users(num_users: int, total_users: int, min_distance: int = None) -> list[int]:
+def merge_codewords_bitwise_majority(codewords: list[str]) -> str:
     """
-    Select colluding users. For grouped schemes, ALWAYS select from different groups.
-    For naive scheme, just select random users.
+    Merge multiple L-bit codewords using bitwise majority voting.
     
     Args:
-        num_users: Number of colluding users (2 or 3)
-        total_users: Total number of users available
-        min_distance: Minimum distance for grouped schemes (None for naive)
+        codewords: List of codeword strings (each should be L bits)
+    
+    Returns:
+        Merged codeword string of length L
+    """
+    if not codewords:
+        raise ValueError("Cannot merge empty list of codewords")
+    
+    L = len(codewords[0])
+    if not all(len(c) == L for c in codewords):
+        raise ValueError(f"All codewords must have the same length (L={L})")
+    
+    merged = []
+    for bit_pos in range(L):
+        bits_at_pos = [int(c[bit_pos]) for c in codewords]
+        # Majority vote: if more 1s than 0s, result is 1, else 0
+        # In case of tie, default to 0
+        majority_bit = 1 if sum(bits_at_pos) > len(bits_at_pos) / 2 else 0
+        merged.append(str(majority_bit))
+    
+    return "".join(merged)
+
+
+def sample_same_group(muw, k: int) -> list[int]:
+    """
+    Sample k users from the same group (for hierarchical scheme).
+    For naive scheme, just sample k random users.
+    
+    Args:
+        muw: Multi-user watermarker instance
+        k: Number of users to sample
     
     Returns:
         List of user IDs
     """
-    if min_distance is None:
-        # Naive scheme: just select random users
-        return sorted(random.sample(range(total_users), num_users))
+    if not hasattr(muw, 'user_to_group') or muw.user_to_group is None:
+        # Naive scheme: all users are independent
+        return sorted(random.sample(range(muw.N), k))
     
-    # For grouped schemes, ALWAYS select users from different groups
-    # Calculate users_per_group based on min_distance (default behavior)
-    # This matches the default in FingerprintingCode.__init__
-    if min_distance == 2:
-        users_per_group = 10
-    elif min_distance == 3:
-        users_per_group = 20
-    else:
-        users_per_group = 10  # Default fallback
+    # Hierarchical scheme: pick a random group and sample k users from it
+    # Get all groups and their users
+    group_to_users = {}
+    for user_id, group_id in muw.user_to_group.items():
+        if group_id not in group_to_users:
+            group_to_users[group_id] = []
+        group_to_users[group_id].append(user_id)
     
-    num_groups = (total_users + users_per_group - 1) // users_per_group
+    # Find groups with at least k users
+    valid_groups = [gid for gid, users in group_to_users.items() if len(users) >= k]
     
-    # Check if we have enough groups
-    if num_groups < num_users:
-        print(f"  ⚠ Warning: Only {num_groups} groups available but need {num_users} colluders. "
-              f"Some users may be from the same group.")
+    if not valid_groups:
+        raise ValueError(f"No group has at least {k} users")
     
-    # Select one user from each of num_users different groups
-    selected_groups = random.sample(range(num_groups), min(num_users, num_groups))
+    # Pick a random group
+    selected_group = random.choice(valid_groups)
+    group_users = group_to_users[selected_group]
+    
+    # Sample k users from this group
+    return sorted(random.sample(group_users, k))
+
+
+def sample_different_groups(muw, k: int) -> list[int]:
+    """
+    Sample k users from k different groups (for hierarchical scheme).
+    For naive scheme, just sample k random users (since all are independent).
+    
+    Args:
+        muw: Multi-user watermarker instance
+        k: Number of users to sample
+    
+    Returns:
+        List of user IDs
+    """
+    if not hasattr(muw, 'user_to_group') or muw.user_to_group is None:
+        # Naive scheme: all users are independent
+        return sorted(random.sample(range(muw.N), k))
+    
+    # Hierarchical scheme: pick k different groups
+    # Get all groups
+    group_to_users = {}
+    for user_id, group_id in muw.user_to_group.items():
+        if group_id not in group_to_users:
+            group_to_users[group_id] = []
+        group_to_users[group_id].append(user_id)
+    
+    available_groups = list(group_to_users.keys())
+    
+    if len(available_groups) < k:
+        raise ValueError(f"Only {len(available_groups)} groups available, need {k} different groups")
+    
+    # Pick k different groups
+    selected_groups = random.sample(available_groups, k)
+    
+    # Pick one user from each group
     selected_users = []
-    
     for group_id in selected_groups:
-        # Get users in this group
-        group_start = group_id * users_per_group
-        group_end = min((group_id + 1) * users_per_group, total_users)
-        group_users = list(range(group_start, group_end))
-        
-        if group_users:
-            # Randomly select one user from this group
-            selected_users.append(random.choice(group_users))
-    
-    # If we need more users but ran out of groups, randomly select from remaining users
-    while len(selected_users) < num_users:
-        remaining = [u for u in range(total_users) if u not in selected_users]
-        if remaining:
-            selected_users.append(random.choice(remaining))
-        else:
-            break
+        group_users = group_to_users[group_id]
+        selected_users.append(random.choice(group_users))
     
     return sorted(selected_users)
 
 
-def trace_collusion(muw, master_key: bytes, combined_text: str, original_user_ids: list[int]) -> dict:
+def sample_2_same_1_diff(muw) -> list[int]:
     """
-    Try to trace back to original colluding users.
+    Sample 2 users from the same group and 1 user from a different group.
+    For naive scheme, just sample 3 random users (since all are independent).
+    
+    Args:
+        muw: Multi-user watermarker instance
+    
+    Returns:
+        List of 3 user IDs
+    """
+    if not hasattr(muw, 'user_to_group') or muw.user_to_group is None:
+        # Naive scheme: all users are independent
+        return sorted(random.sample(range(muw.N), 3))
+    
+    # Hierarchical scheme: pick 2 from one group, 1 from another
+    # Get all groups
+    group_to_users = {}
+    for user_id, group_id in muw.user_to_group.items():
+        if group_id not in group_to_users:
+            group_to_users[group_id] = []
+        group_to_users[group_id].append(user_id)
+    
+    # Find groups with at least 2 users
+    valid_groups = [gid for gid, users in group_to_users.items() if len(users) >= 2]
+    
+    if len(valid_groups) < 2:
+        raise ValueError("Need at least 2 groups, with at least one having 2+ users")
+    
+    # Pick a group for the 2 users
+    group_with_2 = random.choice(valid_groups)
+    users_from_group = random.sample(group_to_users[group_with_2], 2)
+    
+    # Pick a different group for the 1 user
+    other_groups = [gid for gid in group_to_users.keys() if gid != group_with_2]
+    other_group = random.choice(other_groups)
+    user_from_other = random.choice(group_to_users[other_group])
+    
+    return sorted(users_from_group + [user_from_other])
+
+
+def trace_collusion(muw, master_key: bytes, merged_codeword: str, original_user_ids: list[int]) -> dict:
+    """
+    Try to trace back to original colluding users using the merged codeword.
+    Uses direct codeword matching with Hamming distance.
+    
+    Args:
+        muw: Multi-user watermarker instance
+        master_key: Master secret key
+        merged_codeword: The merged L-bit codeword (from bitwise majority)
+        original_user_ids: List of original colluding user IDs
     
     Returns:
         Dictionary with tracing results including success status
     """
     try:
-        accused_users = muw.trace(master_key, combined_text)
+        # Direct codeword matching: compare merged codeword with each user's codeword
+        matches = []
+        hamming_distances = {}
         
-        if not accused_users:
-            return {
-                'success': False,
-                'accused_user_ids': [],
-                'original_user_ids': original_user_ids,
-                'reason': 'No users accused'
-            }
-        
-        accused_ids = [accused['user_id'] for accused in accused_users]
-        
-        # Check if any of the accused users match the original colluding users
-        matches = set(accused_ids) & set(original_user_ids)
-        
-        # Success if at least one original user is correctly identified
-        success = len(matches) > 0
+        for user_id in original_user_ids:
+            try:
+                user_codeword = muw.get_codeword_for_user(user_id)
+                # Calculate Hamming distance
+                hamming_dist = sum(c1 != c2 for c1, c2 in zip(merged_codeword, user_codeword))
+                hamming_distances[user_id] = hamming_dist
+                
+                # Allow small errors (threshold of 2 bits)
+                if hamming_dist <= 2:
+                    matches.append(user_id)
+            except Exception as e:
+                # If we can't get codeword for a user, skip it
+                continue
         
         return {
-            'success': success,
-            'accused_user_ids': accused_ids,
+            'success': len(matches) > 0,
+            'accused_user_ids': matches,
             'original_user_ids': original_user_ids,
-            'matches': list(matches),
+            'matches': matches,
             'num_matches': len(matches),
-            'accused_details': accused_users
+            'merged_codeword': merged_codeword,
+            'hamming_distances': hamming_distances,
+            'method': 'direct_codeword_match'
         }
     except Exception as e:
         return {
             'success': False,
             'accused_user_ids': [],
             'original_user_ids': original_user_ids,
-            'reason': f'Error during tracing: {str(e)}'
+            'reason': f'Error during tracing: {str(e)}',
+            'merged_codeword': merged_codeword
         }
+
+
+def evaluate_collusion_case(
+    muw, master_key: bytes, prompt: str, colluder_ids: list[int],
+    case_name: str, max_new_tokens: int, model_name: str
+) -> dict:
+    """
+    Evaluate a single collusion case: embed for each colluder, recover codewords, merge, trace.
+    
+    Args:
+        muw: Multi-user watermarker instance
+        master_key: Master secret key
+        prompt: The prompt to use
+        colluder_ids: List of colluding user IDs
+        case_name: Name of the collusion case (e.g., 'same_group_2')
+        max_new_tokens: Maximum tokens to generate
+        model_name: Model name for parsing output
+    
+    Returns:
+        Dictionary with evaluation results
+    """
+    # Embed for each colluder
+    user_texts = []
+    recovered_codewords = []
+    
+    for user_id in colluder_ids:
+        # Embed watermark
+        raw_text = muw.embed(master_key, user_id, prompt, max_new_tokens=max_new_tokens)
+        final_text = parse_final_output(raw_text, model_name)
+        user_texts.append(final_text)
+        
+        # Recover L-bit codeword
+        recovered_codeword = muw.lbw.detect(master_key, final_text)
+        recovered_codewords.append(recovered_codeword)
+    
+    # Merge codewords via bitwise majority
+    merged_codeword = merge_codewords_bitwise_majority(recovered_codewords)
+    
+    # Trace merged pattern
+    trace_result = trace_collusion(muw, master_key, merged_codeword, colluder_ids)
+    
+    return {
+        'case_name': case_name,
+        'colluder_ids': colluder_ids,
+        'recovered_codewords': recovered_codewords,
+        'merged_codeword': merged_codeword,
+        'trace_result': trace_result,
+        'success': trace_result['success']
+    }
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance",
+        description="Evaluate naive and hierarchical watermarking schemes under controlled collusion",
         formatter_class=argparse.RawTextHelpFormatter
+    )
+    parser.add_argument(
+        '--scheme',
+        type=str,
+        required=True,
+        choices=['naive', 'hierarchical'],
+        help='Watermarking scheme to use: naive or hierarchical'
+    )
+    parser.add_argument(
+        '--group-bits',
+        type=int,
+        default=None,
+        help='Number of bits for group codewords (required for hierarchical scheme)'
+    )
+    parser.add_argument(
+        '--user-bits',
+        type=int,
+        default=None,
+        help='Number of bits for user fingerprints (required for hierarchical scheme)'
+    )
+    parser.add_argument(
+        '--l-bits',
+        type=int,
+        default=8,
+        help='Total number of L-bits for watermarking (default: 8)'
     )
     parser.add_argument(
         '--prompts-file',
         type=str,
-        default='assets/prompts.txt',
-        help='Path to prompts file (default: assets/prompts.txt)'
+        required=True,
+        help='Path to prompts file'
     )
     parser.add_argument(
-        '--max-prompts',
+        '--num-prompts',
         type=int,
-        default=100,
-        help='Limit on number of prompts to process (default: 100; set <=0 for all prompts)'
-    )
-    parser.add_argument(
-        '--model',
-        type=str,
-        default='gpt2',
-        choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'],
-        help='Model to use for generation and detection'
+        default=300,
+        help='Number of prompts to use (default: 300)'
     )
     parser.add_argument(
         '--users-file',
@@ -234,10 +338,11 @@ def main():
         help='Path to users CSV file (default: assets/users.csv)'
     )
     parser.add_argument(
-        '--l-bits',
-        type=int,
-        default=10,
-        help='Number of L-bits for watermarking (default: 10)'
+        '--model',
+        type=str,
+        default='gpt2',
+        choices=['gpt2', 'gpt-oss-20b', 'gpt-oss-120b'],
+        help='Model to use for generation and detection'
     )
     parser.add_argument(
         '--delta',
@@ -270,90 +375,57 @@ def main():
         help='Maximum number of tokens to generate per user (default: 400)'
     )
     parser.add_argument(
-        '--num-colluders',
-        type=int,
-        default=2,
-        choices=[2, 3],
-        help='Number of colluding users (default: 2)'
-    )
-    parser.add_argument(
-        '--deletion-percentages',
-        type=float,
-        nargs='+',
-        default=[0.05, 0.10, 0.15],
-        help='Percentages of text to delete per user in deletion scenarios (default: 0.05 0.10 0.15 for 5%%, 10%%, 15%%)'
-    )
-    parser.add_argument(
-        '--deletion-types',
-        type=str,
-        nargs='+',
-        default=['random', 'start', 'end'],
-        choices=['random', 'start', 'end'],
-        help='Types of deletion to test: random, start, end (default: all three)'
-    )
-    parser.add_argument(
         '--output-dir',
         type=str,
-        default='evaluation/collusion_resistance',
-        help='Output directory for results (default: evaluation/collusion_resistance). Will append _<num_colluders> automatically.'
-    )
-    parser.add_argument(
-        '--csv-only',
-        action='store_true',
-        help='Skip generation and only build JSON/CSV summaries from existing prompt-level results.'
+        required=True,
+        help='Output directory for results'
     )
     
     args = parser.parse_args()
     
-    # Create output directory with number of colluders appended
-    base_output_dir = args.output_dir
-    # Append _<num_colluders> to the directory name
-    if not base_output_dir.endswith(f'_{args.num_colluders}'):
-        base_output_dir = f'{base_output_dir}_{args.num_colluders}'
+    # Validate arguments
+    if args.scheme == 'hierarchical':
+        if args.group_bits is None or args.user_bits is None:
+            parser.error("--group-bits and --user-bits are required for hierarchical scheme")
+        if args.group_bits + args.user_bits != args.l_bits:
+            parser.error(
+                f"--group-bits ({args.group_bits}) + --user-bits ({args.user_bits}) "
+                f"must equal --l-bits ({args.l_bits})"
+            )
     
-    if not os.path.isabs(base_output_dir):
-        output_dir = os.path.join(parent_dir, base_output_dir)
+    # Create output directory structure
+    if args.scheme == 'hierarchical':
+        scheme_dir = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
     else:
-        output_dir = base_output_dir
-    os.makedirs(output_dir, exist_ok=True)
+        scheme_dir = f"naive_L{args.l_bits}"
+    
+    base_output_dir = args.output_dir
+    if not os.path.isabs(base_output_dir):
+        base_output_dir = os.path.join(parent_dir, base_output_dir)
+    
+    scheme_output_dir = os.path.join(base_output_dir, scheme_dir)
+    os.makedirs(scheme_output_dir, exist_ok=True)
+    
+    # Create subdirectories for 2 and 3 colluders
+    output_2_dir = os.path.join(scheme_output_dir, '2_colluders')
+    output_3_dir = os.path.join(scheme_output_dir, '3_colluders')
+    os.makedirs(output_2_dir, exist_ok=True)
+    os.makedirs(output_3_dir, exist_ok=True)
     
     # Print header
     print("\n" + "="*80)
     print(" " * 20 + "COLLUSION RESISTANCE EVALUATION")
     print("="*80)
     print(f"\nConfiguration:")
-    print(f"  • Number of colluders: {args.num_colluders}")
-    print(f"  • Model: {args.model}")
+    print(f"  • Scheme: {args.scheme}")
+    if args.scheme == 'hierarchical':
+        print(f"  • Group bits: {args.group_bits}")
+        print(f"  • User bits: {args.user_bits}")
     print(f"  • L-bits: {args.l_bits}")
-    print(f"  • Delta: {args.delta}")
-    print(f"  • Entropy threshold: {args.entropy_threshold}")
-    print(f"  • Hashing context: {args.hashing_context}")
-    print(f"  • Z-threshold: {args.z_threshold}")
-    print(f"  • Max new tokens: {args.max_new_tokens}")
-    print(f"  • Deletion percentages: {[f'{p*100:.1f}%' for p in args.deletion_percentages]}")
-    print(f"  • Deletion types: {args.deletion_types}")
-    print(f"  • Output directory: {output_dir}")
+    print(f"  • Model: {args.model}")
+    print(f"  • Number of prompts: {args.num_prompts}")
+    print(f"  • Output directory: {scheme_output_dir}")
     print("="*80)
-    
-    prompt_results_dir = os.path.join(output_dir, 'prompt_results')
-    
-    if args.csv_only:
-        print("\n[CSV-ONLY MODE] Rebuilding summaries from existing prompt results...\n")
-        if not os.path.isdir(prompt_results_dir):
-            print(f"  ❌ Error: Prompt results directory not found: {prompt_results_dir}")
-            print("  Please run the full comparison first.")
-            return
-        all_results = load_prompt_results(prompt_results_dir)
-        if not all_results:
-            print(f"  ❌ Error: No prompt result files found in {prompt_results_dir}")
-            print("  Please run the full comparison first.")
-            return
-        total_prompts_processed = len({result['prompt_id'] for result in all_results})
-        generate_reports(all_results, args, output_dir, total_prompts_processed)
-        return
-    
-    # Setup NLTK (only needed when generating new data)
-    setup_nltk()
     
     # Load prompts
     print(f"\n[1/4] Loading prompts...")
@@ -363,33 +435,24 @@ def main():
         return
     
     with open(prompts_path, 'r', encoding='utf-8') as f:
-        prompts = [line.strip() for line in f.readlines() if line.strip()]
+        all_prompts = [line.strip() for line in f.readlines() if line.strip()]
     
-    total_prompts = len(prompts)
-    if args.max_prompts and args.max_prompts > 0 and args.max_prompts < total_prompts:
-        prompts = prompts[:args.max_prompts]
-        print(f"  ✓ Loaded {total_prompts} prompts, using first {len(prompts)} for evaluation")
+    if len(all_prompts) < args.num_prompts:
+        print(f"  ⚠ Warning: Only {len(all_prompts)} prompts available, using all of them")
+        prompts = all_prompts
     else:
-        print(f"  ✓ Loaded {total_prompts} prompts")
+        prompts = all_prompts[:args.num_prompts]
+    
+    print(f"  ✓ Loaded {len(prompts)} prompts")
     
     # Load model
-    print(f"\n[2/4] Loading model and initializing watermarkers...")
+    print(f"\n[2/4] Loading model and initializing watermarker...")
     print(f"  → Loading model '{args.model}'...")
     model = get_model(args.model)
     print(f"  ✓ Model loaded successfully")
     
-    # Load users file to get total number of users
-    users_path = os.path.join(parent_dir, args.users_file)
-    if not os.path.exists(users_path):
-        print(f"  ❌ Error: Users file not found: {users_path}")
-        return
-    
-    users_df = pd.read_csv(users_path)
-    total_users = len(users_df)
-    print(f"  ✓ Loaded {total_users} users from users file")
-    
-    # Initialize watermarkers for each approach
-    print(f"\n  → Initializing watermarkers...")
+    # Initialize watermarker
+    print(f"\n  → Initializing watermarker...")
     zero_bit = ZeroBitWatermarker(
         model=model,
         delta=args.delta,
@@ -399,363 +462,229 @@ def main():
     )
     lbit_watermarker = LBitWatermarker(zero_bit_watermarker=zero_bit, L=args.l_bits)
     
-    # Create watermarkers for each approach
-    # Note: Using default max_groups and users_per_group (None) to use auto-calculated values
-    naive_muw = NaiveMultiUserWatermarker(lbit_watermarker=lbit_watermarker)
-    grouped_muw_d2 = GroupedMultiUserWatermarker(lbit_watermarker=lbit_watermarker, min_distance=2, 
-                                                 max_groups=None, users_per_group=None)
-    grouped_muw_d3 = GroupedMultiUserWatermarker(lbit_watermarker=lbit_watermarker, min_distance=3,
-                                                 max_groups=None, users_per_group=None)
+    if args.scheme == 'hierarchical':
+        muw = HierarchicalMultiUserWatermarker(
+            lbit_watermarker=lbit_watermarker,
+            group_bits=args.group_bits,
+            user_bits=args.user_bits,
+            min_distance=2
+        )
+    else:
+        muw = NaiveMultiUserWatermarker(lbit_watermarker=lbit_watermarker)
     
-    # Load users for each watermarker
-    print(f"    • Loading users for naive scheme...")
-    naive_muw.load_users(users_path)
-    print(f"    • Loading users for min-distance-2 scheme...")
-    grouped_muw_d2.load_users(users_path)
-    print(f"    • Loading users for min-distance-3 scheme...")
-    grouped_muw_d3.load_users(users_path)
-    print(f"  ✓ All watermarkers initialized")
-    
-    # Results storage
-    all_results = []
-    
-    # Process each prompt
-    print(f"\n[3/4] Processing {len(prompts)} prompts with {args.num_colluders} colluders...")
-    print(f"  → Testing 3 approaches: naive, min-distance-2, min-distance-3")
-    print(f"  → Each prompt uses same colluding users across all approaches")
-    num_deletion_tests = len(args.deletion_percentages) * len(args.deletion_types)
-    print(f"  → Combination methods: normal + {num_deletion_tests} deletion scenarios")
-    print(f"    (Percentages: {[f'{p*100:.1f}%' for p in args.deletion_percentages]}, Types: {args.deletion_types})\n")
-    
-    os.makedirs(prompt_results_dir, exist_ok=True)
-    
-    for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Processing prompts", unit="prompt")):
-        prompt_specific_results = []
-        # Select colluding users ONCE per prompt - same users for all approaches
-        # This ensures fair comparison across approaches using the same collusion scenario
-        # For grouped schemes, try to select from different groups if possible
-        colluding_users = select_colluding_users(args.num_colluders, total_users, min_distance=3)
-        
-        # Use the same users for all three approaches
-        naive_users = colluding_users
-        d2_users = colluding_users
-        d3_users = colluding_users
-        
-        # Generate master keys for each approach
-        naive_key = naive_muw.keygen()
-        d2_key = grouped_muw_d2.keygen()
-        d3_key = grouped_muw_d3.keygen()
-        
-        # Test each approach
-        approaches = [
-            ('naive', naive_muw, naive_key, naive_users),
-            ('min-distance-2', grouped_muw_d2, d2_key, d2_users),
-            ('min-distance-3', grouped_muw_d3, d3_key, d3_users)
-        ]
-        
-        for approach_name, muw, master_key, user_ids in approaches:
-            try:
-                # Create subdirectory structure: {approach}/prompt_{idx}
-                approach_base_dir = os.path.join(output_dir, approach_name)
-                os.makedirs(approach_base_dir, exist_ok=True)
-                prompt_dir = os.path.join(approach_base_dir, f'prompt_{prompt_idx}')
-                os.makedirs(prompt_dir, exist_ok=True)
-                
-                # Save master key for this approach
-                key_filename = f'master_key.key'
-                key_path = os.path.join(prompt_dir, key_filename)
-                with open(key_path, 'w', encoding='utf-8') as f:
-                    f.write(master_key.hex())
-                
-                # Generate watermarked text for each colluding user
-                user_texts = []
-                user_text_files = []
-                for idx, user_id in enumerate(user_ids):
-                    raw_text = muw.embed(master_key, user_id, prompt, max_new_tokens=args.max_new_tokens)
-                    final_text = parse_final_output(raw_text, args.model)
-                    user_texts.append(final_text)
-                    
-                    # Save individual user text file
-                    user_text_filename = f'user_{user_id}_text.txt'
-                    user_text_path = os.path.join(prompt_dir, user_text_filename)
-                    with open(user_text_path, 'w', encoding='utf-8') as f:
-                        f.write(final_text)
-                    user_text_files.append(user_text_filename)
-                
-                # Test combination methods: normal + all deletion scenarios
-                combination_methods = [('normal', None, None)]
-                
-                # Add all deletion scenarios
-                for deletion_percentage in args.deletion_percentages:
-                    for deletion_type in args.deletion_types:
-                        combination_methods.append(('with_deletion', deletion_percentage, deletion_type))
-                
-                for combination_method, deletion_percentage, deletion_type in combination_methods:
-                    if combination_method == 'normal':
-                        combined_text = combine_texts_normal(user_texts)
-                        combined_filename = f'combined_normal.txt'
-                    else:
-                        combined_text = combine_texts_with_deletion(user_texts, deletion_percentage, deletion_type)
-                        # Format: combined_deletion_5.0%_random.txt
-                        pct_str = f"{deletion_percentage*100:.1f}%".replace('.', '_')
-                        combined_filename = f'combined_deletion_{pct_str}_{deletion_type}.txt'
-                    
-                    # Save combined text file
-                    combined_path = os.path.join(prompt_dir, combined_filename)
-                    with open(combined_path, 'w', encoding='utf-8') as f:
-                        f.write(combined_text)
-                    
-                    # Try to trace back
-                    trace_result = trace_collusion(muw, master_key, combined_text, user_ids)
-                    
-                    # Store result
-                    result = {
-                        'prompt_id': prompt_idx,
-                        'prompt': prompt,
-                        'approach': approach_name,
-                        'combination_method': combination_method,
-                        'deletion_percentage': deletion_percentage if deletion_percentage is not None else 0.0,
-                        'deletion_type': deletion_type if deletion_type is not None else 'none',
-                        'num_colluders': args.num_colluders,
-                        'original_user_ids': user_ids,
-                        'trace_result': trace_result,
-                        'success': trace_result['success'],
-                        'files': {
-                            'master_key': key_filename,
-                            'user_texts': user_text_files,
-                            'combined_text': combined_filename
-                        },
-                        'parameters': {
-                            'l_bits': args.l_bits,
-                            'delta': args.delta,
-                            'entropy_threshold': args.entropy_threshold,
-                            'hashing_context': args.hashing_context,
-                            'z_threshold': args.z_threshold,
-                            'max_new_tokens': args.max_new_tokens
-                        }
-                    }
-                    all_results.append(result)
-                    prompt_specific_results.append(result)
-        
-            except Exception as e:
-                print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx} with approach '{approach_name}': {e}")
-                # Store error result for all combination methods
-                combination_methods = [('normal', None, None)]
-                for deletion_percentage in args.deletion_percentages:
-                    for deletion_type in args.deletion_types:
-                        combination_methods.append(('with_deletion', deletion_percentage, deletion_type))
-                
-                for combination_method, deletion_percentage, deletion_type in combination_methods:
-                    result = {
-                        'prompt_id': prompt_idx,
-                        'prompt': prompt,
-                        'approach': approach_name,
-                        'combination_method': combination_method,
-                        'deletion_percentage': deletion_percentage if deletion_percentage is not None else 0.0,
-                        'deletion_type': deletion_type if deletion_type is not None else 'none',
-                        'num_colluders': args.num_colluders,
-                        'original_user_ids': user_ids,
-                        'trace_result': {'success': False, 'reason': str(e)},
-                        'success': False,
-                        'error': str(e)
-                    }
-                    all_results.append(result)
-                    prompt_specific_results.append(result)
-        
-        # Save per-prompt results for later csv-only summary generation
-        prompt_json_path = os.path.join(prompt_results_dir, f'prompt_{prompt_idx}_results.json')
-        with open(prompt_json_path, 'w', encoding='utf-8') as prompt_file:
-            json.dump(prompt_specific_results, prompt_file, indent=2, default=json_default_encoder)
-    
-    total_prompts_processed = len({result['prompt_id'] for result in all_results})
-    generate_reports(all_results, args, output_dir, total_prompts_processed)
-
-
-def load_prompt_results(prompt_results_dir: str) -> list[dict]:
-    """Load all per-prompt result JSON files from disk."""
-    all_results: list[dict] = []
-    if not os.path.isdir(prompt_results_dir):
-        return all_results
-    prompt_files = sorted(
-        filename for filename in os.listdir(prompt_results_dir)
-        if filename.startswith('prompt_') and filename.endswith('_results.json')
-    )
-    for filename in prompt_files:
-        path = os.path.join(prompt_results_dir, filename)
-        try:
-            with open(path, 'r', encoding='utf-8') as f:
-                prompt_results = json.load(f)
-                if isinstance(prompt_results, list):
-                    all_results.extend(prompt_results)
-        except (json.JSONDecodeError, OSError) as exc:
-            print(f"  ⚠ Warning: Could not load {filename}: {exc}")
-            continue
-    return all_results
-
-
-def generate_reports(all_results: list[dict], args, output_dir: str, total_prompts_processed: int):
-    """Calculate success rates and write summary artifacts."""
-    if not all_results:
-        print("No results available to summarize.")
+    # Load users
+    users_path = os.path.join(parent_dir, args.users_file)
+    if not os.path.exists(users_path):
+        print(f"  ❌ Error: Users file not found: {users_path}")
         return
     
-    print(f"\n[4/4] Calculating success rates and generating reports...")
-    print("="*80)
+    muw.load_users(users_path)
+    print(f"  ✓ Loaded {muw.N} users")
     
-    success_rates = {}
+    # Generate master key
+    master_key = muw.keygen()
     
-    # Get unique deletion configurations from results
-    deletion_configs = set()
-    for result in all_results:
-        if result['combination_method'] == 'with_deletion':
-            config = (result['deletion_percentage'], result['deletion_type'])
-            deletion_configs.add(config)
-    deletion_configs = sorted(deletion_configs)
+    # Process each prompt
+    print(f"\n[3/4] Processing {len(prompts)} prompts...")
     
-    for approach in ['naive', 'min-distance-2', 'min-distance-3']:
-        # Normal combination
-        normal_results = [r for r in all_results if r['approach'] == approach and r['combination_method'] == 'normal']
-        if normal_results:
-            successful = sum(1 for r in normal_results if r.get('success', False))
-            total = len(normal_results)
-            success_rate = (successful / total) * 100.0 if total > 0 else 0.0
-            success_rates[f"{approach}_normal"] = {
+    all_results = []
+    
+    for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Processing prompts", unit="prompt")):
+        prompt_results = {
+            'prompt_id': prompt_idx,
+            'prompt': prompt,
+            'scheme': args.scheme,
+            'config': {
+                'l_bits': args.l_bits,
+                'group_bits': args.group_bits if args.scheme == 'hierarchical' else None,
+                'user_bits': args.user_bits if args.scheme == 'hierarchical' else None,
+            },
+            'results': {}
+        }
+        
+        # 2 colluders cases
+        try:
+            # same_group_2
+            colluders_same_2 = sample_same_group(muw, 2)
+            result_same_2 = evaluate_collusion_case(
+                muw, master_key, prompt, colluders_same_2,
+                'same_group_2', args.max_new_tokens, args.model
+            )
+            prompt_results['results']['same_group_2'] = result_same_2
+            
+            # cross_group_2
+            colluders_cross_2 = sample_different_groups(muw, 2)
+            result_cross_2 = evaluate_collusion_case(
+                muw, master_key, prompt, colluders_cross_2,
+                'cross_group_2', args.max_new_tokens, args.model
+            )
+            prompt_results['results']['cross_group_2'] = result_cross_2
+        except Exception as e:
+            print(f"\n  ⚠ Warning: Error processing 2-colluder cases for prompt {prompt_idx}: {e}")
+            prompt_results['results']['same_group_2'] = {'error': str(e)}
+            prompt_results['results']['cross_group_2'] = {'error': str(e)}
+        
+        # 3 colluders cases
+        try:
+            # same_group_3
+            colluders_same_3 = sample_same_group(muw, 3)
+            result_same_3 = evaluate_collusion_case(
+                muw, master_key, prompt, colluders_same_3,
+                'same_group_3', args.max_new_tokens, args.model
+            )
+            prompt_results['results']['same_group_3'] = result_same_3
+            
+            # cross_group_3
+            colluders_cross_3 = sample_different_groups(muw, 3)
+            result_cross_3 = evaluate_collusion_case(
+                muw, master_key, prompt, colluders_cross_3,
+                'cross_group_3', args.max_new_tokens, args.model
+            )
+            prompt_results['results']['cross_group_3'] = result_cross_3
+            
+            # mixed_2same_1diff
+            colluders_mixed = sample_2_same_1_diff(muw)
+            result_mixed = evaluate_collusion_case(
+                muw, master_key, prompt, colluders_mixed,
+                'mixed_2same_1diff', args.max_new_tokens, args.model
+            )
+            prompt_results['results']['mixed_2same_1diff'] = result_mixed
+        except Exception as e:
+            print(f"\n  ⚠ Warning: Error processing 3-colluder cases for prompt {prompt_idx}: {e}")
+            prompt_results['results']['same_group_3'] = {'error': str(e)}
+            prompt_results['results']['cross_group_3'] = {'error': str(e)}
+            prompt_results['results']['mixed_2same_1diff'] = {'error': str(e)}
+        
+        # Save prompt-level results in appropriate subdirectories
+        # Save 2-colluder results
+        prompt_json_2_path = os.path.join(output_2_dir, f'prompt_{prompt_idx}_results.json')
+        prompt_results_2 = {
+            'prompt_id': prompt_idx,
+            'prompt': prompt,
+            'scheme': args.scheme,
+            'config': prompt_results['config'],
+            'results': {
+                'same_group_2': prompt_results['results'].get('same_group_2', {}),
+                'cross_group_2': prompt_results['results'].get('cross_group_2', {})
+            }
+        }
+        with open(prompt_json_2_path, 'w', encoding='utf-8') as f:
+            json.dump(prompt_results_2, f, indent=2, default=json_default_encoder)
+        
+        # Save 3-colluder results
+        prompt_json_3_path = os.path.join(output_3_dir, f'prompt_{prompt_idx}_results.json')
+        prompt_results_3 = {
+            'prompt_id': prompt_idx,
+            'prompt': prompt,
+            'scheme': args.scheme,
+            'config': prompt_results['config'],
+            'results': {
+                'same_group_3': prompt_results['results'].get('same_group_3', {}),
+                'cross_group_3': prompt_results['results'].get('cross_group_3', {}),
+                'mixed_2same_1diff': prompt_results['results'].get('mixed_2same_1diff', {})
+            }
+        }
+        with open(prompt_json_3_path, 'w', encoding='utf-8') as f:
+            json.dump(prompt_results_3, f, indent=2, default=json_default_encoder)
+        
+        all_results.append(prompt_results)
+    
+    # Generate summary reports
+    print(f"\n[4/4] Generating summary reports...")
+    
+    # Calculate success rates for 2-colluder cases
+    case_types_2 = ['same_group_2', 'cross_group_2']
+    success_rates_2 = {}
+    
+    for case_type in case_types_2:
+        case_results = [
+            r['results'].get(case_type, {}) 
+            for r in all_results 
+            if case_type in r['results'] and 'error' not in r['results'][case_type]
+        ]
+        if case_results:
+            successful = sum(1 for r in case_results if r.get('success', False))
+            total = len(case_results)
+            success_rates_2[case_type] = {
                 'successful': successful,
                 'total': total,
-                'success_rate': success_rate
+                'success_rate': (successful / total) * 100.0 if total > 0 else 0.0
             }
-        
-        # Deletion combinations
-        for deletion_percentage, deletion_type in deletion_configs:
-            key = f"{approach}_deletion_{deletion_percentage}_{deletion_type}"
-            approach_results = [
-                r for r in all_results 
-                if r['approach'] == approach 
-                and r['combination_method'] == 'with_deletion'
-                and r['deletion_percentage'] == deletion_percentage
-                and r['deletion_type'] == deletion_type
-            ]
-            
-            if approach_results:
-                successful = sum(1 for r in approach_results if r.get('success', False))
-                total = len(approach_results)
-                success_rate = (successful / total) * 100.0 if total > 0 else 0.0
-                success_rates[key] = {
-                    'successful': successful,
-                    'total': total,
-                    'success_rate': success_rate,
-                    'deletion_percentage': deletion_percentage,
-                    'deletion_type': deletion_type
-                }
     
-    # Print comparison table
+    # Calculate success rates for 3-colluder cases
+    case_types_3 = ['same_group_3', 'cross_group_3', 'mixed_2same_1diff']
+    success_rates_3 = {}
+    
+    for case_type in case_types_3:
+        case_results = [
+            r['results'].get(case_type, {}) 
+            for r in all_results 
+            if case_type in r['results'] and 'error' not in r['results'][case_type]
+        ]
+        if case_results:
+            successful = sum(1 for r in case_results if r.get('success', False))
+            total = len(case_results)
+            success_rates_3[case_type] = {
+                'successful': successful,
+                'total': total,
+                'success_rate': (successful / total) * 100.0 if total > 0 else 0.0
+            }
+    
+    # Save summary JSON for 2 colluders
+    summary_2 = {
+        'scheme': args.scheme,
+        'config': {
+            'l_bits': args.l_bits,
+            'group_bits': args.group_bits if args.scheme == 'hierarchical' else None,
+            'user_bits': args.user_bits if args.scheme == 'hierarchical' else None,
+        },
+        'num_prompts': len(prompts),
+        'num_colluders': 2,
+        'success_rates': success_rates_2
+    }
+    
+    summary_json_2_path = os.path.join(output_2_dir, 'summary.json')
+    with open(summary_json_2_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_2, f, indent=2, default=json_default_encoder)
+    
+    # Save summary JSON for 3 colluders
+    summary_3 = {
+        'scheme': args.scheme,
+        'config': {
+            'l_bits': args.l_bits,
+            'group_bits': args.group_bits if args.scheme == 'hierarchical' else None,
+            'user_bits': args.user_bits if args.scheme == 'hierarchical' else None,
+        },
+        'num_prompts': len(prompts),
+        'num_colluders': 3,
+        'success_rates': success_rates_3
+    }
+    
+    summary_json_3_path = os.path.join(output_3_dir, 'summary.json')
+    with open(summary_json_3_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_3, f, indent=2, default=json_default_encoder)
+    
+    # Print summary
     print("\n" + "="*80)
     print(" " * 25 + "RESULTS SUMMARY")
     print("="*80)
-    print(f"\nTest Configuration:")
-    print(f"  • Number of colluders: {args.num_colluders}")
-    print(f"  • Total prompts tested: {total_prompts_processed}")
-    print(f"  • Deletion percentages: {[f'{p*100:.1f}%' for p in args.deletion_percentages]}")
-    print(f"  • Deletion types: {args.deletion_types}")
-    print(f"\nSuccess Rates by Approach:")
+    print(f"\n2 Colluders - Success Rates:")
     print("-"*80)
+    for case_type, stats in success_rates_2.items():
+        print(f"  {case_type:20s}: {stats['success_rate']:6.2f}% ({stats['successful']}/{stats['total']})")
     
-    # Create a comprehensive table
-    table_data = []
-    for approach in ['naive', 'min-distance-2', 'min-distance-3']:
-        row = {'Approach': approach}
-        
-        # Normal combination
-        normal_key = f"{approach}_normal"
-        if normal_key in success_rates:
-            sr = success_rates[normal_key]
-            row['Normal'] = f"{sr['success_rate']:.2f}% ({sr['successful']}/{sr['total']})"
-        else:
-            row['Normal'] = "N/A"
-        
-        # Deletion combinations
-        for deletion_percentage, deletion_type in deletion_configs:
-            key = f"{approach}_deletion_{deletion_percentage}_{deletion_type}"
-            col_name = f"{deletion_percentage*100:.0f}% {deletion_type}"
-            if key in success_rates:
-                sr = success_rates[key]
-                row[col_name] = f"{sr['success_rate']:.2f}% ({sr['successful']}/{sr['total']})"
-            else:
-                row[col_name] = "N/A"
-        
-        table_data.append(row)
+    print(f"\n3 Colluders - Success Rates:")
+    print("-"*80)
+    for case_type, stats in success_rates_3.items():
+        print(f"  {case_type:20s}: {stats['success_rate']:6.2f}% ({stats['successful']}/{stats['total']})")
     
-    df = pd.DataFrame(table_data)
-    print(df.to_string(index=False))
-    print()
-    
-    # Save detailed results to JSON
-    json_path = os.path.join(output_dir, f'collusion_resistance_results_{args.num_colluders}users.json')
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump({
-            'summary': {
-                'num_prompts': total_prompts_processed,
-                'num_colluders': args.num_colluders,
-                'deletion_percentages': args.deletion_percentages,
-                'deletion_types': args.deletion_types,
-                'parameters': {
-                    'l_bits': args.l_bits,
-                    'delta': args.delta,
-                    'entropy_threshold': args.entropy_threshold,
-                    'hashing_context': args.hashing_context,
-                    'z_threshold': args.z_threshold,
-                    'max_new_tokens': args.max_new_tokens
-                }
-            },
-            'success_rates': success_rates,
-            'detailed_results': all_results
-        }, f, indent=2, default=json_default_encoder)
-    
-    print(f"\n" + "="*80)
-    print(" " * 25 + "FILES SAVED")
-    print("="*80)
-    print(f"\n✓ Detailed results JSON: {json_path}")
-    
-    # Save summary CSV
-    summary_data = []
-    for result in all_results:
-        summary_data.append({
-            'prompt_id': result['prompt_id'],
-            'approach': result['approach'],
-            'combination_method': result['combination_method'],
-            'deletion_percentage': result.get('deletion_percentage', 0.0),
-            'deletion_type': result.get('deletion_type', 'none'),
-            'num_colluders': result['num_colluders'],
-            'original_user_ids': str(result['original_user_ids']),
-            'success': result.get('success', False),
-            'num_matches': result.get('trace_result', {}).get('num_matches', 0)
-        })
-    
-    csv_path = os.path.join(output_dir, f'collusion_resistance_summary_{args.num_colluders}users.csv')
-    summary_df = pd.DataFrame(summary_data)
-    summary_df.to_csv(csv_path, index=False)
-    
-    print(f"✓ Summary CSV: {csv_path}")
-    print(f"\nIntermediate files structure:")
-    print(f"  {output_dir}/")
-    print(f"    ├── naive/")
-    print(f"    │   ├── prompt_0/")
-    print(f"    │   │   ├── master_key.key")
-    print(f"    │   │   ├── user_<ID>_text.txt")
-    print(f"    │   │   ├── combined_normal.txt")
-    print(f"    │   │   └── combined_with_deletion.txt")
-    print(f"    │   └── prompt_1/, prompt_2/, ...")
-    print(f"    ├── min-distance-2/")
-    print(f"    │   └── prompt_0/, prompt_1/, ...")
-    print(f"    └── min-distance-3/")
-    print(f"        └── prompt_0/, prompt_1/, ...")
-    
+    print(f"\n✓ 2-colluder summary saved to: {summary_json_2_path}")
+    print(f"✓ 3-colluder summary saved to: {summary_json_3_path}")
+    print(f"✓ Prompt-level results saved to: {output_2_dir}/ and {output_3_dir}/")
     print("\n" + "="*80)
     print(" " * 30 + "✓ EVALUATION COMPLETE!")
-    print("="*80)
-    print(f"\nAll results saved to: {output_dir}\n")
+    print("="*80 + "\n")
 
 
 if __name__ == "__main__":
     main()
-
