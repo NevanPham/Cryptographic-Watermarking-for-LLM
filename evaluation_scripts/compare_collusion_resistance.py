@@ -42,6 +42,7 @@ def json_default_encoder(obj):
 def merge_codewords_bitwise_majority(codewords: list[str]) -> str:
     """
     Merge multiple L-bit codewords using bitwise majority voting.
+    Handles uncertain bits ('⊥') and conflict bits ('*') properly.
     
     Args:
         codewords: List of codeword strings (each should be L bits)
@@ -58,11 +59,22 @@ def merge_codewords_bitwise_majority(codewords: list[str]) -> str:
     
     merged = []
     for bit_pos in range(L):
-        bits_at_pos = [int(c[bit_pos]) for c in codewords]
-        # Majority vote: if more 1s than 0s, result is 1, else 0
-        # In case of tie, default to 0
-        majority_bit = 1 if sum(bits_at_pos) > len(bits_at_pos) / 2 else 0
-        merged.append(str(majority_bit))
+        # Collect all bits at this position
+        bits_at_pos = [c[bit_pos] for c in codewords]
+        
+        # Filter out uncertain ('⊥') and conflict ('*') bits, keep only valid bits ('0' or '1')
+        valid_bits = [b for b in bits_at_pos if b in ('0', '1')]
+        
+        if not valid_bits:
+            # All codewords are uncertain at this position, result is uncertain
+            merged.append('⊥')
+        else:
+            # Do majority voting on valid bits only
+            valid_ints = [int(b) for b in valid_bits]
+            # Majority vote: if more 1s than 0s, result is 1, else 0
+            # In case of tie, default to 0
+            majority_bit = 1 if sum(valid_ints) > len(valid_ints) / 2 else 0
+            merged.append(str(majority_bit))
     
     return "".join(merged)
 
@@ -209,12 +221,28 @@ def trace_collusion(muw, master_key: bytes, merged_codeword: str, original_user_
         for user_id in original_user_ids:
             try:
                 user_codeword = muw.get_codeword_for_user(user_id)
-                # Calculate Hamming distance
-                hamming_dist = sum(c1 != c2 for c1, c2 in zip(merged_codeword, user_codeword))
+                # Calculate Hamming distance, but only on positions where merged codeword has valid bits
+                # Skip positions with '⊥' (uncertain) or '*' (conflict)
+                valid_positions = [
+                    i for i, c in enumerate(merged_codeword) 
+                    if c in ('0', '1')
+                ]
+                
+                if not valid_positions:
+                    # All positions are uncertain, can't match
+                    hamming_dist = float('inf')
+                else:
+                    # Compare only at valid positions
+                    hamming_dist = sum(
+                        merged_codeword[i] != user_codeword[i] 
+                        for i in valid_positions
+                    )
+                
                 hamming_distances[user_id] = hamming_dist
                 
                 # Allow small errors (threshold of 2 bits)
-                if hamming_dist <= 2:
+                # Also need to check that we have enough valid positions to make a meaningful comparison
+                if len(valid_positions) >= 3 and hamming_dist <= 2:
                     matches.append(user_id)
             except Exception as e:
                 # If we can't get codeword for a user, skip it
