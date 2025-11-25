@@ -53,7 +53,11 @@ class FingerprintingCode:
 
     def _generate_bch_codewords(self, num_groups: int) -> dict:
         """
-        Generates BCH codewords with guaranteed minimum Hamming distance.
+        Generates codewords with guaranteed minimum Hamming distance using max-min greedy algorithm.
+        
+        This implementation uses a two-stage approach:
+        1. Precompute all 2^L possible codewords
+        2. Select codewords using maximum minimum distance greedy selection
         
         Args:
             num_groups (int): Number of group codewords needed.
@@ -61,98 +65,109 @@ class FingerprintingCode:
         Returns:
             dict: Maps group_id to codeword (as numpy array of L bits).
         """
-        # Use a greedy approach to generate codewords with guaranteed minimum distance
+        # Stage 1: Precompute the full search space
+        # Generate all integers from 0 to 2^L - 1 and convert to L-bit representations
+        total_possible = 2 ** self.L
+        
+        # Use vectorized approach for better performance
+        all_codes = np.zeros((total_possible, self.L), dtype=int)
+        for i in range(total_possible):
+            # Convert integer to binary representation
+            binary_str = format(i, f'0{self.L}b')
+            all_codes[i] = np.array([int(bit) for bit in binary_str])
+        
+        # Stage 2: Maximum minimum distance greedy selection
+        # Special case for d=2: use optimal construction (all even-weight codewords)
+        if self.min_distance == 2:
+            # For d=2, optimal code is all codewords with even parity (even number of 1s)
+            # This gives 2^(L-1) codewords, which is the theoretical maximum A(L,2)
+            selected_indices = []
+            for i in range(total_possible):
+                # Count number of 1s (parity)
+                weight = np.sum(all_codes[i])
+                if weight % 2 == 0:  # Even parity
+                    selected_indices.append(i)
+            
+            # Limit to requested number
+            if len(selected_indices) > num_groups:
+                selected_indices = selected_indices[:num_groups]
+            
+            print(f"Using optimal d=2 construction: {len(selected_indices)} codewords (theoretical max: {2**(self.L-1)})")
+        else:
+            # For d > 2, use max-min greedy algorithm
+            selected_indices = []
+            remaining_indices = set(range(total_possible))
+            
+            # Select the all-zero codeword as the first element
+            first_codeword_idx = 0
+            selected_indices.append(first_codeword_idx)
+            remaining_indices.remove(first_codeword_idx)
+            
+            # For each subsequent codeword, select the one with maximum minimum distance
+            for group_id in range(1, num_groups):
+                best_candidate_idx = None
+                best_min_distance = -1
+                
+                # For each candidate in the remaining pool
+                for candidate_idx in remaining_indices:
+                    candidate = all_codes[candidate_idx]
+                    
+                    # Compute minimum distance to all already chosen codewords
+                    min_dist_to_selected = float('inf')
+                    for selected_idx in selected_indices:
+                        selected_codeword = all_codes[selected_idx]
+                        dist = self._hamming_distance(candidate, selected_codeword)
+                        if dist < min_dist_to_selected:
+                            min_dist_to_selected = dist
+                    
+                    # Select candidate with maximum minimum distance
+                    if min_dist_to_selected > best_min_distance:
+                        best_min_distance = min_dist_to_selected
+                        best_candidate_idx = candidate_idx
+                
+                # Check if we can still find a valid codeword
+                if best_candidate_idx is None or best_min_distance < self.min_distance:
+                    # No valid candidate remains
+                    print(f"Warning: Could only generate {len(selected_indices)} codewords out of requested {num_groups}.")
+                    print(f"  Maximum achievable with L={self.L}, d={self.min_distance} is approximately {len(selected_indices)} codewords.")
+                    break
+                
+                # Accept the candidate
+                selected_indices.append(best_candidate_idx)
+                remaining_indices.remove(best_candidate_idx)
+        
+        # Build the result dictionary
         group_codewords = {}
+        for group_id, code_idx in enumerate(selected_indices):
+            group_codewords[group_id] = all_codes[code_idx].copy()
         
-        # Start with the first codeword (all zeros or a base pattern)
-        first_codeword = np.zeros(self.L, dtype=int)
-        group_codewords[0] = first_codeword
+        # Validation: Check all pairwise distances
+        num_generated = len(group_codewords)
+        all_valid = True
+        for i in range(num_generated):
+            for j in range(i + 1, num_generated):
+                dist = self._hamming_distance(group_codewords[i], group_codewords[j])
+                if dist < self.min_distance:
+                    all_valid = False
+                    print(f"ERROR: Distance between codewords {i} and {j} is {dist} < {self.min_distance}")
         
-        # Generate remaining codewords ensuring minimum distance
-        for group_id in range(1, num_groups):
-            codeword = self._find_valid_codeword(group_id, group_codewords, num_groups)
-            group_codewords[group_id] = codeword
+        if all_valid:
+            print(f"Generated {num_generated} codewords out of requested {num_groups}.")
+            print(f"  All pairs have distance >= {self.min_distance}.")
+        else:
+            raise ValueError("Validation failed: Some codeword pairs do not meet minimum distance requirement.")
         
         return group_codewords
     
     def _find_valid_codeword(self, group_id: int, existing_codewords: dict, num_groups: int) -> np.ndarray:
         """
-        Finds a valid codeword for a group that maintains minimum distance from all existing codewords.
-        Uses a greedy search approach to find valid codewords.
+        Legacy method kept for backward compatibility.
+        The new _generate_bch_codewords() method no longer uses this.
         """
-        max_encoded = (2 ** self.L) - 1
-        
-        # Start with a candidate based on group_id
-        # Try different starting points to find a valid codeword quickly
-        start_candidates = []
-        
-        # Strategy 1: Use group_id with spacing
-        if self.min_distance == 2:
-            start_candidates.append(group_id * 2)
-        elif self.min_distance == 3:
-            start_candidates.append(group_id * 4)
-        else:
-            start_candidates.append(group_id * (2 ** (self.min_distance - 1)))
-        
-        # Strategy 2: Use group_id directly (might work for some cases)
-        start_candidates.append(group_id)
-        
-        # Strategy 3: Use group_id with different multipliers
-        for multiplier in [1, 2, 3, 5, 7]:
-            candidate_val = group_id * multiplier
-            if candidate_val <= max_encoded:
-                start_candidates.append(candidate_val)
-        
-        # Try starting candidates first
-        for start_val in start_candidates:
-            if start_val > max_encoded:
-                continue
-            
-            binary = format(start_val, f'0{self.L}b')
-            if len(binary) > self.L:
-                binary = binary[-self.L:]
-            candidate = np.array([int(bit) for bit in binary])
-            
-            # Check if this candidate has minimum distance from all existing codewords
-            valid = True
-            for existing_id, existing_codeword in existing_codewords.items():
-                dist = self._hamming_distance(candidate, existing_codeword)
-                if dist < self.min_distance:
-                    valid = False
-                    break
-            
-            if valid:
-                return candidate
-        
-        # If starting candidates don't work, use exhaustive search
-        return self._find_valid_codeword_fallback(group_id, existing_codewords, num_groups)
-    
-    def _find_valid_codeword_fallback(self, group_id: int, existing_codewords: dict, num_groups: int) -> np.ndarray:
-        """
-        Fallback method to find a valid codeword by exhaustive search if the primary method fails.
-        """
-        max_encoded = (2 ** self.L) - 1
-        
-        # Try all possible codewords
-        for candidate_val in range(max_encoded + 1):
-            binary = format(candidate_val, f'0{self.L}b')
-            candidate = np.array([int(bit) for bit in binary])
-            
-            # Check if this candidate has minimum distance from all existing codewords
-            valid = True
-            for existing_id, existing_codeword in existing_codewords.items():
-                dist = self._hamming_distance(candidate, existing_codeword)
-                if dist < self.min_distance:
-                    valid = False
-                    break
-            
-            if valid:
-                return candidate
-        
-        # If still no valid codeword found, raise an error
-        raise ValueError(
-            f"Cannot generate codeword for group {group_id} with minimum distance {self.min_distance}. "
-            f"Too many groups requested ({num_groups}) for codeword length {self.L}."
+        # This method is deprecated but kept for API compatibility
+        # The new max-min greedy algorithm handles codeword selection internally
+        raise NotImplementedError(
+            "This method is deprecated. The new _generate_bch_codewords() uses max-min greedy selection."
         )
     
     def _hamming_distance(self, codeword1: np.ndarray, codeword2: np.ndarray) -> int:
@@ -309,3 +324,28 @@ class FingerprintingCode:
             
         # Initialize codeword array now that N is known
         self.codewords = np.empty((self.N, self.L), dtype=int)
+
+def generate_user_fingerprint(user_index_in_group: int, user_bits: int) -> str:
+    """
+    Generates a simple user fingerprint within a group.
+    Uses binary representation of user index within the group, padded to user_bits.
+    
+    Args:
+        user_index_in_group (int): The index of the user within their group (0-based).
+        user_bits (int): The number of bits for the user fingerprint.
+    
+    Returns:
+        str: Binary string of length user_bits representing the user fingerprint.
+    """
+    if user_index_in_group < 0:
+        raise ValueError(f"user_index_in_group must be non-negative, got {user_index_in_group}")
+    if user_bits <= 0:
+        raise ValueError(f"user_bits must be positive, got {user_bits}")
+    
+    max_users = 2 ** user_bits
+    if user_index_in_group >= max_users:
+        raise ValueError(
+            f"user_index_in_group {user_index_in_group} exceeds maximum for {user_bits} bits (max {max_users - 1})"
+        )
+    
+    return format(user_index_in_group, f'0{user_bits}b')

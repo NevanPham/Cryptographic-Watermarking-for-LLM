@@ -44,11 +44,19 @@ This repository implements cryptographic watermarking techniques for LLM text ge
 2. Cycle through bits at each high-entropy block, embedding the target bitstring
 3. During detection, test both hypotheses (0 and 1) for each bit position and recover the message
 
-**Multi-User Fingerprinting (BCH-Based):**
-1. Generate BCH codewords with guaranteed minimum Hamming distance (2, 3, or 4)
-2. Assign users to groups sequentially (all users in a group share the same group codeword)
-3. Embed the user's group codeword using L-bit watermarking
-4. During tracing, match recovered codeword to group(s) and identify accused users
+**Multi-User Fingerprinting:**
+- **Grouped Scheme (BCH-Based):**
+  1. Generate BCH codewords with guaranteed minimum Hamming distance (2, 3, or 4)
+  2. Assign users to groups sequentially (all users in a group share the same group codeword)
+  3. Embed the user's group codeword using L-bit watermarking
+  4. During tracing, match recovered codeword to group(s) and identify accused users
+
+- **Hierarchical Scheme:**
+  1. Generate group codewords with minimum Hamming distance (for cross-group collusion resistance)
+  2. Assign simple binary fingerprints to users within each group
+  3. Combine group codeword + user fingerprint to create L-bit message
+  4. Embed the combined codeword using L-bit watermarking
+  5. During tracing, first identify the group, then identify the user within that group
 
 ---
 
@@ -80,6 +88,7 @@ Cryptographic-Watermarking-for-LLM/
 │   │                                  - LBitWatermarker
 │   │                                  - NaiveMultiUserWatermarker
 │   │                                  - GroupedMultiUserWatermarker
+│   │                                  - HierarchicalMultiUserWatermarker
 │   ├── models.py                    # Model abstractions (GPT-2, GPT-OSS variants)
 │   ├── fingerprinting.py            # Multi-user codeword generation & tracing
 │   ├── commands.py                  # CLI command handlers

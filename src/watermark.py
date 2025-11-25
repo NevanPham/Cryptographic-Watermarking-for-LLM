@@ -11,7 +11,7 @@ from .models import LanguageModel
 from transformers import LogitsProcessor
 
 from tqdm import tqdm
-from .fingerprinting import FingerprintingCode
+from .fingerprinting import FingerprintingCode, generate_user_fingerprint
 
 def _calculate_entropy(logits):
     """Calculates the Shannon entropy of a logits distribution."""
@@ -594,3 +594,356 @@ class GroupedMultiUserWatermarker(NaiveMultiUserWatermarker):
         print("Tracing codeword to find user(s)...")
         accused_users = self.fingerprinter.trace(noisy_codeword)
         return accused_users
+
+
+class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
+    """
+    Hierarchical multi-user watermarking scheme that combines group codewords
+    (with minimum distance for cross-group collusion resistance) with per-user
+    fingerprints within each group.
+    
+    The combined codeword is: group_code[group_bits] + user_code[user_bits] = L bits
+    """
+    def __init__(self, lbit_watermarker: LBitWatermarker, group_bits: int, 
+                 user_bits: int, min_distance: int = 2, max_groups: int = None,
+                 users_per_group: int = None):
+        """
+        Initializes the hierarchical multi-user watermarker.
+        
+        Args:
+            lbit_watermarker (LBitWatermarker): The L-bit watermarker to use for embedding.
+            group_bits (int): Number of bits for group codewords.
+            user_bits (int): Number of bits for user fingerprints within groups.
+            min_distance (int): Minimum Hamming distance between group codewords.
+            max_groups (int, optional): Maximum number of groups allowed. If None, calculated automatically.
+            users_per_group (int, optional): Number of users per group. If None, calculated automatically.
+        
+        Raises:
+            ValueError: If group_bits + user_bits != L, or if constraints are violated.
+        """
+        super().__init__(lbit_watermarker=lbit_watermarker)
+        
+        if group_bits + user_bits != self.lbw.L:
+            raise ValueError(
+                f"group_bits ({group_bits}) + user_bits ({user_bits}) must equal L ({self.lbw.L})"
+            )
+        
+        self.group_bits = group_bits
+        self.user_bits = user_bits
+        self.min_distance = min_distance
+        self.max_groups = max_groups
+        self.users_per_group = users_per_group
+        
+        # Validate constraints
+        max_possible_groups = 2 ** group_bits
+        max_possible_users_per_group = 2 ** user_bits
+        
+        if max_groups is not None and max_groups > max_possible_groups:
+            raise ValueError(
+                f"max_groups ({max_groups}) exceeds maximum allowed by group_bits={group_bits} "
+                f"(max {max_possible_groups})"
+            )
+        
+        if users_per_group is not None and users_per_group > max_possible_users_per_group:
+            raise ValueError(
+                f"users_per_group ({users_per_group}) exceeds maximum allowed by user_bits={user_bits} "
+                f"(max {max_possible_users_per_group})"
+            )
+        
+        # FingerprintingCode for group codewords (length = group_bits)
+        self.group_fingerprinter = FingerprintingCode(
+            L=group_bits,
+            min_distance=min_distance,
+            max_groups=max_groups,
+            users_per_group=None  # Not used for group codeword generation
+        )
+        
+        # Store group codewords and user-to-group mapping
+        self.group_codewords: dict[int, str] = {}  # group_id -> codeword string
+        self.user_to_group: dict[int, int] = {}  # user_id -> group_id
+        self.group_to_users: dict[int, list[int]] = {}  # group_id -> list of user_ids
+    
+    def load_users(self, users_file: str) -> pd.DataFrame:
+        """
+        Loads user metadata and generates hierarchical codeword structure.
+        Uses FingerprintingCode to generate group codewords, then assigns
+        simple binary fingerprints to users within each group.
+        """
+        if not os.path.exists(users_file):
+            raise FileNotFoundError(f"User metadata file {users_file} not found")
+        
+        # Load user metadata
+        df = pd.read_csv(users_file)
+        if "UserId" not in df.columns:
+            raise ValueError("users_file must contain a 'UserId' column.")
+        
+        df = df.copy()
+        df["UserId"] = df["UserId"].astype(int)
+        if df["UserId"].duplicated().any():
+            raise ValueError("Duplicate UserId entries detected in users file.")
+        
+        df = df.sort_values("UserId").reset_index(drop=True)
+        self.user_metadata = df
+        self.N = len(df)
+        self.user_lookup = {int(row["UserId"]): row for _, row in df.iterrows()}
+        
+        # Determine users_per_group and max_groups
+        if self.users_per_group is not None:
+            users_per_group = self.users_per_group
+        else:
+            # Default: use maximum capacity based on user_bits
+            users_per_group = 2 ** self.user_bits
+        
+        # Calculate number of groups needed
+        num_groups = (self.N + users_per_group - 1) // users_per_group
+        
+        # Limit users if they exceed capacity (if max_groups is set)
+        if self.max_groups is not None:
+            max_users_allowed = self.max_groups * users_per_group
+            if self.N > max_users_allowed:
+                print(f"Warning: CSV contains {self.N} users, but max_groups={self.max_groups} and "
+                      f"users_per_group={users_per_group} only allows {max_users_allowed} users. "
+                      f"Using only the first {max_users_allowed} users.")
+                self.user_metadata = self.user_metadata.head(max_users_allowed)
+                self.N = max_users_allowed
+                self.user_lookup = {int(row["UserId"]): row for _, row in self.user_metadata.iterrows()}
+                # Recalculate num_groups with limited users
+                num_groups = (self.N + users_per_group - 1) // users_per_group
+        
+        # Check against max_groups constraint if provided
+        if self.max_groups is not None:
+            if num_groups > self.max_groups:
+                raise ValueError(
+                    f"Number of groups needed ({num_groups}) exceeds max_groups ({self.max_groups}). "
+                    f"Consider increasing max_groups or users_per_group."
+                )
+        
+        # Check against theoretical maximum
+        max_possible_groups = 2 ** self.group_bits
+        if num_groups > max_possible_groups:
+            raise ValueError(
+                f"Number of groups needed ({num_groups}) exceeds maximum allowed by "
+                f"group_bits={self.group_bits} (max {max_possible_groups})"
+            )
+        
+        # Generate group codewords using FingerprintingCode
+        # We need to create a temporary users file for the group fingerprinter
+        # that has one "user" per group, and configure it to use 1 user per group
+        # so we get exactly num_groups groups
+        import tempfile
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
+            tmp_file.write("UserId,Username\n")
+            for gid in range(num_groups):
+                tmp_file.write(f"{gid},{gid}\n")
+            tmp_file_path = tmp_file.name
+        
+        try:
+            # Temporarily set users_per_group to 1 to ensure each "user" gets its own group
+            original_users_per_group = self.group_fingerprinter.users_per_group
+            original_max_groups = self.group_fingerprinter.max_groups
+            self.group_fingerprinter.users_per_group = 1
+            self.group_fingerprinter.max_groups = num_groups
+            self.group_fingerprinter.gen(users_file=tmp_file_path)
+            # Restore original values
+            self.group_fingerprinter.users_per_group = original_users_per_group
+            self.group_fingerprinter.max_groups = original_max_groups
+        finally:
+            os.unlink(tmp_file_path)
+        
+        # Extract group codewords
+        for group_id in range(num_groups):
+            group_codeword_array = self.group_fingerprinter.codewords[group_id]
+            self.group_codewords[group_id] = "".join(map(str, group_codeword_array))
+        
+        # Assign users to groups and build mappings
+        self.user_to_group = {}
+        self.group_to_users = {}
+        for index, row in self.user_metadata.iterrows():
+            user_id = int(row["UserId"])
+            group_id = user_id // users_per_group
+            self.user_to_group[user_id] = group_id
+            if group_id not in self.group_to_users:
+                self.group_to_users[group_id] = []
+            self.group_to_users[group_id].append(user_id)
+        
+        print(f"Loaded {self.N} users into {num_groups} groups ({users_per_group} users per group)")
+        print(f"Group codewords: {self.group_bits} bits, User fingerprints: {self.user_bits} bits")
+        if self.max_groups is not None:
+            print(f"Maximum groups constraint: {self.max_groups}")
+        
+        return self.user_metadata
+    
+    def get_codeword_for_user(self, user_id: int) -> str:
+        """
+        Returns the combined L-bit codeword for a user: group_code + user_code.
+        
+        Args:
+            user_id (int): The user ID.
+        
+        Returns:
+            str: Combined codeword of length L (group_bits + user_bits).
+        """
+        self._require_metadata()
+        self._validate_user_id(user_id)
+        
+        # Get group ID
+        group_id = self.user_to_group.get(user_id)
+        if group_id is None:
+            raise ValueError(f"User ID {user_id} not assigned to any group.")
+        
+        # Get group codeword
+        group_code = self.group_codewords.get(group_id)
+        if group_code is None:
+            raise ValueError(f"Group {group_id} codeword not found.")
+        
+        # Get user index within group
+        users_in_group = self.group_to_users.get(group_id, [])
+        try:
+            user_index_in_group = users_in_group.index(user_id)
+        except ValueError:
+            raise ValueError(f"User ID {user_id} not found in group {group_id}.")
+        
+        # Generate user fingerprint
+        user_code = generate_user_fingerprint(user_index_in_group, self.user_bits)
+        
+        # Combine: group_code + user_code
+        combined_code = group_code + user_code
+        
+        if len(combined_code) != self.lbw.L:
+            raise ValueError(
+                f"Combined codeword length mismatch: expected {self.lbw.L}, got {len(combined_code)}"
+            )
+        
+        return combined_code
+    
+    def _log_embed(self, user_id: int, codeword: str):
+        group_id = self.user_to_group.get(user_id, None)
+        if group_id is not None:
+            group_code = codeword[:self.group_bits]
+            user_code = codeword[self.group_bits:]
+            print(f"User ID {user_id} belongs to Group {group_id}")
+            print(f"Embedding hierarchical codeword '{codeword}' for User ID {user_id} "
+                  f"(Group {group_id}: '{group_code}' + User: '{user_code}')...")
+        else:
+            print(f"Embedding codeword '{codeword}' for User ID {user_id} (hierarchical scheme)...")
+    
+    def embed(self, master_key: bytes, user_id: int, prompt: str, **kwargs) -> str:
+        """Embeds the hierarchical codeword for a user."""
+        self._require_metadata()
+        self._validate_user_id(user_id)
+        combined_code = self.get_codeword_for_user(user_id)
+        self._log_embed(user_id, combined_code)
+        return self.lbw.embed(master_key, combined_code, prompt, **kwargs)
+    
+    def trace(self, master_key: bytes, text: str, **kwargs) -> list[dict]:
+        """
+        Traces watermarked text by:
+        1. Recovering L bits using LBitWatermarker.detect
+        2. Splitting into group_bits and user_bits
+        3. Identifying nearest group codeword
+        4. Identifying nearest user fingerprint within that group
+        """
+        self._require_metadata()
+        
+        print("Extracting L-bit codeword from text...")
+        recovered_bits = self.lbw.detect(master_key, text, **kwargs)
+        print(f"  - Recovered Codeword: {recovered_bits}")
+        
+        if len(recovered_bits) != self.lbw.L:
+            print(f"Warning: Recovered codeword length ({len(recovered_bits)}) != L ({self.lbw.L})")
+            return []
+        
+        # Split recovered bits
+        recovered_group_bits = recovered_bits[:self.group_bits]
+        recovered_user_bits = recovered_bits[self.group_bits:]
+        
+        print(f"  - Group part: {recovered_group_bits} ({self.group_bits} bits)")
+        print(f"  - User part: {recovered_user_bits} ({self.user_bits} bits)")
+        
+        # Group identification: find nearest group codeword by Hamming distance
+        best_group_id = None
+        best_group_distance = float('inf')
+        valid_group_positions = [i for i, bit in enumerate(recovered_group_bits) 
+                                if bit not in ('⊥', '*', '?')]
+        
+        if not valid_group_positions:
+            print("No valid bits in group part; cannot identify group.")
+            return []
+        
+        for group_id, group_codeword in self.group_codewords.items():
+            # Calculate Hamming distance only on valid positions
+            distance = sum(
+                recovered_group_bits[i] != group_codeword[i]
+                for i in valid_group_positions
+            )
+            if distance < best_group_distance:
+                best_group_distance = distance
+                best_group_id = group_id
+        
+        if best_group_id is None:
+            print("Could not identify group.")
+            return []
+        
+        print(f"Identified Group {best_group_id} (Hamming distance: {best_group_distance})")
+        
+        # User identification: find nearest user fingerprint within the identified group
+        users_in_group = self.group_to_users.get(best_group_id, [])
+        if not users_in_group:
+            print(f"No users found in group {best_group_id}.")
+            return []
+        
+        valid_user_positions = [i for i, bit in enumerate(recovered_user_bits) 
+                               if bit not in ('⊥', '*', '?')]
+        
+        if not valid_user_positions:
+            print("No valid bits in user part; cannot identify user.")
+            # Return all users in the group as candidates
+            accused = []
+            for user_id in users_in_group:
+                row = self.user_lookup.get(user_id)
+                accused.append({
+                    "user_id": user_id,
+                    "username": row.get("Username") if row is not None else None,
+                    "match_score_percent": 0.0,
+                    "group_id": best_group_id
+                })
+            return accused
+        
+        best_user_id = None
+        best_user_distance = float('inf')
+        candidates = []
+        
+        for user_id in users_in_group:
+            user_index_in_group = users_in_group.index(user_id)
+            user_fingerprint = generate_user_fingerprint(user_index_in_group, self.user_bits)
+            
+            # Calculate Hamming distance only on valid positions
+            distance = sum(
+                recovered_user_bits[i] != user_fingerprint[i]
+                for i in valid_user_positions
+            )
+            
+            if distance < best_user_distance:
+                best_user_distance = distance
+                best_user_id = user_id
+                candidates = [user_id]
+            elif distance == best_user_distance:
+                candidates.append(user_id)
+        
+        # Return all users tied for best match
+        accused = []
+        total_valid = len(valid_user_positions)
+        for user_id in candidates:
+            row = self.user_lookup.get(user_id)
+            match_score = ((total_valid - best_user_distance) / total_valid * 100) if total_valid > 0 else 0.0
+            accused.append({
+                "user_id": user_id,
+                "username": row.get("Username") if row is not None else None,
+                "match_score_percent": match_score,
+                "group_id": best_group_id
+            })
+        
+        print(f"Identified User(s) {candidates} in Group {best_group_id} "
+              f"(Hamming distance: {best_user_distance})")
+        
+        return accused

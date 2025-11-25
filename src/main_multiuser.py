@@ -15,6 +15,7 @@ from src.watermark import (
     LBitWatermarker,
     NaiveMultiUserWatermarker,
     GroupedMultiUserWatermarker,
+    HierarchicalMultiUserWatermarker,
 )
 
 def parse_final_output(raw_text: str, model_name: str) -> str:
@@ -61,7 +62,7 @@ def main():
         '--scheme',
         type=str,
         default='grouped',
-        choices=['naive', 'grouped'],
+        choices=['naive', 'grouped', 'hierarchical'],
         help="Multi-user scheme to use (default: grouped).",
     )
     base_parser.add_argument('--min-distance', type=int, default=2, choices=[2, 3],
@@ -70,6 +71,10 @@ def main():
                             help="Maximum number of groups allowed (default: auto-calculated based on min-distance).")
     base_parser.add_argument('--users-per-group', type=int, default=None,
                             help="Number of users per group (default: auto-calculated based on min-distance).")
+    base_parser.add_argument('--group-bits', type=int, default=None,
+                            help="Number of bits for group codewords (required for hierarchical scheme).")
+    base_parser.add_argument('--user-bits', type=int, default=None,
+                            help="Number of bits for user fingerprints within groups (required for hierarchical scheme).")
 
     # --- Generate Command ---
     gen_parser = subparsers.add_parser('generate', help='Generate text watermarked for a specific user.', parents=[base_parser])
@@ -98,7 +103,23 @@ def main():
         hashing_context=args.hashing_context
     )
     lbw = LBitWatermarker(zero_bit_watermarker=zbw, L=args.l_bits)
-    if args.scheme == 'grouped':
+    
+    if args.scheme == 'hierarchical':
+        if args.group_bits is None or args.user_bits is None:
+            print("Error: --group-bits and --user-bits are required for hierarchical scheme.")
+            return
+        if args.group_bits + args.user_bits != args.l_bits:
+            print(f"Error: --group-bits ({args.group_bits}) + --user-bits ({args.user_bits}) must equal --l-bits ({args.l_bits}).")
+            return
+        muw = HierarchicalMultiUserWatermarker(
+            lbit_watermarker=lbw,
+            group_bits=args.group_bits,
+            user_bits=args.user_bits,
+            min_distance=args.min_distance,
+            max_groups=args.max_groups,
+            users_per_group=args.users_per_group
+        )
+    elif args.scheme == 'grouped':
         muw = GroupedMultiUserWatermarker(
             lbit_watermarker=lbw, 
             min_distance=args.min_distance,
