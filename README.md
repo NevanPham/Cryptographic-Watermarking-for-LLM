@@ -100,6 +100,7 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── compare_collusion_resistance.py  # Compare naive vs fingerprinting approaches
 │   ├── evaluate_multiuser_performance.py  # Multi-user performance evaluation
 │   ├── evaluate_hierarchical_detection.py  # Pure detection performance for hierarchical schemes
+│   ├── evaluate_hierarchical_robustness.py  # Robustness to deletion attacks for hierarchical schemes
 │   ├── run_lbit_sweep.py            # L-bit parameter sweep
 │   ├── run_lbit_parameter_sweep.py  # L-bit parameter sweep (alternative)
 │   ├── run_detection_only.py        # Standalone detection script
@@ -120,7 +121,8 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── run_collusion_eval_hpc.sh    # Collusion resistance evaluation
 │   ├── run_multiuser_performance_eval_hpc.sh  # Multi-user performance evaluation
 │   ├── run_lbit_sweep_hpc.sh        # L-bit parameter sweep
-│   └── run_hierarchical_detection_hpc.sh  # Hierarchical detection evaluation
+│   ├── run_hierarchical_detection_hpc.sh  # Hierarchical detection evaluation
+│   └── run_hierarchical_robustness_hpc.sh  # Hierarchical robustness evaluation
 │
 ├── assets/                          # Data files
 │   ├── users.csv                    # 1000 users (UserIds 0-999)
@@ -132,7 +134,8 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── lbit_sweep/                  # L-bit parameter sweep results
 │   ├── collusion_resistance_2_colluders/  # Collusion resistance evaluation (2 colluders)
 │   ├── local_multiuser_perf_user500/  # Multi-user performance evaluation results
-│   └── hierarchical_detection/     # Hierarchical detection evaluation results
+│   ├── hierarchical_detection/     # Hierarchical detection evaluation results
+│   └── robustness/                 # Hierarchical robustness evaluation results
 │
 └── demonstration/                   # Example outputs
     ├── multiuser_user0.txt          # Multi-user example (user 0)
@@ -693,6 +696,36 @@ python evaluation_scripts/evaluate_hierarchical_detection.py ^
 - Saves per-prompt JSON files and summary JSON
 - Supports both naive and hierarchical schemes
 
+#### `evaluation_scripts/evaluate_hierarchical_robustness.py`
+**Purpose:** Evaluate robustness to deletion attacks for hierarchical multi-user watermarking at L=8, across all allocations of group bits and user bits
+**Usage:**
+```bat
+python evaluation_scripts/evaluate_hierarchical_robustness.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/robustness
+```
+
+**Features:**
+- Same structure as `evaluate_hierarchical_detection.py` but tests robustness to deletion attacks
+- Tests 16 attack variants per prompt: 4 deletion percents (0.05, 0.10, 0.15, 0.20) × 4 deletion modes (start, middle, end, random)
+- For each attack variant: applies deletion, detects codeword, decodes IDs, computes metrics
+- Logs per-attack: deletion_percent, deletion_mode, recovered codeword, Hamming distance, z-scores, match statuses
+- Computes metrics: group accuracy, user accuracy, full identity accuracy, average invalid symbols, average Hamming distance, average z-score, false positive/negative rates
+- Saves all attack results to a single `results.json` file and summary JSON
+- Supports both naive and hierarchical schemes
+
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
 **Usage:**
@@ -758,11 +791,15 @@ All scripts in `slurm_scripts/` are HPC cluster batch job scripts for running ev
 - `run_multiuser_performance_eval_hpc.sh`: Multi-user performance evaluation
 - `run_lbit_sweep_hpc.sh`: L-bit parameter sweep
 - `run_hierarchical_detection_hpc.sh`: Hierarchical detection evaluation
+- `run_hierarchical_robustness_hpc.sh`: Hierarchical robustness evaluation
 
 **Usage:**
 ```bash
 # Example: Run hierarchical detection evaluation
 sbatch slurm_scripts/run_hierarchical_detection_hpc.sh
+
+# Or run hierarchical robustness evaluation
+sbatch slurm_scripts/run_hierarchical_robustness_hpc.sh
 
 # Or run collusion resistance evaluation
 sbatch slurm_scripts/run_collusion_eval_hpc.sh
@@ -1340,6 +1377,101 @@ Run all 8 configurations on HPC:
 ```bash
 sbatch slurm_scripts/run_hierarchical_detection_hpc.sh
 ```
+
+---
+
+### Hierarchical Robustness Evaluation
+
+Evaluate robustness to deletion attacks for hierarchical multi-user watermarking at L=8, across all allocations of group bits and user bits.
+
+#### Run Evaluation
+
+**Naive scheme (L=8, no hierarchy):**
+```bat
+python evaluation_scripts/evaluate_hierarchical_robustness.py ^
+  --scheme naive ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/robustness
+```
+
+**Hierarchical scheme (G=4, U=4):**
+```bat
+python evaluation_scripts/evaluate_hierarchical_robustness.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/robustness
+```
+
+**What it does:**
+1. Same as hierarchical detection evaluation, but applies deletion attacks before detection
+2. For each prompt:
+   - Generates watermarked text (same as detection evaluation)
+   - Applies 16 deletion attack variants:
+     - 4 deletion percents: 5%, 10%, 15%, 20%
+     - 4 deletion modes: start, middle, end, random
+   - For each attacked text: detects codeword, decodes IDs, computes metrics
+3. Deletion attack details:
+   - **start**: Remove first k tokens (k = percent × total tokens)
+   - **end**: Remove last k tokens
+   - **middle**: Remove k tokens centered at middle position
+   - **random**: Remove k randomly sampled tokens
+4. Computes metrics:
+   - **For naive**: Full identity accuracy, false positive/negative rates, average invalid symbols, average Hamming distance, average z-score
+   - **For hierarchical**: Group accuracy, user accuracy, full identity accuracy, false positive/negative rates, average invalid symbols, average Hamming distance, average z-score
+
+**Output structure:**
+```
+evaluation/robustness/
+├── naive/naive_L8/
+│   ├── results.json          # All attack results (one entry per attack variant)
+│   └── summary.json          # Summary metrics
+├── hierarchical/G4_U4/
+│   ├── results.json          # All attack results (one entry per attack variant)
+│   └── summary.json          # Summary metrics
+└── ... (other configurations)
+```
+
+**Results JSON contains (per entry):**
+- `prompt_id`, `prompt`, `true_user_id`
+- `deletion_percent`, `deletion_mode`
+- `recovered_codeword`, `ground_truth_codeword`
+- `num_invalid_symbols`, `hamming_distance`, `z_score`
+- `detected_user_id`, `detected_group_id` (for hierarchical)
+- `group_match`, `user_match`, `full_identity_match`
+
+**Summary JSON contains:**
+- Configuration (scheme, l_bits, group_bits, user_bits)
+- Number of prompts, number of attack variants per prompt, total attack results
+- Deletion percents and modes tested
+- Computed metrics (accuracy rates, false positive/negative rates, averages)
+
+**HPC Usage:**
+Run all 9 configurations (naive + 8 hierarchical variants) on HPC:
+```bash
+sbatch slurm_scripts/run_hierarchical_robustness_hpc.sh
+```
+
+**Note:** This evaluation takes significantly longer than detection evaluation (~16× longer) since each prompt generates 16 attack variants instead of 1 clean result.
 
 ---
 

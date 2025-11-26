@@ -7,6 +7,7 @@ import json
 import os
 import random
 import sys
+import time
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
@@ -504,6 +505,12 @@ def main():
         default='evaluation/robustness',
         help='Output directory for results (default: evaluation/robustness)'
     )
+    parser.add_argument(
+        '--seed',
+        type=int,
+        default=None,
+        help='Random seed for reproducibility (default: auto-generated)'
+    )
     
     args = parser.parse_args()
     
@@ -532,6 +539,31 @@ def main():
     scheme_output_dir = os.path.join(base_output_dir, scheme_dir)
     os.makedirs(scheme_output_dir, exist_ok=True)
     
+    # Set random seed for reproducibility
+    if args.seed is None:
+        # Generate a random seed if not provided
+        seed = int(time.time() * 1000) % (2**31)  # Use timestamp-based seed
+    else:
+        seed = args.seed
+    
+    random.seed(seed)
+    np.random.seed(seed)
+    
+    # Save seed to file for reproducibility
+    seed_file_path = os.path.join(scheme_output_dir, 'seeds.txt')
+    with open(seed_file_path, 'w', encoding='utf-8') as f:
+        f.write("# Random seeds used for user selection in robustness evaluation\n")
+        f.write(f"# Scheme: {args.scheme}\n")
+        if args.scheme == 'hierarchical':
+            f.write(f"# Group bits: {args.group_bits}, User bits: {args.user_bits}\n")
+        f.write(f"# L-bits: {args.l_bits}\n")
+        f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"\n")
+        f.write(f"random_seed = {seed}\n")
+        f.write(f"numpy_seed = {seed}\n")
+        f.write(f"\n")
+        f.write("# To reproduce results, use: --seed {}\n".format(seed))
+    
     # Print header
     print("\n" + "="*80)
     print(" " * 20 + "HIERARCHICAL ROBUSTNESS EVALUATION")
@@ -544,6 +576,7 @@ def main():
     print(f"  • L-bits: {args.l_bits}")
     print(f"  • Model: {args.model}")
     print(f"  • Number of prompts: {args.num_prompts}")
+    print(f"  • Random seed: {seed} (saved to seeds.txt)")
     print(f"  • Deletion percents: [0.05, 0.10, 0.15, 0.20]")
     print(f"  • Deletion modes: [start, middle, end, random]")
     print(f"  • Total attack variants per prompt: 16")
