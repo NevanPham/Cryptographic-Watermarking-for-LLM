@@ -103,6 +103,7 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── evaluate_hierarchical_robustness.py  # Robustness to deletion attacks for hierarchical schemes
 │   ├── evaluate_paraphrasing_attack.py  # Robustness to paraphrasing (T5-small) attacks
 │   ├── evaluate_synonym_attack.py  # Robustness to synonym substitution attacks
+│   ├── evaluate_rewrite_attack.py  # Robustness to LLM rewrite attacks
 │   ├── run_lbit_sweep.py            # L-bit parameter sweep
 │   ├── run_lbit_parameter_sweep.py  # L-bit parameter sweep (alternative)
 │   ├── run_detection_only.py        # Standalone detection script
@@ -126,7 +127,8 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── run_hierarchical_detection_hpc.sh  # Hierarchical detection evaluation
 │   ├── run_hierarchical_robustness_hpc.sh  # Hierarchical robustness evaluation
 │   ├── run_paraphrasing_attack_hpc.sh  # Paraphrasing attack evaluation (T5-small)
-│   └── run_synonym_attack_hpc.sh  # Synonym substitution attack evaluation
+│   ├── run_synonym_attack_hpc.sh  # Synonym substitution attack evaluation
+│   └── run_rewrite_attack_hpc.sh  # Rewrite attack evaluation
 │
 ├── assets/                          # Data files
 │   ├── users.csv                    # 1000 users (UserIds 0-999)
@@ -785,6 +787,33 @@ python evaluation_scripts/evaluate_synonym_attack.py ^
 - Records per-prompt stats identical to detection/paraphrasing runs (codewords, invalid symbols, distances, z-scores, group/user matches)
 - Computes the same aggregate metrics and saves `prompt_*.json`, `results.json`, `summary.json`, and `summary.csv` under `evaluation/synonym_attack/<scheme_dir>`
 
+#### `evaluation_scripts/evaluate_rewrite_attack.py`
+**Purpose:** Evaluate robustness against full-text rewrites generated deterministically by the same base LLM used for watermarking (GPT-2 / GPT-OSS variants)
+**Usage:**
+```bat
+python evaluation_scripts/evaluate_rewrite_attack.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/rewrite_attack
+```
+
+**Features:**
+- Uses `apply_llm_rewrite` to prompt the same LM to rewrite the generated text deterministically (no sampling) before detection
+- Evaluates naive plus all hierarchical splits, mirroring other Tier A scripts
+- Tracks the same per-prompt metrics (codewords, invalid symbols, Hamming distance, z-scores, group/user matches)
+- Outputs per-prompt JSONs, `results.json`, `summary.json`, and `summary.csv` under `evaluation/rewrite_attack/<scheme_dir>`
+
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
 **Usage:**
@@ -1096,6 +1125,10 @@ sbatch slurm_scripts/run_paraphrasing_attack_hpc.sh
 
 # Synonym substitution attack sweep
 sbatch slurm_scripts/run_synonym_attack_hpc.sh
+
+# Rewrite attack sweep
+sbatch slurm_scripts/run_rewrite_attack_hpc.sh
+```
 ```
 
 ### Monitor Job
