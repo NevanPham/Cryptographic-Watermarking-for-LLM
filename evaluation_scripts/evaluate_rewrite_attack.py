@@ -643,6 +643,8 @@ def main():
 
     master_key = muw.keygen()
 
+    rewrite_max_tokens = min(args.max_new_tokens, 256)
+
     print(f"\n[3/4] Processing {len(prompts)} prompts with rewrite attacks...")
     all_results = []
 
@@ -656,7 +658,7 @@ def main():
                 true_user_id,
                 args.scheme,
                 args.model,
-                args.max_new_tokens,
+                rewrite_max_tokens,
                 rewrite_model,
                 tokenizer,
             )
