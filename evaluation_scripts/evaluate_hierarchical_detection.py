@@ -487,7 +487,23 @@ def main():
         print(f"  ❌ Error: Users file not found: {users_path}")
         return
     
-    muw.load_users(users_path)
+    # For naive scheme, ensure exactly 128 users for fair comparison with hierarchical
+    if args.scheme == 'naive':
+        import tempfile
+        df_all = pd.read_csv(users_path)
+        if len(df_all) > 128:
+            print(f"  → Limiting to 128 users for naive scheme (for fair comparison)")
+            df_limited = df_all.head(128)
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
+                df_limited.to_csv(tmp_file.name, index=False)
+                tmp_users_path = tmp_file.name
+            muw.load_users(tmp_users_path)
+            os.unlink(tmp_users_path)
+        else:
+            muw.load_users(users_path)
+    else:
+        muw.load_users(users_path)
+    
     print(f"  ✓ Loaded {muw.N} users")
     
     # Generate master key

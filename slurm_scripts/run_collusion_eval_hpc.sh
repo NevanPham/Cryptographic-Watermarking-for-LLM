@@ -29,7 +29,7 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
-echo "Running collusion resistance evaluation for all 8 configurations..."
+echo "Running collusion resistance evaluation for all 9 configurations..."
 echo "L = 8 for all configurations"
 echo ""
 
@@ -186,6 +186,27 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --scheme hierarchical \
     --group-bits 7 \
     --user-bits 1 \
+    --l-bits 8 \
+    --prompts-file assets/prompts.txt \
+    --num-prompts 300 \
+    --users-file assets/users.csv \
+    --model gpt2 \
+    --delta 3.5 \
+    --entropy-threshold 2.5 \
+    --hashing-context 5 \
+    --z-threshold 4.0 \
+    --max-new-tokens 400 \
+    --output-dir evaluation/collusion_resistance
+
+# Configuration 9: Group-only G=8, U=0 → 128 groups, 1 user per group
+echo ""
+echo "=========================================="
+echo "Configuration 9: Group-only G=8, U=0"
+echo "=========================================="
+python evaluation_scripts/compare_collusion_resistance.py \
+    --scheme hierarchical \
+    --group-bits 8 \
+    --user-bits 0 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
     --num-prompts 300 \

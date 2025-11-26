@@ -691,7 +691,31 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         
         df = df.sort_values("UserId").reset_index(drop=True)
         
-        # Enforce overall L-bit capacity
+        # Enforce hierarchical capacity rules early (before computing num_groups)
+        # For min_distance=2, max_groups = 2^(group_bits-1)
+        if self.min_distance == 2:
+            max_groups_allowed = 2 ** (self.group_bits - 1)
+        else:
+            max_groups_allowed = 2 ** self.group_bits
+        
+        # Handle group-only mode (user_bits == 0) and hierarchical mode (user_bits > 0)
+        if self.user_bits == 0:
+            # Group-only mode: one user per group
+            max_users_allowed = max_groups_allowed
+        else:
+            # Hierarchical mode: max_groups * users_per_group
+            users_per_group_auto = 2 ** self.user_bits
+            max_users_allowed = max_groups_allowed * users_per_group_auto
+        
+        if len(df) > max_users_allowed:
+            print(
+                f"Warning: users file contains {len(df)} entries but hierarchical config "
+                f"(G={self.group_bits}, U={self.user_bits}, min_distance={self.min_distance}) "
+                f"only supports {max_users_allowed} users. Truncating to {max_users_allowed}."
+            )
+            df = df.head(max_users_allowed)
+        
+        # Enforce overall L-bit capacity (additional safety check)
         max_supported_users = 2 ** self.lbw.L
         if len(df) > max_supported_users:
             print(
@@ -707,7 +731,14 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
             # Default: use maximum capacity based on user_bits
             users_per_group = 2 ** self.user_bits
         
-        theoretical_max_groups = 2 ** self.group_bits
+        # Calculate theoretical maximum groups based on min_distance
+        # For min_distance=2, theoretical maximum is 2^(group_bits-1)
+        # For other min_distance values, use 2^group_bits as a conservative upper bound
+        if self.min_distance == 2:
+            theoretical_max_groups = 2 ** (self.group_bits - 1)
+        else:
+            theoretical_max_groups = 2 ** self.group_bits
+        
         max_groups_allowed = self.max_groups if self.max_groups is not None else theoretical_max_groups
         max_total_users_allowed = max_groups_allowed * users_per_group
         
@@ -731,13 +762,12 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         self.N = len(df)
         self.user_lookup = {int(row["UserId"]): row for _, row in df.iterrows()}
         
-        # Truncate users to hierarchical capacity (2^G * 2^U)
+        # Truncate users to hierarchical capacity based on min_distance
         # This ensures users don't get assigned to non-existent groups
-        num_groups_theoretical = 2 ** self.group_bits
-        max_supported = num_groups_theoretical * users_per_group
+        max_supported = theoretical_max_groups * users_per_group
         
         if self.N > max_supported:
-            print(f"Warning: CSV contains {self.N} users, but hierarchical config (G={self.group_bits}, U={self.user_bits}) only supports {max_supported} users. Truncating to {max_supported}.")
+            print(f"Warning: CSV contains {self.N} users, but hierarchical config (G={self.group_bits}, U={self.user_bits}, min_distance={self.min_distance}) only supports {max_supported} users. Truncating to {max_supported}.")
             self.user_metadata = self.user_metadata.head(max_supported)
             self.N = len(self.user_metadata)
             self.user_lookup = {int(row["UserId"]): row for _, row in self.user_metadata.iterrows()}
@@ -856,8 +886,11 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         except ValueError:
             raise ValueError(f"User ID {user_id} not found in group {group_id}.")
         
-        # Generate user fingerprint
-        user_code = generate_user_fingerprint(user_index_in_group, self.user_bits)
+        # Generate user fingerprint (handle group-only mode where user_bits=0)
+        if self.user_bits == 0:
+            user_code = ""  # Group-only mode: no user fingerprint
+        else:
+            user_code = generate_user_fingerprint(user_index_in_group, self.user_bits)
         
         # Combine: group_code + user_code
         combined_code = group_code + user_code
@@ -873,10 +906,14 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         group_id = self.user_to_group.get(user_id, None)
         if group_id is not None:
             group_code = codeword[:self.group_bits]
-            user_code = codeword[self.group_bits:]
+            user_code = codeword[self.group_bits:] if self.user_bits > 0 else ""
             print(f"User ID {user_id} belongs to Group {group_id}")
-            print(f"Embedding hierarchical codeword '{codeword}' for User ID {user_id} "
-                  f"(Group {group_id}: '{group_code}' + User: '{user_code}')...")
+            if self.user_bits == 0:
+                print(f"Embedding group-only codeword '{codeword}' for User ID {user_id} "
+                      f"(Group {group_id}: '{group_code}')...")
+            else:
+                print(f"Embedding hierarchical codeword '{codeword}' for User ID {user_id} "
+                      f"(Group {group_id}: '{group_code}' + User: '{user_code}')...")
         else:
             print(f"Embedding codeword '{codeword}' for User ID {user_id} (hierarchical scheme)...")
     
@@ -944,6 +981,20 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         if not users_in_group:
             print(f"No users found in group {best_group_id}.")
             return []
+        
+        # Handle group-only mode (user_bits=0): return all users in the group
+        if self.user_bits == 0:
+            accused = []
+            for user_id in users_in_group:
+                row = self.user_lookup.get(user_id)
+                accused.append({
+                    "user_id": user_id,
+                    "username": row.get("Username") if row is not None else None,
+                    "match_score_percent": 100.0,  # Perfect match in group-only mode
+                    "group_id": best_group_id
+                })
+            print(f"Identified User(s) {[u['user_id'] for u in accused]} in Group {best_group_id} (group-only mode)")
+            return accused
         
         valid_user_positions = [i for i, bit in enumerate(recovered_user_bits) 
                                if bit not in ('⊥', '*', '?')]
