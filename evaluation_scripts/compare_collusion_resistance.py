@@ -3,11 +3,14 @@
 # Tests with 2-3 colluders in different configurations: same group, cross group, mixed
 
 import argparse
+import gzip
 import json
 import os
 import random
 import sys
 import time
+from datetime import datetime
+
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
@@ -198,6 +201,17 @@ def sample_2_same_1_diff(muw) -> list[int]:
     user_from_other = random.choice(group_to_users[other_group])
     
     return sorted(users_from_group + [user_from_other])
+
+
+def save_raw_results(records: list[dict], output_path: str):
+    """Persist full prompt-level collusion results as gzipped JSON Lines."""
+    if not records:
+        return
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with gzip.open(output_path, 'wt', encoding='utf-8') as f:
+        for record in records:
+            f.write(json.dumps(record, default=json_default_encoder))
+            f.write("\n")
 
 
 def trace_collusion(muw, master_key: bytes, merged_codeword: str, original_user_ids: list[int]) -> dict:
@@ -410,6 +424,23 @@ def main():
         help='Output directory for results'
     )
     parser.add_argument(
+        '--run-tag',
+        type=str,
+        default=None,
+        help='Optional identifier appended to the output directory (e.g., job id)'
+    )
+    parser.add_argument(
+        '--save-raw-results',
+        action='store_true',
+        help='If set, store per-prompt collusion records as raw_results.jsonl.gz'
+    )
+    parser.add_argument(
+        '--raw-results-file',
+        type=str,
+        default='raw_results.jsonl.gz',
+        help='Filename for the raw results artifact'
+    )
+    parser.add_argument(
         '--seed',
         type=int,
         default=None,
@@ -430,15 +461,18 @@ def main():
     
     # Create output directory structure
     if args.scheme == 'hierarchical':
-        scheme_dir = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
+        scheme_dir_parts = ['hierarchical', f"G{args.group_bits}_U{args.user_bits}"]
     else:
-        scheme_dir = f"naive_L{args.l_bits}"
+        scheme_dir_parts = ['naive', f"L{args.l_bits}"]
     
     base_output_dir = args.output_dir
     if not os.path.isabs(base_output_dir):
         base_output_dir = os.path.join(parent_dir, base_output_dir)
     
-    scheme_output_dir = os.path.join(base_output_dir, scheme_dir)
+    dir_parts = [base_output_dir, *scheme_dir_parts]
+    if args.run_tag:
+        dir_parts.append(args.run_tag)
+    scheme_output_dir = os.path.join(*dir_parts)
     os.makedirs(scheme_output_dir, exist_ok=True)
     
     # Set random seed for reproducibility
@@ -459,14 +493,17 @@ def main():
         if args.scheme == 'hierarchical':
             f.write(f"# Group bits: {args.group_bits}, User bits: {args.user_bits}\n")
         f.write(f"# L-bits: {args.l_bits}\n")
+        f.write(f"# Model: {args.model}\n")
         f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"\n")
+        f.write("\n")
         f.write(f"random_seed = {seed}\n")
         f.write(f"numpy_seed = {seed}\n")
-        f.write(f"\n")
+        f.write("\n")
+        if args.run_tag:
+            f.write(f"run_tag = {args.run_tag}\n")
         f.write("# To reproduce results, use: --seed {}\n".format(seed))
     
-    # Create subdirectories for 2 and 3 colluders
+    # Create subdirectories for colluder scenarios (for summaries only)
     output_2_dir = os.path.join(scheme_output_dir, '2_colluders')
     output_3_dir = os.path.join(scheme_output_dir, '3_colluders')
     os.makedirs(output_2_dir, exist_ok=True)
@@ -632,42 +669,18 @@ def main():
             prompt_results['results']['cross_group_3'] = {'error': str(e)}
             prompt_results['results']['mixed_2same_1diff'] = {'error': str(e)}
         
-        # Save prompt-level results in appropriate subdirectories
-        # Save 2-colluder results
-        prompt_json_2_path = os.path.join(output_2_dir, f'prompt_{prompt_idx}_results.json')
-        prompt_results_2 = {
-            'prompt_id': prompt_idx,
-            'prompt': prompt,
-            'scheme': args.scheme,
-            'config': prompt_results['config'],
-            'results': {
-                'same_group_2': prompt_results['results'].get('same_group_2', {}),
-                'cross_group_2': prompt_results['results'].get('cross_group_2', {})
-            }
-        }
-        with open(prompt_json_2_path, 'w', encoding='utf-8') as f:
-            json.dump(prompt_results_2, f, indent=2, default=json_default_encoder)
-        
-        # Save 3-colluder results
-        prompt_json_3_path = os.path.join(output_3_dir, f'prompt_{prompt_idx}_results.json')
-        prompt_results_3 = {
-            'prompt_id': prompt_idx,
-            'prompt': prompt,
-            'scheme': args.scheme,
-            'config': prompt_results['config'],
-            'results': {
-                'same_group_3': prompt_results['results'].get('same_group_3', {}),
-                'cross_group_3': prompt_results['results'].get('cross_group_3', {}),
-                'mixed_2same_1diff': prompt_results['results'].get('mixed_2same_1diff', {})
-            }
-        }
-        with open(prompt_json_3_path, 'w', encoding='utf-8') as f:
-            json.dump(prompt_results_3, f, indent=2, default=json_default_encoder)
-        
         all_results.append(prompt_results)
     
     # Generate summary reports
     print(f"\n[4/4] Generating summary reports...")
+    
+    raw_results_path = None
+    if args.save_raw_results and all_results:
+        raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
+        save_raw_results(all_results, raw_results_path)
+        print(f"  ✓ Saved raw collusion records to: {raw_results_path}")
+    else:
+        print("  → Raw collusion records not persisted (enable --save-raw-results to store them)")
     
     # Calculate success rates for 2-colluder cases
     case_types_2 = ['same_group_2', 'cross_group_2']
@@ -708,14 +721,22 @@ def main():
             }
     
     # Save summary JSON for 2 colluders
-    summary_2 = {
+    base_summary = {
         'scheme': args.scheme,
-        'config': {
-            'l_bits': args.l_bits,
-            'group_bits': args.group_bits if args.scheme == 'hierarchical' else None,
-            'user_bits': args.user_bits if args.scheme == 'hierarchical' else None,
-        },
-        'num_prompts': len(prompts),
+        'model': args.model,
+        'run_tag': args.run_tag,
+        'l_bits': args.l_bits,
+        'group_bits': args.group_bits if args.scheme == 'hierarchical' else None,
+        'user_bits': args.user_bits if args.scheme == 'hierarchical' else None,
+        'num_prompts': len(all_results),
+        'random_seed': seed,
+        'output_directory': scheme_output_dir,
+        'raw_results_file': os.path.basename(raw_results_path) if raw_results_path else None,
+        'generated_utc': datetime.utcnow().isoformat() + "Z"
+    }
+    
+    summary_2 = {
+        **base_summary,
         'num_colluders': 2,
         'success_rates': success_rates_2
     }
@@ -726,13 +747,7 @@ def main():
     
     # Save summary JSON for 3 colluders
     summary_3 = {
-        'scheme': args.scheme,
-        'config': {
-            'l_bits': args.l_bits,
-            'group_bits': args.group_bits if args.scheme == 'hierarchical' else None,
-            'user_bits': args.user_bits if args.scheme == 'hierarchical' else None,
-        },
-        'num_prompts': len(prompts),
+        **base_summary,
         'num_colluders': 3,
         'success_rates': success_rates_3
     }
@@ -757,7 +772,10 @@ def main():
     
     print(f"\n✓ 2-colluder summary saved to: {summary_json_2_path}")
     print(f"✓ 3-colluder summary saved to: {summary_json_3_path}")
-    print(f"✓ Prompt-level results saved to: {output_2_dir}/ and {output_3_dir}/")
+    if raw_results_path:
+        print(f"✓ Raw collusion records saved to: {raw_results_path}")
+    else:
+        print("✓ Raw collusion records skipped (pass --save-raw-results to capture them)")
     print("\n" + "="*80)
     print(" " * 30 + "✓ EVALUATION COMPLETE!")
     print("="*80 + "\n")

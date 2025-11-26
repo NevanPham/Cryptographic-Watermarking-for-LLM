@@ -29,6 +29,9 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
+RUN_TAG=${RUN_TAG:-job_${SLURM_JOB_ID:-$(date +%Y%m%d_%H%M%S)}}
+echo "Using run tag: ${RUN_TAG}"
+
 echo "Running rewrite attack evaluation for all 9 configurations..."
 echo "L = 8 for all configurations"
 echo "Deterministic rewrite using the same base model/tokenizer"
@@ -58,7 +61,8 @@ run_eval () {
             --hashing-context 5 \
             --z-threshold 4.0 \
             --max-new-tokens 512 \
-            --output-dir evaluation/rewrite_attack
+            --output-dir evaluation/rewrite_attack \
+            --run-tag ${RUN_TAG}
     else
         python evaluation_scripts/evaluate_rewrite_attack.py \
             --scheme hierarchical \
@@ -74,7 +78,8 @@ run_eval () {
             --hashing-context 5 \
             --z-threshold 4.0 \
             --max-new-tokens 512 \
-            --output-dir evaluation/rewrite_attack
+            --output-dir evaluation/rewrite_attack \
+            --run-tag ${RUN_TAG}
     fi
 }
 

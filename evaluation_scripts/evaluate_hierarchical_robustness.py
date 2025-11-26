@@ -3,11 +3,14 @@
 # at L=8, across all allocations of group bits and user bits.
 
 import argparse
+import gzip
 import json
 import os
 import random
 import sys
 import time
+from datetime import datetime
+
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
@@ -137,6 +140,19 @@ def hamming_distance(codeword1: str, codeword2: str) -> int:
 def count_invalid_symbols(codeword: str) -> int:
     """Count the number of invalid symbols (⊥, *, ?) in a codeword."""
     return sum(1 for c in codeword if c in ('⊥', '*', '?'))
+
+
+def save_raw_results(results: list[dict], output_path: str):
+    """
+    Persist detailed attack-level results as gzipped JSON Lines.
+    """
+    if not results:
+        return
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with gzip.open(output_path, 'wt', encoding='utf-8') as f:
+        for record in results:
+            f.write(json.dumps(record, default=json_default_encoder))
+            f.write("\n")
 
 
 def decode_naive_user(muw, recovered_codeword: str) -> int | None:
@@ -506,6 +522,23 @@ def main():
         help='Output directory for results (default: evaluation/robustness)'
     )
     parser.add_argument(
+        '--run-tag',
+        type=str,
+        default=None,
+        help='Optional identifier appended to the output directory (e.g., job id)'
+    )
+    parser.add_argument(
+        '--save-raw-results',
+        action='store_true',
+        help='If set, also save detailed attack records as raw_results.jsonl.gz'
+    )
+    parser.add_argument(
+        '--raw-results-file',
+        type=str,
+        default='raw_results.jsonl.gz',
+        help='Filename for the raw results artifact (default: raw_results.jsonl.gz)'
+    )
+    parser.add_argument(
         '--seed',
         type=int,
         default=None,
@@ -526,17 +559,18 @@ def main():
     
     # Create output directory structure
     if args.scheme == 'hierarchical':
-        scheme_name = "hierarchical"
-        scheme_dir = f"hierarchical/G{args.group_bits}_U{args.user_bits}"
+        scheme_dir_parts = ['hierarchical', f"G{args.group_bits}_U{args.user_bits}"]
     else:
-        scheme_name = "naive"
-        scheme_dir = f"naive/naive_L{args.l_bits}"
+        scheme_dir_parts = ['naive', f"L{args.l_bits}"]
     
     base_output_dir = args.output_dir
     if not os.path.isabs(base_output_dir):
         base_output_dir = os.path.join(parent_dir, base_output_dir)
     
-    scheme_output_dir = os.path.join(base_output_dir, scheme_dir)
+    dir_parts = [base_output_dir, *scheme_dir_parts]
+    if args.run_tag:
+        dir_parts.append(args.run_tag)
+    scheme_output_dir = os.path.join(*dir_parts)
     os.makedirs(scheme_output_dir, exist_ok=True)
     
     # Set random seed for reproducibility
@@ -557,11 +591,14 @@ def main():
         if args.scheme == 'hierarchical':
             f.write(f"# Group bits: {args.group_bits}, User bits: {args.user_bits}\n")
         f.write(f"# L-bits: {args.l_bits}\n")
+        f.write(f"# Model: {args.model}\n")
         f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"\n")
+        f.write("\n")
         f.write(f"random_seed = {seed}\n")
         f.write(f"numpy_seed = {seed}\n")
-        f.write(f"\n")
+        f.write("\n")
+        if args.run_tag:
+            f.write(f"run_tag = {args.run_tag}\n")
         f.write("# To reproduce results, use: --seed {}\n".format(seed))
     
     # Print header
@@ -685,11 +722,14 @@ def main():
             continue
     
     # Save all results to a single JSON file
-    results_json_path = os.path.join(scheme_output_dir, 'results.json')
     print(f"\n[4/4] Saving results and computing metrics...")
-    with open(results_json_path, 'w', encoding='utf-8') as f:
-        json.dump(all_results, f, indent=2, default=json_default_encoder)
-    print(f"  ✓ Saved {len(all_results)} attack results to: {results_json_path}")
+    raw_results_path = None
+    if args.save_raw_results and all_results:
+        raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
+        save_raw_results(all_results, raw_results_path)
+        print(f"  ✓ Saved {len(all_results)} attack records to: {raw_results_path}")
+    else:
+        print("  → Raw attack records not persisted (enable --save-raw-results to store them)")
     
     # Compute metrics
     metrics = compute_metrics(all_results, args.scheme)
@@ -705,6 +745,12 @@ def main():
         'total_attack_results': len(all_results),
         'deletion_percents': [0.05, 0.10, 0.15, 0.20],
         'deletion_modes': ["start", "middle", "end", "random"],
+        'model': args.model,
+        'run_tag': args.run_tag,
+        'random_seed': seed,
+        'output_directory': scheme_output_dir,
+        'raw_results_file': os.path.basename(raw_results_path) if raw_results_path else None,
+        'generated_utc': datetime.utcnow().isoformat() + "Z",
         'metrics': metrics
     }
     
@@ -724,7 +770,10 @@ def main():
             print(f"  {metric_name:30s}: {metric_value}")
     
     print(f"\n✓ Summary saved to: {summary_json_path}")
-    print(f"✓ All attack results saved to: {results_json_path}")
+    if raw_results_path:
+        print(f"✓ Raw attack records saved to: {raw_results_path}")
+    else:
+        print("✓ Raw attack records skipped (pass --save-raw-results to capture them)")
     print("\n" + "="*80)
     print(" " * 30 + "✓ EVALUATION COMPLETE!")
     print("="*80 + "\n")

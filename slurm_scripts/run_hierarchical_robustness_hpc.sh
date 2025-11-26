@@ -29,6 +29,9 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz402/kpham-watermark/crypto-watermark
 
+RUN_TAG=${RUN_TAG:-job_${SLURM_JOB_ID:-$(date +%Y%m%d_%H%M%S)}}
+echo "Using run tag: ${RUN_TAG}"
+
 echo "Running hierarchical robustness evaluation for all 9 configurations..."
 echo "L = 8 for all configurations"
 echo "Testing deletion attacks: 4 percents × 4 modes = 16 variants per prompt"
@@ -50,7 +53,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 2: Hierarchical G=1, U=7 → 1 group, 128 users per group
 echo ""
@@ -71,7 +75,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 3: Hierarchical G=2, U=6 → 2 groups, 64 users per group
 echo ""
@@ -92,7 +97,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 4: Hierarchical G=3, U=5 → 4 groups, 32 users per group
 echo ""
@@ -113,7 +119,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 5: Hierarchical G=4, U=4 → 8 groups, 16 users per group
 echo ""
@@ -134,7 +141,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 6: Hierarchical G=5, U=3 → 16 groups, 8 users per group
 echo ""
@@ -155,7 +163,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 7: Hierarchical G=6, U=2 → 32 groups, 4 users per group
 echo ""
@@ -176,7 +185,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 8: Hierarchical G=7, U=1 → 64 groups, 2 users per group
 echo ""
@@ -197,7 +207,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 # Configuration 9: Group-only G=8, U=0 → 128 groups, 1 user per group
 echo ""
@@ -218,7 +229,8 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py \
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
-    --output-dir evaluation/robustness
+    --output-dir evaluation/robustness \
+    --run-tag ${RUN_TAG}
 
 echo ""
 echo "=========================================="

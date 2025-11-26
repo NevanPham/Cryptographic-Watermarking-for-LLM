@@ -1,10 +1,12 @@
 import argparse
+import gzip
 import json
 import os
 import random
 import sys
 import time
 from collections import OrderedDict
+from datetime import datetime
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
@@ -389,6 +391,17 @@ def compute_metrics(results: list[dict], scheme: str) -> dict:
     return metrics
 
 
+def save_raw_results(results: list[dict], output_path: str) -> None:
+    """Persist per-prompt rewrite-attack results as gzipped JSON Lines."""
+    if not results:
+        return
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with gzip.open(output_path, "wt", encoding="utf-8") as f:
+        for record in results:
+            f.write(json.dumps(record, default=json_default_encoder))
+            f.write("\n")
+
+
 def read_existing_seed(seed_file_path: str) -> int | None:
     """Read random seed from existing seed file if present."""
     if not os.path.exists(seed_file_path):
@@ -412,11 +425,14 @@ def write_seed_file(seed_file_path: str, seed: int, args) -> None:
         if args.scheme == "hierarchical":
             f.write(f"# Group bits: {args.group_bits}, User bits: {args.user_bits}\n")
         f.write(f"# L-bits: {args.l_bits}\n")
+        f.write(f"# Model: {args.model}\n")
         f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("\n")
         f.write(f"random_seed = {seed}\n")
         f.write(f"numpy_seed = {seed}\n")
         f.write("\n")
+        if getattr(args, "run_tag", None):
+            f.write(f"run_tag = {args.run_tag}\n")
         f.write(f"# To reproduce results, use: --seed {seed}\n")
 
 
@@ -520,6 +536,23 @@ def main():
         help="Output directory for results (default: evaluation/rewrite_attack)",
     )
     parser.add_argument(
+        "--run-tag",
+        type=str,
+        default=None,
+        help="Optional identifier appended to the output directory (e.g., job id)",
+    )
+    parser.add_argument(
+        "--save-raw-results",
+        action="store_true",
+        help="If set, save detailed per-prompt records as raw_results.jsonl.gz",
+    )
+    parser.add_argument(
+        "--raw-results-file",
+        type=str,
+        default="raw_results.jsonl.gz",
+        help="Filename for the raw results artifact",
+    )
+    parser.add_argument(
         "--seed",
         type=int,
         default=None,
@@ -537,15 +570,18 @@ def main():
             )
 
     if args.scheme == "hierarchical":
-        scheme_dir = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
+        scheme_dir_parts = ["hierarchical", f"G{args.group_bits}_U{args.user_bits}"]
     else:
-        scheme_dir = f"naive_L{args.l_bits}"
+        scheme_dir_parts = ["naive", f"L{args.l_bits}"]
 
     base_output_dir = args.output_dir
     if not os.path.isabs(base_output_dir):
         base_output_dir = os.path.join(parent_dir, base_output_dir)
 
-    scheme_output_dir = os.path.join(base_output_dir, scheme_dir)
+    dir_parts = [base_output_dir, *scheme_dir_parts]
+    if args.run_tag:
+        dir_parts.append(args.run_tag)
+    scheme_output_dir = os.path.join(*dir_parts)
     os.makedirs(scheme_output_dir, exist_ok=True)
 
     seed_file_path = os.path.join(scheme_output_dir, "seeds.txt")
@@ -665,27 +701,33 @@ def main():
             result["prompt_id"] = prompt_idx
             result["prompt"] = prompt
             all_results.append(result)
-
-            prompt_json_path = os.path.join(scheme_output_dir, f"prompt_{prompt_idx}.json")
-            with open(prompt_json_path, "w", encoding="utf-8") as f:
-                json.dump(result, f, indent=2, default=json_default_encoder)
         except Exception as e:
             print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx}: {e}")
             continue
-
-    results_json_path = os.path.join(scheme_output_dir, "results.json")
-    with open(results_json_path, "w", encoding="utf-8") as f:
-        json.dump(all_results, f, indent=2, default=json_default_encoder)
+    
+    raw_results_path = None
+    if args.save_raw_results and all_results:
+        raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
+        save_raw_results(all_results, raw_results_path)
+        print(f"  ✓ Saved raw rewrite-attack records to: {raw_results_path}")
+    else:
+        print("  → Raw rewrite-attack records not persisted (enable --save-raw-results to store them)")
 
     print(f"\n[4/4] Computing metrics...")
     metrics = compute_metrics(all_results, args.scheme)
 
     summary = {
         "scheme": args.scheme,
+        "model": args.model,
+        "run_tag": args.run_tag,
         "l_bits": args.l_bits,
         "group_bits": args.group_bits if args.scheme == "hierarchical" else None,
         "user_bits": args.user_bits if args.scheme == "hierarchical" else None,
         "num_prompts": len(all_results),
+        "random_seed": seed,
+        "output_directory": scheme_output_dir,
+        "raw_results_file": os.path.basename(raw_results_path) if raw_results_path else None,
+        "generated_utc": datetime.utcnow().isoformat() + "Z",
         "metrics": metrics,
     }
 
@@ -707,8 +749,10 @@ def main():
 
     print(f"\n✓ Summary saved to: {summary_json_path}")
     print(f"✓ Summary CSV saved to: {summary_csv_path}")
-    print(f"✓ Prompt-level results saved to: {scheme_output_dir}/")
-    print(f"✓ All results consolidated at: {results_json_path}")
+    if raw_results_path:
+        print(f"✓ Raw rewrite-attack records saved to: {raw_results_path}")
+    else:
+        print("✓ Raw rewrite-attack records skipped (pass --save-raw-results to capture them)")
     print("\n" + "=" * 80)
     print(" " * 30 + "✓ EVALUATION COMPLETE!")
     print("=" * 80 + "\n")
