@@ -101,6 +101,7 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── evaluate_multiuser_performance.py  # Multi-user performance evaluation
 │   ├── evaluate_hierarchical_detection.py  # Pure detection performance for hierarchical schemes
 │   ├── evaluate_hierarchical_robustness.py  # Robustness to deletion attacks for hierarchical schemes
+│   ├── evaluate_paraphrasing_attack.py  # Robustness to paraphrasing (T5-small) attacks
 │   ├── run_lbit_sweep.py            # L-bit parameter sweep
 │   ├── run_lbit_parameter_sweep.py  # L-bit parameter sweep (alternative)
 │   ├── run_detection_only.py        # Standalone detection script
@@ -122,7 +123,8 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── run_multiuser_performance_eval_hpc.sh  # Multi-user performance evaluation
 │   ├── run_lbit_sweep_hpc.sh        # L-bit parameter sweep
 │   ├── run_hierarchical_detection_hpc.sh  # Hierarchical detection evaluation
-│   └── run_hierarchical_robustness_hpc.sh  # Hierarchical robustness evaluation
+│   ├── run_hierarchical_robustness_hpc.sh  # Hierarchical robustness evaluation
+│   └── run_paraphrasing_attack_hpc.sh  # Paraphrasing attack evaluation (T5-small)
 │
 ├── assets/                          # Data files
 │   ├── users.csv                    # 1000 users (UserIds 0-999)
@@ -726,6 +728,34 @@ python evaluation_scripts/evaluate_hierarchical_robustness.py ^
 - Saves all attack results to a single `results.json` file and summary JSON
 - Supports both naive and hierarchical schemes
 
+#### `evaluation_scripts/evaluate_paraphrasing_attack.py`
+**Purpose:** Evaluate robustness against paraphrasing attacks (single-pass T5-small) for both naive and hierarchical schemes at L=8
+**Usage:**
+```bat
+python evaluation_scripts/evaluate_paraphrasing_attack.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/paraphrasing_attack
+```
+
+**Features:**
+- Mirrors the detection workflow but inserts a T5-small paraphrasing step (beam=4, deterministic) before detection
+- Evaluates naive plus all eight hierarchical splits (G=1,U=7 … G=8,U=0) in a single run
+- Records per-prompt paraphrased text stats: recovered codeword, invalid symbols, Hamming distance, z-score, group/user matches
+- Computes the same metrics as detection (group/user/full accuracy, L-bit accuracy, false positive/negative rates, averages)
+- Saves prompt-level JSONs, consolidated `results.json`, `summary.json`, and a CSV summary per configuration under `evaluation/paraphrasing_attack`
+
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
 **Usage:**
@@ -1020,8 +1050,20 @@ python -c "import nltk; nltk.download('punkt', download_dir='/shared/nltk_data')
 
 ### Submit Job
 
+Pick the SLURM wrapper that matches your evaluation:
+
 ```bash
+# Demo / manual runs
 sbatch slurm_scripts/demonstration.sh
+
+# Hierarchical detection sweep
+sbatch slurm_scripts/run_hierarchical_detection_hpc.sh
+
+# Deletion-robustness sweep
+sbatch slurm_scripts/run_hierarchical_robustness_hpc.sh
+
+# Paraphrasing (T5-small) attack sweep
+sbatch slurm_scripts/run_paraphrasing_attack_hpc.sh
 ```
 
 ### Monitor Job
