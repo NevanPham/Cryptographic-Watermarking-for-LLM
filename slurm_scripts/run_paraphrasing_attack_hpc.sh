@@ -53,7 +53,7 @@ run_eval () {
             --scheme naive \
             --l-bits 8 \
             --prompts-file assets/prompts.txt \
-            --num-prompts 300 \
+            --num-prompts 200 \
             --users-file assets/users.csv \
             --model gpt2 \
             --delta 3.5 \
@@ -70,7 +70,7 @@ run_eval () {
             --user-bits "${user_bits}" \
             --l-bits 8 \
             --prompts-file assets/prompts.txt \
-            --num-prompts 300 \
+            --num-prompts 200 \
             --users-file assets/users.csv \
             --model gpt2 \
             --delta 3.5 \

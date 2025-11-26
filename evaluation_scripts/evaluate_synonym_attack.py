@@ -389,40 +389,6 @@ def save_raw_results(results: list[dict], output_path: str) -> None:
             f.write("\n")
 
 
-def read_existing_seed(seed_file_path: str) -> int | None:
-    """Read random seed from existing seed file if present."""
-    if not os.path.exists(seed_file_path):
-        return None
-
-    with open(seed_file_path, "r", encoding="utf-8") as f:
-        for line in f:
-            if line.strip().startswith("random_seed"):
-                try:
-                    return int(line.split("=")[1].strip())
-                except (IndexError, ValueError):
-                    return None
-    return None
-
-
-def write_seed_file(seed_file_path: str, seed: int, args) -> None:
-    """Persist random seeds for reproducibility."""
-    with open(seed_file_path, "w", encoding="utf-8") as f:
-        f.write("# Random seeds used for synonym attack evaluation\n")
-        f.write(f"# Scheme: {args.scheme}\n")
-        if args.scheme == "hierarchical":
-            f.write(f"# Group bits: {args.group_bits}, User bits: {args.user_bits}\n")
-        f.write(f"# L-bits: {args.l_bits}\n")
-        f.write(f"# Model: {args.model}\n")
-        f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write("\n")
-        f.write(f"random_seed = {seed}\n")
-        f.write(f"numpy_seed = {seed}\n")
-        f.write("\n")
-        if getattr(args, "run_tag", None):
-            f.write(f"run_tag = {args.run_tag}\n")
-        f.write(f"# To reproduce results, use: --seed {seed}\n")
-
-
 def save_summary_csv(summary_path: str, summary: dict) -> None:
     """Save summary metrics to CSV."""
     metrics = summary.get("metrics", {})
@@ -571,13 +537,65 @@ def main():
     scheme_output_dir = os.path.join(*dir_parts)
     os.makedirs(scheme_output_dir, exist_ok=True)
 
-    seed_file_path = os.path.join(scheme_output_dir, "seeds.txt")
+    # Ensure base output directory exists
+    os.makedirs(base_output_dir, exist_ok=True)
+    
+    # Set random seed for reproducibility
     seed = args.seed
     if seed is None:
-        seed = read_existing_seed(seed_file_path)
+        # Try to read from main seeds.txt if it exists and has this config
+        main_seeds_file = os.path.join(base_output_dir, "seeds.txt")
+        if os.path.exists(main_seeds_file):
+            # Generate config name to check
+            if args.scheme == "hierarchical":
+                config_name = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
+            else:
+                config_name = f"naive_L{args.l_bits}"
+            
+            # Try to read existing seed for this config
+            with open(main_seeds_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip().startswith(f"{config_name}:"):
+                        try:
+                            seed = int(line.split(":")[1].strip())
+                            break
+                        except (IndexError, ValueError):
+                            pass
+    
     if seed is None:
         seed = int(time.time() * 1000) % (2**31)
-    write_seed_file(seed_file_path, seed, args)
+    
+    # Generate config name for seeds.txt
+    if args.scheme == "hierarchical":
+        config_name = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
+    else:
+        config_name = f"naive_L{args.l_bits}"
+    
+    # Append seed to main seeds.txt file in base output directory
+    main_seeds_file = os.path.join(base_output_dir, "seeds.txt")
+    # Write header only if file doesn't exist
+    if not os.path.exists(main_seeds_file):
+        with open(main_seeds_file, "w", encoding="utf-8") as f:
+            f.write("# Random seeds used for synonym attack evaluation\n")
+            f.write(f"# Model: {args.model}\n")
+            if args.run_tag:
+                f.write(f"# Run tag: {args.run_tag}\n")
+            f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write("# Format: config_name: seed_value\n")
+            f.write("\n")
+    
+    # Append this configuration's seed (only if not already present)
+    config_found = False
+    if os.path.exists(main_seeds_file):
+        with open(main_seeds_file, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip().startswith(f"{config_name}:"):
+                    config_found = True
+                    break
+    
+    if not config_found:
+        with open(main_seeds_file, "a", encoding="utf-8") as f:
+            f.write(f"{config_name}: {seed}\n")
 
     random.seed(seed)
     np.random.seed(seed)
@@ -593,7 +611,7 @@ def main():
     print(f"  • L-bits: {args.l_bits}")
     print(f"  • Model: {args.model}")
     print(f"  • Number of prompts: {args.num_prompts}")
-    print(f"  • Random seed: {seed} (saved to seeds.txt)")
+    print(f"  • Random seed: {seed} (saved to {os.path.join(base_output_dir, 'seeds.txt')})")
     print(f"  • Output directory: {scheme_output_dir}")
     print("=" * 80)
 

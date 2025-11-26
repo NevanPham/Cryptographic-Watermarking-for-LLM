@@ -44,7 +44,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --scheme naive \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -66,7 +66,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 7 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -88,7 +88,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 6 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -110,7 +110,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 5 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -132,7 +132,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 4 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -154,7 +154,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 3 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -176,7 +176,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 2 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -198,7 +198,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 1 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \
@@ -220,7 +220,7 @@ python evaluation_scripts/compare_collusion_resistance.py \
     --user-bits 0 \
     --l-bits 8 \
     --prompts-file assets/prompts.txt \
-    --num-prompts 300 \
+    --num-prompts 200 \
     --users-file assets/users.csv \
     --model gpt2 \
     --delta 3.5 \

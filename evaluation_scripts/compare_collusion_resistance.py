@@ -475,6 +475,9 @@ def main():
     scheme_output_dir = os.path.join(*dir_parts)
     os.makedirs(scheme_output_dir, exist_ok=True)
     
+    # Ensure base output directory exists
+    os.makedirs(base_output_dir, exist_ok=True)
+    
     # Set random seed for reproducibility
     if args.seed is None:
         # Generate a random seed if not provided
@@ -485,23 +488,38 @@ def main():
     random.seed(seed)
     np.random.seed(seed)
     
-    # Save seed to file for reproducibility
-    seed_file_path = os.path.join(scheme_output_dir, 'seeds.txt')
-    with open(seed_file_path, 'w', encoding='utf-8') as f:
-        f.write("# Random seeds used for user sampling in collusion evaluation\n")
-        f.write(f"# Scheme: {args.scheme}\n")
-        if args.scheme == 'hierarchical':
-            f.write(f"# Group bits: {args.group_bits}, User bits: {args.user_bits}\n")
-        f.write(f"# L-bits: {args.l_bits}\n")
-        f.write(f"# Model: {args.model}\n")
-        f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write("\n")
-        f.write(f"random_seed = {seed}\n")
-        f.write(f"numpy_seed = {seed}\n")
-        f.write("\n")
-        if args.run_tag:
-            f.write(f"run_tag = {args.run_tag}\n")
-        f.write("# To reproduce results, use: --seed {}\n".format(seed))
+    # Generate config name for seeds.txt
+    if args.scheme == 'hierarchical':
+        config_name = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
+    else:
+        config_name = f"naive_L{args.l_bits}"
+    
+    # Append seed to main seeds.txt file in base output directory
+    main_seeds_file = os.path.join(base_output_dir, 'seeds.txt')
+    # Write header only if file doesn't exist
+    if not os.path.exists(main_seeds_file):
+        with open(main_seeds_file, 'w', encoding='utf-8') as f:
+            f.write("# Random seeds used for user sampling in collusion evaluation\n")
+            f.write(f"# Model: {args.model}\n")
+            if args.run_tag:
+                f.write(f"# Run tag: {args.run_tag}\n")
+            f.write(f"# Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write("# Format: config_name: seed_value\n")
+            f.write("\n")
+    
+    # Check if config already exists in seeds.txt
+    config_found = False
+    if os.path.exists(main_seeds_file):
+        with open(main_seeds_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.strip().startswith(f"{config_name}:"):
+                    config_found = True
+                    break
+    
+    # Append this configuration's seed only if not already present
+    if not config_found:
+        with open(main_seeds_file, 'a', encoding='utf-8') as f:
+            f.write(f"{config_name}: {seed}\n")
     
     # Create subdirectories for colluder scenarios (for summaries only)
     output_2_dir = os.path.join(scheme_output_dir, '2_colluders')
@@ -521,7 +539,7 @@ def main():
     print(f"  • L-bits: {args.l_bits}")
     print(f"  • Model: {args.model}")
     print(f"  • Number of prompts: {args.num_prompts}")
-    print(f"  • Random seed: {seed} (saved to seeds.txt)")
+    print(f"  • Random seed: {seed} (saved to {os.path.join(base_output_dir, 'seeds.txt')})")
     print(f"  • Output directory: {scheme_output_dir}")
     print("="*80)
     
