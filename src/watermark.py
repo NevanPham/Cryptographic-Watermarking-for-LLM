@@ -637,13 +637,18 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         self.users_per_group = users_per_group
         
         # Validate constraints
-        max_possible_groups = 2 ** group_bits
+        # For min_distance=2, theoretical maximum is 2^(group_bits-1)
+        # For other min_distance values, use 2^group_bits as a conservative upper bound
+        if min_distance == 2:
+            max_possible_groups = 2 ** (group_bits - 1)
+        else:
+            max_possible_groups = 2 ** group_bits
         max_possible_users_per_group = 2 ** user_bits
         
         if max_groups is not None and max_groups > max_possible_groups:
             raise ValueError(
                 f"max_groups ({max_groups}) exceeds maximum allowed by group_bits={group_bits} "
-                f"(max {max_possible_groups})"
+                f"and min_distance={min_distance} (max {max_possible_groups})"
             )
         
         if users_per_group is not None and users_per_group > max_possible_users_per_group:
@@ -726,6 +731,17 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         self.N = len(df)
         self.user_lookup = {int(row["UserId"]): row for _, row in df.iterrows()}
         
+        # Truncate users to hierarchical capacity (2^G * 2^U)
+        # This ensures users don't get assigned to non-existent groups
+        num_groups_theoretical = 2 ** self.group_bits
+        max_supported = num_groups_theoretical * users_per_group
+        
+        if self.N > max_supported:
+            print(f"Warning: CSV contains {self.N} users, but hierarchical config (G={self.group_bits}, U={self.user_bits}) only supports {max_supported} users. Truncating to {max_supported}.")
+            self.user_metadata = self.user_metadata.head(max_supported)
+            self.N = len(self.user_metadata)
+            self.user_lookup = {int(row["UserId"]): row for _, row in self.user_metadata.iterrows()}
+        
         # Calculate number of groups needed
         num_groups = (self.N + users_per_group - 1) // users_per_group
         
@@ -751,11 +767,16 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
                 )
         
         # Check against theoretical maximum
-        max_possible_groups = 2 ** self.group_bits
+        # For min_distance=2, theoretical maximum is 2^(group_bits-1)
+        # For other min_distance values, use 2^group_bits as a conservative upper bound
+        if self.min_distance == 2:
+            max_possible_groups = 2 ** (self.group_bits - 1)
+        else:
+            max_possible_groups = 2 ** self.group_bits
         if num_groups > max_possible_groups:
             raise ValueError(
                 f"Number of groups needed ({num_groups}) exceeds maximum allowed by "
-                f"group_bits={self.group_bits} (max {max_possible_groups})"
+                f"group_bits={self.group_bits} and min_distance={self.min_distance} (max {max_possible_groups})"
             )
         
         # Generate group codewords using FingerprintingCode

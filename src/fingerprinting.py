@@ -77,22 +77,47 @@ class FingerprintingCode:
             all_codes[i] = np.array([int(bit) for bit in binary_str])
         
         # Stage 2: Maximum minimum distance greedy selection
-        # Special case for d=2: use optimal construction (all even-weight codewords)
+        # Special case for d=2: use optimal deterministic construction (all even-parity codewords)
         if self.min_distance == 2:
-            # For d=2, optimal code is all codewords with even parity (even number of 1s)
-            # This gives 2^(L-1) codewords, which is the theoretical maximum A(L,2)
-            selected_indices = []
-            for i in range(total_possible):
-                # Count number of 1s (parity)
-                weight = np.sum(all_codes[i])
-                if weight % 2 == 0:  # Even parity
-                    selected_indices.append(i)
+            # Optimal construction: all even-parity codewords
+            # This gives exactly 2^(L-1) codewords, which is the theoretical maximum A(L,2)
+            # All even-parity codewords have minimum distance ≥ 2 (any two differ in at least 2 positions)
+            L = self.L
+            max_codewords = 2 ** (L - 1)
+            codewords = []
             
-            # Limit to requested number
-            if len(selected_indices) > num_groups:
-                selected_indices = selected_indices[:num_groups]
+            # Deterministic enumeration: iterate through all 2^L possible codewords
+            for i in range(2 ** L):
+                # Convert integer to bit list
+                bits = [(i >> b) & 1 for b in range(L)]
+                # Check even parity (sum of bits is even)
+                if sum(bits) % 2 == 0:
+                    codewords.append(np.array(bits, dtype=int))
+                    # Stop when we have enough codewords
+                    if len(codewords) == num_groups:
+                        break
             
-            print(f"Using optimal d=2 construction: {len(selected_indices)} codewords (theoretical max: {2**(self.L-1)})")
+            # Build result dictionary with exactly min(num_groups, 2^(L-1)) codewords
+            group_codewords = {idx: cw for idx, cw in enumerate(codewords)}
+            
+            num_generated = len(group_codewords)
+            print(f"Using optimal d=2 construction: {num_generated} codewords (theoretical max: {max_codewords}, requested: {num_groups})")
+            
+            # Validation: Check all pairwise distances (should all be ≥ 2)
+            all_valid = True
+            for i in range(num_generated):
+                for j in range(i + 1, num_generated):
+                    dist = self._hamming_distance(group_codewords[i], group_codewords[j])
+                    if dist < self.min_distance:
+                        all_valid = False
+                        print(f"ERROR: Distance between codewords {i} and {j} is {dist} < {self.min_distance}")
+            
+            if all_valid:
+                print(f"  All pairs have distance >= {self.min_distance}.")
+            else:
+                raise ValueError("Validation failed: Some codeword pairs do not meet minimum distance requirement.")
+            
+            return group_codewords
         else:
             # For d > 2, use max-min greedy algorithm
             selected_indices = []
