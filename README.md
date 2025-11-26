@@ -96,9 +96,10 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── utils.py                     # Helper utilities (parsing, perturbations)
 │   └── main_multiuser.py            # Multi-user CLI (generate, trace)
 │
-├── evalution_scripts/               # Evaluation and experiment scripts
+├── evaluation_scripts/              # Evaluation and experiment scripts
 │   ├── compare_collusion_resistance.py  # Compare naive vs fingerprinting approaches
 │   ├── evaluate_multiuser_performance.py  # Multi-user performance evaluation
+│   ├── evaluate_hierarchical_detection.py  # Pure detection performance for hierarchical schemes
 │   ├── run_lbit_sweep.py            # L-bit parameter sweep
 │   ├── run_lbit_parameter_sweep.py  # L-bit parameter sweep (alternative)
 │   ├── run_detection_only.py        # Standalone detection script
@@ -108,6 +109,7 @@ Cryptographic-Watermarking-for-LLM/
 ├── helper_scripts/                  # Analysis and utility scripts
 │   ├── analyse.py                   # Generate plots from evaluation results
 │   ├── generate_users.py            # Create user database CSV
+│   ├── compute_code_capacity.py     # Compute code capacity for fingerprinting
 │   ├── visualise_blocks.py          # Visualize watermark blocks
 │   ├── visualise_lbit_blocks.py     # Visualize L-bit blocks
 │   ├── visualize_groups.py         # Visualize multi-user groups
@@ -115,32 +117,29 @@ Cryptographic-Watermarking-for-LLM/
 │   └── download_models_hpc.py       # Pre-download models for HPC
 │
 ├── slurm_scripts/                   # HPC cluster batch job scripts
-│   ├── demonstration.sh             # Zero-bit demonstration job
-│   ├── demonstration_lbit.sh        # L-bit demonstration job
-│   ├── demonstration_multiuser.sh   # Multi-user demonstration job
-│   ├── run_gpt20b_eval.sh          # GPT-OSS-20B evaluation
-│   ├── run_detection_job.sh         # Detection-only job
-│   └── run_visualise_blocks.sh      # Block visualization job
+│   ├── run_collusion_eval_hpc.sh    # Collusion resistance evaluation
+│   ├── run_multiuser_performance_eval_hpc.sh  # Multi-user performance evaluation
+│   ├── run_lbit_sweep_hpc.sh        # L-bit parameter sweep
+│   └── run_hierarchical_detection_hpc.sh  # Hierarchical detection evaluation
 │
 ├── assets/                          # Data files
 │   ├── users.csv                    # 1000 users (UserIds 0-999)
-│   └── prompts.txt                  # 75 evaluation prompts
+│   └── prompts.txt                  # Evaluation prompts (typically 300+)
 │
 ├── evaluation/                      # Evaluation results (auto-created)
 │   ├── evaluation_results/          # Main evaluation outputs
-│   ├── lbit_parameter_sweep/        # L-bit parameter sweep results
-│   ├── lbit_sweep/                  # L-bit sweep results
-│   └── gui_app_evaluation_results/  # Evaluation analysis results
+│   ├── evaluation_results_lbit/      # L-bit evaluation results
+│   ├── lbit_sweep/                  # L-bit parameter sweep results
+│   ├── collusion_resistance_2_colluders/  # Collusion resistance evaluation (2 colluders)
+│   ├── local_multiuser_perf_user500/  # Multi-user performance evaluation results
+│   └── hierarchical_detection/     # Hierarchical detection evaluation results
 │
 └── demonstration/                   # Example outputs
-    ├── my_watermark.txt             # Zero-bit example output
-    ├── my_watermark.key             # Zero-bit secret key
-    ├── my_lbit.txt                  # L-bit example output
-    ├── my_lbit.key                  # L-bit secret key
     ├── multiuser_user0.txt          # Multi-user example (user 0)
-    ├── multiuser_user888.txt        # Multi-user example (user 888)
-    ├── multiuser_bob.txt            # Multi-user example (user "bob")
-    └── multiuser_master.key         # Multi-user master key
+    ├── hierarchical_user0.txt      # Hierarchical scheme example (user 0)
+    ├── hierarchical_user30.txt     # Hierarchical scheme example (user 30)
+    ├── hierarchical_user100.txt    # Hierarchical scheme example (user 100)
+    └── hierarchical_user239.txt    # Hierarchical scheme example (user 239)
 ```
 
 ---
@@ -646,11 +645,11 @@ python -m src.main_multiuser trace [args]
 
 ### Helper Scripts
 
-#### `evalution_scripts/compare_collusion_resistance.py`
+#### `evaluation_scripts/compare_collusion_resistance.py`
 **Purpose:** Compare naive vs fingerprinting multi-user watermarking approaches for collusion resistance
 **Usage:**
 ```bat
-python evalution_scripts\compare_collusion_resistance.py ^
+python evaluation_scripts\compare_collusion_resistance.py ^
   --prompts-file assets/prompts.txt ^
   --max-prompts 100 ^
   --num-colluders 2 ^
@@ -664,6 +663,35 @@ python evalution_scripts\compare_collusion_resistance.py ^
 - Generates comparison table, JSON results, per-prompt JSONs, and CSV summary
 - Organized output structure by approach and prompt
 - Supports `--csv-only` mode to rebuild summaries without regenerating text
+
+#### `evaluation_scripts/evaluate_hierarchical_detection.py`
+**Purpose:** Evaluate pure detection performance (no collusion) for hierarchical multi-user watermarking at L=8, across all allocations of group bits and user bits
+**Usage:**
+```bat
+python evaluation_scripts/evaluate_hierarchical_detection.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/hierarchical_detection
+```
+
+**Features:**
+- Evaluates 8 configurations: naive (L=8) and hierarchical (G=1,U=7 through G=7,U=1)
+- For each prompt: chooses random user, embeds watermark, detects codeword, decodes IDs
+- Logs per-prompt: true/detected IDs, codewords, Hamming distance, z-scores, match statuses
+- Computes metrics: group accuracy, user accuracy, full identity accuracy, L-bit accuracy, false positive/negative rates
+- Saves per-prompt JSON files and summary JSON
+- Supports both naive and hierarchical schemes
 
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
@@ -705,11 +733,11 @@ python helper_scripts\visualise_lbit_blocks.py output_lbit.txt --key-file secret
 
 **Output:** Shows which bit is embedded at each block position
 
-#### `evalution_scripts/test_undetectability.py`
+#### `evaluation_scripts/test_undetectability.py`
 **Purpose:** Statistical tests for undetectability
 **Usage:**
 ```bat
-python evalution_scripts\test_undetectability.py --model gpt2 --num-samples 100
+python evaluation_scripts\test_undetectability.py --model gpt2 --num-samples 100
 ```
 
 **Output:** Chi-square test results, KL divergence metrics
@@ -723,26 +751,21 @@ python helper_scripts\download_models_hpc.py --model gpt-oss-20b --cache-dir /sh
 
 ### SLURM Scripts
 
-All scripts in `slurm_scripts/` are templates for HPC cluster job submission.
+All scripts in `slurm_scripts/` are HPC cluster batch job scripts for running evaluations.
 
-**Common structure:**
-```bash
-#!/bin/bash
-#SBATCH --job-name=watermark_demo
-#SBATCH --time=01:00:00
-#SBATCH --mem=16G
-#SBATCH --gres=gpu:1
-
-export HF_HOME=/shared/models
-export NLTK_DATA=/shared/nltk_data
-
-source venv/bin/activate
-python main.py generate "Prompt" --model gpt2 -o output.txt
-```
+**Available scripts:**
+- `run_collusion_eval_hpc.sh`: Collusion resistance evaluation
+- `run_multiuser_performance_eval_hpc.sh`: Multi-user performance evaluation
+- `run_lbit_sweep_hpc.sh`: L-bit parameter sweep
+- `run_hierarchical_detection_hpc.sh`: Hierarchical detection evaluation
 
 **Usage:**
 ```bash
-sbatch slurm_scripts/demonstration.sh
+# Example: Run hierarchical detection evaluation
+sbatch slurm_scripts/run_hierarchical_detection_hpc.sh
+
+# Or run collusion resistance evaluation
+sbatch slurm_scripts/run_collusion_eval_hpc.sh
 ```
 
 ### Asset Files
@@ -1154,7 +1177,7 @@ Compare naive vs fingerprinting multi-user watermarking approaches for collusion
 #### Run Comparison
 
 ```bat
-python evalution_scripts/compare_collusion_resistance.py ^
+python evaluation_scripts/compare_collusion_resistance.py ^
   --prompts-file assets/prompts.txt ^
   --max-prompts 100 ^
   --model gpt2 ^
@@ -1217,6 +1240,106 @@ evaluation/collusion_resistance_<N>/
 - `--max-prompts`: Number of prompts to test (default: 100)
 - Output directory automatically appends `_<num_colluders>` (e.g., `collusion_resistance_2`)
 - `--csv-only`: Skip generation and rebuild JSON/CSV summaries from existing per-prompt results
+
+---
+
+### Hierarchical Detection Performance Evaluation
+
+Evaluate pure detection performance (no collusion) for hierarchical multi-user watermarking at L=8, across all allocations of group bits and user bits.
+
+#### Run Evaluation
+
+**Naive scheme (L=8, no hierarchy):**
+```bat
+python evaluation_scripts/evaluate_hierarchical_detection.py ^
+  --scheme naive ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/hierarchical_detection
+```
+
+**Hierarchical scheme (G=4, U=4):**
+```bat
+python evaluation_scripts/evaluate_hierarchical_detection.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/hierarchical_detection
+```
+
+**What it does:**
+1. Evaluates 8 configurations:
+   - **Naive**: L=8, no hierarchy, every user gets a flat L-bit codeword
+   - **Hierarchical G=1, U=7**: 1 group, 128 users per group
+   - **Hierarchical G=2, U=6**: 2 groups, 64 users per group
+   - **Hierarchical G=3, U=5**: 4 groups, 32 users per group
+   - **Hierarchical G=4, U=4**: 8 groups, 16 users per group
+   - **Hierarchical G=5, U=3**: 16 groups, 8 users per group
+   - **Hierarchical G=6, U=2**: 32 groups, 4 users per group
+   - **Hierarchical G=7, U=1**: 64 groups, 2 users per group
+2. For each prompt:
+   - Chooses a random user ID
+   - Embeds watermark
+   - Detects L-bit codeword
+   - Decodes group ID and user ID (for hierarchical)
+   - Logs: true/detected IDs, codewords, Hamming distance, z-scores, match statuses
+3. Computes metrics:
+   - **For naive**: L-bit accuracy, full identity accuracy, false positive/negative rates
+   - **For hierarchical**: group accuracy, user accuracy (given correct group), full identity accuracy, L-bit accuracy, false positive/negative rates
+
+**Output structure:**
+```
+evaluation/hierarchical_detection/
+├── naive_L8/
+│   ├── prompt_0.json
+│   ├── prompt_1.json
+│   ├── ...
+│   └── summary.json
+├── hierarchical_G1_U7/
+│   ├── prompt_0.json
+│   ├── prompt_1.json
+│   ├── ...
+│   └── summary.json
+├── hierarchical_G2_U6/
+│   └── ...
+└── ... (other configurations)
+```
+
+**Per-prompt JSON contains:**
+- `true_user_id`, `detected_user_id`
+- `true_group_id`, `detected_group_id` (for hierarchical)
+- `recovered_codeword`, `ground_truth_codeword`
+- `num_invalid_symbols`, `hamming_distance`, `z_score`
+- `group_match`, `user_match`, `full_identity_match`, `lbit_accuracy`
+
+**Summary JSON contains:**
+- Configuration (scheme, l_bits, group_bits, user_bits)
+- Number of prompts
+- Computed metrics (accuracy rates, false positive/negative rates)
+
+**HPC Usage:**
+Run all 8 configurations on HPC:
+```bash
+sbatch slurm_scripts/run_hierarchical_detection_hpc.sh
+```
 
 ---
 
