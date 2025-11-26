@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 #SBATCH --job-name=hier_detection
 #SBATCH --account=oz402
