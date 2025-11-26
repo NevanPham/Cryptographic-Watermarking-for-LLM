@@ -1,4 +1,4 @@
-> **Note:** This file contains commands for running the watermarking schemes (zero-bit, L-bit, multi-user) only. For evaluation scripts (e.g., `evaluate_hierarchical_detection.py`, `compare_collusion_resistance.py`), see the README.md file.
+> **Note:** This file contains commands for running the watermarking schemes (zero-bit, L-bit, multi-user) only. For evaluation scripts (e.g., `evaluate_hierarchical_detection.py`, `compare_collusion_resistance.py`, `evaluate_synonym_attack.py`), see the README.md file.
 
 ## Local quickstart (Windows cmd)
 

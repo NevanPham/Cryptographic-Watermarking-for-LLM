@@ -102,6 +102,7 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── evaluate_hierarchical_detection.py  # Pure detection performance for hierarchical schemes
 │   ├── evaluate_hierarchical_robustness.py  # Robustness to deletion attacks for hierarchical schemes
 │   ├── evaluate_paraphrasing_attack.py  # Robustness to paraphrasing (T5-small) attacks
+│   ├── evaluate_synonym_attack.py  # Robustness to synonym substitution attacks
 │   ├── run_lbit_sweep.py            # L-bit parameter sweep
 │   ├── run_lbit_parameter_sweep.py  # L-bit parameter sweep (alternative)
 │   ├── run_detection_only.py        # Standalone detection script
@@ -124,7 +125,8 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── run_lbit_sweep_hpc.sh        # L-bit parameter sweep
 │   ├── run_hierarchical_detection_hpc.sh  # Hierarchical detection evaluation
 │   ├── run_hierarchical_robustness_hpc.sh  # Hierarchical robustness evaluation
-│   └── run_paraphrasing_attack_hpc.sh  # Paraphrasing attack evaluation (T5-small)
+│   ├── run_paraphrasing_attack_hpc.sh  # Paraphrasing attack evaluation (T5-small)
+│   └── run_synonym_attack_hpc.sh  # Synonym substitution attack evaluation
 │
 ├── assets/                          # Data files
 │   ├── users.csv                    # 1000 users (UserIds 0-999)
@@ -756,6 +758,33 @@ python evaluation_scripts/evaluate_paraphrasing_attack.py ^
 - Computes the same metrics as detection (group/user/full accuracy, L-bit accuracy, false positive/negative rates, averages)
 - Saves prompt-level JSONs, consolidated `results.json`, `summary.json`, and a CSV summary per configuration under `evaluation/paraphrasing_attack`
 
+#### `evaluation_scripts/evaluate_synonym_attack.py`
+**Purpose:** Evaluate robustness against synonym substitution attacks (WordNet, 10% of tokens) for both naive and hierarchical schemes at L=8
+**Usage:**
+```bat
+python evaluation_scripts/evaluate_synonym_attack.py ^
+  --scheme hierarchical ^
+  --group-bits 4 ^
+  --user-bits 4 ^
+  --l-bits 8 ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/synonym_attack
+```
+
+**Features:**
+- Mirrors the detection workflow but applies a single WordNet-based synonym swap (`ratio=0.1`) after generation
+- Evaluates naive plus all eight hierarchical splits (G=1,U=7 … G=8,U=0) automatically
+- Records per-prompt stats identical to detection/paraphrasing runs (codewords, invalid symbols, distances, z-scores, group/user matches)
+- Computes the same aggregate metrics and saves `prompt_*.json`, `results.json`, `summary.json`, and `summary.csv` under `evaluation/synonym_attack/<scheme_dir>`
+
 #### `helper_scripts/analyse.py` (261 lines)
 **Purpose:** Generate plots and statistics from evaluation results
 **Usage:**
@@ -1064,6 +1093,9 @@ sbatch slurm_scripts/run_hierarchical_robustness_hpc.sh
 
 # Paraphrasing (T5-small) attack sweep
 sbatch slurm_scripts/run_paraphrasing_attack_hpc.sh
+
+# Synonym substitution attack sweep
+sbatch slurm_scripts/run_synonym_attack_hpc.sh
 ```
 
 ### Monitor Job
