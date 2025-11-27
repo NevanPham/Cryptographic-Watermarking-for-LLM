@@ -17,7 +17,7 @@ module load python-scientific/3.10.8-foss-2022b
 module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
-source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
+source /home/kpham/watermark-venv/bin/activate
 
 export TRANSFORMERS_CACHE=/fred/oz402/kpham-watermark/huggingface
 export HF_HOME=/fred/oz402/kpham-watermark/huggingface
