@@ -927,11 +927,11 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
     
     def trace(self, master_key: bytes, text: str, **kwargs) -> list[dict]:
         """
-        Traces watermarked text by:
+        Traces watermarked text using staged tracing for better performance:
         1. Recovering L bits using LBitWatermarker.detect
         2. Splitting into group_bits and user_bits
-        3. Identifying nearest group codeword
-        4. Identifying nearest user fingerprint within that group
+        3. Identifying suspect groups by comparing group bits only
+        4. Searching users only within suspect groups by comparing full codeword
         """
         self._require_metadata()
         
@@ -950,104 +950,100 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         print(f"  - Group part: {recovered_group_bits} ({self.group_bits} bits)")
         print(f"  - User part: {recovered_user_bits} ({self.user_bits} bits)")
         
-        # Group identification: find nearest group codeword by Hamming distance
-        best_group_id = None
-        best_group_distance = float('inf')
+        # Stage 1: Find suspect groups by comparing group bits only
         valid_group_positions = [i for i, bit in enumerate(recovered_group_bits) 
                                 if bit not in ('⊥', '*', '?')]
         
         if not valid_group_positions:
-            print("No valid bits in group part; cannot identify group.")
+            print("No valid bits in group part; cannot identify groups.")
             return []
         
+        # Calculate distances for all groups
+        group_distances = []
         for group_id, group_codeword in self.group_codewords.items():
-            # Calculate Hamming distance only on valid positions
             distance = sum(
                 recovered_group_bits[i] != group_codeword[i]
                 for i in valid_group_positions
             )
-            if distance < best_group_distance:
-                best_group_distance = distance
-                best_group_id = group_id
+            group_distances.append((group_id, distance))
         
-        if best_group_id is None:
-            print("Could not identify group.")
+        if not group_distances:
+            print("Could not identify any groups.")
             return []
         
-        print(f"Identified Group {best_group_id} (Hamming distance: {best_group_distance})")
+        # Find minimum distance and collect all groups with that distance (suspect groups)
+        min_group_distance = min(dist for _, dist in group_distances)
+        suspect_groups = [group_id for group_id, dist in group_distances if dist == min_group_distance]
         
-        # User identification: find nearest user fingerprint within the identified group
-        users_in_group = self.group_to_users.get(best_group_id, [])
-        if not users_in_group:
-            print(f"No users found in group {best_group_id}.")
-            return []
+        print(f"Identified {len(suspect_groups)} suspect group(s) with Hamming distance {min_group_distance}: {suspect_groups}")
         
-        # Handle group-only mode (user_bits=0): return all users in the group
-        if self.user_bits == 0:
-            accused = []
-            for user_id in users_in_group:
-                row = self.user_lookup.get(user_id)
-                accused.append({
-                    "user_id": user_id,
-                    "username": row.get("Username") if row is not None else None,
-                    "match_score_percent": 100.0,  # Perfect match in group-only mode
-                    "group_id": best_group_id
-                })
-            print(f"Identified User(s) {[u['user_id'] for u in accused]} in Group {best_group_id} (group-only mode)")
-            return accused
-        
-        valid_user_positions = [i for i, bit in enumerate(recovered_user_bits) 
+        # Stage 2: Search users only within suspect groups, comparing full codeword
+        valid_full_positions = [i for i, bit in enumerate(recovered_bits) 
                                if bit not in ('⊥', '*', '?')]
         
-        if not valid_user_positions:
-            print("No valid bits in user part; cannot identify user.")
-            # Return all users in the group as candidates
+        if not valid_full_positions:
+            print("No valid bits in recovered codeword; cannot identify users.")
+            return []
+        
+        # Handle group-only mode (user_bits=0): return all users in suspect groups
+        if self.user_bits == 0:
             accused = []
-            for user_id in users_in_group:
-                row = self.user_lookup.get(user_id)
-                accused.append({
-                    "user_id": user_id,
-                    "username": row.get("Username") if row is not None else None,
-                    "match_score_percent": 0.0,
-                    "group_id": best_group_id
-                })
+            for group_id in suspect_groups:
+                users_in_group = self.group_to_users.get(group_id, [])
+                for user_id in users_in_group:
+                    row = self.user_lookup.get(user_id)
+                    accused.append({
+                        "user_id": user_id,
+                        "username": row.get("Username") if row is not None else None,
+                        "match_score_percent": 100.0,  # Perfect match in group-only mode
+                        "group_id": group_id
+                    })
+            print(f"Identified User(s) {[u['user_id'] for u in accused]} in suspect groups (group-only mode)")
             return accused
         
-        best_user_id = None
-        best_user_distance = float('inf')
-        candidates = []
+        # Compare full codeword against users in suspect groups
+        all_candidates = []
+        best_full_distance = float('inf')
         
-        for user_id in users_in_group:
-            user_index_in_group = users_in_group.index(user_id)
-            user_fingerprint = generate_user_fingerprint(user_index_in_group, self.user_bits)
+        for group_id in suspect_groups:
+            users_in_group = self.group_to_users.get(group_id, [])
+            if not users_in_group:
+                continue
             
-            # Calculate Hamming distance only on valid positions
-            distance = sum(
-                recovered_user_bits[i] != user_fingerprint[i]
-                for i in valid_user_positions
-            )
-            
-            if distance < best_user_distance:
-                best_user_distance = distance
-                best_user_id = user_id
-                candidates = [user_id]
-            elif distance == best_user_distance:
-                candidates.append(user_id)
+            for user_id in users_in_group:
+                # Get the full codeword for this user
+                user_codeword = self.get_codeword_for_user(user_id)
+                
+                # Calculate Hamming distance on full codeword (only valid positions)
+                distance = sum(
+                    recovered_bits[i] != user_codeword[i]
+                    for i in valid_full_positions
+                )
+                
+                if distance < best_full_distance:
+                    best_full_distance = distance
+                    all_candidates = [(user_id, group_id, distance)]
+                elif distance == best_full_distance:
+                    all_candidates.append((user_id, group_id, distance))
+        
+        if not all_candidates:
+            print("No users found in suspect groups.")
+            return []
         
         # Return all users tied for best match
         accused = []
-        total_valid = len(valid_user_positions)
-        for user_id in candidates:
+        total_valid = len(valid_full_positions)
+        for user_id, group_id, distance in all_candidates:
             row = self.user_lookup.get(user_id)
-            match_score = ((total_valid - best_user_distance) / total_valid * 100) if total_valid > 0 else 0.0
+            match_score = ((total_valid - distance) / total_valid * 100) if total_valid > 0 else 0.0
             accused.append({
                 "user_id": user_id,
                 "username": row.get("Username") if row is not None else None,
                 "match_score_percent": match_score,
-                "group_id": best_group_id
+                "group_id": group_id
             })
         
-        print(f"Identified User(s) {candidates} in Group {best_group_id} "
-              f"(Hamming distance: {best_user_distance})")
+        print(f"Identified User(s) {[u['user_id'] for u in accused]} "
+              f"in suspect groups (full codeword Hamming distance: {best_full_distance})")
         
         return accused

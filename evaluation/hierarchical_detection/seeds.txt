@@ -1,0 +1,15 @@
+# Random seeds used for user selection in detection evaluation
+# Model: gpt2
+# Run tag: my_local_run
+# Generated: 2025-11-28 01:13:10
+# Format: config_name: seed_value
+
+naive_L8: 1168715426
+hierarchical_G1_U7: 1170253422
+hierarchical_G2_U6: 1171617759
+hierarchical_G3_U5: 1172991996
+hierarchical_G4_U4: 1174538143
+hierarchical_G5_U3: 1176052445
+hierarchical_G6_U2: 1177486496
+hierarchical_G7_U1: 1179002888
+hierarchical_G8_U0: 1180423424
