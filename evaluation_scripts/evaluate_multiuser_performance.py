@@ -1,6 +1,6 @@
 # evaluate_multiuser_performance.py
 # Script to evaluate performance metrics (memory, computation, storage) for multi-user watermarking schemes
-# Compares: naive, min-distance-2, and min-distance-3 schemes
+# Compares: naive and hierarchical schemes (with different group/user bit allocations)
 
 import argparse
 import json
@@ -21,7 +21,7 @@ parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 sys.path.insert(0, parent_dir)
 
 from src.models import GPT2Model, GptOssModel, GptOss120bModel
-from src.watermark import ZeroBitWatermarker, LBitWatermarker, NaiveMultiUserWatermarker, GroupedMultiUserWatermarker
+from src.watermark import ZeroBitWatermarker, LBitWatermarker, NaiveMultiUserWatermarker, HierarchicalMultiUserWatermarker
 
 
 def get_model(model_name: str):
@@ -114,12 +114,13 @@ def measure_initialization(muw, users_file: str, scheme_name: str) -> dict:
     num_groups = 0
     users_per_group = 0
     
-    if hasattr(muw, 'fingerprinter') and muw.fingerprinter.codewords is not None:
-        # Grouped scheme: store num_groups codewords
-        storage_mb = get_storage_size_mb(muw.fingerprinter.codewords)
-        if hasattr(muw.fingerprinter, 'group_codewords') and muw.fingerprinter.group_codewords:
-            num_groups = len(muw.fingerprinter.group_codewords)
-            users_per_group = muw.fingerprinter.users_per_group
+    # Hierarchical scheme: store group codewords
+    if hasattr(muw, 'group_codewords') and muw.group_codewords:
+        storage_mb = get_storage_size_mb(muw.group_codewords)
+        num_groups = len(muw.group_codewords)
+        if hasattr(muw, 'group_to_users') and muw.group_to_users:
+            # Get average users per group
+            users_per_group = sum(len(users) for users in muw.group_to_users.values()) / len(muw.group_to_users) if muw.group_to_users else 0
     # Naive scheme: no storage (computed on-the-fly)
     
     return {
@@ -226,13 +227,14 @@ def measure_tracing(muw, master_key: bytes, text: str, scheme_name: str) -> dict
     """Measure tracing time, comparisons, and memory."""
     print(f"\n--- Measuring Tracing for {scheme_name} ---")
     
-    # Count comparisons: N for naive, N for grouped (currently), but could be num_groups if optimized
+    # Count comparisons: N for naive, hierarchical uses group-based tracing
     N = muw.N
     expected_comparisons = N
     
-    if hasattr(muw, 'fingerprinter') and muw.fingerprinter.group_codewords:
-        num_groups = len(muw.fingerprinter.group_codewords)
-        # Note: current implementation still does N comparisons, but could be optimized to num_groups
+    if hasattr(muw, 'group_codewords') and muw.group_codewords:
+        num_groups = len(muw.group_codewords)
+        # Hierarchical scheme: first compare groups, then users within group
+        # Current implementation may do N comparisons, but could be optimized
         potential_optimized_comparisons = num_groups
     else:
         num_groups = None
@@ -258,37 +260,32 @@ def measure_tracing(muw, master_key: bytes, text: str, scheme_name: str) -> dict
     }
 
 
-def measure_scalability(users_file: str, L: int, min_distance: int = None) -> dict:
+def measure_scalability(users_file: str, L: int, group_bits: int = None, user_bits: int = None) -> dict:
     """Measure scalability metrics: max users, groups, etc."""
     df = pd.read_csv(users_file)
     N = len(df)
     
     max_users_naive = 2 ** L
     
-    if min_distance is not None:
-        # Use default values based on min_distance (matching FingerprintingCode defaults)
-        if min_distance == 2:
-            max_groups = 100
-            users_per_group = 10
-        elif min_distance == 3:
-            max_groups = 50
-            users_per_group = 20
-        else:
-            max_groups = 100
-            users_per_group = 10
-        max_users_grouped = max_groups * users_per_group
+    if group_bits is not None and user_bits is not None:
+        # Hierarchical scheme: max_groups = 2^group_bits, max_users_per_group = 2^user_bits
+        max_groups = 2 ** group_bits
+        max_users_per_group = 2 ** user_bits
+        max_users_hierarchical = max_groups * max_users_per_group
     else:
         max_groups = None
-        users_per_group = None
-        max_users_grouped = None
+        max_users_per_group = None
+        max_users_hierarchical = None
     
     return {
         'current_users': N,
         'max_users_naive': max_users_naive,
-        'max_users_grouped': max_users_grouped,
+        'max_users_hierarchical': max_users_hierarchical,
         'max_groups': max_groups,
-        'users_per_group': users_per_group,
-        'l_bits': L
+        'max_users_per_group': max_users_per_group,
+        'l_bits': L,
+        'group_bits': group_bits,
+        'user_bits': user_bits
     }
 
 
@@ -328,8 +325,20 @@ def main():
     parser.add_argument(
         '--l-bits',
         type=int,
-        default=10,
-        help='Number of L-bits for watermarking (default: 10)'
+        default=8,
+        help='Number of L-bits for watermarking (default: 8)'
+    )
+    parser.add_argument(
+        '--group-bits',
+        type=int,
+        default=None,
+        help='Number of bits for group codewords (for hierarchical scheme, required if testing hierarchical)'
+    )
+    parser.add_argument(
+        '--user-bits',
+        type=int,
+        default=None,
+        help='Number of bits for user fingerprints (for hierarchical scheme, required if testing hierarchical)'
     )
     parser.add_argument(
         '--delta',
@@ -370,8 +379,8 @@ def main():
     parser.add_argument(
         '--user-id',
         type=int,
-        default=0,
-        help='User ID to use for embedding test (default: 0)'
+        default=64,
+        help='User ID to use for embedding test (default: 64)'
     )
     parser.add_argument(
         '--prompts-file',
@@ -391,25 +400,53 @@ def main():
         default='evaluation/multiuser_performance',
         help='Output directory for results (default: evaluation/multiuser_performance)'
     )
+    parser.add_argument(
+        '--seed',
+        type=int,
+        default=None,
+        help='Random seed for reproducibility (default: auto-generated or loaded from seeds file)'
+    )
+    parser.add_argument(
+        '--seeds-file',
+        type=str,
+        default=None,
+        help='Path to seeds.txt file to read existing seeds from (optional). If provided and seed exists for this config, it will be reused.'
+    )
     
     args = parser.parse_args()
     
+    # Resolve paths relative to repo root
+    users_file_path = args.users_file
+    if not os.path.isabs(users_file_path):
+        users_file_path = os.path.join(parent_dir, users_file_path)
+    
+    prompts_file_path = args.prompts_file
+    if not os.path.isabs(prompts_file_path):
+        prompts_file_path = os.path.join(parent_dir, prompts_file_path)
+    
+    output_dir_path = args.output_dir
+    if not os.path.isabs(output_dir_path):
+        output_dir_path = os.path.join(parent_dir, output_dir_path)
+    
     # Create output directory
-    os.makedirs(args.output_dir, exist_ok=True)
+    os.makedirs(output_dir_path, exist_ok=True)
     
     print("=" * 80)
     print("Multi-User Watermarking Performance Evaluation")
     print("=" * 80)
     print(f"Model: {args.model}")
     print(f"L-bits: {args.l_bits}")
-    print(f"Users file: {args.users_file}")
-    print(f"Output directory: {args.output_dir}")
+    if args.group_bits is not None and args.user_bits is not None:
+        print(f"Hierarchical: G={args.group_bits}, U={args.user_bits}")
+    print(f"User ID: {args.user_id}")
+    print(f"Users file: {users_file_path}")
+    print(f"Output directory: {output_dir_path}")
     print("=" * 80)
     
     if args.prompt:
         prompts_to_use = [args.prompt.strip()]
     else:
-        prompts_to_use = load_prompts(args.prompts_file, args.max_prompts)
+        prompts_to_use = load_prompts(prompts_file_path, args.max_prompts)
     
     if not prompts_to_use:
         raise ValueError("No prompts available for evaluation.")
@@ -430,31 +467,43 @@ def main():
     )
     lbw = LBitWatermarker(zero_bit_watermarker=zbw, L=args.l_bits)
     
-    # Test schemes: naive, min-distance-2, min-distance-3
-    schemes = [
-        ('naive', None),
-        ('min-distance-2', 2),
-        ('min-distance-3', 3)
-    ]
+    # Test schemes: naive and hierarchical (if group_bits/user_bits provided)
+    schemes = [('naive', None, None, None)]
+    
+    if args.group_bits is not None and args.user_bits is not None:
+        if args.group_bits + args.user_bits != args.l_bits:
+            raise ValueError(
+                f"--group-bits ({args.group_bits}) + --user-bits ({args.user_bits}) "
+                f"must equal --l-bits ({args.l_bits})"
+            )
+        schemes.append(('hierarchical', args.group_bits, args.user_bits, 2))  # min_distance=2 for hierarchical
     
     all_results = {}
     
-    for scheme_name, min_distance in schemes:
+    for scheme_name, group_bits, user_bits, min_distance in schemes:
         print(f"\n{'=' * 80}")
-        print(f"Evaluating Scheme: {scheme_name}")
+        if scheme_name == 'hierarchical':
+            print(f"Evaluating Scheme: {scheme_name} (G={group_bits}, U={user_bits})")
+        else:
+            print(f"Evaluating Scheme: {scheme_name}")
         print(f"{'=' * 80}")
         
         # Create watermarker
         if scheme_name == 'naive':
             muw = NaiveMultiUserWatermarker(lbit_watermarker=lbw)
-        else:
-            muw = GroupedMultiUserWatermarker(lbit_watermarker=lbw, min_distance=min_distance)
+        else:  # hierarchical
+            muw = HierarchicalMultiUserWatermarker(
+                lbit_watermarker=lbw,
+                group_bits=group_bits,
+                user_bits=user_bits,
+                min_distance=min_distance
+            )
         
         scheme_results = {}
         
         # 1. Initialization metrics
         try:
-            init_metrics = measure_initialization(muw, args.users_file, scheme_name)
+            init_metrics = measure_initialization(muw, users_file_path, scheme_name)
             scheme_results['initialization'] = init_metrics
             print(f"✓ Initialization completed: {init_metrics['init_time_sec']:.4f}s")
         except Exception as e:
@@ -463,7 +512,7 @@ def main():
             continue
         
         # 2. Scalability metrics
-        scalability_metrics = measure_scalability(args.users_file, args.l_bits, min_distance)
+        scalability_metrics = measure_scalability(users_file_path, args.l_bits, group_bits, user_bits)
         scheme_results['scalability'] = scalability_metrics
         
         # 3. Generate master key
@@ -537,15 +586,26 @@ def main():
         all_results[scheme_name] = scheme_results
     
     # Save results
-    results_file = os.path.join(args.output_dir, 'performance_results.json')
+    results_file = os.path.join(output_dir_path, 'performance_results.json')
     with open(results_file, 'w') as f:
         json.dump(all_results, f, indent=2, default=json_default_encoder)
     print(f"\n✓ Results saved to: {results_file}")
     
     # Create summary CSV
     summary_data = []
-    for scheme_name, results in all_results.items():
-        row = {'scheme': scheme_name}
+    for scheme_tuple in schemes:
+        scheme_name = scheme_tuple[0]
+        if scheme_name not in all_results:
+            continue
+        results = all_results[scheme_name]
+        
+        # Create scheme label
+        if scheme_name == 'hierarchical':
+            scheme_label = f"hierarchical_G{scheme_tuple[1]}_U{scheme_tuple[2]}"
+        else:
+            scheme_label = scheme_name
+        
+        row = {'scheme': scheme_label}
         
         # Initialization
         if 'initialization' in results and 'error' not in results['initialization']:
@@ -580,13 +640,17 @@ def main():
             scale = results['scalability']
             if scheme_name == 'naive':
                 row['max_users'] = scale.get('max_users_naive', 0)
-            else:
-                row['max_users'] = scale.get('max_users_grouped', 0)
+            else:  # hierarchical
+                row['max_users'] = scale.get('max_users_hierarchical', 0)
+                row['max_groups'] = scale.get('max_groups', 0)
+                row['max_users_per_group'] = scale.get('max_users_per_group', 0)
+                row['group_bits'] = scale.get('group_bits', 0)
+                row['user_bits'] = scale.get('user_bits', 0)
         
         summary_data.append(row)
     
     summary_df = pd.DataFrame(summary_data)
-    summary_file = os.path.join(args.output_dir, 'performance_summary.csv')
+    summary_file = os.path.join(output_dir_path, 'performance_summary.csv')
     summary_df.to_csv(summary_file, index=False)
     print(f"✓ Summary saved to: {summary_file}")
     
@@ -597,7 +661,7 @@ def main():
     print(summary_df.to_string(index=False))
     print("=" * 80)
     
-    print(f"\n✓ Evaluation complete! Results saved to: {args.output_dir}")
+    print(f"\n✓ Evaluation complete! Results saved to: {output_dir_path}")
 
 
 if __name__ == '__main__':

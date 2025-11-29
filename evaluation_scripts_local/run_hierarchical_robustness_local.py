@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 """
-Convenience driver to run all hierarchical-detection configurations locally.
+Convenience driver to run all hierarchical-robustness configurations locally.
 
-This mirrors `slurm_scripts/run_hierarchical_detection_hpc.sh` but is designed
+This mirrors `slurm_scripts/run_hierarchical_robustness_hpc.sh` but is designed
 for a single workstation. It sequentially invokes
-`evaluation_scripts/evaluate_hierarchical_detection.py` for all nine schemes
+`evaluation_scripts/evaluate_hierarchical_robustness.py` for all nine schemes
 (naive baseline + eight hierarchical splits) and forwards shared arguments
 such as the prompts file, number of prompts, and model selection.
 """
@@ -23,7 +23,7 @@ import pandas as pd
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 EVAL_SCRIPT = os.path.join(
-    REPO_ROOT, "evaluation_scripts", "evaluate_hierarchical_detection.py"
+    REPO_ROOT, "evaluation_scripts", "evaluate_hierarchical_robustness.py"
 )
 
 CONFIGS = [
@@ -90,8 +90,8 @@ CONFIGS = [
 def build_common_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Run all hierarchical-detection configurations locally using the "
-            "evaluate_hierarchical_detection.py script."
+            "Run all hierarchical-robustness configurations locally using the "
+            "evaluate_hierarchical_robustness.py script."
         )
     )
     parser.add_argument(
@@ -150,13 +150,30 @@ def build_common_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--output-dir",
-        default="evaluation/hierarchical_detection",
-        help="Base output directory (default: evaluation/hierarchical_detection).",
+        default="evaluation/robustness",
+        help="Base output directory (default: evaluation/robustness).",
     )
     parser.add_argument(
         "--run-tag",
         default=None,
         help="Optional run tag appended to each configuration directory.",
+    )
+    parser.add_argument(
+        "--save-raw-results",
+        action="store_true",
+        help="If set, also save detailed attack records as raw_results.jsonl.gz",
+    )
+    parser.add_argument(
+        "--raw-results-file",
+        type=str,
+        default="raw_results.jsonl.gz",
+        help="Filename for the raw results artifact (default: raw_results.jsonl.gz).",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        help="Random seed for reproducibility (default: auto-generated).",
     )
     parser.add_argument(
         "--dry-run",
@@ -182,6 +199,11 @@ def build_common_parser() -> argparse.ArgumentParser:
         "--run-tag-filter",
         default=None,
         help="When using --csv-only, filter summaries by this run_tag (default: include all).",
+    )
+    parser.add_argument(
+        "--seeds-file",
+        default=None,
+        help="Path to seeds.txt file to read existing seeds from (optional). If provided, seeds will be reused for each configuration.",
     )
     return parser
 
@@ -209,6 +231,16 @@ def build_command(args: argparse.Namespace, config: dict, run_tag: str) -> List[
         cmd.extend(["--user-bits", str(config["user_bits"])])
         cmd.extend(["--l-bits", str(config["l_bits"])])
 
+    # Optional arguments
+    if args.save_raw_results:
+        cmd.append("--save-raw-results")
+    if args.raw_results_file != "raw_results.jsonl.gz":
+        cmd.extend(["--raw-results-file", args.raw_results_file])
+    if args.seed is not None:
+        cmd.extend(["--seed", str(args.seed)])
+    if args.seeds_file:
+        cmd.extend(["--seeds-file", args.seeds_file])
+
     return cmd
 
 
@@ -220,7 +252,7 @@ def collect_and_aggregate_summaries(
     aggregate them into a single CSV file.
     
     Args:
-        output_dir: Base output directory (e.g., "evaluation/hierarchical_detection")
+        output_dir: Base output directory (e.g., "evaluation/robustness")
         run_tag: Optional run tag to filter summaries (None = include all)
         csv_path: Optional custom path for CSV output
     
@@ -270,6 +302,8 @@ def collect_and_aggregate_summaries(
                 "group_bits": summary.get("group_bits", ""),
                 "user_bits": summary.get("user_bits", ""),
                 "num_prompts": summary.get("num_prompts", ""),
+                "num_attack_variants_per_prompt": summary.get("num_attack_variants_per_prompt", ""),
+                "total_attack_results": summary.get("total_attack_results", ""),
                 "random_seed": summary.get("random_seed", ""),
                 "generated_utc": summary.get("generated_utc", ""),
             }
@@ -328,10 +362,13 @@ def main():
 
     # Normal mode: run evaluations
     print("=" * 80)
-    print("Running hierarchical detection evaluations locally")
+    print("Running hierarchical robustness evaluations locally")
     print(f"Evaluator script: {EVAL_SCRIPT}")
     print(f"Prompts file: {args.prompts_file} | Users file: {args.users_file}")
     print(f"Number of prompts per config: {args.num_prompts}")
+    print(f"Deletion percents: [0.05, 0.10, 0.15, 0.20]")
+    print(f"Deletion modes: [start, middle, end, random]")
+    print(f"Total attack variants per prompt: 16")
     print("=" * 80)
 
     # Determine run_tag early so we can use it for CSV aggregation

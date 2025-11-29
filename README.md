@@ -80,7 +80,6 @@ Cryptographic-Watermarking-for-LLM/
 ├── main.py                          # Main CLI entry point (zero-bit, L-bit, evaluation)
 ├── requirements.txt                 # Python dependencies
 ├── COMMANDS.md                      # Copy-paste ready command examples
-├── PARAMS.md                        # Parameter tuning guide
 │
 ├── src/                             # Core source code
 │   ├── watermark.py                 # Watermarking implementations
@@ -109,6 +108,11 @@ Cryptographic-Watermarking-for-LLM/
 │   ├── run_detection_only.py        # Standalone detection script
 │   ├── redo_paraphrase_attack.py    # Re-run perturbation attacks
 │   └── test_undetectability.py      # Statistical undetectability tests
+│
+├── evaluation_scripts_local/        # Local convenience wrappers for evaluation scripts
+│   ├── run_hierarchical_detection_local.py  # Run hierarchical detection evaluation locally
+│   ├── run_hierarchical_performance_local.py  # Run hierarchical performance evaluation locally
+│   └── run_hierarchical_robustness_local.py  # Run hierarchical robustness evaluation locally
 │
 ├── helper_scripts/                  # Analysis and utility scripts
 │   ├── analyse.py                   # Generate plots from evaluation results
@@ -695,7 +699,7 @@ python evaluation_scripts/evaluate_hierarchical_detection.py ^
 ```
 
 **Features:**
-- Evaluates 8 configurations: naive (L=8) and hierarchical (G=1,U=7 through G=7,U=1)
+- Evaluates 9 configurations: naive (L=8) and hierarchical (G=1,U=7 through G=8,U=0)
 - For each prompt: chooses random user, embeds watermark, detects codeword, decodes IDs
 - Logs per-prompt: true/detected IDs, codewords, Hamming distance, z-scores, match statuses
 - Computes metrics: group accuracy, user accuracy, full identity accuracy, L-bit accuracy, false positive/negative rates
@@ -870,6 +874,80 @@ python evaluation_scripts\test_undetectability.py --model gpt2 --num-samples 100
 python helper_scripts\download_models_hpc.py --model gpt-oss-20b --cache-dir /shared/models
 ```
 
+### Local Evaluation Scripts
+
+Convenience wrappers for running evaluation scripts locally (without SLURM). These scripts sequentially invoke the corresponding evaluation scripts for all configurations.
+
+#### `evaluation_scripts_local/run_hierarchical_detection_local.py`
+**Purpose:** Run all hierarchical detection configurations locally (naive + 8 hierarchical splits)
+**Usage:**
+```bat
+python evaluation_scripts_local\run_hierarchical_detection_local.py ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/hierarchical_detection
+```
+
+**Features:**
+- Runs all 9 configurations sequentially (naive L=8 + 8 hierarchical splits: G=1,U=7 through G=8,U=0)
+- Forwards shared arguments to `evaluate_hierarchical_detection.py`
+- Generates consolidated summary CSV across all configurations
+- Designed for single workstation use (mirrors HPC SLURM script functionality)
+
+#### `evaluation_scripts_local/run_hierarchical_performance_local.py`
+**Purpose:** Run all hierarchical performance evaluations locally (memory, computation, storage metrics)
+**Usage:**
+```bat
+python evaluation_scripts_local\run_hierarchical_performance_local.py ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 100 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --user-id 500 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/local_multiuser_perf_user500
+```
+
+**Features:**
+- Runs all 9 configurations sequentially (naive L=8 + 8 hierarchical splits)
+- Measures performance metrics: memory usage, computation time, storage size
+- Forwards shared arguments to `evaluate_multiuser_performance.py`
+- Generates consolidated performance summary
+
+#### `evaluation_scripts_local/run_hierarchical_robustness_local.py`
+**Purpose:** Run all hierarchical robustness evaluations locally (deletion attack resistance)
+**Usage:**
+```bat
+python evaluation_scripts_local\run_hierarchical_robustness_local.py ^
+  --prompts-file assets/prompts.txt ^
+  --num-prompts 300 ^
+  --users-file assets/users.csv ^
+  --model gpt2 ^
+  --delta 3.5 ^
+  --entropy-threshold 2.5 ^
+  --hashing-context 5 ^
+  --z-threshold 4.0 ^
+  --max-new-tokens 512 ^
+  --output-dir evaluation/robustness
+```
+
+**Features:**
+- Runs all 9 configurations sequentially (naive L=8 + 8 hierarchical splits)
+- Tests 16 deletion attack variants per prompt (4 deletion percents × 4 deletion modes)
+- Forwards shared arguments to `evaluate_hierarchical_robustness.py`
+- Generates consolidated summary CSV across all configurations
+
 ### SLURM Scripts
 
 All scripts in `slurm_scripts/` are HPC cluster batch job scripts for running evaluations.
@@ -920,7 +998,7 @@ Explain quantum computing in simple terms
 
 ## Parameters and Tuning
 
-See `PARAMS.md` for comprehensive tuning guide. Key parameters:
+Key parameters:
 
 ### Generation Parameters
 
@@ -1430,7 +1508,7 @@ python evaluation_scripts/evaluate_hierarchical_detection.py ^
 ```
 
 **What it does:**
-1. Evaluates 8 configurations:
+1. Evaluates 9 configurations:
    - **Naive**: L=8, no hierarchy, every user gets a flat L-bit codeword
    - **Hierarchical G=1, U=7**: 1 group, 128 users per group
    - **Hierarchical G=2, U=6**: 2 groups, 64 users per group
@@ -1439,6 +1517,7 @@ python evaluation_scripts/evaluate_hierarchical_detection.py ^
    - **Hierarchical G=5, U=3**: 16 groups, 8 users per group
    - **Hierarchical G=6, U=2**: 32 groups, 4 users per group
    - **Hierarchical G=7, U=1**: 64 groups, 2 users per group
+   - **Hierarchical G=8, U=0**: 128 groups, 1 user per group (group-only mode)
 2. For each prompt:
    - Chooses a random user ID
    - Embeds watermark
@@ -1730,7 +1809,6 @@ A: Depends on text length and parameters. Longer text → more blocks → can em
 
 **For more details, see:**
 - `COMMANDS.md` - Copy-paste command examples
-- `PARAMS.md` - Parameter tuning guide
 - `src/watermark.py` - Implementation details
 - GitHub Issues - Community support
 

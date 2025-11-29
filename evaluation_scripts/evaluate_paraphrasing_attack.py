@@ -518,7 +518,13 @@ def main():
         "--seed",
         type=int,
         default=None,
-        help="Random seed for reproducibility (default: auto or loaded from seeds.txt)",
+        help="Random seed for reproducibility (default: auto-generated or loaded from seeds file)",
+    )
+    parser.add_argument(
+        "--seeds-file",
+        type=str,
+        default=None,
+        help="Path to seeds.txt file to read existing seeds from (optional). If provided and seed exists for this config, it will be reused.",
     )
 
     args = parser.parse_args()
@@ -552,24 +558,28 @@ def main():
     # Set random seed for reproducibility
     seed = args.seed
     if seed is None:
-        # Try to read from main seeds.txt if it exists and has this config
-        main_seeds_file = os.path.join(base_output_dir, "seeds.txt")
-        if os.path.exists(main_seeds_file):
-            # Generate config name to check
-            if args.scheme == "hierarchical":
-                config_name = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
-            else:
-                config_name = f"naive_L{args.l_bits}"
+        # Try to read from seeds file if provided
+        if args.seeds_file:
+            seeds_file_path = args.seeds_file
+            if not os.path.isabs(seeds_file_path):
+                seeds_file_path = os.path.join(parent_dir, seeds_file_path)
             
-            # Try to read existing seed for this config
-            with open(main_seeds_file, "r", encoding="utf-8") as f:
-                for line in f:
-                    if line.strip().startswith(f"{config_name}:"):
-                        try:
-                            seed = int(line.split(":")[1].strip())
-                            break
-                        except (IndexError, ValueError):
-                            pass
+            if os.path.exists(seeds_file_path):
+                # Generate config name to check
+                if args.scheme == "hierarchical":
+                    config_name = f"hierarchical_G{args.group_bits}_U{args.user_bits}"
+                else:
+                    config_name = f"naive_L{args.l_bits}"
+                
+                # Try to read existing seed for this config
+                with open(seeds_file_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.strip().startswith(f"{config_name}:"):
+                            try:
+                                seed = int(line.split(":")[1].strip())
+                                break
+                            except (IndexError, ValueError):
+                                pass
     
     if seed is None:
         seed = int(time.time() * 1000) % (2**31)
