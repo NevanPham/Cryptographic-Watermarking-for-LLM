@@ -101,7 +101,21 @@ def measure_initialization(muw, users_file: str, scheme_name: str) -> dict:
     
     # Measure initialization time
     start_time = time.perf_counter()
-    muw.load_users(users_file)
+    
+    # For fair comparison, limit all schemes to 128 users
+    import tempfile
+    df_all = pd.read_csv(users_file)
+    if len(df_all) > 128:
+        print(f"  → Limiting to 128 users for {scheme_name} scheme (for fair comparison)")
+        df_limited = df_all.head(128)
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
+            df_limited.to_csv(tmp_file.name, index=False)
+            tmp_users_path = tmp_file.name
+        muw.load_users(tmp_users_path)
+        os.unlink(tmp_users_path)
+    else:
+        muw.load_users(users_file)
+    
     init_time = time.perf_counter() - start_time
     
     # Measure memory after
@@ -196,8 +210,13 @@ def measure_embedding(muw, master_key: bytes, user_id: int, prompt: str, max_new
     return metrics, watermarked_text
 
 
-def measure_detection(muw, master_key: bytes, text: str, scheme_name: str) -> dict:
-    """Measure detection time, HMAC operations, and memory."""
+def measure_detection(muw, master_key: bytes, text: str, scheme_name: str) -> tuple[dict, str]:
+    """
+    Measure detection time, HMAC operations, and memory.
+    
+    Returns:
+        tuple: (metrics_dict, recovered_codeword) - The recovered codeword can be reused for tracing.
+    """
     print(f"\n--- Measuring Detection for {scheme_name} ---")
     
     # Count HMAC operations: 2L (one for each bit position, each with 0 and 1)
@@ -207,13 +226,13 @@ def measure_detection(muw, master_key: bytes, text: str, scheme_name: str) -> di
     memory_before = get_memory_mb()
     start_time = time.perf_counter()
     
-    # Detection happens inside trace, but we can measure it separately
+    # Detection: model forward pass + 2L zero-bit detections
     recovered_codeword = muw.lbw.detect(master_key, text)
     
     detect_time = time.perf_counter() - start_time
     memory_after = get_memory_mb()
     
-    return {
+    metrics = {
         'detect_time_sec': detect_time,
         'hmac_operations': expected_hmac_ops,
         'memory_before_mb': memory_before,
@@ -221,11 +240,25 @@ def measure_detection(muw, master_key: bytes, text: str, scheme_name: str) -> di
         'memory_delta_mb': memory_after - memory_before,
         'recovered_codeword': recovered_codeword
     }
+    
+    return metrics, recovered_codeword
 
 
-def measure_tracing(muw, master_key: bytes, text: str, scheme_name: str) -> dict:
-    """Measure tracing time, comparisons, and memory."""
-    print(f"\n--- Measuring Tracing for {scheme_name} ---")
+def measure_tracing(muw, master_key: bytes, text: str, recovered_codeword: str = None, scheme_name: str = None) -> dict:
+    """
+    Measure pure tracing time (comparisons only, without detection).
+    
+    Args:
+        muw: Multi-user watermarker instance
+        master_key: Master secret key (not used if recovered_codeword provided)
+        text: Watermarked text (not used if recovered_codeword provided)
+        recovered_codeword: Pre-computed recovered codeword from detection
+        scheme_name: Name of the scheme for logging
+    """
+    if scheme_name:
+        print(f"\n--- Measuring Tracing (comparisons only) for {scheme_name} ---")
+    else:
+        print(f"\n--- Measuring Tracing (comparisons only) ---")
     
     # Count comparisons: N for naive, hierarchical uses group-based tracing
     N = muw.N
@@ -233,24 +266,45 @@ def measure_tracing(muw, master_key: bytes, text: str, scheme_name: str) -> dict
     
     if hasattr(muw, 'group_codewords') and muw.group_codewords:
         num_groups = len(muw.group_codewords)
-        # Hierarchical scheme: first compare groups, then users within group
-        # Current implementation may do N comparisons, but could be optimized
+        # Hierarchical scheme: first compare groups, then users within suspect groups
+        # Typical: G group comparisons + users_in_suspect_groups user comparisons
         potential_optimized_comparisons = num_groups
     else:
         num_groups = None
         potential_optimized_comparisons = None
     
+    # If recovered_codeword not provided, we need to get it (but this shouldn't happen in normal flow)
+    if recovered_codeword is None:
+        print("Warning: No recovered_codeword provided, running detection first...")
+        recovered_codeword = muw.lbw.detect(master_key, text)
+    
     memory_before = get_memory_mb()
     start_time = time.perf_counter()
     
-    accused_users = muw.trace(master_key, text)
+    # Pure tracing: just comparisons, no detection
+    accused_users = muw.trace_from_codeword(recovered_codeword)
     
     trace_time = time.perf_counter() - start_time
     memory_after = get_memory_mb()
     
+    # Count actual comparisons made
+    actual_comparisons = N  # Naive: N user comparisons
+    if hasattr(muw, 'group_codewords') and muw.group_codewords:
+        # Hierarchical: G group comparisons + users in suspect groups
+        num_groups_compared = len(muw.group_codewords)
+        # Estimate users compared (typically 1-2 suspect groups * users_per_group)
+        if hasattr(muw, 'group_to_users') and muw.group_to_users:
+            avg_users_per_group = sum(len(users) for users in muw.group_to_users.values()) / len(muw.group_to_users) if muw.group_to_users else 0
+            # Assume 1-2 suspect groups on average
+            estimated_users_compared = min(2 * avg_users_per_group, N)
+        else:
+            estimated_users_compared = 0
+        actual_comparisons = num_groups_compared + estimated_users_compared
+    
     return {
         'trace_time_sec': trace_time,
         'comparisons_count': expected_comparisons,
+        'actual_comparisons_estimate': actual_comparisons,
         'potential_optimized_comparisons': potential_optimized_comparisons,
         'num_groups': num_groups,
         'memory_before_mb': memory_before,
@@ -537,8 +591,9 @@ def main():
                 continue
             
             if watermarked_text:
+                recovered_codeword = None
                 try:
-                    detect_metrics = measure_detection(muw, master_key, watermarked_text, scheme_name)
+                    detect_metrics, recovered_codeword = measure_detection(muw, master_key, watermarked_text, scheme_name)
                     detect_metrics['prompt'] = prompt
                     detect_metrics['prompt_index'] = prompt_idx
                     detection_metrics_list.append(detect_metrics)
@@ -546,7 +601,8 @@ def main():
                     print(f"✗ Detection failed for prompt #{prompt_idx}: {e}")
                 
                 try:
-                    trace_metrics = measure_tracing(muw, master_key, watermarked_text, scheme_name)
+                    # Pass recovered_codeword to avoid re-running detection
+                    trace_metrics = measure_tracing(muw, master_key, watermarked_text, recovered_codeword, scheme_name)
                     trace_metrics['prompt'] = prompt
                     trace_metrics['prompt_index'] = prompt_idx
                     tracing_metrics_list.append(trace_metrics)

@@ -1,0 +1,21 @@
+{
+  "scheme": "hierarchical",
+  "model": "gpt2",
+  "run_tag": "my_local_run",
+  "l_bits": 8,
+  "group_bits": 6,
+  "user_bits": 2,
+  "num_prompts": 100,
+  "random_seed": 1177486496,
+  "output_directory": "D:\\Researching Career\\Cryptographic-Watermarking-for-LLM\\evaluation/hierarchical_detection_2\\hierarchical\\G6_U2\\my_local_run",
+  "raw_results_file": null,
+  "generated_utc": "2025-11-29T19:51:16.824540Z",
+  "metrics": {
+    "group_accuracy": 0.91,
+    "user_accuracy": 0.989010989010989,
+    "full_identity_accuracy": 0.9,
+    "lbit_accuracy": 0.84,
+    "false_positive_rate": 0.03,
+    "false_negative_rate": 0.07
+  }
+}

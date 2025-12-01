@@ -507,6 +507,20 @@ class NaiveMultiUserWatermarker:
         print("Extracting L-bit codeword from text...")
         recovered_codeword = self.lbw.detect(master_key, text, **kwargs)
         print(f"  - Recovered Codeword: {recovered_codeword}")
+        return self.trace_from_codeword(recovered_codeword)
+    
+    def trace_from_codeword(self, recovered_codeword: str) -> list[dict]:
+        """
+        Traces users from a recovered codeword (without running detection).
+        This allows separation of detection and tracing for performance measurement.
+        
+        Args:
+            recovered_codeword (str): The recovered L-bit codeword from detection.
+        
+        Returns:
+            list[dict]: List of accused users with match scores.
+        """
+        self._require_metadata()
         return self._match_users_from_codeword(recovered_codeword)
     
     def _match_users_from_codeword(self, recovered_codeword: str) -> list[dict]:
@@ -592,6 +606,22 @@ class GroupedMultiUserWatermarker(NaiveMultiUserWatermarker):
         print("Extracting L-bit codeword from text...")
         noisy_codeword = self.lbw.detect(master_key, text, **kwargs)
         print(f"  - Recovered Codeword: {noisy_codeword}")
+        
+        return self.trace_from_codeword(noisy_codeword)
+    
+    def trace_from_codeword(self, noisy_codeword: str) -> list[dict]:
+        """
+        Traces users from a recovered codeword (without running detection).
+        This allows separation of detection and tracing for performance measurement.
+        
+        Args:
+            noisy_codeword (str): The recovered L-bit codeword from detection.
+        
+        Returns:
+            list[dict]: List of accused users with match scores.
+        """
+        if self.fingerprinter.codewords is None or self.fingerprinter.user_metadata is None:
+            raise ValueError("Fingerprinter codes or metadata not loaded. Call load_users(...) first.")
         
         print("Tracing codeword to find user(s)...")
         accused_users = self.fingerprinter.trace(noisy_codeword)
@@ -938,6 +968,21 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         print("Extracting L-bit codeword from text...")
         recovered_bits = self.lbw.detect(master_key, text, **kwargs)
         print(f"  - Recovered Codeword: {recovered_bits}")
+        
+        return self.trace_from_codeword(recovered_bits)
+    
+    def trace_from_codeword(self, recovered_bits: str) -> list[dict]:
+        """
+        Traces users from a recovered codeword (without running detection).
+        This allows separation of detection and tracing for performance measurement.
+        
+        Args:
+            recovered_bits (str): The recovered L-bit codeword from detection.
+        
+        Returns:
+            list[dict]: List of accused users with match scores.
+        """
+        self._require_metadata()
         
         if len(recovered_bits) != self.lbw.L:
             print(f"Warning: Recovered codeword length ({len(recovered_bits)}) != L ({self.lbw.L})")
