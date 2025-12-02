@@ -17,17 +17,17 @@ module load python-scientific/3.10.8-foss-2022b
 module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
-source /fred/oz402/kpham-watermark/crypto-watermark/venv/bin/activate
+source /fred/oz411/kpham/crypto-watermark/venv/bin/activate
 
-export TRANSFORMERS_CACHE=/fred/oz402/kpham-watermark/huggingface
-export HF_HOME=/fred/oz402/kpham-watermark/huggingface
-export HF_DATASETS_CACHE=/fred/oz402/kpham-watermark/huggingface
-export HF_HUB_CACHE=/fred/oz402/kpham-watermark/huggingface
+export TRANSFORMERS_CACHE=/fred/oz411/kpham/huggingface
+export HF_HOME=/fred/oz411/kpham/huggingface
+export HF_DATASETS_CACHE=/fred/oz411/kpham/huggingface
+export HF_HUB_CACHE=/fred/oz411/kpham/huggingface
 export TRANSFORMERS_OFFLINE=1
 export HF_HUB_OFFLINE=1
 export NLTK_DATA=$HF_HOME
 
-cd /fred/oz402/kpham-watermark/crypto-watermark
+cd /fred/oz411/kpham/crypto-watermark
 
 RUN_TAG=${RUN_TAG:-job_${SLURM_JOB_ID:-$(date +%Y%m%d_%H%M%S)}}
 echo "Using run tag: ${RUN_TAG}"
