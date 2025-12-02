@@ -3,8 +3,7 @@
 #SBATCH --job-name=hier_rewrite
 #SBATCH --account=oz411
 #SBATCH -p volta-gpu
-#SBATCH --constraint=v100
-#SBATCH --gres=gpu:V100:1
+#SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
