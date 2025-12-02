@@ -13,7 +13,6 @@
 
 module purge
 module load gcc/14.2.0
-module load python-scientific/3.10.8-foss-2022b
 module load cuda/12.6.0
 module load cudnn/9.5.0.50-cuda-12.6.0
 
