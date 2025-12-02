@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=hier_synonym
-#SBATCH --account=oz402
+#SBATCH --account=oz411
 #SBATCH --partition=skylake-gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1

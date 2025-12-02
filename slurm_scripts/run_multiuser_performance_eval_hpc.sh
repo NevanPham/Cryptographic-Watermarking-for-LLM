@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=multiuser_perf_eval
-#SBATCH --account=oz402
+#SBATCH --account=oz411
 #SBATCH --partition=skylake-gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -29,7 +29,7 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz411/kpham/crypto-watermark
 
-python evalution_scripts/evaluate_multiuser_performance.py \
+python evaluation_scripts/evaluate_multiuser_performance.py \
     --users-file assets/users.csv \
     --model gpt2 \
     --l-bits 10 \

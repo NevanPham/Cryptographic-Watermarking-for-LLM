@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=lbit_sweep
-#SBATCH --account=oz402
+#SBATCH --account=oz411
 #SBATCH --partition=skylake-gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -29,14 +29,14 @@ export NLTK_DATA=$HF_HOME
 
 cd /fred/oz411/kpham/crypto-watermark
 
-python evalution_scripts/run_lbit_sweep.py \
+python evaluation_scripts/run_lbit_sweep.py \
     --prompts-file assets/prompts.txt \
     --max-prompts 300 \
     --model gpt2 \
     --min-l 4 \
     --max-l 30 \
     --delta 3.5 \
-    --entropy-threshold 2.5 \
+    --entropy-threshold 2.5 \   
     --hashing-context 5 \
     --z-threshold 4.0 \
     --max-new-tokens 512 \
