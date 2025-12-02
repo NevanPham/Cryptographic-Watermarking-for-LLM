@@ -2,13 +2,14 @@
 
 #SBATCH --job-name=hier_detection
 #SBATCH --account=oz411
-#SBATCH --partition=skylake-gpu
+#SBATCH -p volta-gpu
+#SBATCH --constraint=v100
+#SBATCH --gres=gpu:V100:1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=8:00:00
-#SBATCH --gres=gpu:1
 #SBATCH --output=slurm_out/slurm-%j.out
 
 module --force purge
