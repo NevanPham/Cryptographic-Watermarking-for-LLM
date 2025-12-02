@@ -19,12 +19,12 @@ module load cudnn/9.5.0.50-cuda-12.6.0
 
 source /fred/oz411/kpham/crypto-watermark/venv/bin/activate
 
-export TRANSFORMERS_CACHE=/fred/oz411/kpham/huggingface
 export HF_HOME=/fred/oz411/kpham/huggingface
-export HF_DATASETS_CACHE=/fred/oz411/kpham/huggingface
-export HF_HUB_CACHE=/fred/oz411/kpham/huggingface
+export TRANSFORMERS_CACHE=$HF_HOME
 export TRANSFORMERS_OFFLINE=1
 export HF_HUB_OFFLINE=1
+export HF_DATASETS_CACHE=$HF_HOME
+export HF_HUB_CACHE=$HF_HOME
 export NLTK_DATA=$HF_HOME
 
 cd /fred/oz411/kpham/crypto-watermark
