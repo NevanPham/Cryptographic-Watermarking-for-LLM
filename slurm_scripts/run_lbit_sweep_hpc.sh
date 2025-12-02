@@ -11,11 +11,11 @@
 #SBATCH --time=12:00:00
 #SBATCH --output=slurm_out/slurm-%j.out
 
-module --force purge
-module load gcc/12.2.0
-module load python/3.10.8
-module load cuda/12.6.0
-module load cudnn/9.5.0.50-cuda-12.6.0
+module purge
+module load gcc/14.2.0
+module load python-scientific/3.10.8-foss-2022b
+module load cuda/12.8.0
+module load cudnn/9.10.1.4-cuda-12.8.0@slurm_scripts
 
 source /fred/oz411/kpham/crypto-watermark/venv/bin/activate
 
