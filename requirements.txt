@@ -11,3 +11,4 @@ nltk
 pyside6
 openpyxl
 psutil
+datasets
