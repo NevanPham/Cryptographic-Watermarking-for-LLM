@@ -576,28 +576,28 @@ def main():
     print(f"\n[1/4] Loading prompts...")
     prompts_path = os.path.join(parent_dir, args.prompts_file)
     if not os.path.exists(prompts_path):
-        print(f"  ❌ Error: Prompts file not found: {prompts_path}")
+        print(f"  Error: Prompts file not found: {prompts_path}")
         return
     
     with open(prompts_path, 'r', encoding='utf-8') as f:
         all_prompts = [line.strip() for line in f.readlines() if line.strip()]
     
     if len(all_prompts) < args.num_prompts:
-        print(f"  ⚠ Warning: Only {len(all_prompts)} prompts available, using all of them")
+        print(f"  Warning: Only {len(all_prompts)} prompts available, using all of them")
         prompts = all_prompts
     else:
         prompts = all_prompts[:args.num_prompts]
     
-    print(f"  ✓ Loaded {len(prompts)} prompts")
+    print(f"  Loaded {len(prompts)} prompts")
     
     # Load model
     print(f"\n[2/4] Loading model and initializing watermarker...")
-    print(f"  → Loading model '{args.model}'...")
+    print(f"  Loading model '{args.model}'...")
     model = get_model(args.model)
-    print(f"  ✓ Model loaded successfully")
+    print(f"  Model loaded successfully")
     
     # Initialize watermarker
-    print(f"\n  → Initializing watermarker...")
+    print(f"\n  Initializing watermarker...")
     zero_bit = ZeroBitWatermarker(
         model=model,
         delta=args.delta,
@@ -620,7 +620,7 @@ def main():
     # Load users
     users_path = os.path.join(parent_dir, args.users_file)
     if not os.path.exists(users_path):
-        print(f"  ❌ Error: Users file not found: {users_path}")
+        print(f"  Error: Users file not found: {users_path}")
         return
     
     # For naive scheme, ensure exactly 128 users for fair comparison with hierarchical
@@ -628,7 +628,7 @@ def main():
         import tempfile
         df_all = pd.read_csv(users_path)
         if len(df_all) > 128:
-            print(f"  → Limiting to 128 users for naive scheme (for fair comparison)")
+            print(f"  Limiting to 128 users for naive scheme (for fair comparison)")
             df_limited = df_all.head(128)
             with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
                 df_limited.to_csv(tmp_file.name, index=False)
@@ -640,7 +640,7 @@ def main():
     else:
         muw.load_users(users_path)
     
-    print(f"  ✓ Loaded {muw.N} users")
+    print(f"  Loaded {muw.N} users")
     
     # Generate master key
     master_key = muw.keygen()
@@ -681,7 +681,7 @@ def main():
             )
             prompt_results['results']['cross_group_2'] = result_cross_2
         except Exception as e:
-            print(f"\n  ⚠ Warning: Error processing 2-colluder cases for prompt {prompt_idx}: {e}")
+            print(f"\n  Warning: Error processing 2-colluder cases for prompt {prompt_idx}: {e}")
             prompt_results['results']['same_group_2'] = {'error': str(e)}
             prompt_results['results']['cross_group_2'] = {'error': str(e)}
         
@@ -711,7 +711,7 @@ def main():
             )
             prompt_results['results']['mixed_2same_1diff'] = result_mixed
         except Exception as e:
-            print(f"\n  ⚠ Warning: Error processing 3-colluder cases for prompt {prompt_idx}: {e}")
+            print(f"\n  Warning: Error processing 3-colluder cases for prompt {prompt_idx}: {e}")
             prompt_results['results']['same_group_3'] = {'error': str(e)}
             prompt_results['results']['cross_group_3'] = {'error': str(e)}
             prompt_results['results']['mixed_2same_1diff'] = {'error': str(e)}
@@ -725,9 +725,9 @@ def main():
     if args.save_raw_results and all_results:
         raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
         save_raw_results(all_results, raw_results_path)
-        print(f"  ✓ Saved raw collusion records to: {raw_results_path}")
+        print(f"  Saved raw collusion records to: {raw_results_path}")
     else:
-        print("  → Raw collusion records not persisted (enable --save-raw-results to store them)")
+        print("  Raw collusion records not persisted (enable --save-raw-results to store them)")
     
     # Calculate success rates for 2-colluder cases
     case_types_2 = ['same_group_2', 'cross_group_2']
@@ -817,14 +817,14 @@ def main():
     for case_type, stats in success_rates_3.items():
         print(f"  {case_type:20s}: {stats['success_rate']:6.2f}% ({stats['successful']}/{stats['total']})")
     
-    print(f"\n✓ 2-colluder summary saved to: {summary_json_2_path}")
-    print(f"✓ 3-colluder summary saved to: {summary_json_3_path}")
+    print(f"\n2-colluder summary saved to: {summary_json_2_path}")
+    print(f"3-colluder summary saved to: {summary_json_3_path}")
     if raw_results_path:
-        print(f"✓ Raw collusion records saved to: {raw_results_path}")
+        print(f"Raw collusion records saved to: {raw_results_path}")
     else:
-        print("✓ Raw collusion records skipped (pass --save-raw-results to capture them)")
+        print("Raw collusion records skipped (pass --save-raw-results to capture them)")
     print("\n" + "="*80)
-    print(" " * 30 + "✓ EVALUATION COMPLETE!")
+    print(" " * 30 + "EVALUATION COMPLETE!")
     print("="*80 + "\n")
 
 

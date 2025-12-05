@@ -208,63 +208,88 @@ def evaluate_prompt_with_synonym_attack(
     scheme,
     model_name,
     max_new_tokens,
-) -> dict:
-    """Evaluate a single prompt with a synonym substitution attack."""
+) -> list[dict]:
+    """
+    Evaluate a single prompt with synonym substitution attacks at multiple intensities.
+    
+    Returns:
+        List of dictionaries with evaluation results (one per attack intensity)
+    """
+    # Embed watermark once
     raw_text = muw.embed(master_key, true_user_id, prompt, max_new_tokens=max_new_tokens)
     final_text = parse_final_output(raw_text, model_name)
-    attacked_text = apply_synonym_substitution(final_text, ratio=0.1)
-
-    recovered_codeword = muw.lbw.detect(master_key, attacked_text)
-
+    
+    # Get ground truth codeword
     try:
         ground_truth_codeword = muw.get_codeword_for_user(true_user_id)
     except Exception:
         ground_truth_codeword = None
-
-    z_score = compute_z_score(muw.lbw, master_key, attacked_text)
-    num_invalid_symbols = count_invalid_symbols(recovered_codeword)
-    hamming_dist = (
-        hamming_distance(recovered_codeword, ground_truth_codeword)
-        if ground_truth_codeword
-        else float("inf")
-    )
-
-    result = {
-        "true_user_id": true_user_id,
-        "recovered_codeword": recovered_codeword,
-        "ground_truth_codeword": ground_truth_codeword,
-        "num_invalid_symbols": num_invalid_symbols,
-        "hamming_distance": hamming_dist if hamming_dist != float("inf") else None,
-        "z_score": z_score,
-    }
-
-    if scheme == "naive":
-        detected_user_id = decode_naive_user(muw, recovered_codeword)
-        result["detected_user_id"] = detected_user_id
-        result["full_identity_match"] = detected_user_id == true_user_id
-        result["lbit_accuracy"] = (
-            recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
+    
+    # Define attack intensities
+    synonym_ratios = [0.05, 0.10, 0.15]
+    
+    all_results = []
+    
+    # Test each attack intensity
+    for synonym_ratio in synonym_ratios:
+        # Apply synonym substitution attack
+        attacked_text = apply_synonym_substitution(final_text, ratio=synonym_ratio)
+        
+        # Detect L-bit codeword on attacked text
+        recovered_codeword = muw.lbw.detect(master_key, attacked_text)
+        
+        # Compute z-score
+        z_score = compute_z_score(muw.lbw, master_key, attacked_text)
+        
+        # Count invalid symbols
+        num_invalid_symbols = count_invalid_symbols(recovered_codeword)
+        
+        # Compute Hamming distance
+        hamming_dist = (
+            hamming_distance(recovered_codeword, ground_truth_codeword)
+            if ground_truth_codeword
+            else float("inf")
         )
-    else:
-        (
-            detected_group_id,
-            detected_user_id,
-            true_group_id,
-        ) = decode_hierarchical_user(muw, recovered_codeword, true_user_id)
-
-        result["true_group_id"] = true_group_id
-        result["detected_group_id"] = detected_group_id
-        result["detected_user_id"] = detected_user_id
-        result["group_match"] = detected_group_id == true_group_id
-        result["user_match"] = detected_user_id == true_user_id
-        result["full_identity_match"] = (
-            detected_group_id == true_group_id and detected_user_id == true_user_id
-        )
-        result["lbit_accuracy"] = (
-            recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
-        )
-
-    return result
+        
+        result = {
+            "true_user_id": true_user_id,
+            "synonym_ratio": synonym_ratio,
+            "recovered_codeword": recovered_codeword,
+            "ground_truth_codeword": ground_truth_codeword,
+            "num_invalid_symbols": num_invalid_symbols,
+            "hamming_distance": hamming_dist if hamming_dist != float("inf") else None,
+            "z_score": z_score,
+        }
+        
+        if scheme == "naive":
+            detected_user_id = decode_naive_user(muw, recovered_codeword)
+            result["detected_user_id"] = detected_user_id
+            result["full_identity_match"] = detected_user_id == true_user_id
+            result["lbit_accuracy"] = (
+                recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
+            )
+        else:
+            (
+                detected_group_id,
+                detected_user_id,
+                true_group_id,
+            ) = decode_hierarchical_user(muw, recovered_codeword, true_user_id)
+            
+            result["true_group_id"] = true_group_id
+            result["detected_group_id"] = detected_group_id
+            result["detected_user_id"] = detected_user_id
+            result["group_match"] = detected_group_id == true_group_id
+            result["user_match"] = detected_user_id == true_user_id
+            result["full_identity_match"] = (
+                detected_group_id == true_group_id and detected_user_id == true_user_id
+            )
+            result["lbit_accuracy"] = (
+                recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
+            )
+        
+        all_results.append(result)
+    
+    return all_results
 
 
 def compute_metrics(results: list[dict], scheme: str) -> dict:
@@ -628,25 +653,25 @@ def main():
     print("\n[1/4] Loading prompts...")
     prompts_path = os.path.join(parent_dir, args.prompts_file)
     if not os.path.exists(prompts_path):
-        print(f"  ❌ Error: Prompts file not found: {prompts_path}")
+        print(f"  Error: Prompts file not found: {prompts_path}")
         return
 
     with open(prompts_path, "r", encoding="utf-8") as f:
         all_prompts = [line.strip() for line in f.readlines() if line.strip()]
 
     if len(all_prompts) < args.num_prompts:
-        print(f"  ⚠ Warning: Only {len(all_prompts)} prompts available, using all of them")
+        print(f"  Warning: Only {len(all_prompts)} prompts available, using all of them")
         prompts = all_prompts
     else:
         prompts = all_prompts[: args.num_prompts]
-    print(f"  ✓ Loaded {len(prompts)} prompts")
+    print(f"  Loaded {len(prompts)} prompts")
 
     print("\n[2/4] Loading model and initializing watermarker...")
-    print(f"  → Loading model '{args.model}'...")
+    print(f"  Loading model '{args.model}'...")
     model = get_model(args.model)
-    print("  ✓ Model loaded successfully")
+    print("  Model loaded successfully")
 
-    print("\n  → Initializing watermarker...")
+    print("\n  Initializing watermarker...")
     zero_bit = ZeroBitWatermarker(
         model=model,
         delta=args.delta,
@@ -668,7 +693,7 @@ def main():
 
     users_path = os.path.join(parent_dir, args.users_file)
     if not os.path.exists(users_path):
-        print(f"  ❌ Error: Users file not found: {users_path}")
+        print(f"  Error: Users file not found: {users_path}")
         return
 
     if args.scheme == "naive":
@@ -676,7 +701,7 @@ def main():
 
         df_all = pd.read_csv(users_path)
         if len(df_all) > 128:
-            print("  → Limiting to 128 users for naive scheme (for fair comparison)")
+            print("  Limiting to 128 users for naive scheme (for fair comparison)")
             df_limited = df_all.head(128)
             with tempfile.NamedTemporaryFile(mode="w", suffix=".csv", delete=False) as tmp_file:
                 df_limited.to_csv(tmp_file.name, index=False)
@@ -688,17 +713,19 @@ def main():
     else:
         muw.load_users(users_path)
 
-    print(f"  ✓ Loaded {muw.N} users")
+    print(f"  Loaded {muw.N} users")
 
     master_key = muw.keygen()
 
     print(f"\n[3/4] Processing {len(prompts)} prompts with synonym attacks...")
+    print(f"  → Testing intensities: 5%, 10%, 15%")
+    print(f"  → Total attack variants per prompt: 3")
     all_results = []
 
     for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Processing prompts", unit="prompt")):
         true_user_id = random.randint(0, muw.N - 1)
         try:
-            result = evaluate_prompt_with_synonym_attack(
+            attack_results = evaluate_prompt_with_synonym_attack(
                 muw,
                 master_key,
                 prompt,
@@ -707,9 +734,12 @@ def main():
                 args.model,
                 args.max_new_tokens,
             )
-            result["prompt_id"] = prompt_idx
-            result["prompt"] = prompt
-            all_results.append(result)
+            
+            # Add prompt metadata to each result
+            for result in attack_results:
+                result["prompt_id"] = prompt_idx
+                result["prompt"] = prompt
+                all_results.append(result)
         except Exception as e:
             print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx}: {e}")
             continue
@@ -718,9 +748,9 @@ def main():
     if args.save_raw_results and all_results:
         raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
         save_raw_results(all_results, raw_results_path)
-        print(f"  ✓ Saved raw synonym-attack records to: {raw_results_path}")
+        print(f"  Saved raw synonym-attack records to: {raw_results_path}")
     else:
-        print("  → Raw synonym-attack records not persisted (enable --save-raw-results to store them)")
+        print("  Raw synonym-attack records not persisted (enable --save-raw-results to store them)")
 
     print(f"\n[4/4] Computing metrics...")
     metrics = compute_metrics(all_results, args.scheme)
@@ -732,7 +762,10 @@ def main():
         "l_bits": args.l_bits,
         "group_bits": args.group_bits if args.scheme == "hierarchical" else None,
         "user_bits": args.user_bits if args.scheme == "hierarchical" else None,
-        "num_prompts": len(all_results),
+        "num_prompts": len(prompts),
+        "num_attack_variants_per_prompt": 3,
+        "total_attack_results": len(all_results),
+        "synonym_ratios": [0.05, 0.10, 0.15],
         "random_seed": seed,
         "output_directory": scheme_output_dir,
         "raw_results_file": os.path.basename(raw_results_path) if raw_results_path else None,
@@ -756,14 +789,14 @@ def main():
         else:
             print(f"  {metric_name:30s}: {metric_value}")
 
-    print(f"\n✓ Summary saved to: {summary_json_path}")
-    print(f"✓ Summary CSV saved to: {summary_csv_path}")
+    print(f"\nSummary saved to: {summary_json_path}")
+    print(f"Summary CSV saved to: {summary_csv_path}")
     if raw_results_path:
-        print(f"✓ Raw synonym-attack records saved to: {raw_results_path}")
+        print(f"Raw synonym-attack records saved to: {raw_results_path}")
     else:
-        print("✓ Raw synonym-attack records skipped (pass --save-raw-results to capture them)")
+        print("Raw synonym-attack records skipped (pass --save-raw-results to capture them)")
     print("\n" + "=" * 80)
-    print(" " * 30 + "✓ EVALUATION COMPLETE!")
+    print(" " * 30 + "EVALUATION COMPLETE!")
     print("=" * 80 + "\n")
 
 

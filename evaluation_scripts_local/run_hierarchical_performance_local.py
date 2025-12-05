@@ -243,7 +243,7 @@ def main():
         result = subprocess.run(cmd, cwd=REPO_ROOT)
         if result.returncode != 0:
             print(
-                f"\n❌ Configuration failed with exit code {result.returncode}. "
+                f"\nConfiguration failed with exit code {result.returncode}. "
                 "Stopping early."
             )
             sys.exit(result.returncode)
@@ -251,7 +251,7 @@ def main():
     print("\n" + "=" * 80)
     print("All configurations completed successfully!")
     print("=" * 80)
-    print(f"\n📊 Results saved to: {args.output_dir}")
+    print(f"\nResults saved to: {args.output_dir}")
     print(f"   Run tag: {run_tag}")
 
 

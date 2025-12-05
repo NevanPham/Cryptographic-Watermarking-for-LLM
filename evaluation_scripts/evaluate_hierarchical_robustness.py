@@ -671,31 +671,31 @@ def main():
     print(f"\n[1/4] Loading prompts...")
     prompts_path = os.path.join(parent_dir, args.prompts_file)
     if not os.path.exists(prompts_path):
-        print(f"  ❌ Error: Prompts file not found: {prompts_path}")
+        print(f"  Error: Prompts file not found: {prompts_path}")
         return
     
     with open(prompts_path, 'r', encoding='utf-8') as f:
         all_prompts = [line.strip() for line in f.readlines() if line.strip()]
     
     if len(all_prompts) < args.num_prompts:
-        print(f"  ⚠ Warning: Only {len(all_prompts)} prompts available, using all of them")
+        print(f"  Warning: Only {len(all_prompts)} prompts available, using all of them")
         prompts = all_prompts
     else:
         prompts = all_prompts[:args.num_prompts]
     
-    print(f"  ✓ Loaded {len(prompts)} prompts")
+    print(f"  Loaded {len(prompts)} prompts")
     
     # Load model
     print(f"\n[2/4] Loading model and initializing watermarker...")
-    print(f"  → Loading model '{args.model}'...")
+    print(f"  Loading model '{args.model}'...")
     model = get_model(args.model)
-    print(f"  ✓ Model loaded successfully")
+    print(f"  Model loaded successfully")
     
     # Get tokenizer for deletion attacks
     tokenizer = model.tokenizer
     
     # Initialize watermarker
-    print(f"\n  → Initializing watermarker...")
+    print(f"\n  Initializing watermarker...")
     zero_bit = ZeroBitWatermarker(
         model=model,
         delta=args.delta,
@@ -718,7 +718,7 @@ def main():
     # Load users
     users_path = os.path.join(parent_dir, args.users_file)
     if not os.path.exists(users_path):
-        print(f"  ❌ Error: Users file not found: {users_path}")
+        print(f"  Error: Users file not found: {users_path}")
         return
     
     # For naive scheme, ensure exactly 128 users for fair comparison with hierarchical
@@ -726,7 +726,7 @@ def main():
         import tempfile
         df_all = pd.read_csv(users_path)
         if len(df_all) > 128:
-            print(f"  → Limiting to 128 users for naive scheme (for fair comparison)")
+            print(f"  Limiting to 128 users for naive scheme (for fair comparison)")
             df_limited = df_all.head(128)
             with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
                 df_limited.to_csv(tmp_file.name, index=False)
@@ -738,7 +738,7 @@ def main():
     else:
         muw.load_users(users_path)
     
-    print(f"  ✓ Loaded {muw.N} users")
+    print(f"  Loaded {muw.N} users")
     
     # Generate master key
     master_key = muw.keygen()
@@ -765,7 +765,7 @@ def main():
                 all_results.append(result)
                 
         except Exception as e:
-            print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx}: {e}")
+            print(f"\n  Warning: Error processing prompt {prompt_idx}: {e}")
             continue
     
     # Save all results to a single JSON file
@@ -774,9 +774,9 @@ def main():
     if args.save_raw_results and all_results:
         raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
         save_raw_results(all_results, raw_results_path)
-        print(f"  ✓ Saved {len(all_results)} attack records to: {raw_results_path}")
+        print(f"  Saved {len(all_results)} attack records to: {raw_results_path}")
     else:
-        print("  → Raw attack records not persisted (enable --save-raw-results to store them)")
+        print("  Raw attack records not persisted (enable --save-raw-results to store them)")
     
     # Compute metrics
     metrics = compute_metrics(all_results, args.scheme)
@@ -816,13 +816,13 @@ def main():
         else:
             print(f"  {metric_name:30s}: {metric_value}")
     
-    print(f"\n✓ Summary saved to: {summary_json_path}")
+    print(f"\nSummary saved to: {summary_json_path}")
     if raw_results_path:
-        print(f"✓ Raw attack records saved to: {raw_results_path}")
+        print(f"Raw attack records saved to: {raw_results_path}")
     else:
-        print("✓ Raw attack records skipped (pass --save-raw-results to capture them)")
+        print("Raw attack records skipped (pass --save-raw-results to capture them)")
     print("\n" + "="*80)
-    print(" " * 30 + "✓ EVALUATION COMPLETE!")
+    print(" " * 30 + "EVALUATION COMPLETE!")
     print("="*80 + "\n")
 
 

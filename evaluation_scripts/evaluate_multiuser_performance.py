@@ -106,7 +106,7 @@ def measure_initialization(muw, users_file: str, scheme_name: str) -> dict:
     import tempfile
     df_all = pd.read_csv(users_file)
     if len(df_all) > 128:
-        print(f"  → Limiting to 128 users for {scheme_name} scheme (for fair comparison)")
+        print(f"  Limiting to 128 users for {scheme_name} scheme (for fair comparison)")
         df_limited = df_all.head(128)
         with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
             df_limited.to_csv(tmp_file.name, index=False)
@@ -559,7 +559,7 @@ def main():
         try:
             init_metrics = measure_initialization(muw, users_file_path, scheme_name)
             scheme_results['initialization'] = init_metrics
-            print(f"✓ Initialization completed: {init_metrics['init_time_sec']:.4f}s")
+            print(f"Initialization completed: {init_metrics['init_time_sec']:.4f}s")
         except Exception as e:
             print(f"✗ Initialization failed: {e}")
             scheme_results['initialization'] = {'error': str(e)}
@@ -615,7 +615,7 @@ def main():
                 'average': avg_embedding,
                 'per_prompt': embedding_metrics_list
             }
-            print(f"✓ Embedding completed for {len(embedding_metrics_list)} prompt(s); average time {avg_embedding.get('embed_time_sec', 0):.4f}s")
+            print(f"Embedding completed for {len(embedding_metrics_list)} prompt(s); average time {avg_embedding.get('embed_time_sec', 0):.4f}s")
         else:
             scheme_results['embedding'] = {'error': 'No successful embeddings'}
         
@@ -625,7 +625,7 @@ def main():
                 'average': avg_detection,
                 'per_prompt': detection_metrics_list
             }
-            print(f"✓ Detection completed for {len(detection_metrics_list)} prompt(s); average time {avg_detection.get('detect_time_sec', 0):.4f}s")
+            print(f"Detection completed for {len(detection_metrics_list)} prompt(s); average time {avg_detection.get('detect_time_sec', 0):.4f}s")
         else:
             scheme_results['detection'] = {'error': 'No detection results available'}
         
@@ -635,7 +635,7 @@ def main():
                 'average': avg_tracing,
                 'per_prompt': tracing_metrics_list
             }
-            print(f"✓ Tracing completed for {len(tracing_metrics_list)} prompt(s); average time {avg_tracing.get('trace_time_sec', 0):.4f}s")
+            print(f"Tracing completed for {len(tracing_metrics_list)} prompt(s); average time {avg_tracing.get('trace_time_sec', 0):.4f}s")
         else:
             scheme_results['tracing'] = {'error': 'No tracing results available'}
         
@@ -645,7 +645,7 @@ def main():
     results_file = os.path.join(output_dir_path, 'performance_results.json')
     with open(results_file, 'w') as f:
         json.dump(all_results, f, indent=2, default=json_default_encoder)
-    print(f"\n✓ Results saved to: {results_file}")
+    print(f"\nResults saved to: {results_file}")
     
     # Create summary CSV
     summary_data = []
@@ -708,7 +708,7 @@ def main():
     summary_df = pd.DataFrame(summary_data)
     summary_file = os.path.join(output_dir_path, 'performance_summary.csv')
     summary_df.to_csv(summary_file, index=False)
-    print(f"✓ Summary saved to: {summary_file}")
+    print(f"Summary saved to: {summary_file}")
     
     # Print summary table
     print("\n" + "=" * 80)
@@ -717,7 +717,7 @@ def main():
     print(summary_df.to_string(index=False))
     print("=" * 80)
     
-    print(f"\n✓ Evaluation complete! Results saved to: {output_dir_path}")
+    print(f"\nEvaluation complete! Results saved to: {output_dir_path}")
 
 
 if __name__ == '__main__':

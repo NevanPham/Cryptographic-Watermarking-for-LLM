@@ -873,7 +873,9 @@ class HierarchicalMultiUserWatermarker(NaiveMultiUserWatermarker):
         self.group_to_users = {}
         for index, row in self.user_metadata.iterrows():
             user_id = int(row["UserId"])
-            group_id = user_id // users_per_group
+            # Use index instead of user_id to ensure groups are 0, 1, 2, ..., num_groups-1
+            # This matches the group codewords that were generated for groups 0 to num_groups-1
+            group_id = index // users_per_group
             self.user_to_group[user_id] = group_id
             if group_id not in self.group_to_users:
                 self.group_to_users[group_id] = []

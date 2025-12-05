@@ -11,6 +11,7 @@ from tqdm import tqdm
 import pandas as pd
 import numpy as np
 import torch
+import nltk
 
 # Add the parent directory to sys.path
 current_dir = os.path.dirname(__file__)
@@ -32,29 +33,93 @@ from src.fingerprinting import generate_user_fingerprint
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-def apply_llm_rewrite(model, tokenizer, text, max_new_tokens=512):
-    # simple deterministic rewrite prompt
-    prompt = f"Rewrite the following text in your own words, keeping the same meaning:\n{text}\nRewrite:"
-    input_ids = tokenizer.encode(prompt, return_tensors="pt").to(device)
+def apply_llm_rewrite(model, tokenizer, text, max_new_tokens=512, ratio: float = 1.0):
+    """
+    Rewrite text using LLM.
+    
+    Args:
+        model: LLM model to use for rewriting
+        tokenizer: Tokenizer for the model
+        text: Text to rewrite
+        max_new_tokens: Maximum tokens to generate
+        ratio: Fraction of sentences to rewrite (0.05, 0.10, 0.15, or 1.0 for all)
+    
+    Returns:
+        Rewritten text
+    """
+    # If ratio is 1.0, rewrite entire text (original behavior)
+    if ratio >= 1.0:
+        prompt = f"Rewrite the following text in your own words, keeping the same meaning:\n{text}\nRewrite:"
+        input_ids = tokenizer.encode(prompt, return_tensors="pt").to(device)
 
-    attention_mask = torch.ones_like(input_ids)
+        attention_mask = torch.ones_like(input_ids)
 
-    with torch.no_grad():
-        output_ids = model.generate(
-            input_ids,
-            max_new_tokens=max_new_tokens,
-            do_sample=False,   # deterministic greedy decoding
-            attention_mask=attention_mask,
-            pad_token_id=tokenizer.eos_token_id if tokenizer.eos_token_id is not None else tokenizer.pad_token_id,
-        )
+        with torch.no_grad():
+            output_ids = model.generate(
+                input_ids,
+                max_new_tokens=max_new_tokens,
+                do_sample=False,   # deterministic greedy decoding
+                attention_mask=attention_mask,
+                pad_token_id=tokenizer.eos_token_id if tokenizer.eos_token_id is not None else tokenizer.pad_token_id,
+            )
 
-    rewritten = tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
+        rewritten = tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
 
-    # remove the instruction/prompt portion
-    if rewritten.startswith(prompt):
-        rewritten = rewritten[len(prompt):].strip()
+        # remove the instruction/prompt portion
+        if rewritten.startswith(prompt):
+            rewritten = rewritten[len(prompt):].strip()
 
-    return rewritten if rewritten else text
+        return rewritten if rewritten else text
+    
+    # Otherwise, rewrite only a percentage of sentences
+    try:
+        sentences = nltk.sent_tokenize(text)
+    except Exception as e:
+        # Fallback to simple split if NLTK fails
+        sentences = [s.strip() for s in text.split('.') if s.strip()]
+        if not sentences:
+            sentences = [text]
+    
+    if not sentences:
+        return text
+    
+    num_sentences = len(sentences)
+    num_to_rewrite = max(1, int(num_sentences * ratio))
+    indices_to_rewrite = random.sample(range(num_sentences), min(num_to_rewrite, num_sentences))
+    
+    rewritten_sentences = list(sentences)
+    for i in indices_to_rewrite:
+        sentence = sentences[i].strip()
+        if not sentence:
+            continue
+        
+        try:
+            prompt = f"Rewrite the following text in your own words, keeping the same meaning:\n{sentence}\nRewrite:"
+            input_ids = tokenizer.encode(prompt, return_tensors="pt").to(device)
+            attention_mask = torch.ones_like(input_ids)
+            
+            with torch.no_grad():
+                output_ids = model.generate(
+                    input_ids,
+                    max_new_tokens=min(max_new_tokens, 256),  # Limit for individual sentences
+                    do_sample=False,
+                    attention_mask=attention_mask,
+                    pad_token_id=tokenizer.eos_token_id if tokenizer.eos_token_id is not None else tokenizer.pad_token_id,
+                )
+            
+            rewritten = tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
+            
+            # Remove the instruction/prompt portion
+            if rewritten.startswith(prompt):
+                rewritten = rewritten[len(prompt):].strip()
+            
+            if rewritten:
+                rewritten_sentences[i] = rewritten
+        except Exception as e:
+            # If rewriting fails, keep original sentence
+            continue
+    
+    return " ".join(rewritten_sentences)
 
 
 def get_model_and_tokenizer(model_name: str):
@@ -219,65 +284,91 @@ def evaluate_prompt_with_rewrite_attack(
     max_new_tokens,
     rewrite_model,
     rewrite_tokenizer,
-) -> dict:
-    """Evaluate a single prompt with an LLM rewrite attack."""
+) -> list[dict]:
+    """
+    Evaluate a single prompt with rewrite attacks at multiple intensities.
+    
+    Returns:
+        List of dictionaries with evaluation results (one per attack intensity)
+    """
+    # Embed watermark once
     raw_text = muw.embed(master_key, true_user_id, prompt, max_new_tokens=max_new_tokens)
     final_text = parse_final_output(raw_text, model_name)
-    attacked_text = apply_llm_rewrite(
-        rewrite_model, rewrite_tokenizer, final_text, max_new_tokens=max_new_tokens
-    )
-
-    recovered_codeword = muw.lbw.detect(master_key, attacked_text)
-
+    
+    # Get ground truth codeword
     try:
         ground_truth_codeword = muw.get_codeword_for_user(true_user_id)
     except Exception:
         ground_truth_codeword = None
-
-    z_score = compute_z_score(muw.lbw, master_key, attacked_text)
-    num_invalid_symbols = count_invalid_symbols(recovered_codeword)
-    hamming_dist = (
-        hamming_distance(recovered_codeword, ground_truth_codeword)
-        if ground_truth_codeword
-        else float("inf")
-    )
-
-    result = {
-        "true_user_id": true_user_id,
-        "recovered_codeword": recovered_codeword,
-        "ground_truth_codeword": ground_truth_codeword,
-        "num_invalid_symbols": num_invalid_symbols,
-        "hamming_distance": hamming_dist if hamming_dist != float("inf") else None,
-        "z_score": z_score,
-    }
-
-    if scheme == "naive":
-        detected_user_id = decode_naive_user(muw, recovered_codeword)
-        result["detected_user_id"] = detected_user_id
-        result["full_identity_match"] = detected_user_id == true_user_id
-        result["lbit_accuracy"] = (
-            recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
+    
+    # Define attack intensities
+    rewrite_ratios = [0.05, 0.10, 0.15]
+    
+    all_results = []
+    
+    # Test each attack intensity
+    for rewrite_ratio in rewrite_ratios:
+        # Apply rewrite attack
+        attacked_text = apply_llm_rewrite(
+            rewrite_model, rewrite_tokenizer, final_text, 
+            max_new_tokens=max_new_tokens, ratio=rewrite_ratio
         )
-    else:
-        (
-            detected_group_id,
-            detected_user_id,
-            true_group_id,
-        ) = decode_hierarchical_user(muw, recovered_codeword, true_user_id)
-
-        result["true_group_id"] = true_group_id
-        result["detected_group_id"] = detected_group_id
-        result["detected_user_id"] = detected_user_id
-        result["group_match"] = detected_group_id == true_group_id
-        result["user_match"] = detected_user_id == true_user_id
-        result["full_identity_match"] = (
-            detected_group_id == true_group_id and detected_user_id == true_user_id
+        
+        # Detect L-bit codeword on attacked text
+        recovered_codeword = muw.lbw.detect(master_key, attacked_text)
+        
+        # Compute z-score
+        z_score = compute_z_score(muw.lbw, master_key, attacked_text)
+        
+        # Count invalid symbols
+        num_invalid_symbols = count_invalid_symbols(recovered_codeword)
+        
+        # Compute Hamming distance
+        hamming_dist = (
+            hamming_distance(recovered_codeword, ground_truth_codeword)
+            if ground_truth_codeword
+            else float("inf")
         )
-        result["lbit_accuracy"] = (
-            recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
-        )
-
-    return result
+        
+        result = {
+            "true_user_id": true_user_id,
+            "rewrite_ratio": rewrite_ratio,
+            "recovered_codeword": recovered_codeword,
+            "ground_truth_codeword": ground_truth_codeword,
+            "num_invalid_symbols": num_invalid_symbols,
+            "hamming_distance": hamming_dist if hamming_dist != float("inf") else None,
+            "z_score": z_score,
+        }
+        
+        if scheme == "naive":
+            detected_user_id = decode_naive_user(muw, recovered_codeword)
+            result["detected_user_id"] = detected_user_id
+            result["full_identity_match"] = detected_user_id == true_user_id
+            result["lbit_accuracy"] = (
+                recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
+            )
+        else:
+            (
+                detected_group_id,
+                detected_user_id,
+                true_group_id,
+            ) = decode_hierarchical_user(muw, recovered_codeword, true_user_id)
+            
+            result["true_group_id"] = true_group_id
+            result["detected_group_id"] = detected_group_id
+            result["detected_user_id"] = detected_user_id
+            result["group_match"] = detected_group_id == true_group_id
+            result["user_match"] = detected_user_id == true_user_id
+            result["full_identity_match"] = (
+                detected_group_id == true_group_id and detected_user_id == true_user_id
+            )
+            result["lbit_accuracy"] = (
+                recovered_codeword == ground_truth_codeword if ground_truth_codeword else False
+            )
+        
+        all_results.append(result)
+    
+    return all_results
 
 
 def compute_metrics(results: list[dict], scheme: str) -> dict:
@@ -641,27 +732,27 @@ def main():
     print("\n[1/4] Loading prompts...")
     prompts_path = os.path.join(parent_dir, args.prompts_file)
     if not os.path.exists(prompts_path):
-        print(f"  ❌ Error: Prompts file not found: {prompts_path}")
+        print(f"  Error: Prompts file not found: {prompts_path}")
         return
 
     with open(prompts_path, "r", encoding="utf-8") as f:
         all_prompts = [line.strip() for line in f.readlines() if line.strip()]
 
     if len(all_prompts) < args.num_prompts:
-        print(f"  ⚠ Warning: Only {len(all_prompts)} prompts available, using all of them")
+        print(f"  Warning: Only {len(all_prompts)} prompts available, using all of them")
         prompts = all_prompts
     else:
         prompts = all_prompts[: args.num_prompts]
-    print(f"  ✓ Loaded {len(prompts)} prompts")
+    print(f"  Loaded {len(prompts)} prompts")
 
     print("\n[2/4] Loading model and initializing watermarker...")
-    print(f"  → Loading model '{args.model}'...")
+    print(f"  Loading model '{args.model}'...")
     tokenizer, model = get_model_and_tokenizer(args.model)
-    print("  ✓ Model loaded successfully")
+    print("  Model loaded successfully")
 
     rewrite_model = model._model if hasattr(model, "_model") else model
 
-    print("\n  → Initializing watermarker...")
+    print("\n  Initializing watermarker...")
     zero_bit = ZeroBitWatermarker(
         model=model,
         delta=args.delta,
@@ -683,7 +774,7 @@ def main():
 
     users_path = os.path.join(parent_dir, args.users_file)
     if not os.path.exists(users_path):
-        print(f"  ❌ Error: Users file not found: {users_path}")
+        print(f"  Error: Users file not found: {users_path}")
         return
 
     if args.scheme == "naive":
@@ -691,7 +782,7 @@ def main():
 
         df_all = pd.read_csv(users_path)
         if len(df_all) > 128:
-            print("  → Limiting to 128 users for naive scheme (for fair comparison)")
+            print("  Limiting to 128 users for naive scheme (for fair comparison)")
             df_limited = df_all.head(128)
             with tempfile.NamedTemporaryFile(mode="w", suffix=".csv", delete=False) as tmp_file:
                 df_limited.to_csv(tmp_file.name, index=False)
@@ -703,19 +794,21 @@ def main():
     else:
         muw.load_users(users_path)
 
-    print(f"  ✓ Loaded {muw.N} users")
+    print(f"  Loaded {muw.N} users")
 
     master_key = muw.keygen()
 
     rewrite_max_tokens = min(args.max_new_tokens, 256)
 
     print(f"\n[3/4] Processing {len(prompts)} prompts with rewrite attacks...")
+    print(f"  → Testing intensities: 5%, 10%, 15%")
+    print(f"  → Total attack variants per prompt: 3")
     all_results = []
 
     for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Processing prompts", unit="prompt")):
         true_user_id = random.randint(0, muw.N - 1)
         try:
-            result = evaluate_prompt_with_rewrite_attack(
+            attack_results = evaluate_prompt_with_rewrite_attack(
                 muw,
                 master_key,
                 prompt,
@@ -726,9 +819,12 @@ def main():
                 rewrite_model,
                 tokenizer,
             )
-            result["prompt_id"] = prompt_idx
-            result["prompt"] = prompt
-            all_results.append(result)
+            
+            # Add prompt metadata to each result
+            for result in attack_results:
+                result["prompt_id"] = prompt_idx
+                result["prompt"] = prompt
+                all_results.append(result)
         except Exception as e:
             print(f"\n  ⚠ Warning: Error processing prompt {prompt_idx}: {e}")
             continue
@@ -737,9 +833,9 @@ def main():
     if args.save_raw_results and all_results:
         raw_results_path = os.path.join(scheme_output_dir, args.raw_results_file)
         save_raw_results(all_results, raw_results_path)
-        print(f"  ✓ Saved raw rewrite-attack records to: {raw_results_path}")
+        print(f"  Saved raw rewrite-attack records to: {raw_results_path}")
     else:
-        print("  → Raw rewrite-attack records not persisted (enable --save-raw-results to store them)")
+        print("  Raw rewrite-attack records not persisted (enable --save-raw-results to store them)")
 
     print(f"\n[4/4] Computing metrics...")
     metrics = compute_metrics(all_results, args.scheme)
@@ -751,7 +847,10 @@ def main():
         "l_bits": args.l_bits,
         "group_bits": args.group_bits if args.scheme == "hierarchical" else None,
         "user_bits": args.user_bits if args.scheme == "hierarchical" else None,
-        "num_prompts": len(all_results),
+        "num_prompts": len(prompts),
+        "num_attack_variants_per_prompt": 3,
+        "total_attack_results": len(all_results),
+        "rewrite_ratios": [0.05, 0.10, 0.15],
         "random_seed": seed,
         "output_directory": scheme_output_dir,
         "raw_results_file": os.path.basename(raw_results_path) if raw_results_path else None,
@@ -775,14 +874,14 @@ def main():
         else:
             print(f"  {metric_name:30s}: {metric_value}")
 
-    print(f"\n✓ Summary saved to: {summary_json_path}")
-    print(f"✓ Summary CSV saved to: {summary_csv_path}")
+    print(f"\nSummary saved to: {summary_json_path}")
+    print(f"Summary CSV saved to: {summary_csv_path}")
     if raw_results_path:
-        print(f"✓ Raw rewrite-attack records saved to: {raw_results_path}")
+        print(f"Raw rewrite-attack records saved to: {raw_results_path}")
     else:
-        print("✓ Raw rewrite-attack records skipped (pass --save-raw-results to capture them)")
+        print("Raw rewrite-attack records skipped (pass --save-raw-results to capture them)")
     print("\n" + "=" * 80)
-    print(" " * 30 + "✓ EVALUATION COMPLETE!")
+    print(" " * 30 + "EVALUATION COMPLETE!")
     print("=" * 80 + "\n")
 
 

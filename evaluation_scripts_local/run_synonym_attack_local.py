@@ -279,12 +279,12 @@ def collect_and_aggregate_summaries(
                 summary_files.append(summary_path)
     
     if not summary_files:
-        print(f"⚠ Warning: No summary.json files found in {output_dir_abs}")
+        print(f"Warning: No summary.json files found in {output_dir_abs}")
         if run_tag:
             print(f"  (filtered by run_tag: {run_tag})")
         return csv_path
     
-    print(f"\n📊 Found {len(summary_files)} summary.json files. Aggregating...")
+    print(f"\nFound {len(summary_files)} summary.json files. Aggregating...")
     
     # Load and flatten all summaries
     rows = []
@@ -313,11 +313,11 @@ def collect_and_aggregate_summaries(
             
             rows.append(row)
         except Exception as e:
-            print(f"  ⚠ Warning: Failed to load {summary_path}: {e}")
+            print(f"  Warning: Failed to load {summary_path}: {e}")
             continue
     
     if not rows:
-        print("  ⚠ Warning: No valid summaries could be loaded.")
+        print("  Warning: No valid summaries could be loaded.")
         return csv_path
     
     # Create DataFrame and save
@@ -333,8 +333,8 @@ def collect_and_aggregate_summaries(
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     df.to_csv(csv_path, index=False)
     
-    print(f"  ✓ Aggregated CSV saved to: {csv_path}")
-    print(f"  ✓ Contains {len(df)} configurations with {len(df.columns)} columns")
+    print(f"  Aggregated CSV saved to: {csv_path}")
+    print(f"  Contains {len(df)} configurations with {len(df.columns)} columns")
     
     return csv_path
 
@@ -355,7 +355,7 @@ def main():
         csv_path = collect_and_aggregate_summaries(
             args.output_dir, filter_tag, args.csv_summary_path
         )
-        print(f"\n📊 CSV summary: {csv_path}")
+        print(f"\nCSV summary: {csv_path}")
         return
 
     # Normal mode: run evaluations
@@ -383,7 +383,7 @@ def main():
         result = subprocess.run(cmd, cwd=REPO_ROOT)
         if result.returncode != 0:
             print(
-                f"\n❌ Configuration failed with exit code {result.returncode}. "
+                f"\nConfiguration failed with exit code {result.returncode}. "
                 "Stopping early."
             )
             sys.exit(result.returncode)
@@ -397,7 +397,7 @@ def main():
         csv_path = collect_and_aggregate_summaries(
             args.output_dir, run_tag, args.csv_summary_path
         )
-        print(f"\n📊 CSV summary: {csv_path")
+        print(f"\nCSV summary: {csv_path}")
 
 
 if __name__ == "__main__":
